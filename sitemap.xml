@@ -7,7 +7,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://odoolisto.com/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://odoolisto.com/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://odoolisto.com/"/>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -63,28 +63,21 @@
 
   <url>
     <loc>https://odoolisto.com/#blog</loc>
-    <lastmod>2026-06-02</lastmod>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://odoolisto.com/#post1</loc>
-    <lastmod>2026-06-02</lastmod>
+    <loc>https://odoolisto.com/#post-1</loc>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://odoolisto.com/#post2</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://odoolisto.com/#post3</loc>
-    <lastmod>2026-06-02</lastmod>
+    <loc>https://odoolisto.com/#post-2</loc>
+    <lastmod>2026-06-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
