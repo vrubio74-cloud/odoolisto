@@ -47,7 +47,7 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 ### 🔴 PRIORIDAD ALTA — Publicar primero
 - [x] `odoo barato pymes españa` → PUBLICADO: 2026-06-08 → URL: https://odoolisto.com/#post-1
 - [x] `odoo vs holded` → PUBLICADO: 2026-06-08 → URL: https://odoolisto.com/#post-2
-- [ ] `odoo community gratis` → Título: "¿Odoo Community es gratis? Todo lo que debes saber en 2026"
+- [x] `odoo community gratis` → PUBLICADO: 2026-06-14 → URL: https://odoolisto.com/#post-5
 - [ ] `verifactu odoo` → Título: "VeriFactu y Odoo: cómo cumplir la obligación fiscal en 2026"
 - [ ] `kit digital odoo` → Título: "Kit Digital y Odoo: hasta €12.000 para tu ERP en 2026"
 
@@ -166,6 +166,7 @@ Cada artículo debe generarse en este formato HTML para insertar en el blog de O
 |-------|---------|--------|-----|--------|
 | 2026-06-08 | odoo barato pymes españa | Odoo barato para pymes en España: precios reales 2026 | https://odoolisto.com/#post-1 | ✅ Publicado |
 | 2026-06-08 | odoo vs holded | Odoo vs Holded 2026: comparativa completa para pymes españolas | https://odoolisto.com/#post-2 | ✅ Publicado |
+| 2026-06-14 | odoo community gratis | ¿Odoo Community es gratis? Todo lo que debes saber en 2026 | https://odoolisto.com/#post-5 | ✅ Publicado |
 
 ---
 
@@ -180,5 +181,5 @@ Cada artículo debe generarse en este formato HTML para insertar en el blog de O
 
 ---
 
-*Última actualización: 2026-06-08*
+*Última actualización: 2026-06-14*
 *Agente configurado por: Athilan Pignus, S.L.*
