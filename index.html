@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18242312681"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18242312681');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OdooListo — Odoo Barato para Pymes | Desde €297 | GO LIVE en 3 días</title>
@@ -825,6 +817,23 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 .mod-cta .btn-s{border-color:rgba(255,255,255,.3);color:white}
 .mod-cta .btn-s:hover{border-color:white}
 </style>
+
+<!-- Google Ads Conversion Tracking -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18242312681/CPhfCIapnMAcEOmzzvpD',
+      'transaction_id': '',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 </head>
 <body>
 
@@ -1401,7 +1410,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   <h2>Contabilidad completa desde €297</h2>
   <p>VeriFactu nativo. Plan contable español. Sin configuración adicional.</p>
   <div class="cta-btns">
-    <button class="btn-t" onclick="window.open('https://buy.stripe.com/fZubJ19caerr3Xmdvogfu07','_blank')">Contratar Pack S →</button>
+    <button class="btn-t" onclick="gtag_report_conversion(); window.open('https://buy.stripe.com/fZubJ19caerr3Xmdvogfu07','_blank')">Contratar Pack S →</button>
     <button class="btn-s" onclick="go('home')">Ver todos los packs</button>
   </div>
 </div>
@@ -1574,7 +1583,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   <h2>CRM y Ventas incluidos desde €297</h2>
   <p>Pipeline Kanban, presupuestos y pedidos conectados con contabilidad.</p>
   <div class="cta-btns">
-    <button class="btn-t" onclick="window.open('https://buy.stripe.com/fZubJ19caerr3Xmdvogfu07','_blank')">Contratar Pack S →</button>
+    <button class="btn-t" onclick="gtag_report_conversion(); window.open('https://buy.stripe.com/fZubJ19caerr3Xmdvogfu07','_blank')">Contratar Pack S →</button>
     <button class="btn-s" onclick="go('home')">Ver todos los packs</button>
   </div>
 </div>
@@ -1749,7 +1758,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   <h2>Inventario incluido en Pack M desde €497</h2>
   <p>Multi-almacén, trazabilidad, reabastecimiento automático.</p>
   <div class="cta-btns">
-    <button class="btn-t" onclick="window.open('https://buy.stripe.com/5kQ14nfAy4QR8dCbnggfu09','_blank')">Contratar Pack M →</button>
+    <button class="btn-t" onclick="gtag_report_conversion(); window.open('https://buy.stripe.com/5kQ14nfAy4QR8dCbnggfu09','_blank')">Contratar Pack M →</button>
     <button class="btn-s" onclick="go('home')">Ver todos los packs</button>
   </div>
 </div>
@@ -1907,7 +1916,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   <h2>Fabricación incluida en Pack L desde €697</h2>
   <p>MRP completo, BoM, centros de trabajo y control de calidad.</p>
   <div class="cta-btns">
-    <button class="btn-t" onclick="window.open('https://buy.stripe.com/8x29AT0FEfvveC0dvogfu0a','_blank')">Contratar Pack L →</button>
+    <button class="btn-t" onclick="gtag_report_conversion(); window.open('https://buy.stripe.com/8x29AT0FEfvveC0dvogfu0a','_blank')">Contratar Pack L →</button>
     <button class="btn-s" onclick="go('home')">Ver todos los packs</button>
   </div>
 </div>
@@ -2106,7 +2115,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   <h2>RRHH incluido en Pack L desde €697</h2>
   <p>Control horario legal, ausencias, contratos y evaluaciones.</p>
   <div class="cta-btns">
-    <button class="btn-t" onclick="window.open('https://buy.stripe.com/8x29AT0FEfvveC0dvogfu0a','_blank')">Contratar Pack L →</button>
+    <button class="btn-t" onclick="gtag_report_conversion(); window.open('https://buy.stripe.com/8x29AT0FEfvveC0dvogfu0a','_blank')">Contratar Pack L →</button>
     <button class="btn-s" onclick="go('home')">Ver todos los packs</button>
   </div>
 </div>
