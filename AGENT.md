@@ -1,6 +1,6 @@
 # AGENT.md — OdooListo Blog Agent
 ## Configuración del agente automático de contenido SEO
-## Versión 1.0 — Junio 2026
+## Versión 1.1 — Junio 2026
 
 ---
 
@@ -45,16 +45,16 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 ## KEYWORDS PENDIENTES DE PUBLICAR
 
 ### 🔴 PRIORIDAD ALTA — Publicar primero
-- [x] `odoo barato pymes españa` → PUBLICADO: 2026-06-08 → URL: https://odoolisto.com/#post-1
-- [x] `odoo vs holded` → PUBLICADO: 2026-06-08 → URL: https://odoolisto.com/#post-2
-- [x] `odoo community gratis` → PUBLICADO: 2026-06-14 → URL: https://odoolisto.com/#post-5
-- [ ] `verifactu odoo` → Título: "VeriFactu y Odoo: cómo cumplir la obligación fiscal en 2026"
+- [x] `odoo vs holded` → PUBLICADO: 2026-06-02 → URL: https://odoolisto.com/#post1
+- [x] `cuanto cuesta implantar odoo` → PUBLICADO: 2026-06-02 → URL: https://odoolisto.com/#post2
+- [x] `verifactu odoo` → PUBLICADO: 2026-06-02 → URL: https://odoolisto.com/#post3
+- [x] `odoo barato pymes españa` → PUBLICADO: 2026-06-02 → URL: https://odoolisto.com/#post4
+- [x] `odoo community gratis` → PUBLICADO: 2026-06-02 → URL: https://odoolisto.com/#post5
 - [ ] `kit digital odoo` → Título: "Kit Digital y Odoo: hasta €12.000 para tu ERP en 2026"
 
 ### 🟠 PRIORIDAD MEDIA — Segunda tanda
 - [ ] `odoo community vs enterprise` → Título: "Odoo Community vs Enterprise: qué necesita realmente tu pyme"
 - [ ] `erp barato pyme` → Título: "Los 5 ERP más baratos para pymes en España (2026)"
-- [ ] `cuanto cuesta implantar odoo` → Título: "¿Cuánto cuesta implantar Odoo en España? Precios reales 2026"
 - [ ] `odoo vs sap pyme` → Título: "Odoo vs SAP Business One: comparativa para pymes 2026"
 - [ ] `implantar odoo rapido` → Título: "Cómo implantar Odoo en 3 días: metodología OdooListo"
 
@@ -109,31 +109,45 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 
 ## FORMATO DE SALIDA HTML
 
-Cada artículo debe generarse en este formato HTML para insertar en el blog de OdooListo:
+Cada artículo debe generarse siguiendo la estructura existente del blog:
 
 ```html
-<!-- BLOG POST: [KEYWORD] -->
-<!-- DATE: [FECHA] -->
-<!-- SLUG: [slug-del-articulo] -->
-<article class="blog-post" id="post-[N]">
-  <div class="post-header">
-    <div class="post-meta">
-      <span class="post-date">[Fecha en formato "DD MMM YYYY"]</span>
-      <span class="post-cat">[Categoría: Precios / Comparativas / Guías / Latam]</span>
-      <span class="post-read">[X] min de lectura</span>
+<!-- POST N -->
+<div id="page-postN" data-page="top" class="page" style="display:none">
+<section class="sec" style="padding-top:48px">
+  <div class="bp">
+    <div class="backbtn" onclick="go('blog')">← <span data-lang="es">Volver al blog</span><span data-lang="en">Back to blog</span></div>
+    <div class="btag" data-lang="es">[Categoría]</div><div class="btag" data-lang="en">[Category]</div>
+    <h1 data-lang="es">[TÍTULO ES]</h1>
+    <h1 data-lang="en">[TÍTULO EN]</h1>
+    <div class="bpmeta">OdooListo · [Mes] 2026 · [X] min · Por Javier Molina, CEO</div>
+    [CUERPO CON h2, p, ul, table, details/summary para FAQ]
+    [CTA FINAL con botón onclick="go('checkout')"]
+  </div>
+</section>
+</div><!-- /post-N -->
+```
+
+Y la tarjeta de blog correspondiente (insertar en la cuadrícula .bg):
+
+```html
+<div class="bc reveal">
+  <div class="bc-img" style="background:linear-gradient(135deg,[COLOR1],[COLOR2])">
+    <span style="font-size:2rem">[EMOJI]</span>
+  </div>
+  <div class="bc-body">
+    <div class="bc-meta">
+      <span class="bc-cat" data-lang="es">[Categoría]</span><span class="bc-cat" data-lang="en">[Category]</span>
+      <span class="bc-time">[X] min</span>
     </div>
-    <h1 class="post-title">[TÍTULO]</h1>
-    <p class="post-intro">[INTRODUCCIÓN 150-200 palabras]</p>
+    <h3 class="bc-title" data-lang="es">[Título ES]</h3>
+    <h3 class="bc-title" data-lang="en">[Título EN]</h3>
+    <p class="bc-exc" data-lang="es">[Resumen ES]</p>
+    <p class="bc-exc" data-lang="en">[Resumen EN]</p>
+    <button class="btn-blog" onclick="go('postN')" data-lang="es">Leer artículo →</button>
+    <button class="btn-blog" onclick="go('postN')" data-lang="en">Read article →</button>
   </div>
-  <div class="post-body">
-    [CUERPO DEL ARTÍCULO EN HTML con H2, H3, p, ul, table]
-  </div>
-  <div class="post-cta">
-    <h3>¿Listo para implantar Odoo en 3 días?</h3>
-    <p>Desde €297. GO LIVE garantizado. Sin permanencia.</p>
-    <a href="https://odoolisto.com/#checkout" class="btn-cta-post">Ver packs y contratar →</a>
-  </div>
-</article>
+</div>
 ```
 
 ---
@@ -145,18 +159,15 @@ Cada artículo debe generarse en este formato HTML para insertar en el blog de O
 1. **Leer** este AGENT.md y encontrar la primera keyword marcada con `[ ]` en PRIORIDAD ALTA
 2. **Buscar** en Google los 5 primeros resultados para esa keyword
 3. **Analizar** qué estructura, longitud y enfoque tienen los artículos que posicionan
-4. **Redactar** el artículo siguiendo las instrucciones de este documento
-5. **Generar** el HTML completo del artículo
-6. **Insertar** el artículo en el index.html de OdooListo (en la sección #blog)
-7. **Actualizar** el sitemap.xml con la nueva URL
-8. **Desplegar** en Cloudflare Pages via API
-9. **Marcar** la keyword como completada: `[ ]` → `[x] PUBLICADO: [fecha]`
-10. **Actualizar** este AGENT.md con el resultado
+4. **Descargar** el index.html actual del repo y detectar el último `id="page-postN"` existente
+5. **Redactar** el artículo siguiendo las instrucciones de este documento (post N+1)
+6. **Insertar** la tarjeta en la cuadrícula `.bg` y la página `page-postN+1` en el index.html
+7. **Actualizar** el sitemap.xml con la nueva URL `https://odoolisto.com/#postN+1`
+8. **Hacer commit** de los 3 archivos (index.html, sitemap.xml, AGENT.md) vía GitHub API
+9. **Marcar** la keyword como completada: `[ ]` → `[x] PUBLICADO: [fecha] → URL: ...`
 
-### Credenciales de Cloudflare (configurar en Cowork como variables de entorno)
-- `CLOUDFLARE_ACCOUNT_ID` → tu Account ID de Cloudflare
-- `CLOUDFLARE_API_TOKEN` → el token que has creado
-- `CLOUDFLARE_PROJECT_NAME` → `odoolisto`
+### ⚠️ Regla anti-duplicados
+Antes de publicar, verificar siempre que la keyword no esté ya marcada `[x]` en este archivo. Si lo está, saltar a la siguiente `[ ]`.
 
 ---
 
@@ -164,9 +175,11 @@ Cada artículo debe generarse en este formato HTML para insertar en el blog de O
 
 | Fecha | Keyword | Título | URL | Estado |
 |-------|---------|--------|-----|--------|
-| 2026-06-08 | odoo barato pymes españa | Odoo barato para pymes en España: precios reales 2026 | https://odoolisto.com/#post-1 | ✅ Publicado |
-| 2026-06-08 | odoo vs holded | Odoo vs Holded 2026: comparativa completa para pymes españolas | https://odoolisto.com/#post-2 | ✅ Publicado |
-| 2026-06-14 | odoo community gratis | ¿Odoo Community es gratis? Todo lo que debes saber en 2026 | https://odoolisto.com/#post-5 | ✅ Publicado |
+| 2026-06-02 | `odoo vs holded` | Odoo vs Holded 2026: comparativa completa para pymes | https://odoolisto.com/#post1 | ✅ Publicado |
+| 2026-06-02 | `cuanto cuesta implantar odoo` | ¿Cuánto cuesta implantar Odoo en una pyme española? | https://odoolisto.com/#post2 | ✅ Publicado |
+| 2026-06-02 | `verifactu odoo` | VeriFactu y Odoo: todo lo que necesita saber tu pyme | https://odoolisto.com/#post3 | ✅ Publicado |
+| 2026-06-02 | `odoo barato pymes españa` | Odoo barato para pymes en España: precios reales 2026 | https://odoolisto.com/#post4 | ✅ Publicado |
+| 2026-06-02 | `odoo community gratis` | ¿Odoo Community es gratis? Todo lo que debes saber en 2026 | https://odoolisto.com/#post5 | ✅ Publicado |
 
 ---
 
@@ -181,5 +194,5 @@ Cada artículo debe generarse en este formato HTML para insertar en el blog de O
 
 ---
 
-*Última actualización: 2026-06-14*
+*Última actualización: 2026-06-20*
 *Agente configurado por: Athilan Pignus, S.L.*
