@@ -50,7 +50,7 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 - [x] `verifactu odoo` → PUBLICADO: 2026-06-02 → URL: https://odoolisto.com/#post3
 - [x] `odoo barato pymes españa` → PUBLICADO: 2026-06-02 → URL: https://odoolisto.com/#post4
 - [x] `odoo community gratis` → PUBLICADO: 2026-06-02 → URL: https://odoolisto.com/#post5
-- [ ] `kit digital odoo` → Título: "Kit Digital y Odoo: hasta €12.000 para tu ERP en 2026"
+- [x] `kit digital odoo` → PUBLICADO: 2026-06-20 → URL: https://odoolisto.com/#post6
 
 ### 🟠 PRIORIDAD MEDIA — Segunda tanda
 - [ ] `odoo community vs enterprise` → Título: "Odoo Community vs Enterprise: qué necesita realmente tu pyme"
@@ -180,6 +180,7 @@ Antes de publicar, verificar siempre que la keyword no esté ya marcada `[x]` en
 | 2026-06-02 | `verifactu odoo` | VeriFactu y Odoo: todo lo que necesita saber tu pyme | https://odoolisto.com/#post3 | ✅ Publicado |
 | 2026-06-02 | `odoo barato pymes españa` | Odoo barato para pymes en España: precios reales 2026 | https://odoolisto.com/#post4 | ✅ Publicado |
 | 2026-06-02 | `odoo community gratis` | ¿Odoo Community es gratis? Todo lo que debes saber en 2026 | https://odoolisto.com/#post5 | ✅ Publicado |
+| 2026-06-20 | `kit digital odoo` | Kit Digital y Odoo: hasta €12.000 para implantar tu ERP en 2026 | https://odoolisto.com/#post6 | ✅ Publicado |
 
 ---
 
