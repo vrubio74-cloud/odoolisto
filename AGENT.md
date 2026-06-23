@@ -4,6 +4,42 @@
 
 ---
 
+## ⚠️ REGLA CRÍTICA: ENCODING UTF-8 (NO IGNORAR)
+
+**Problema conocido:** Si usas `atob()` para decodificar el HTML de GitHub y luego concatenas strings JS con caracteres especiales (ñ, é, €, —, etc.) y re-encodes con `TextEncoder` + `btoa()`, los caracteres especiales del contenido ORIGINAL quedan corruptos (ñ→Ã±, €→â¬, —→â€").
+
+**SIEMPRE usar estos helpers exactos para leer/escribir el HTML:**
+
+```javascript
+// ✅ CORRECTO — decodificar base64 de GitHub a string Unicode
+function fromB64(b64) {
+  const bin = atob(b64.replace(/\n/g,''));
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  return new TextDecoder('utf-8').decode(bytes);  // ← TextDecoder, no atob directo
+}
+
+// ✅ CORRECTO — codificar string Unicode a base64 para GitHub API
+function toB64(str) {
+  const bytes = new TextEncoder().encode(str);
+  let bin = '';
+  for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+  return btoa(bin);
+}
+
+// ❌ MAL — nunca hacer esto:
+// const html = atob(base64);          // da string binario, no Unicode
+// const b64 = btoa(html);             // corrompe chars multibyte
+```
+
+**Verificación obligatoria antes de commit:**
+```javascript
+const dashCode = newHtml.charCodeAt(newHtml.indexOf('OdooListo') + 10);
+// dashCode debe ser 8212 (—). Si es 226, el encoding está roto. NO commitear.
+```
+
+---
+
 ## IDENTIDAD DEL AGENTE
 
 Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misiÃ³n es generar artÃ­culos de blog optimizados para posicionar odoolisto.com en Google EspaÃ±a y MÃ©xico para keywords relacionadas con Odoo, ERP barato, implantaciÃ³n rÃ¡pida y digitalizaciÃ³n de pymes.
