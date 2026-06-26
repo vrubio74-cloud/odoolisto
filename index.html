@@ -911,6 +911,88 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   .ham{display:flex}
   .nav-actions .btn-p{display:none}
 }
+
+/* ── POPUP DEMO ─────────────────────────────────────────── */
+.popup-overlay{
+  position:fixed;top:0;left:0;right:0;bottom:0;
+  background:rgba(10,5,40,.75);
+  z-index:99999;
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;
+  opacity:0;pointer-events:none;
+  transition:opacity .35s ease;
+  backdrop-filter:blur(4px);
+}
+.popup-overlay.open{opacity:1;pointer-events:all}
+.popup-box{
+  background:linear-gradient(160deg,#1C0F5E 0%,#110828 100%);
+  border:1px solid rgba(0,160,157,.35);
+  border-radius:20px;
+  padding:36px 32px;
+  max-width:480px;
+  width:100%;
+  position:relative;
+  box-shadow:0 24px 64px rgba(0,0,0,.5);
+  animation:popIn .4s cubic-bezier(.34,1.56,.64,1) both;
+}
+@keyframes popIn{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+.popup-close{
+  position:absolute;top:14px;right:16px;
+  background:none;border:none;color:rgba(255,255,255,.45);
+  font-size:1.4rem;cursor:pointer;line-height:1;
+  transition:color .2s;padding:4px;
+}
+.popup-close:hover{color:white}
+.popup-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(0,160,157,.2);color:#4DD9D6;
+  border:1px solid rgba(0,160,157,.3);
+  border-radius:20px;padding:5px 14px;
+  font-size:.72rem;font-weight:800;
+  letter-spacing:.06em;text-transform:uppercase;
+  margin-bottom:16px;font-family:var(--sans);
+}
+.popup-h{
+  font-family:var(--serif);
+  font-size:clamp(1.4rem,3vw,1.9rem);
+  color:white;line-height:1.2;
+  margin-bottom:10px;
+}
+.popup-h em{color:#4DD9D6;font-style:normal}
+.popup-sub{
+  color:rgba(255,255,255,.68);
+  font-size:.88rem;line-height:1.65;
+  margin-bottom:22px;
+  font-family:var(--sans);
+}
+.popup-cta{
+  display:block;width:100%;
+  background:var(--teal);color:white;
+  border:none;border-radius:12px;
+  padding:14px;font-size:1rem;font-weight:800;
+  cursor:pointer;font-family:var(--sans);
+  transition:background .2s,transform .2s;
+  text-decoration:none;text-align:center;
+}
+.popup-cta:hover{background:#008f8c;transform:translateY(-2px)}
+.popup-skip{
+  display:block;text-align:center;
+  margin-top:12px;font-size:.78rem;
+  color:rgba(255,255,255,.35);cursor:pointer;
+  font-family:var(--sans);background:none;border:none;
+  transition:color .2s;
+}
+.popup-skip:hover{color:rgba(255,255,255,.6)}
+.popup-trust{
+  display:flex;align-items:center;justify-content:center;
+  gap:16px;margin-top:18px;padding-top:16px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+.popup-trust span{
+  font-size:.72rem;color:rgba(255,255,255,.45);
+  font-family:var(--sans);
+}
+
 </style>
 
 </head>
@@ -3673,6 +3755,38 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
+// ── POPUP DEMO ───────────────────────────────────────────
+function openPopup() {
+  var popup = document.getElementById('demo-popup');
+  if (popup) popup.classList.add('open');
+}
+function closePopup() {
+  var popup = document.getElementById('demo-popup');
+  if (popup) popup.classList.remove('open');
+  try { localStorage.setItem('ol_popup', Date.now()); } catch(e) {}
+}
+// Close on overlay click
+document.addEventListener('click', function(e) {
+  var popup = document.getElementById('demo-popup');
+  if (popup && e.target === popup) closePopup();
+});
+// Close on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closePopup();
+});
+// Show popup after 30 seconds - once every 7 days
+(function() {
+  try {
+    var last = localStorage.getItem('ol_popup');
+    var sevenDays = 7 * 24 * 60 * 60 * 1000;
+    if (!last || Date.now() - parseInt(last) > sevenDays) {
+      setTimeout(openPopup, 30000);
+    }
+  } catch(e) {
+    setTimeout(openPopup, 30000);
+  }
+})();
 // ── RESTORE LANG ───────────────────────────────────────────
 try { var sl = localStorage.getItem('ol_lang'); if (sl === 'en') setLang('en'); } catch(e) {}
 
@@ -3692,6 +3806,46 @@ try { var sl = localStorage.getItem('ol_lang'); if (sl === 'en') setLang('en'); 
       <path d="M19.5 16.8c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z" fill="#25D366"/>
     </svg>
   </a>
+</div>
+
+<!-- ── POPUP DEMO GRATUITA ─────────────────────────────── -->
+<div class="popup-overlay" id="demo-popup" role="dialog" aria-modal="true">
+  <div class="popup-box">
+    <button class="popup-close" onclick="closePopup()" aria-label="Cerrar">✕</button>
+
+    <!-- ES -->
+    <div data-lang="es">
+      <div class="popup-badge">🎁 Oferta limitada</div>
+      <h2 class="popup-h">¿Tu pyme aún<br>sin ERP? <em>Esto es para ti.</em></h2>
+      <p class="popup-sub">Reserva ahora una demo gratuita de 30 minutos y descubre cómo ponemos en marcha tu Odoo en 3 días desde €297 — con un consultor real acompañándote.</p>
+      <a href="https://calendly.com/odoolisto/demo-gratuita-odoo-community-19" target="_blank" class="popup-cta" onclick="closePopup()">
+        📅 Reservar demo gratuita — sin compromiso
+      </a>
+      <button class="popup-skip" onclick="closePopup()">Ahora no, gracias</button>
+      <div class="popup-trust">
+        <span>🛡️ Sin permanencia</span>
+        <span>⚡ GO LIVE en 3 días</span>
+        <span>💰 Desde €297</span>
+      </div>
+    </div>
+
+    <!-- EN -->
+    <div data-lang="en">
+      <div class="popup-badge">🎁 Limited offer</div>
+      <h2 class="popup-h">No ERP yet?<br><em>This is for you.</em></h2>
+      <p class="popup-sub">Book a free 30-minute demo and discover how we get your Odoo up and running in 3 days from €297 — with a real consultant guiding you every step.</p>
+      <a href="https://calendly.com/odoolisto/demo-gratuita-odoo-community-19" target="_blank" class="popup-cta" onclick="closePopup()">
+        📅 Book free demo — no commitment
+      </a>
+      <button class="popup-skip" onclick="closePopup()">Not now, thanks</button>
+      <div class="popup-trust">
+        <span>🛡️ No lock-in</span>
+        <span>⚡ Live in 3 days</span>
+        <span>💰 From €297</span>
+      </div>
+    </div>
+
+  </div>
 </div>
 </body>
                       </html>
