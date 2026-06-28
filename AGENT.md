@@ -90,7 +90,7 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 
 ### ð  PRIORIDAD MEDIA â Segunda tanda
 - [x] `odoo community vs enterprise` → PUBLICADO: 2026-06-23 → URL: https://odoolisto.com/#post7
-- [ ] `erp barato pyme` â TÃ­tulo: "Los 5 ERP mÃ¡s baratos para pymes en EspaÃ±a (2026)"
+- [x] `erp barato pyme` → PUBLICADO: 2026-06-28 → URL: https://odoolisto.com/#post8 â TÃ­tulo: "Los 5 ERP mÃ¡s baratos para pymes en EspaÃ±a (2026)"
 - [ ] `odoo vs sap pyme` â TÃ­tulo: "Odoo vs SAP Business One: comparativa para pymes 2026"
 - [ ] `implantar odoo rapido` â TÃ­tulo: "CÃ³mo implantar Odoo en 3 dÃ­as: metodologÃ­a OdooListo"
 
