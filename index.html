@@ -3916,10 +3916,10 @@ document.addEventListener('keydown', function(e) {
     var last = localStorage.getItem('ol_popup');
     var sevenDays = 7 * 24 * 60 * 60 * 1000;
     if (!last || Date.now() - parseInt(last) > sevenDays) {
-      setTimeout(openPopup, 30000);
+      setTimeout(openPopup, 15000);
     }
   } catch(e) {
-    setTimeout(openPopup, 30000);
+    setTimeout(openPopup, 15000);
   }
 })();
 // ── RESTORE LANG ───────────────────────────────────────────
