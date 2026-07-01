@@ -364,6 +364,24 @@ nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.95);backdrop-
 .pmo{font-weight:800;color:#4DD9D6;font-size:.9rem}
 .hcta{margin-top:16px;width:100%;padding:12px;border-radius:var(--rmd);background:var(--teal);color:var(--white);font-weight:800;font-size:.875rem;cursor:pointer;border:none;font-family:var(--sans);transition:all .2s;display:block;text-align:center}
 .hcta:hover{background:var(--teal-dk)}
+/* ── HERO v2: WhatsApp CTA · precio móvil · prueba social (Clarity fix) ── */
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#0b3d2e;font-weight:800;font-size:.9rem;padding:12px 18px;border-radius:var(--rmd);text-decoration:none;border:none;cursor:pointer;font-family:var(--sans);transition:all .2s}
+.btn-wa:hover{background:#1ebe5b}
+.hmob-price{display:none}
+.hmob-price{margin-top:18px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:var(--rmd);padding:16px}
+.hmp-t{font-weight:800;color:#fff;font-size:.92rem;margin-bottom:10px}
+.hmp-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+.hmp-row:last-of-type{border-bottom:none}
+.hmp-name{color:#fff;font-weight:700;font-size:.85rem}
+.hmp-price{color:#4DD9D6;font-weight:800;font-size:.85rem}
+.hmp-ctas{display:flex;gap:8px;margin-top:13px}
+.hmp-ctas a{flex:1;text-align:center;padding:12px;border-radius:var(--rmd);font-weight:800;font-size:.85rem;text-decoration:none}
+.htrust{background:#0d1e3a;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:14px 5%}
+.htrust-in{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;text-align:center}
+.htrust .stars{color:#FFC53D;font-size:1rem;letter-spacing:2px}
+.htrust .htq{color:rgba(255,255,255,.85);font-size:.9rem;font-style:italic}
+.htrust .htn{color:rgba(255,255,255,.5);font-size:.82rem;font-weight:600}
+@media(max-width:600px){.htrust-in{gap:8px}.htrust .htq{font-size:.84rem}}
 
 /* ── LOGOS STRIP ──────────────────────────────────────────── */
 .lstrip{background:var(--g1);padding:22px 5%;border-bottom:1px solid var(--g2)}
@@ -632,6 +650,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 @media(max-width:768px){
   .hin,.hiwg,.tsg,.mg,.teamg,.bg,.pg,.cog,.cong{grid-template-columns:1fr}
   .hcard{display:none}
+  .hmob-price{display:block}
   .ftop{grid-template-columns:1fr 1fr}
   .nav-links{display:none}
 }
@@ -1074,11 +1093,24 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
       </div>
       <h1 data-lang="es">Tu negocio en marcha<br>con Odoo. <em>En 3 días.</em></h1>
       <h1 data-lang="en">Your business up and running<br>with Odoo. <em>In 3 days.</em></h1>
-      <p class="hsub" data-lang="es">12 años y 300 implantaciones nos han permitido automatizar con IA cada paso del proceso. El resultado: ponemos en marcha tu Odoo en 3 días hábiles, con un consultor real acompañándote, desde solo <strong style="color:white">€297.</strong> Nadie más en España puede garantizarlo.</p>
-      <p class="hsub" data-lang="en">12 years and 300 deployments have allowed us to automate every step with AI. The result: your Odoo up and running in 3 business days, with a real consultant guiding you, from just <strong style="color:white">€297.</strong> No one else in Spain can guarantee this.</p>
+      <p class="hsub" data-lang="es">Ponemos en marcha tu Odoo Community 19 en <strong style="color:white">3 días hábiles</strong>, con un consultor real acompañándote. Todo incluido desde <strong style="color:white">€297</strong>, sin licencias. Nadie más en España lo garantiza.</p>
+      <p class="hsub" data-lang="en">We get your Odoo Community 19 up and running in <strong style="color:white">3 business days</strong>, with a real consultant guiding you. All included from <strong style="color:white">€297</strong>, no licenses. No one else in Spain can guarantee this.</p>
       <div class="hctas">
         <button class="btn-t" onclick="go('checkout')"><span data-lang="es">Contratar ahora →</span><span data-lang="en">Get started →</span></button>
         <a href="https://calendly.com/odoolisto/demo-gratuita-odoo-community-19" target="_blank" class="btn-s" style="border-color:rgba(255,255,255,.25);color:rgba(255,255,255,.84)"><span data-lang="es">📅 Pedir demo</span><span data-lang="en">📅 Book a demo</span></a>
+        <a href="https://wa.me/34644044808?text=Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">💬 <span data-lang="es">WhatsApp directo</span><span data-lang="en">WhatsApp us</span></a>
+      </div>
+      <!-- Precio + WhatsApp visibles en MÓVIL (fix Clarity: la .hcard se oculta <768px) -->
+      <div class="hmob-price">
+        <div class="hmp-t" data-lang="es">Todo incluido · sin licencias · sin permanencia</div>
+        <div class="hmp-t" data-lang="en">All included · no licenses · no lock-in</div>
+        <div class="hmp-row"><span class="hmp-name">Pack S</span><span class="hmp-price">€297 + €97/mes</span></div>
+        <div class="hmp-row"><span class="hmp-name">Pack M ⭐</span><span class="hmp-price">€497 + €147/mes</span></div>
+        <div class="hmp-row"><span class="hmp-name">Pack L</span><span class="hmp-price">€697 + €197/mes</span></div>
+        <div class="hmp-ctas">
+          <a href="#precios" style="background:var(--teal);color:#fff"><span data-lang="es">Ver packs →</span><span data-lang="en">See packs →</span></a>
+          <a href="https://wa.me/34644044808?text=Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" target="_blank" rel="noopener" style="background:#25D366;color:#0b3d2e">💬 WhatsApp</a>
+        </div>
       </div>
       <div class="hstats">
         <div><div class="sn">3</div><div class="sl" data-lang="es">días para la puesta en marcha</div><div class="sl" data-lang="en">days to go live</div></div>
@@ -1096,7 +1128,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
       <ul class="plist">
         <li class="pi" onclick="selHP(this)"><div><div class="pn">Pack S</div><div class="pm" data-lang="es">Contabilidad · Ventas · CRM</div><div class="pm" data-lang="en">Accounting · Sales · CRM</div></div><div class="pp"><div class="ps">Setup €297</div><div class="pmo">€97/mes</div></div></li>
         <li class="pi active" onclick="selHP(this)"><div><div class="pn">Pack M ⭐</div><div class="pm" data-lang="es">Pack S + Inventario · Compras · Proyectos</div><div class="pm" data-lang="en">Pack S + Inventory · Purchase · Projects</div></div><div class="pp"><div class="ps">Setup €497</div><div class="pmo">€147/mes</div></div></li>
-        <li class="pi" onclick="selHP(this)"><div><div class="pn">Pack L</div><div class="pm" data-lang="es" data-lang="es">Pack M + RRHH · Fabricación · eCommerce</span><span data-lang="en">Pack M + HR · Manufacturing · eCommerce</div><div class="pm" data-lang="en">Pack M + HR · Manufacturing · eCommerce</div></div><div class="pp"><div class="ps">Setup €697</div><div class="pmo">€197/mes</div></div></li>
+        <li class="pi" onclick="selHP(this)"><div><div class="pn">Pack L</div><div class="pm" data-lang="es">Pack M + RRHH · Fabricación · eCommerce</div><div class="pm" data-lang="en">Pack M + HR · Manufacturing · eCommerce</div></div><div class="pp"><div class="ps">Setup €697</div><div class="pmo">€197/mes</div></div></li>
       </ul>
       <a class="hcta" onclick="go('checkout')" data-lang="es">Contratar este pack →</a>
       <a class="hcta" onclick="go('checkout')" data-lang="en">Get this pack →</a>
@@ -1115,6 +1147,17 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   </div>
 </div>
 
+
+<!-- Prueba social ALTA (subida desde sección testimonios) -->
+<div class="htrust">
+  <div class="htrust-in">
+    <span class="stars">★★★★★</span>
+    <span class="htq" data-lang="es">"En 3 días teníamos Odoo funcionando con todo migrado."</span>
+    <span class="htq" data-lang="en">"In 3 days we had Odoo running with everything migrated."</span>
+    <span class="htn" data-lang="es">— María Fornes · Distribuciones Fornes, Valencia&nbsp;&nbsp;·&nbsp;&nbsp;+300 pymes ya confían</span>
+    <span class="htn" data-lang="en">— María Fornes · Distribuciones Fornes, Valencia&nbsp;&nbsp;·&nbsp;&nbsp;300+ SMEs already trust us</span>
+  </div>
+</div>
 
 <!-- ══ VÍDEO ODOOLISTO ══ -->
 <section class="sec" style="background:linear-gradient(160deg,#0e0628 0%,#1C0F5E 50%,#0d1e3a 100%);padding:60px 5%;text-align:center">
