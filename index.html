@@ -3312,7 +3312,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <span>€497 + €147/mes</span>
       </div>
       <div class="po" id="po-l" onclick="selPack(this,'l',697,197)">
-        <div><label data-lang="es">Pack L — Avanzado (9 módulos, ≤40 usuarios)</label><label data-lang="en">Pack L — Advanced (9 modules, ≤40 users)</label><div class="posub" data-lang="es" data-lang="es">+ RRHH · Fabricación · eCommerce</li><li data-lang="en">+ HR · Manufacturing · eCommerce</div><div class="posub" data-lang="en">+ HR · Manufacturing · eCommerce</div></div>
+        <div><label data-lang="es">Pack L — Avanzado (9 módulos, ≤40 usuarios)</label><label data-lang="en">Pack L — Advanced (9 modules, ≤40 users)</label><div class="posub" data-lang="es">+ RRHH · Fabricación · eCommerce</div><div class="posub" data-lang="en">+ HR · Manufacturing · eCommerce</div></div>
         <span>€697 + €197/mes</span>
       </div>
     </div>
@@ -3573,28 +3573,6 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 </div>
 
 <!-- ═══════════════════════ MODALS ═══════════════════════ -->
-<!-- Stripe Modal -->
-<div class="mov" id="m-stripe">
-  <div class="mbox">
-    <button class="mcls" onclick="closeMod('m-stripe')">✕</button>
-    <div class="mtitle" data-lang="es">Pago con tarjeta</div><div class="mtitle" data-lang="en">Card payment</div>
-    <div class="msub" data-lang="es">Resumen de tu pedido</div><div class="msub" data-lang="en">Order summary</div>
-    <div style="background:var(--off);border-radius:var(--rmd);padding:18px;margin-bottom:18px">
-      <div style="display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:7px"><span data-lang="es">Pack</span><span data-lang="en">Pack</span><strong id="s-pack">Pack S — Esencial</strong></div>
-      <div style="display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:7px"><span data-lang="es">Setup</span><span data-lang="en">Setup</span><strong id="s-setup">€297</strong></div>
-      <div style="display:flex;justify-content:space-between;font-size:.84rem;margin-bottom:7px"><span data-lang="es">Mensual</span><span data-lang="en">Monthly</span><strong id="s-monthly">€97/mes</strong></div>
-      <div style="display:flex;justify-content:space-between;font-size:.97rem;padding-top:9px;border-top:1px solid var(--g2);font-weight:800"><span data-lang="es">Total hoy (IVA incl.)</span><span data-lang="en">Total today (VAT incl.)</span><strong id="s-total">€477,74</strong></div>
-    </div>
-    <div style="background:#FFF3CD;border:1px solid #FFD966;border-radius:var(--r);padding:13px;margin-bottom:18px;font-size:.8rem;color:#7D5A00">
-      <strong data-lang="es">⚠️ Integración Stripe en configuración.</strong><strong data-lang="en">⚠️ Stripe integration being configured.</strong>
-      <span data-lang="es"> Por favor continúa con transferencia bancaria o escríbenos a <strong><a href="mailto:hola@odoolisto.com" style="color:var(--teal);font-weight:700;text-decoration:none">hola@odoolisto.com</a></strong> para procesar tu pago de forma asistida.</span>
-      <span data-lang="en"> Please continue with bank transfer or write to <strong><a href="mailto:hola@odoolisto.com" style="color:var(--teal);font-weight:700;text-decoration:none">hola@odoolisto.com</a></strong> to process your payment with assistance.</span>
-    </div>
-    <button class="btn-t" style="width:100%;padding:13px;margin-bottom:9px;animation:none" onclick="closeMod('m-stripe');openMod('m-transfer')"><span data-lang="es">Continuar con transferencia →</span><span data-lang="en">Continue with bank transfer →</span></button>
-    <button class="btn-s" style="width:100%;padding:11px;justify-content:center" onclick="closeMod('m-stripe')"><span data-lang="es">Cancelar</span><span data-lang="en">Cancel</span></button>
-  </div>
-</div>
-
 <!-- Transfer Modal -->
 <div class="mov" id="m-transfer">
   <div class="mbox">
@@ -3760,12 +3738,6 @@ function tFaq(btn) {
 
 // ── MODALS ─────────────────────────────────────────────────
 function openMod(id) {
-  if (id === 'm-stripe') {
-    var sp = document.getElementById('s-pack'); if(sp) sp.textContent = pack.name;
-    var ss = document.getElementById('s-setup'); if(ss) ss.textContent = '€' + pack.setup;
-    var sm = document.getElementById('s-monthly'); if(sm) sm.textContent = '€' + pack.monthly + '/mes';
-    var st = document.getElementById('s-total'); if(st) st.textContent = '€' + ((pack.setup + pack.monthly) * 1.21).toFixed(2);
-  }
   var mel = document.getElementById(id);
   if (mel) mel.classList.add('open');
 }
@@ -3905,6 +3877,7 @@ function payStripe() {
     if (idParts.length > 1) packId = idParts[1];
   }
   var link = stripeLinks[packId] || stripeLinks['s'];
+  gtag_report_conversion();
   window.open(link, '_blank');
 }
 
