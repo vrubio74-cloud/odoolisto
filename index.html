@@ -477,6 +477,13 @@ tbody td.ours{background:rgba(28,15,94,.03);font-weight:700;color:var(--navy)}
 .ts .sh{color:var(--white)}
 .ts .ss{color:rgba(255,255,255,.58)}
 .tsg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
+/* ── Sección Seguridad y Confianza ── */
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.segc{background:var(--white);border:1px solid var(--g2);border-radius:var(--rlg);padding:24px;box-shadow:var(--sh)}
+.segc .segi{font-size:1.7rem;line-height:1;margin-bottom:12px}
+.segc h3{font-size:1rem;color:var(--navy);font-weight:800;margin-bottom:7px}
+.segc p{font-size:.86rem;color:var(--g3);line-height:1.55}
+@media(max-width:768px){.seg{grid-template-columns:1fr}}
 .tc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--rlg);padding:24px}
 .tst{color:#4DD9D6;font-size:.9rem;margin-bottom:11px;letter-spacing:2px}
 .tq{font-size:.85rem;color:rgba(255,255,255,.78);line-height:1.7;margin-bottom:17px;font-style:italic;font-family:var(--serif)}
@@ -1418,6 +1425,53 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   </div>
 </section>
 
+<section class="sec" id="seguridad" style="background:var(--off)">
+  <div class="si">
+    <div class="reveal"><div class="stag" data-lang="es">SEGURIDAD Y CONFIANZA</div><div class="stag" data-lang="en">SECURITY & TRUST</div>
+      <h2 class="sh" data-lang="es">Tus datos y tu operación, protegidos</h2>
+      <h2 class="sh" data-lang="en">Your data and operation, protected</h2>
+    </div>
+    <div class="seg">
+      <div class="segc reveal">
+        <div class="segi">🇪🇸</div>
+        <h3 data-lang="es">Servidores en España</h3><h3 data-lang="en">Servers in Spain</h3>
+        <p data-lang="es">Tu Odoo se aloja en un datacenter en Barcelona (Clouding.io), dentro de la UE. Tus datos nunca salen de territorio europeo — cumplimiento RGPD nativo.</p>
+        <p data-lang="en">Your Odoo is hosted in a Barcelona datacenter (Clouding.io), inside the EU. Your data never leaves European soil — GDPR-native by design.</p>
+      </div>
+      <div class="segc reveal">
+        <div class="segi">💾</div>
+        <h3 data-lang="es">Backup diario</h3><h3 data-lang="en">Daily backups</h3>
+        <p data-lang="es">Copia de seguridad diaria, guardada con triple réplica en un almacenamiento independiente. Si un disco falla, tus datos siguen a salvo.</p>
+        <p data-lang="en">Daily backup, stored with triple replication in independent storage. If a disk fails, your data stays safe.</p>
+      </div>
+      <div class="segc reveal">
+        <div class="segi">🔓</div>
+        <h3 data-lang="es">Tu copia, donde tú quieras</h3><h3 data-lang="en">Your backup, wherever you want</h3>
+        <p data-lang="es">Odoo Community es software libre y tus datos son tuyos. Te entregamos una copia completa de tu base de datos en el almacenamiento que tú elijas —tu nube o tu servidor por SFTP—, por un canal seguro. Sin lock-in.</p>
+        <p data-lang="en">Odoo Community is open source and your data is yours. We deliver a full copy of your database to the storage you choose —your cloud or your SFTP server— over a secure channel. No lock-in.</p>
+      </div>
+      <div class="segc reveal">
+        <div class="segi">🔒</div>
+        <h3 data-lang="es">Conexión cifrada</h3><h3 data-lang="en">Encrypted connection</h3>
+        <p data-lang="es">Todo el tráfico con tu Odoo viaja cifrado mediante SSL/TLS. Tu acceso y tus datos, protegidos en tránsito.</p>
+        <p data-lang="en">All traffic to your Odoo travels encrypted via SSL/TLS. Your access and data, protected in transit.</p>
+      </div>
+      <div class="segc reveal">
+        <div class="segi">🎧</div>
+        <h3 data-lang="es">SLA de soporte por pack</h3><h3 data-lang="en">Support SLA by pack</h3>
+        <p data-lang="es">Primera respuesta garantizada en horario laboral: 4h en Pack S, 2h en Pack M y 1h en Pack L. Restauración en menos de 4h laborables ante un desastre.</p>
+        <p data-lang="en">Guaranteed first response in business hours: 4h on Pack S, 2h on Pack M, 1h on Pack L. Recovery in under 4 business hours in case of disaster.</p>
+      </div>
+      <div class="segc reveal">
+        <div class="segi">🔁</div>
+        <h3 data-lang="es">Sin permanencia</h3><h3 data-lang="en">No lock-in period</h3>
+        <p data-lang="es">Cancela cuando quieras avisando con 30 días. Sin penalización y con una copia de todos tus datos en la mano.</p>
+        <p data-lang="en">Cancel anytime with 30 days notice. No penalty, and with a copy of all your data in hand.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="sec" id="faq">
   <div class="si">
     <div class="reveal"><div class="stag">FAQ</div>
@@ -1430,7 +1484,12 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
       <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Odoo Community es gratuito en licencias?</span><span data-lang="en">Is Odoo Community license-free?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Sí. Odoo Community es 100% open source y gratuito en licencias. Si en el futuro necesitas Odoo Enterprise, te ayudamos a migrar sin perder datos.</span><span data-lang="en">Yes. Odoo Community is 100% open source and free of licenses. If you ever need Odoo Enterprise, we help you migrate without data loss.</span></div></div>
       <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Hacéis desarrollos a medida?</span><span data-lang="en">Do you do custom development?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">No. OdooListo es implantación 100% estándar. Esto mantiene precios bajos y plazos de 3 días. Para desarrollos a medida te referimos a un partner Gold.</span><span data-lang="en">No. OdooListo is 100% standard deployment. This keeps prices low and timelines at 3 days. For custom development we refer you to a Gold partner.</span></div></div>
       <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Es compatible con VeriFactu?</span><span data-lang="en">Is it VeriFactu compliant?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Sí. Odoo Community 19 incluye compatibilidad nativa con VeriFactu y localización española completa. Incluido desde el primer día sin coste adicional.</span><span data-lang="en">Yes. Odoo Community 19 includes native VeriFactu support and full Spanish localization. Included from day one at no extra cost.</span></div></div>
-      <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Qué soporte tengo tras la puesta en marcha?</span><span data-lang="en">What support after go-live?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">La suscripción incluye soporte básico por ticketing (24–48h laborables). Para necesidades adicionales hay bolsas de horas a €45/h.</span><span data-lang="en">The subscription includes basic ticketing support (24–48h business hours). For additional needs there are hour bundles at €45/h.</span></div></div>
+      <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Qué soporte tengo tras la puesta en marcha?</span><span data-lang="en">What support after go-live?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Soporte por ticket en horario laboral con <strong>primera respuesta garantizada según tu pack</strong>: 4h en Pack S, 2h en Pack M y 1h en Pack L (horas laborables). Para necesidades adicionales hay bolsas de horas a €45/h.</span><span data-lang="en">Ticket support during business hours with <strong>guaranteed first response by pack</strong>: 4h on Pack S, 2h on Pack M, 1h on Pack L (business hours). For additional needs there are hour bundles at €45/h.</span></div></div>
+      <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Dónde están alojados mis datos?</span><span data-lang="en">Where is my data hosted?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">En un datacenter en Barcelona (Clouding.io), en territorio español y de la Unión Europea. Cumplimiento RGPD nativo, sin transferencias fuera de Europa. El datacenter cuenta con seguridad física 24/7, videovigilancia, sistemas anti-incendios y suministro eléctrico redundante.</span><span data-lang="en">In a Barcelona datacenter (Clouding.io), on Spanish and EU territory. GDPR-native, no transfers outside Europe. The datacenter has 24/7 physical security, video surveillance, fire-suppression systems and redundant power.</span></div></div>
+      <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Cómo saco mis datos si algún día me voy?</span><span data-lang="en">How do I get my data out if I ever leave?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Odoo Community es software libre: tus datos son tuyos. Te entregamos una exportación completa de tu base de datos en formato estándar cuando la pidas, mediante un enlace seguro. Sin lock-in: tu Odoo puede moverse a cualquier hosting o partner.</span><span data-lang="en">Odoo Community is open source: your data is yours. We provide a full export of your database in standard format whenever you ask, via a secure link. No lock-in: your Odoo can move to any host or partner.</span></div></div>
+      <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Puedo tener siempre una copia en mi propio sistema?</span><span data-lang="en">Can I always keep a copy on my own system?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Sí. Además de tu backup diario en nuestros servidores, puedes recibir una copia completa de tu base de datos en el almacenamiento que tú controles —tu nube (Google Drive, Dropbox, tu propio S3…) o un servidor tuyo por SFTP—, por un canal seguro, bajo petición o de forma periódica. Así siempre tienes una copia en tu poder, independiente de OdooListo.</span><span data-lang="en">Yes. On top of your daily backup on our servers, you can receive a full copy of your database in storage you control —your cloud (Google Drive, Dropbox, your own S3…) or your own SFTP server— over a secure channel, on request or on a schedule. That way you always hold a copy, independent from OdooListo.</span></div></div>
+      <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Qué pasa si OdooListo dejara de operar?</span><span data-lang="en">What if OdooListo stopped operating?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Tu Odoo no depende de que nosotros existamos. Es software libre corriendo en un servidor estándar; con tu base de datos exportada puedes trasladarlo a cualquier proveedor. Nunca quedas atrapado.</span><span data-lang="en">Your Odoo does not depend on us existing. It is open-source software running on a standard server; with your exported database you can move it to any provider. You are never trapped.</span></div></div>
+      <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Están seguras mis copias de seguridad?</span><span data-lang="en">Are my backups safe?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Hacemos copia de seguridad diaria, almacenada con triple réplica en un sistema independiente del disco principal. Ante un desastre, restauramos tu servicio en menos de 4 horas laborables.</span><span data-lang="en">We run a daily backup, stored with triple replication in a system independent from the main disk. In case of disaster, we restore your service in under 4 business hours.</span></div></div>
     </div>
   </div>
 </section>
