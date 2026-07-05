@@ -478,7 +478,29 @@ tbody td.ours{background:rgba(28,15,94,.03);font-weight:700;color:var(--navy)}
 .ts .ss{color:rgba(255,255,255,.58)}
 .tsg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
 /* ── Sección Seguridad y Confianza ── */
-.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+".seg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+/* ── Comparativa vs freemium/DIY ── */
+.vscmp{width:100%;border-collapse:collapse;margin-top:34px;font-size:.9rem}
+.vscmp th,.vscmp td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--g2);vertical-align:top}
+.vscmp thead th{color:#fff;font-weight:800;font-size:.84rem;background:#6B7280}
+.vscmp thead th:first-child{background:transparent}
+.vscmp thead th:last-child{background:var(--teal)}
+.vscmp td:first-child{font-weight:700;color:var(--navy)}
+.vscmp .vsno{color:#B03A3A}
+.vscmp .vsyes{color:var(--teal);font-weight:700}
+@media(max-width:768px){.vscmp{font-size:.78rem}.vscmp th,.vscmp td{padding:9px 8px}}
+/* ── Fotos reales + botones de demo por módulo ── */
+.mockup-wrap img{width:100%;display:block}
+.mw-demos{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px}
+.demo-btn{display:inline-flex;align-items:center;gap:7px;background:var(--teal);color:#fff;border:none;border-radius:var(--rmd);padding:10px 18px;font-weight:800;font-size:.85rem;cursor:pointer;font-family:var(--sans);transition:all .2s}
+.demo-btn:hover{background:var(--teal-dk)}
+#m-video.open .mbox{max-width:880px;width:92%;padding:0;background:#000;overflow:hidden}
+/* ── Vídeo Nuestra historia ── */
+.story-video{position:relative;max-width:720px;margin:34px auto 0;border-radius:var(--rlg);overflow:hidden;cursor:pointer;box-shadow:var(--sh);aspect-ratio:16/9;background:#000}
+.story-video img{width:100%;height:100%;object-fit:cover;display:block;opacity:.88;transition:opacity .2s}
+.story-video:hover img{opacity:1}
+.pv-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:rgba(255,255,255,.94);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:1.7rem;padding-left:6px;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .2s}
+.story-video:hover .pv-play{transform:translate(-50%,-50%) scale(1.08)}
 .segc{background:var(--white);border:1px solid var(--g2);border-radius:var(--rlg);padding:24px;box-shadow:var(--sh)}
 .segc .segi{font-size:1.7rem;line-height:1;margin-bottom:12px}
 .segc h3{font-size:1rem;color:var(--navy);font-weight:800;margin-bottom:7px}
@@ -1103,10 +1125,11 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
       <p class="hsub" data-lang="es">Ponemos en marcha tu Odoo Community 19 en <strong style="color:white">3 días hábiles</strong>, con un consultor real acompañándote. Todo incluido desde <strong style="color:white">€297</strong>, sin licencias. Nadie más en España lo garantiza.</p>
       <p class="hsub" data-lang="en">We get your Odoo Community 19 up and running in <strong style="color:white">3 business days</strong>, with a real consultant guiding you. All included from <strong style="color:white">€297</strong>, no licenses. No one else in Spain can guarantee this.</p>
       <div class="hctas">
-        <button class="btn-t" onclick="go('checkout')"><span data-lang="es">Contratar ahora →</span><span data-lang="en">Get started →</span></button>
-        <a href="https://calendly.com/odoolisto/demo-gratuita-odoo-community-19" target="_blank" class="btn-s" style="border-color:rgba(255,255,255,.25);color:rgba(255,255,255,.84)"><span data-lang="es">📅 Pedir demo</span><span data-lang="en">📅 Book a demo</span></a>
+        <button class="btn-t" onclick="openMod('m-trial')"><span data-lang="es">🚀 Prueba gratis 15 días →</span><span data-lang="en">🚀 Free 15-day trial →</span></button>
+        <button class="btn-s" onclick="go('checkout')" style="border-color:rgba(255,255,255,.25);color:rgba(255,255,255,.9)"><span data-lang="es">Contratar ahora</span><span data-lang="en">Get started</span></button>
         <a href="https://wa.me/34644044808?text=Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" target="_blank" rel="noopener" class="btn-wa" aria-label="WhatsApp">💬 <span data-lang="es">WhatsApp directo</span><span data-lang="en">WhatsApp us</span></a>
       </div>
+      <div style="margin-top:11px;font-size:.82rem;color:rgba(255,255,255,.62)"><span data-lang="es">Sin tarjeta · Sin compromiso · ¿Prefieres verlo con un consultor? </span><span data-lang="en">No card · No commitment · Prefer a guided demo? </span><a href="https://calendly.com/odoolisto/demo-gratuita-odoo-community-19" target="_blank" style="color:#4DD9D6;font-weight:700;text-decoration:none"><span data-lang="es">Reserva una demo gratis</span><span data-lang="en">Book a free demo</span></a></div>
       <!-- Precio + WhatsApp visibles en MÓVIL (fix Clarity: la .hcard se oculta <768px) -->
       <div class="hmob-price">
         <div class="hmp-t" data-lang="es">Todo incluido · sin licencias · sin permanencia</div>
@@ -1115,7 +1138,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="hmp-row"><span class="hmp-name">Pack M ⭐</span><span class="hmp-price">€497 + €147/mes</span></div>
         <div class="hmp-row"><span class="hmp-name">Pack L</span><span class="hmp-price">€697 + €197/mes</span></div>
         <div class="hmp-ctas">
-          <a href="#precios" style="background:var(--teal);color:#fff"><span data-lang="es">Ver packs →</span><span data-lang="en">See packs →</span></a>
+          <a onclick="openMod('m-trial')" style="background:var(--teal);color:#fff;cursor:pointer"><span data-lang="es">🚀 Prueba gratis</span><span data-lang="en">🚀 Free trial</span></a>
           <a href="https://wa.me/34644044808?text=Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" target="_blank" rel="noopener" style="background:#25D366;color:#0b3d2e">💬 WhatsApp</a>
         </div>
       </div>
@@ -1421,6 +1444,62 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="tq" data-lang="en">"The best part is knowing that as we grow, Odoo grows with us. We started with Pack M and are already adding manufacturing without changing systems."</div>
         <div class="ta"><div class="tav">LO</div><div><div class="tname">Lucía Ospina</div><div class="tco" data-lang="es">CEO · Industrias Ospina Ltda. · Bogotá</div><div class="tco" data-lang="en">CEO · Industrias Ospina Ltda. · Bogotá</div></div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="vs-freemium">
+  <div class="si">
+    <div class="reveal"><div class="stag" data-lang="es">POR QUÉ NOSOTROS</div><div class="stag" data-lang="en">WHY US</div>
+      <h2 class="sh" data-lang="es">Un espacio vacío "gratis" no es tu Odoo funcionando</h2>
+      <h2 class="sh" data-lang="en">A free empty workspace isn't your Odoo running</h2>
+      <p class="ss" data-lang="es">Otros te dan un Odoo en blanco que montas tú. Nosotros te lo dejamos configurado, con tus datos, y funcionando en 3 días.</p>
+      <p class="ss" data-lang="en">Others hand you a blank Odoo you set up yourself. We deliver it configured, with your data, and running in 3 days.</p>
+    </div>
+    <table class="vscmp">
+      <thead><tr>
+        <th></th>
+        <th><span data-lang="es">Plan "gratis" de otros (hazlo tú)</span><span data-lang="en">Others' "free" plan (DIY)</span></th>
+        <th>OdooListo</th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span data-lang="es">Puesta en marcha</span><span data-lang="en">Setup</span></td>
+          <td class="vsno"><span data-lang="es">Espacio vacío, lo configuras tú</span><span data-lang="en">Empty workspace, you configure it</span></td>
+          <td class="vsyes"><span data-lang="es">Configurado por un consultor real</span><span data-lang="en">Configured by a real consultant</span></td></tr>
+        <tr><td><span data-lang="es">Tus datos</span><span data-lang="en">Your data</span></td>
+          <td class="vsno"><span data-lang="es">Los migras tú</span><span data-lang="en">You migrate them</span></td>
+          <td class="vsyes"><span data-lang="es">Los migramos por ti</span><span data-lang="en">We migrate them for you</span></td></tr>
+        <tr><td><span data-lang="es">Tiempo hasta operar</span><span data-lang="en">Time to operate</span></td>
+          <td class="vsno"><span data-lang="es">El que tú tardes</span><span data-lang="en">However long you take</span></td>
+          <td class="vsyes"><span data-lang="es">3 días hábiles</span><span data-lang="en">3 business days</span></td></tr>
+        <tr><td><span data-lang="es">Soporte (1ª respuesta)</span><span data-lang="en">Support (first response)</span></td>
+          <td class="vsno"><span data-lang="es">48–72h</span><span data-lang="en">48–72h</span></td>
+          <td class="vsyes"><span data-lang="es">4h / 2h / 1h según pack</span><span data-lang="en">4h / 2h / 1h by pack</span></td></tr>
+        <tr><td><span data-lang="es">Coste de puesta en marcha</span><span data-lang="en">Setup cost</span></td>
+          <td class="vsno"><span data-lang="es">Onboarding desde 500 €</span><span data-lang="en">Onboarding from €500</span></td>
+          <td class="vsyes"><span data-lang="es">Desde 297 €</span><span data-lang="en">From €297</span></td></tr>
+        <tr><td><span data-lang="es">Garantía</span><span data-lang="en">Guarantee</span></td>
+          <td class="vsno">—</td>
+          <td class="vsyes"><span data-lang="es">3 días o devolvemos el setup</span><span data-lang="en">3 days or we refund the setup</span></td></tr>
+      </tbody>
+    </table>
+    <div style="text-align:center;margin-top:28px">
+      <button class="btn-t" onclick="openMod('m-trial')" style="display:inline-block"><span data-lang="es">🚀 Pruébalo gratis 15 días</span><span data-lang="en">🚀 Try it free for 15 days</span></button>
+      <button class="demo-btn" onclick="openVideo('5S-1uDGD4GA')" style="margin-left:10px">▶ <span data-lang="es">Ver Odoo vs SAP</span><span data-lang="en">Watch Odoo vs SAP</span></button>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="nuestra-historia">
+  <div class="si">
+    <div class="reveal"><div class="stag" data-lang="es">NUESTRA HISTORIA</div><div class="stag" data-lang="en">OUR STORY</div>
+      <h2 class="sh" data-lang="es">Por qué existe OdooListo</h2><h2 class="sh" data-lang="en">Why OdooListo exists</h2>
+      <p class="ss" data-lang="es">Nació de un cabreo: demasiadas pymes que van bien, atascadas en Excel, porque implantar un ERP "de verdad" costaba 20.000 € y meses de proyecto. El software bueno ya existía —Odoo Community, sin licencias—; el problema era cómo se implantaba. Así que lo industrializamos.</p>
+      <p class="ss" data-lang="en">It was born out of frustration: too many healthy SMEs stuck in Excel because implementing a "real" ERP cost €20,000 and months of work. The good software already existed —Odoo Community, no licenses—; the problem was how it was deployed. So we industrialized it.</p>
+    </div>
+    <div class="story-video" onclick="openVideo('xWj7iDjPz2c')" role="button" aria-label="Ver el vídeo de OdooListo">
+      <img src="https://img.youtube.com/vi/xWj7iDjPz2c/hqdefault.jpg" alt="La historia de OdooListo" loading="lazy">
+      <div class="pv-play">▶</div>
     </div>
   </div>
 </section>
@@ -1762,73 +1841,10 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="oc-dot" style="background:#28C840"></div>
         <span style="color:rgba(255,255,255,.6);font-size:10px;margin-left:8px;font-family:var(--sans)">Odoo Community 19 — Contabilidad</span>
       </div>
-      <div class="odoo-body">
-        <div class="od-wrap">
-          <div class="od-topbar">
-            <span style="margin-right:8px">☰</span>
-            <div class="od-topbar-apps">
-              <div class="od-app active">Contabilidad</div>
-              <div class="od-app">Ventas</div>
-              <div class="od-app">Compras</div>
-            </div>
-          </div>
-          <div style="display:flex;height:260px">
-            <div class="od-sidebar">
-              <div class="od-menu-item active">🏠 Panel</div>
-              <div class="od-menu-item">📄 Facturas cliente</div>
-              <div class="od-menu-item">🧾 Facturas proveedor</div>
-              <div class="od-menu-item">🏦 Banco</div>
-              <div class="od-menu-item">📊 Informes</div>
-              <div class="od-menu-item" style="margin-top:6px;font-size:10px;color:#ADB5BD;padding:4px 14px">AEAT</div>
-              <div class="od-menu-item">📋 Modelo 303</div>
-              <div class="od-menu-item">📑 Modelo 390</div>
-              <div class="od-menu-item">🧾 VeriFactu</div>
-            </div>
-            <div class="od-content">
-              <div class="od-breadcrumb">Contabilidad › <span>Panel</span></div>
-              <!-- KPI row -->
-              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px">
-                <div style="background:#F8F9FA;border:1px solid var(--od-border);border-radius:6px;padding:8px;text-align:center">
-                  <div style="font-size:16px;font-weight:800;color:#28A745">€24.830</div>
-                  <div style="font-size:9px;color:#6C757D;margin-top:2px">Por cobrar</div>
-                </div>
-                <div style="background:#F8F9FA;border:1px solid var(--od-border);border-radius:6px;padding:8px;text-align:center">
-                  <div style="font-size:16px;font-weight:800;color:#DC3545">€8.420</div>
-                  <div style="font-size:9px;color:#6C757D;margin-top:2px">Por pagar</div>
-                </div>
-                <div style="background:#F8F9FA;border:1px solid var(--od-border);border-radius:6px;padding:8px;text-align:center">
-                  <div style="font-size:16px;font-weight:800;color:#714B67">€156.340</div>
-                  <div style="font-size:9px;color:#6C757D;margin-top:2px">Ventas (año)</div>
-                </div>
-                <div style="background:#F3EEF8;border:1px solid #D6CCE4;border-radius:6px;padding:8px;text-align:center">
-                  <div style="font-size:16px;font-weight:800;color:#714B67">✓ OK</div>
-                  <div style="font-size:9px;color:#6C757D;margin-top:2px">VeriFactu</div>
-                </div>
-              </div>
-              <!-- Chart -->
-              <div style="background:#F8F9FA;border:1px solid var(--od-border);border-radius:6px;padding:10px;margin-bottom:10px">
-                <div style="font-size:10px;font-weight:800;color:#495057;margin-bottom:8px">Ingresos vs Gastos — 2026</div>
-                <div class="od-chart">
-                  <div style="flex:1"><div class="od-bar" style="height:45%;background:linear-gradient(180deg,#28A745,#1e7e34)"></div><div class="od-bar-lbl">Ene</div></div>
-                  <div style="flex:1"><div class="od-bar" style="height:60%;background:linear-gradient(180deg,#28A745,#1e7e34)"></div><div class="od-bar-lbl">Feb</div></div>
-                  <div style="flex:1"><div class="od-bar" style="height:50%;background:linear-gradient(180deg,#28A745,#1e7e34)"></div><div class="od-bar-lbl">Mar</div></div>
-                  <div style="flex:1"><div class="od-bar" style="height:75%;background:linear-gradient(180deg,#28A745,#1e7e34)"></div><div class="od-bar-lbl">Abr</div></div>
-                  <div style="flex:1"><div class="od-bar" style="height:68%;background:linear-gradient(180deg,#28A745,#1e7e34)"></div><div class="od-bar-lbl">May</div></div>
-                  <div style="flex:1"><div class="od-bar" style="height:35%;background:linear-gradient(180deg,#DC3545,#c82333)"></div><div class="od-bar-lbl">Gasto</div></div>
-                </div>
-              </div>
-              <!-- Recent invoices -->
-              <table class="od-table">
-                <thead><tr><th>Nº Factura</th><th>Cliente</th><th>Fecha</th><th>Importe</th><th>Estado</th></tr></thead>
-                <tbody>
-                  <tr><td>INV/2026/0142</td><td>Dist. Fornes S.L.</td><td>28/05/26</td><td style="font-weight:700">€3.450,00</td><td><span class="od-badge badge-green">Pagada</span></td></tr>
-                  <tr><td>INV/2026/0141</td><td>Talleres Rendón</td><td>27/05/26</td><td style="font-weight:700">€1.200,00</td><td><span class="od-badge badge-orange">Vencida</span></td></tr>
-                  <tr><td>INV/2026/0140</td><td>Ind. Ospina Ltda.</td><td>25/05/26</td><td style="font-weight:700">€8.900,00</td><td><span class="od-badge badge-blue">Enviada</span></td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+      <img src="img/contabilidad-factura.webp" alt="Factura en Odoo Contabilidad" loading="lazy">
+      <div class="mw-demos">
+        <button class="demo-btn" onclick="openVideo('QGcpONNTdYM')">▶ <span data-lang="es">Ver demo: Contabilidad</span><span data-lang="en">Watch demo: Accounting</span></button>
+        <button class="demo-btn" onclick="openVideo('oDeBf03YZ8o')">▶ <span data-lang="es">Ver demo: Tablero</span><span data-lang="en">Watch demo: Dashboard</span></button>
       </div>
     </div>
   </div>
@@ -2029,63 +2045,12 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="oc-dot" style="background:#FF5F57"></div>
         <div class="oc-dot" style="background:#FEBC2E"></div>
         <div class="oc-dot" style="background:#28C840"></div>
-        <span style="color:rgba(255,255,255,.6);font-size:10px;margin-left:8px;font-family:var(--sans)">Odoo Community 19 — CRM</span>
+        <span style="color:rgba(255,255,255,.6);font-size:10px;margin-left:8px;font-family:var(--sans)">Odoo Community 19 — CRM y Ventas</span>
       </div>
-      <div class="odoo-body">
-        <div class="od-wrap">
-          <div class="od-topbar">
-            <span style="margin-right:8px">☰</span>
-            <div class="od-topbar-apps">
-              <div class="od-app active">CRM</div>
-              <div class="od-app">Ventas</div>
-              <div class="od-app">Contabilidad</div>
-            </div>
-          </div>
-          <div style="display:flex;height:260px">
-            <div class="od-sidebar">
-              <div class="od-menu-item active">📊 Mi pipeline</div>
-              <div class="od-menu-item">📋 Todas oport.</div>
-              <div class="od-menu-item">👥 Clientes</div>
-              <div class="od-menu-item">📅 Actividades</div>
-              <div class="od-menu-item">📈 Informes</div>
-              <div style="margin-top:6px;font-size:10px;color:#ADB5BD;padding:4px 14px">VENTAS</div>
-              <div class="od-menu-item">🛒 Pedidos</div>
-              <div class="od-menu-item">📄 Presupuestos</div>
-              <div class="od-menu-item">💰 Tarifas</div>
-            </div>
-            <div class="od-content">
-              <div class="od-breadcrumb">CRM › <span>Mi Pipeline</span></div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-                <div style="font-size:13px;font-weight:800">Pipeline de Ventas <span style="font-size:10px;color:#6C757D;font-weight:400">(€187.450 esperados)</span></div>
-                <div style="display:flex;gap:5px;font-size:9px">
-                  <button style="background:#F8F9FA;border:1px solid var(--od-border);border-radius:4px;padding:3px 7px;cursor:pointer">☰ Lista</button>
-                  <button style="background:#714B67;color:white;border:none;border-radius:4px;padding:3px 7px;cursor:pointer">▦ Kanban</button>
-                </div>
-              </div>
-              <div class="od-kanban">
-                <div class="od-col">
-                  <div class="od-col-title"><span>NUEVO</span><span style="background:#E9ECEF;border-radius:10px;padding:1px 6px">3</span></div>
-                  <div class="od-card-mini"><strong>Tech Soluciones SL</strong><div style="color:#6C757D;font-size:9px;margin-top:2px">📞 Llamada pendiente</div><span class="amount">€12.000</span></div>
-                  <div class="od-card-mini"><strong>Mercados Altea</strong><div style="color:#6C757D;font-size:9px;margin-top:2px">✉️ Email enviado</div><span class="amount">€8.500</span></div>
-                </div>
-                <div class="od-col">
-                  <div class="od-col-title"><span>PROPUESTA</span><span style="background:#E9ECEF;border-radius:10px;padding:1px 6px">4</span></div>
-                  <div class="od-card-mini"><strong>Dist. Fornes SL</strong><div style="color:#6C757D;font-size:9px;margin-top:2px">📄 Presupuesto enviado</div><span class="amount">€34.200</span></div>
-                  <div class="od-card-mini"><strong>Talleres Rendón</strong><div style="color:#6C757D;font-size:9px;margin-top:2px">📅 Demo programada</div><span class="amount">€18.750</span></div>
-                  <div class="od-card-mini"><strong>Grupo Almería</strong><div style="color:#6C757D;font-size:9px;margin-top:2px">⏳ En revisión</div><span class="amount">€9.000</span></div>
-                </div>
-                <div class="od-col">
-                  <div class="od-col-title"><span>NEGOCIACIÓN</span><span style="background:#E9ECEF;border-radius:10px;padding:1px 6px">2</span></div>
-                  <div class="od-card-mini"><strong>Ospina Ltda.</strong><div style="color:#6C757D;font-size:9px;margin-top:2px">🤝 Reunión 02/06</div><span class="amount">€67.000</span></div>
-                </div>
-                <div class="od-col">
-                  <div class="od-col-title" style="color:#28A745"><span>GANADO</span><span style="background:#D4EDDA;color:#155724;border-radius:10px;padding:1px 6px">5</span></div>
-                  <div class="od-card-mini" style="border-color:#C3E6CB"><strong>Serv. Valencia SA</strong><div style="color:#6C757D;font-size:9px;margin-top:2px">✅ Cerrado 22/05</div><span class="amount" style="color:#28A745">€28.000</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <img src="img/ventas-presupuesto.webp" alt="Presupuesto en Odoo Ventas" loading="lazy">
+      <div class="mw-demos">
+        <button class="demo-btn" onclick="openVideo('xbyPsjIfylk')">▶ <span data-lang="es">Ver demo: CRM</span><span data-lang="en">Watch demo: CRM</span></button>
+        <button class="demo-btn" onclick="openVideo('N4zw-2t6spk')">▶ <span data-lang="es">Ver demo: Ventas</span><span data-lang="en">Watch demo: Sales</span></button>
       </div>
     </div>
   </div>
@@ -2204,63 +2169,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="oc-dot" style="background:#28C840"></div>
         <span style="color:rgba(255,255,255,.6);font-size:10px;margin-left:8px;font-family:var(--sans)">Odoo Community 19 — Inventario</span>
       </div>
-      <div class="odoo-body">
-        <div class="od-wrap">
-          <div class="od-topbar">
-            <span style="margin-right:8px">☰</span>
-            <div class="od-topbar-apps">
-              <div class="od-app active">Inventario</div>
-              <div class="od-app">Compras</div>
-              <div class="od-app">Fabricación</div>
-            </div>
-          </div>
-          <div style="display:flex;height:260px">
-            <div class="od-sidebar">
-              <div class="od-menu-item active">🏠 Panel</div>
-              <div class="od-menu-item">📦 Productos</div>
-              <div class="od-menu-item">🏭 Almacenes</div>
-              <div class="od-menu-item">📋 Movimientos</div>
-              <div class="od-menu-item">🔄 Recepciones</div>
-              <div class="od-menu-item">🚚 Entregas</div>
-              <div class="od-menu-item">🔁 Traslados</div>
-              <div class="od-menu-item">📊 Valoración</div>
-              <div class="od-menu-item">🔍 Trazabilidad</div>
-            </div>
-            <div class="od-content">
-              <div class="od-breadcrumb">Inventario › <span>Panel</span></div>
-              <!-- Almacenes KPIs -->
-              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px">
-                <div style="background:#F8F9FA;border:1px solid var(--od-border);border-radius:6px;padding:8px">
-                  <div style="font-size:10px;color:#6C757D;margin-bottom:3px">📥 Recepciones pendientes</div>
-                  <div style="font-size:18px;font-weight:800;color:#714B67">12</div>
-                  <div style="font-size:9px;color:#DC3545">3 urgentes</div>
-                </div>
-                <div style="background:#F8F9FA;border:1px solid var(--od-border);border-radius:6px;padding:8px">
-                  <div style="font-size:10px;color:#6C757D;margin-bottom:3px">📤 Entregas pendientes</div>
-                  <div style="font-size:18px;font-weight:800;color:#714B67">8</div>
-                  <div style="font-size:9px;color:#28A745">Todas en plazo</div>
-                </div>
-                <div style="background:#FFF3CD;border:1px solid #FFD966;border-radius:6px;padding:8px">
-                  <div style="font-size:10px;color:#856404;margin-bottom:3px">⚠️ Stock mínimo</div>
-                  <div style="font-size:18px;font-weight:800;color:#856404">5</div>
-                  <div style="font-size:9px;color:#856404">Productos bajo mínimo</div>
-                </div>
-              </div>
-              <!-- Products table -->
-              <div style="font-size:10px;font-weight:800;color:#6C757D;text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px">Productos con alertas de stock</div>
-              <table class="od-table">
-                <thead><tr><th>Producto</th><th>Stock actual</th><th>Stock mínimo</th><th>Ubicación</th><th>Estado</th></tr></thead>
-                <tbody>
-                  <tr><td>Cable HDMI 2m</td><td style="text-align:right">3</td><td style="text-align:right">20</td><td>WH/Stock</td><td><span class="od-badge badge-red">Crítico</span></td></tr>
-                  <tr><td>Teclado inalámbrico</td><td style="text-align:right">8</td><td style="text-align:right">15</td><td>WH/Stock</td><td><span class="od-badge badge-orange">Bajo</span></td></tr>
-                  <tr><td>Monitor 27" 4K</td><td style="text-align:right">12</td><td style="text-align:right">10</td><td>WH/Stock</td><td><span class="od-badge badge-green">OK</span></td></tr>
-                  <tr><td>Ratón ergonómico</td><td style="text-align:right">45</td><td style="text-align:right">20</td><td>WH/Stock</td><td><span class="od-badge badge-green">OK</span></td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
+      <img src="img/generico-gestion.webp" alt="Catálogo de productos en Odoo" loading="lazy">
     </div>
   </div>
 </div>
@@ -2379,46 +2288,9 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="oc-dot" style="background:#28C840"></div>
         <span style="color:rgba(255,255,255,.6);font-size:10px;margin-left:8px;font-family:var(--sans)">Odoo Community 19 — Fabricación</span>
       </div>
-      <div class="odoo-body">
-        <div class="od-wrap">
-          <div class="od-topbar">
-            <span style="margin-right:8px">☰</span>
-            <div class="od-topbar-apps">
-              <div class="od-app active">Fabricación</div>
-              <div class="od-app">Inventario</div>
-              <div class="od-app">Compras</div>
-            </div>
-          </div>
-          <div style="display:flex;height:260px">
-            <div class="od-sidebar">
-              <div class="od-menu-item active">📊 Panel</div>
-              <div class="od-menu-item">🏭 Órdenes fab.</div>
-              <div class="od-menu-item">📋 LdM (BoM)</div>
-              <div class="od-menu-item">🔧 Centros trabajo</div>
-              <div class="od-menu-item">⚙️ Operaciones</div>
-              <div class="od-menu-item">✅ Control calidad</div>
-              <div class="od-menu-item">📦 Componentes</div>
-              <div class="od-menu-item">📈 Planificación</div>
-            </div>
-            <div class="od-content">
-              <div class="od-breadcrumb">Fabricación › <span>Panel</span></div>
-              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px">
-                <div style="background:#F3EEF8;border:1px solid #D6CCE4;border-radius:6px;padding:8px;text-align:center"><div style="font-size:18px;font-weight:800;color:#714B67">7</div><div style="font-size:9px;color:#6C757D">En producción</div></div>
-                <div style="background:#FFF3CD;border:1px solid #FFD966;border-radius:6px;padding:8px;text-align:center"><div style="font-size:18px;font-weight:800;color:#856404">3</div><div style="font-size:9px;color:#856404">Componentes faltantes</div></div>
-                <div style="background:#D4EDDA;border:1px solid #C3E6CB;border-radius:6px;padding:8px;text-align:center"><div style="font-size:18px;font-weight:800;color:#155724">12</div><div style="font-size:9px;color:#6C757D">Finalizadas hoy</div></div>
-              </div>
-              <div style="font-size:10px;font-weight:800;color:#6C757D;text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px">Órdenes de fabricación activas</div>
-              <table class="od-table">
-                <thead><tr><th>Ref.</th><th>Producto</th><th>Cantidad</th><th>Fecha fin</th><th>Estado</th></tr></thead>
-                <tbody>
-                  <tr><td>MO/2026/0034</td><td>Mesa Escritorio Pro</td><td style="text-align:center">25 ud</td><td>03/06/26</td><td><span class="od-badge badge-blue">En progreso</span></td></tr>
-                  <tr><td>MO/2026/0033</td><td>Silla Ergonómica</td><td style="text-align:center">50 ud</td><td>05/06/26</td><td><span class="od-badge badge-orange">Esperando comp.</span></td></tr>
-                  <tr><td>MO/2026/0032</td><td>Estantería Modular</td><td style="text-align:center">10 ud</td><td>01/06/26</td><td><span class="od-badge badge-green">Finalizada</span></td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+      <img src="img/generico-features.webp" alt="Plan maestro de producción en Odoo" loading="lazy">
+      <div class="mw-demos">
+        <button class="demo-btn" onclick="openVideo('3BUQjNCl9bs')">▶ <span data-lang="es">Ver demo: Fabricación</span><span data-lang="en">Watch demo: Manufacturing</span></button>
       </div>
     </div>
   </div>
@@ -2535,65 +2407,11 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="oc-dot" style="background:#FF5F57"></div>
         <div class="oc-dot" style="background:#FEBC2E"></div>
         <div class="oc-dot" style="background:#28C840"></div>
-        <span style="color:rgba(255,255,255,.6);font-size:10px;margin-left:8px;font-family:var(--sans)">Odoo Community 19 — Recursos Humanos</span>
+        <span style="color:rgba(255,255,255,.6);font-size:10px;margin-left:8px;font-family:var(--sans)">Odoo Community 19 — RRHH</span>
       </div>
-      <div class="odoo-body">
-        <div class="od-wrap">
-          <div class="od-topbar">
-            <span style="margin-right:8px">☰</span>
-            <div class="od-topbar-apps">
-              <div class="od-app active">Empleados</div>
-              <div class="od-app">Ausencias</div>
-              <div class="od-app">Nóminas</div>
-            </div>
-          </div>
-          <div style="display:flex;height:260px">
-            <div class="od-sidebar">
-              <div class="od-menu-item active">👥 Empleados</div>
-              <div class="od-menu-item">🏢 Departamentos</div>
-              <div class="od-menu-item">📅 Ausencias</div>
-              <div class="od-menu-item">⏰ Asistencias</div>
-              <div class="od-menu-item">📄 Contratos</div>
-              <div class="od-menu-item">⭐ Evaluaciones</div>
-              <div class="od-menu-item">💶 Gastos</div>
-              <div class="od-menu-item">📊 Informes</div>
-            </div>
-            <div class="od-content">
-              <div class="od-breadcrumb">Empleados › <span>Todos los empleados</span></div>
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-                <div style="font-size:13px;font-weight:800">12 empleados activos</div>
-                <div style="display:flex;gap:5px">
-                  <button style="font-size:9px;background:#714B67;color:white;border:none;border-radius:4px;padding:3px 7px;cursor:pointer">+ Nuevo empleado</button>
-                </div>
-              </div>
-              <!-- Employee cards -->
-              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:7px">
-                <div style="background:#F8F9FA;border:1px solid var(--od-border);border-radius:6px;padding:8px;text-align:center">
-                  <div style="width:32px;height:32px;background:linear-gradient(135deg,#714B67,#00A09D);border-radius:50%;margin:0 auto 5px;display:flex;align-items:center;justify-content:center;color:white;font-size:11px;font-weight:800">JM</div>
-                  <div style="font-size:10px;font-weight:700">Javier Molina</div>
-                  <div style="font-size:9px;color:#6C757D">CEO · Dirección</div>
-                  <span class="od-badge badge-green" style="margin-top:3px;font-size:9px">Presente</span>
-                </div>
-                <div style="background:#F8F9FA;border:1px solid var(--od-border);border-radius:6px;padding:8px;text-align:center">
-                  <div style="width:32px;height:32px;background:linear-gradient(135deg,#875A7B,#1C0F5E);border-radius:50%;margin:0 auto 5px;display:flex;align-items:center;justify-content:center;color:white;font-size:11px;font-weight:800">LP</div>
-                  <div style="font-size:10px;font-weight:700">Laura Pons</div>
-                  <div style="font-size:9px;color:#6C757D">Resp. Técnica · IT</div>
-                  <span class="od-badge badge-green" style="margin-top:3px;font-size:9px">Presente</span>
-                </div>
-                <div style="background:#F8F9FA;border:1px solid var(--od-border);border-radius:6px;padding:8px;text-align:center">
-                  <div style="width:32px;height:32px;background:linear-gradient(135deg,#00A09D,#260D72);border-radius:50%;margin:0 auto 5px;display:flex;align-items:center;justify-content:center;color:white;font-size:11px;font-weight:800">AV</div>
-                  <div style="font-size:10px;font-weight:700">Andrés Varela</div>
-                  <div style="font-size:9px;color:#6C757D">Consultor · Latam</div>
-                  <span class="od-badge badge-orange" style="margin-top:3px;font-size:9px">Vacaciones</span>
-                </div>
-              </div>
-              <div style="margin-top:8px;background:#FFF3CD;border:1px solid #FFD966;border-radius:6px;padding:7px;font-size:10px;display:flex;align-items:center;gap:6px">
-                <span>⚠️</span>
-                <span><strong>2 ausencias</strong> pendientes de aprobación · <strong>1 contrato</strong> próximo a vencer (30/06/26)</span>
-              </div>
-            </div>
-          </div>
-        </div>
+      <img src="img/rrhh-competencias.webp" alt="Empleados y competencias en Odoo RRHH" loading="lazy">
+      <div class="mw-demos">
+        <button class="demo-btn" onclick="openVideo('c6j76APuJfM')">▶ <span data-lang="es">Ver demo: Partes de horas</span><span data-lang="en">Watch demo: Timesheets</span></button>
       </div>
     </div>
   </div>
@@ -3673,6 +3491,49 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   </div>
 </div>
 
+<!-- Video Modal -->
+<div class="mov" id="m-video">
+  <div class="mbox" style="max-width:880px;padding:0;background:#000">
+    <button class="mcls" onclick="closeVideo()" style="z-index:5">✕</button>
+    <div style="position:relative;padding-bottom:56.25%;height:0;border-radius:inherit;overflow:hidden">
+      <iframe id="vid-frame" src="" title="Demo Odoo" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- Trial Modal -->
+<div class="mov" id="m-trial">
+  <div class="mbox">
+    <button class="mcls" onclick="closeMod('m-trial')">✕</button>
+    <div class="mtitle" data-lang="es">Prueba Odoo gratis 15 días</div><div class="mtitle" data-lang="en">Try Odoo free for 15 days</div>
+    <div class="msub" data-lang="es">Te creamos una instancia Odoo funcional con datos de ejemplo. Sin tarjeta y sin compromiso. Recibes tu acceso por email en menos de 24h laborables.</div>
+    <div class="msub" data-lang="en">We set up a working Odoo instance with sample data. No card, no commitment. You get your access by email in under 24 business hours.</div>
+    <div id="pf-wrap">
+      <div class="frow">
+        <div class="fg"><label data-lang="es">Nombre *</label><label data-lang="en">Name *</label><input type="text" id="pf-name" placeholder="Tu nombre"></div>
+        <div class="fg"><label data-lang="es">Empresa *</label><label data-lang="en">Company *</label><input type="text" id="pf-co" placeholder="Nombre empresa"></div>
+      </div>
+      <div class="fg"><label data-lang="es">Email de empresa *</label><label data-lang="en">Work email *</label><input type="email" id="pf-email" placeholder="tu@empresa.com"></div>
+      <div class="fg"><label data-lang="es">¿Qué necesitas gestionar? (opcional)</label><label data-lang="en">What do you need to manage? (optional)</label><input type="text" id="pf-need" placeholder="Ventas, facturación, inventario..."></div>
+      <label style="display:flex;align-items:flex-start;gap:8px;font-size:.8rem;color:var(--g3);margin:12px 0 15px;cursor:pointer"><input type="checkbox" id="pf-priv" style="margin-top:3px"> <span data-lang="es">Acepto la política de privacidad y el tratamiento de mis datos para gestionar la solicitud.</span><span data-lang="en">I accept the privacy policy and the processing of my data to handle this request.</span></label>
+      <button class="fsub" onclick="submitTrial()" data-lang="es">Solicitar mi prueba gratis →</button>
+      <button class="fsub" onclick="submitTrial()" data-lang="en">Request my free trial →</button>
+    </div>
+    <div id="pf-succ" style="display:none;text-align:center;padding:18px">
+      <div style="font-size:2.6rem;margin-bottom:12px">🚀</div>
+      <h3 style="font-family:var(--serif);font-size:1.15rem;color:var(--navy);margin-bottom:7px" data-lang="es">¡Prueba solicitada!</h3>
+      <h3 style="font-family:var(--serif);font-size:1.15rem;color:var(--navy);margin-bottom:7px" data-lang="en">Trial requested!</h3>
+      <p style="color:var(--g3);font-size:.84rem" data-lang="es">Preparamos tu instancia Odoo con datos de ejemplo y te enviamos el acceso por email en menos de 24h laborables (L–V 9–18h).</p>
+      <p style="color:var(--g3);font-size:.84rem" data-lang="en">We're preparing your Odoo instance with sample data and will email your access within 24 business hours (Mon–Fri 9am–6pm).</p>
+      <div style="margin-top:16px">
+        <a href="https://calendly.com/odoolisto/demo-gratuita-odoo-community-19" target="_blank" style="display:inline-flex;align-items:center;gap:7px;background:var(--teal);color:white;padding:10px 20px;border-radius:10px;font-weight:800;font-size:.84rem;text-decoration:none">
+          <span data-lang="es">📅 O reserva una demo con consultor</span><span data-lang="en">📅 Or book a demo with a consultant</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer>
   <div class="fi2">
     <div class="ftop">
@@ -3796,6 +3657,16 @@ function tFaq(btn) {
 }
 
 // ── MODALS ─────────────────────────────────────────────────
+function openVideo(id){
+  var f = document.getElementById('vid-frame');
+  if (f) f.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+  openMod('m-video');
+}
+function closeVideo(){
+  closeMod('m-video');
+  var f = document.getElementById('vid-frame');
+  if (f) f.src = '';
+}
 function openMod(id) {
   var mel = document.getElementById(id);
   if (mel) mel.classList.add('open');
@@ -3855,6 +3726,50 @@ function submitCF() {
   .catch(function() {
     if (btn) { btn.disabled = false; btn.textContent = 'Enviar mensaje →'; }
     alert('Error de conexión. Por favor escríbenos a <a href="mailto:hola@odoolisto.com" style="color:var(--teal);font-weight:700;text-decoration:none">hola@odoolisto.com</a>');
+  });
+}
+function submitTrial() {
+  var name = document.getElementById('pf-name');
+  var email = document.getElementById('pf-email');
+  var co = document.getElementById('pf-co');
+  var need = document.getElementById('pf-need');
+  var priv = document.getElementById('pf-priv');
+  if (!name || !name.value.trim()) { alert('Por favor indica tu nombre.'); return; }
+  if (!email || !email.value.trim()) { alert('Por favor indica tu email.'); return; }
+  if (!co || !co.value.trim()) { alert('Por favor indica tu empresa.'); return; }
+  if (!priv || !priv.checked) { alert('Debes aceptar la política de privacidad.'); return; }
+  var btns = document.querySelectorAll('#pf-wrap .fsub');
+  btns.forEach(function(b){ b.disabled = true; b.textContent = 'Enviando...'; });
+  fetch('https://formspree.io/f/xwvzgqyq', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      tipo: 'SOLICITUD PRUEBA GRATIS 15 DIAS',
+      nombre: name.value,
+      email: email.value,
+      empresa: co.value,
+      necesidad: need ? need.value : '',
+      _subject: 'Prueba gratis OdooListo - ' + co.value,
+      _replyto: email.value
+    })
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(data){
+    if (data.ok || data.next) {
+      try { gtag_report_conversion(); } catch(e){}
+      try { gtag('event', 'solicitud_prueba'); } catch(e){}
+      var wrap = document.getElementById('pf-wrap');
+      var succ = document.getElementById('pf-succ');
+      if (wrap) wrap.style.display = 'none';
+      if (succ) succ.style.display = 'block';
+    } else {
+      btns.forEach(function(b){ b.disabled = false; b.textContent = 'Solicitar mi prueba gratis →'; });
+      alert('Error al enviar. Por favor escríbenos a hola@odoolisto.com');
+    }
+  })
+  .catch(function(){
+    btns.forEach(function(b){ b.disabled = false; b.textContent = 'Solicitar mi prueba gratis →'; });
+    alert('Error de conexión. Por favor escríbenos a hola@odoolisto.com');
   });
 }
 function submitTF() {
