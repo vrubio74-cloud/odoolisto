@@ -756,6 +756,10 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 .ss-label h4{font-size:.84rem;font-weight:800;color:var(--navy);margin-bottom:2px}
 .ss-label p{font-size:.74rem;color:var(--g3)}
 .ss-mock{padding:12px}
+.ss-mock img{width:100%;display:block;border-radius:8px}
+.tab-mod{padding:8px 16px;border-radius:20px;font-size:.8rem;font-weight:700;cursor:pointer;white-space:nowrap;border:1px solid rgba(255,255,255,.35);color:#fff;background:rgba(255,255,255,.13);font-family:var(--sans);transition:all .2s}
+.tab-mod:hover{background:rgba(255,255,255,.24);border-color:rgba(255,255,255,.6)}
+.tab-mod.active{background:var(--teal);border-color:var(--teal);color:#fff;box-shadow:0 3px 12px rgba(0,160,157,.45)}
 
 /* ── CTA SECTION ─────────────────────────────────────── */
 .mod-ct
@@ -1773,11 +1777,11 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 <div id="page-modules" data-page="top" class="page" style="display:none;background:linear-gradient(160deg,#0e0628 0%,#1C0F5E 60%,#0d1e3a 100%)">
 <div style="background:rgba(0,0,0,.3);border-bottom:1px solid rgba(255,255,255,.1);padding:12px 5%;position:sticky;top:64px;z-index:150;backdrop-filter:blur(12px)">
   <div style="max-width:1140px;margin:0 auto;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none">
-    <button class="tab-mod active" onclick="showMod('accounting')" style="padding:7px 14px;border-radius:20px;font-size:.78rem;font-weight:700;cursor:pointer;white-space:nowrap;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);font-family:var(--sans);transition:all .2s">📊 Contabilidad</button>
-    <button class="tab-mod" onclick="showMod('crm')" style="padding:7px 14px;border-radius:20px;font-size:.78rem;font-weight:700;cursor:pointer;white-space:nowrap;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);font-family:var(--sans);transition:all .2s">💼 CRM &amp; Ventas</button>
-    <button class="tab-mod" onclick="showMod('inventory')" style="padding:7px 14px;border-radius:20px;font-size:.78rem;font-weight:700;cursor:pointer;white-space:nowrap;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);font-family:var(--sans);transition:all .2s">📦 Inventario</button>
-    <button class="tab-mod" onclick="showMod('manufacturing')" style="padding:7px 14px;border-radius:20px;font-size:.78rem;font-weight:700;cursor:pointer;white-space:nowrap;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);font-family:var(--sans);transition:all .2s">🏭 Fabricación</button>
-    <button class="tab-mod" onclick="showMod('hr')" style="padding:7px 14px;border-radius:20px;font-size:.78rem;font-weight:700;cursor:pointer;white-space:nowrap;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);background:rgba(255,255,255,.06);font-family:var(--sans);transition:all .2s">👥 RRHH</button>
+    <button class="tab-mod active" onclick="showMod('accounting')">📊 Contabilidad</button>
+    <button class="tab-mod" onclick="showMod('crm')">💼 CRM &amp; Ventas</button>
+    <button class="tab-mod" onclick="showMod('inventory')">📦 Inventario</button>
+    <button class="tab-mod" onclick="showMod('manufacturing')">🏭 Fabricación</button>
+    <button class="tab-mod" onclick="showMod('hr')">👥 RRHH</button>
   </div>
 </div>
 <section class="sec" style="padding-top:48px">
@@ -1793,15 +1797,15 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
       <span style="background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.25);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:20px" data-lang="es">⚫ Pack L — desde €197/mes</span><span style="background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.25);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:20px" data-lang="en">⚫ Pack L — from €197/month</span>
     </div>
     <div class="mg">
-      <div class="mc" style="border-left:4px solid var(--teal)"><div class="mc-ico">📊</div><h3 data-lang="es">Contabilidad</h3><h3 data-lang="en">Accounting</h3><p data-lang="es">Plan contable español, asientos automáticos, conciliación bancaria, VeriFactu y factura electrónica.</p><p data-lang="en">Spanish chart of accounts, automatic entries, bank reconciliation, VeriFactu and e-invoicing.</p><span class="mtag ms">Pack S</span></div>
-      <div class="mc" style="border-left:4px solid #875A7B"><div class="mc-ico">💼</div><h3>CRM</h3><p data-lang="es">Pipeline de ventas visual, seguimiento de oportunidades y actividades automáticas.</p><p data-lang="en">Visual sales pipeline, opportunity tracking and automatic activities.</p><span class="mtag ms">Pack S</span></div>
-      <div class="mc" style="border-left:4px solid #1C0F5E"><div class="mc-ico">🛒</div><h3 data-lang="es">Ventas</h3><h3 data-lang="en">Sales</h3><p data-lang="es">Presupuestos, pedidos, tarifas y facturación. Conectado con stock y contabilidad en tiempo real.</p><p data-lang="en">Quotes, orders, pricing and invoicing. Connected with stock and accounting in real time.</p><span class="mtag ms">Pack S</span></div>
-      <div class="mc" style="border-left:4px solid #00A09D"><div class="mc-ico">📦</div><h3 data-lang="es">Inventario</h3><h3 data-lang="en">Inventory</h3><p data-lang="es">Control de stock en tiempo real, múltiples almacenes, trazabilidad por lote y número de serie.</p><p data-lang="en">Real-time stock control, multiple warehouses, lot and serial number traceability.</p><span class="mtag mm">Pack M</span></div>
-      <div class="mc" style="border-left:4px solid #875A7B"><div class="mc-ico">🛍️</div><h3 data-lang="es">Compras</h3><h3 data-lang="en">Purchase</h3><p data-lang="es">Órdenes a proveedores, recepción de mercancía y validación de facturas. Integrado con inventario.</p><p data-lang="en">Supplier orders, goods receipt and invoice validation. Integrated with inventory.</p><span class="mtag mm">Pack M</span></div>
-      <div class="mc" style="border-left:4px solid #1C0F5E"><div class="mc-ico">📋</div><h3 data-lang="es">Proyectos</h3><h3 data-lang="en">Projects</h3><p data-lang="es">Kanban de proyectos, tareas, horas imputadas y facturación por proyecto.</p><p data-lang="en">Project Kanban, tasks, time tracking and project billing.</p><span class="mtag mm">Pack M</span></div>
-      <div class="mc" style="border-left:4px solid #00A09D"><div class="mc-ico">👥</div><h3 data-lang="es">RRHH</h3><h3 data-lang="en">HR</h3><p data-lang="es">Empleados, contratos, ausencias, vacaciones y control horario (obligatorio en España).</p><p data-lang="en">Employees, contracts, leaves, holidays and time tracking (mandatory in Spain).</p><span class="mtag ml2">Pack L</span></div>
-      <div class="mc" style="border-left:4px solid #875A7B"><div class="mc-ico">🏭</div><h3 data-lang="es">Fabricación</h3><h3 data-lang="en">Manufacturing</h3><p data-lang="es">Órdenes de fabricación, listas de materiales (BoM) y control de producción.</p><p data-lang="en">Manufacturing orders, Bills of Materials (BoM) and production control.</p><span class="mtag ml2">Pack L</span></div>
-      <div class="mc" style="border-left:4px solid #1C0F5E"><div class="mc-ico">🌐</div><h3>eCommerce</h3><p data-lang="es">Tienda online integrada con inventario y contabilidad. Catálogo, carrito y pagos online.</p><p data-lang="en">Online store integrated with inventory and accounting. Catalog, cart and online payments.</p><span class="mtag ml2">Pack L</span></div>
+      <div class="mc" onclick="showMod('accounting')" style="border-left:4px solid var(--teal)"><div class="mc-ico">📊</div><h3 data-lang="es">Contabilidad</h3><h3 data-lang="en">Accounting</h3><p data-lang="es">Plan contable español, asientos automáticos, conciliación bancaria, VeriFactu y factura electrónica.</p><p data-lang="en">Spanish chart of accounts, automatic entries, bank reconciliation, VeriFactu and e-invoicing.</p><span class="mtag ms">Pack S</span></div>
+      <div class="mc" onclick="showMod('crm')" style="border-left:4px solid #875A7B"><div class="mc-ico">💼</div><h3>CRM</h3><p data-lang="es">Pipeline de ventas visual, seguimiento de oportunidades y actividades automáticas.</p><p data-lang="en">Visual sales pipeline, opportunity tracking and automatic activities.</p><span class="mtag ms">Pack S</span></div>
+      <div class="mc" onclick="showMod('crm')" style="border-left:4px solid #1C0F5E"><div class="mc-ico">🛒</div><h3 data-lang="es">Ventas</h3><h3 data-lang="en">Sales</h3><p data-lang="es">Presupuestos, pedidos, tarifas y facturación. Conectado con stock y contabilidad en tiempo real.</p><p data-lang="en">Quotes, orders, pricing and invoicing. Connected with stock and accounting in real time.</p><span class="mtag ms">Pack S</span></div>
+      <div class="mc" onclick="showMod('inventory')" style="border-left:4px solid #00A09D"><div class="mc-ico">📦</div><h3 data-lang="es">Inventario</h3><h3 data-lang="en">Inventory</h3><p data-lang="es">Control de stock en tiempo real, múltiples almacenes, trazabilidad por lote y número de serie.</p><p data-lang="en">Real-time stock control, multiple warehouses, lot and serial number traceability.</p><span class="mtag mm">Pack M</span></div>
+      <div class="mc" onclick="showMod('inventory')" style="border-left:4px solid #875A7B"><div class="mc-ico">🛍️</div><h3 data-lang="es">Compras</h3><h3 data-lang="en">Purchase</h3><p data-lang="es">Órdenes a proveedores, recepción de mercancía y validación de facturas. Integrado con inventario.</p><p data-lang="en">Supplier orders, goods receipt and invoice validation. Integrated with inventory.</p><span class="mtag mm">Pack M</span></div>
+      <div class="mc" onclick="showMod('crm')" style="border-left:4px solid #1C0F5E"><div class="mc-ico">📋</div><h3 data-lang="es">Proyectos</h3><h3 data-lang="en">Projects</h3><p data-lang="es">Kanban de proyectos, tareas, horas imputadas y facturación por proyecto.</p><p data-lang="en">Project Kanban, tasks, time tracking and project billing.</p><span class="mtag mm">Pack M</span></div>
+      <div class="mc" onclick="showMod('hr')" style="border-left:4px solid #00A09D"><div class="mc-ico">👥</div><h3 data-lang="es">RRHH</h3><h3 data-lang="en">HR</h3><p data-lang="es">Empleados, contratos, ausencias, vacaciones y control horario (obligatorio en España).</p><p data-lang="en">Employees, contracts, leaves, holidays and time tracking (mandatory in Spain).</p><span class="mtag ml2">Pack L</span></div>
+      <div class="mc" onclick="showMod('manufacturing')" style="border-left:4px solid #875A7B"><div class="mc-ico">🏭</div><h3 data-lang="es">Fabricación</h3><h3 data-lang="en">Manufacturing</h3><p data-lang="es">Órdenes de fabricación, listas de materiales (BoM) y control de producción.</p><p data-lang="en">Manufacturing orders, Bills of Materials (BoM) and production control.</p><span class="mtag ml2">Pack L</span></div>
+      <div class="mc" onclick="showMod('inventory')" style="border-left:4px solid #1C0F5E"><div class="mc-ico">🌐</div><h3>eCommerce</h3><p data-lang="es">Tienda online integrada con inventario y contabilidad. Catálogo, carrito y pagos online.</p><p data-lang="en">Online store integrated with inventory and accounting. Catalog, cart and online payments.</p><span class="mtag ml2">Pack L</span></div>
     </div>
     <div style="text-align:center;margin-top:40px">
       <button class="btn-t" onclick="go('checkout')" style="margin-right:12px"><span data-lang="es">Ver precios y contratar →</span><span data-lang="en">See pricing →</span></button>
@@ -1874,137 +1878,17 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
     <h2 class="sh">La interfaz real de Odoo</h2>
     <p class="ss" style="margin-bottom:0">Así es exactamente como verás el módulo de Contabilidad en tu instancia OdooListo.</p>
     <div class="ss-grid">
-      <!-- SCREENSHOT 1: Factura -->
       <div class="ss-item">
-        <div class="ss-label"><h4>Emisión de factura con VeriFactu</h4><p>Crea y envía facturas con QR AEAT integrado</p></div>
-        <div class="ss-mock">
-          <div class="od-wrap" style="height:220px;font-size:11px">
-            <div style="background:#714B67;color:white;padding:5px 10px;font-size:10px;font-weight:700;display:flex;justify-content:space-between;align-items:center">
-              <span>Odoo ▸ Contabilidad ▸ Facturas ▸ INV/2026/0142</span>
-              <span style="background:rgba(255,255,255,.2);padding:2px 8px;border-radius:10px;font-size:9px">✓ VeriFactu registrada</span>
-            </div>
-            <div style="padding:10px 12px">
-              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:10px">
-                <div>
-                  <div style="font-size:14px;font-weight:800;color:#212529">Factura de cliente</div>
-                  <div style="font-size:10px;color:#6C757D">INV/2026/0142 · 28 mayo 2026</div>
-                </div>
-                <span class="od-badge badge-green" style="font-size:11px;padding:3px 10px">✓ Pagada</span>
-              </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px;font-size:10px">
-                <div><div style="color:#6C757D;margin-bottom:1px">Cliente</div><div style="font-weight:700">Distribuciones Fornes, S.L.</div><div style="color:#6C757D">CIF: B46123456</div></div>
-                <div style="text-align:right"><div style="color:#6C757D;margin-bottom:1px">Vencimiento</div><div style="font-weight:700">28/06/2026</div><div style="color:#6C757D">30 días</div></div>
-              </div>
-              <table style="width:100%;font-size:10px;border-collapse:collapse">
-                <thead><tr style="background:#F8F9FA"><th style="padding:4px 6px;text-align:left;color:#6C757D;font-size:9px">DESCRIPCIÓN</th><th style="padding:4px 6px;text-align:right;color:#6C757D;font-size:9px">CANT.</th><th style="padding:4px 6px;text-align:right;color:#6C757D;font-size:9px">PRECIO</th><th style="padding:4px 6px;text-align:right;color:#6C757D;font-size:9px">IVA</th><th style="padding:4px 6px;text-align:right;color:#6C757D;font-size:9px">TOTAL</th></tr></thead>
-                <tbody>
-                  <tr><td style="padding:4px 6px">Servicio consultoría Odoo</td><td style="padding:4px 6px;text-align:right">8</td><td style="padding:4px 6px;text-align:right">€350,00</td><td style="padding:4px 6px;text-align:right">21%</td><td style="padding:4px 6px;text-align:right;font-weight:700">€3.388,00</td></tr>
-                </tbody>
-              </table>
-              <div style="text-align:right;margin-top:8px;font-size:10px">
-                <div style="color:#6C757D">Base: €2.800,00 · IVA 21%: €588,00</div>
-                <div style="font-size:14px;font-weight:800;color:#714B67;margin-top:2px">Total: €3.388,00</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="ss-label"><h4 data-lang="es">Factura de cliente con VeriFactu</h4><h4 data-lang="en">Customer invoice with VeriFactu</h4><p data-lang="es">Emite facturas con QR AEAT integrado</p><p data-lang="en">Issue invoices with built-in AEAT QR</p></div>
+        <div class="ss-mock"><img src="img/contabilidad-factura.webp" alt="Factura de cliente con VeriFactu" loading="lazy"></div>
       </div>
-
-      <!-- SCREENSHOT 2: Conciliación bancaria -->
       <div class="ss-item">
-        <div class="ss-label"><h4>Conciliación bancaria automática</h4><p>Importa y reconcilia extractos en segundos</p></div>
-        <div class="ss-mock">
-          <div class="od-wrap" style="height:220px">
-            <div style="background:#714B67;color:white;padding:5px 10px;font-size:10px;font-weight:700">Odoo ▸ Contabilidad ▸ Banco ▸ Caixabank Principal</div>
-            <div style="padding:10px 12px">
-              <div style="display:flex;justify-content:space-between;margin-bottom:8px">
-                <div><div style="font-size:12px;font-weight:800">Caixabank Principal</div><div style="font-size:10px;color:#6C757D">ES76 2100 0418 4202 0012 3456</div></div>
-                <div style="text-align:right"><div style="font-size:16px;font-weight:800;color:#28A745">€34.218,40</div><div style="font-size:9px;color:#6C757D">Saldo actual</div></div>
-              </div>
-              <div style="font-size:10px;font-weight:800;color:#6C757D;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">Movimientos pendientes de conciliar (3)</div>
-              <div style="display:flex;flex-direction:column;gap:5px">
-                <div style="display:flex;align-items:center;justify-content:space-between;background:#FFF3CD;border:1px solid #FFD966;border-radius:6px;padding:7px 10px">
-                  <div style="font-size:10px"><div style="font-weight:700">Transferencia recibida</div><div style="color:#6C757D">28/05/26 · Dist. Fornes S.L.</div></div>
-                  <div style="text-align:right"><div style="font-size:12px;font-weight:800;color:#28A745">+€3.388,00</div><button style="font-size:9px;background:#714B67;color:white;border:none;border-radius:4px;padding:2px 6px;cursor:pointer;margin-top:3px">Conciliar</button></div>
-                </div>
-                <div style="display:flex;align-items:center;justify-content:space-between;background:#D4EDDA;border:1px solid #C3E6CB;border-radius:6px;padding:7px 10px">
-                  <div style="font-size:10px"><div style="font-weight:700">✓ Conciliado automáticamente</div><div style="color:#6C757D">27/05/26 · Pago proveedor · INV/P/0089</div></div>
-                  <div style="font-size:12px;font-weight:800;color:#DC3545">-€1.452,00</div>
-                </div>
-                <div style="display:flex;align-items:center;justify-content:space-between;background:#F8F9FA;border:1px solid var(--od-border);border-radius:6px;padding:7px 10px">
-                  <div style="font-size:10px"><div style="font-weight:700">Comisión bancaria</div><div style="color:#6C757D">01/05/26 · Caixabank</div></div>
-                  <div style="text-align:right"><div style="font-size:12px;font-weight:800;color:#DC3545">-€12,50</div><button style="font-size:9px;background:#714B67;color:white;border:none;border-radius:4px;padding:2px 6px;cursor:pointer;margin-top:3px">Registrar gasto</button></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="ss-label"><h4 data-lang="es">Contabilidad en el móvil</h4><h4 data-lang="en">Accounting on mobile</h4><p data-lang="es">Consulta y opera desde cualquier lugar</p><p data-lang="en">Check and operate from anywhere</p></div>
+        <div class="ss-mock"><img src="img/contabilidad-movil.webp" alt="Contabilidad en el móvil" loading="lazy"></div>
       </div>
-
-      <!-- SCREENSHOT 3: Informe P&G -->
       <div class="ss-item">
-        <div class="ss-label"><h4>Informe de Pérdidas y Ganancias</h4><p>Balance financiero en tiempo real exportable a Excel</p></div>
-        <div class="ss-mock">
-          <div class="od-wrap" style="height:220px">
-            <div style="background:#714B67;color:white;padding:5px 10px;font-size:10px;font-weight:700">Odoo ▸ Contabilidad ▸ Informes ▸ Pérdidas y Ganancias</div>
-            <div style="padding:10px 12px">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-                <div style="font-size:12px;font-weight:800">PyG — Ejercicio 2026</div>
-                <div style="display:flex;gap:5px">
-                  <button style="font-size:9px;background:#F8F9FA;border:1px solid var(--od-border);border-radius:4px;padding:3px 7px;cursor:pointer">📥 Excel</button>
-                  <button style="font-size:9px;background:#F8F9FA;border:1px solid var(--od-border);border-radius:4px;padding:3px 7px;cursor:pointer">📄 PDF</button>
-                </div>
-              </div>
-              <table style="width:100%;font-size:10px;border-collapse:collapse">
-                <tbody>
-                  <tr style="background:#E8F5E9"><td style="padding:5px 8px;font-weight:800;color:#155724">INGRESOS</td><td style="padding:5px 8px;text-align:right;font-weight:800;color:#155724">€156.340,00</td></tr>
-                  <tr><td style="padding:4px 8px 4px 18px;color:#6C757D">Ventas de productos</td><td style="padding:4px 8px;text-align:right">€98.200,00</td></tr>
-                  <tr><td style="padding:4px 8px 4px 18px;color:#6C757D">Prestación de servicios</td><td style="padding:4px 8px;text-align:right">€58.140,00</td></tr>
-                  <tr style="background:#FFF3CD"><td style="padding:5px 8px;font-weight:800;color:#856404">GASTOS</td><td style="padding:5px 8px;text-align:right;font-weight:800;color:#856404">€89.420,00</td></tr>
-                  <tr><td style="padding:4px 8px 4px 18px;color:#6C757D">Compras y consumos</td><td style="padding:4px 8px;text-align:right">€54.300,00</td></tr>
-                  <tr><td style="padding:4px 8px 4px 18px;color:#6C757D">Gastos de personal</td><td style="padding:4px 8px;text-align:right">€35.120,00</td></tr>
-                  <tr style="background:#D4EDDA;border-top:2px solid #155724"><td style="padding:6px 8px;font-weight:800;color:#155724;font-size:12px">RESULTADO DEL EJERCICIO</td><td style="padding:6px 8px;text-align:right;font-weight:800;color:#155724;font-size:13px">€66.920,00</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SCREENSHOT 4: Modelo 303 -->
-      <div class="ss-item">
-        <div class="ss-label"><h4>Modelo 303 — Declaración trimestral IVA</h4><p>Genera el XML listo para presentar en la AEAT</p></div>
-        <div class="ss-mock">
-          <div class="od-wrap" style="height:220px">
-            <div style="background:#714B67;color:white;padding:5px 10px;font-size:10px;font-weight:700">Odoo ▸ Contabilidad ▸ AEAT ▸ Modelo 303</div>
-            <div style="padding:10px 12px">
-              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-                <div><div style="font-size:12px;font-weight:800">Modelo 303 — 1T 2026</div><div style="font-size:10px;color:#6C757D">Período: Enero–Marzo 2026</div></div>
-                <span class="od-badge badge-orange">Por presentar</span>
-              </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:10px">
-                <div style="background:#F8F9FA;border:1px solid var(--od-border);border-radius:6px;padding:8px">
-                  <div style="color:#6C757D;margin-bottom:4px;font-size:9px;text-transform:uppercase;letter-spacing:.04em">IVA devengado</div>
-                  <div style="font-size:15px;font-weight:800;color:#DC3545">€8.234,10</div>
-                  <div style="color:#6C757D;font-size:9px;margin-top:2px">Base imponible: €39.210,00</div>
-                </div>
-                <div style="background:#F8F9FA;border:1px solid var(--od-border);border-radius:6px;padding:8px">
-                  <div style="color:#6C757D;margin-bottom:4px;font-size:9px;text-transform:uppercase;letter-spacing:.04em">IVA deducible</div>
-                  <div style="font-size:15px;font-weight:800;color:#28A745">€3.108,50</div>
-                  <div style="color:#6C757D;font-size:9px;margin-top:2px">Base imponible: €14.802,38</div>
-                </div>
-              </div>
-              <div style="background:#FFF3CD;border:1px solid #FFD966;border-radius:6px;padding:10px;margin-top:8px;display:flex;justify-content:space-between;align-items:center">
-                <div><div style="font-size:10px;font-weight:800;color:#856404">Resultado a ingresar</div><div style="font-size:9px;color:#856404">Casilla 71</div></div>
-                <div style="font-size:18px;font-weight:800;color:#856404">€5.125,60</div>
-              </div>
-              <div style="display:flex;gap:6px;margin-top:8px">
-                <button style="flex:1;font-size:10px;background:#714B67;color:white;border:none;border-radius:4px;padding:6px;cursor:pointer;font-weight:700">📥 Exportar XML AEAT</button>
-                <button style="flex:1;font-size:10px;background:#F8F9FA;border:1px solid var(--od-border);border-radius:4px;padding:6px;cursor:pointer;font-weight:700">📄 Ver desglose</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="ss-label"><h4 data-lang="es">Informes y análisis</h4><h4 data-lang="en">Reports and analytics</h4><p data-lang="es">Tablas dinámicas y cuadros de mando</p><p data-lang="en">Pivot tables and dashboards</p></div>
+        <div class="ss-mock"><img src="img/reporting-pivot.webp" alt="Informes y análisis" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -2078,56 +1962,12 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
     <h2 class="sh">CRM y Ventas en acción</h2>
     <div class="ss-grid">
       <div class="ss-item">
-        <div class="ss-label"><h4>Oportunidad de venta detallada</h4><p>Toda la información del cliente en una sola pantalla</p></div>
-        <div class="ss-mock">
-          <div class="od-wrap" style="height:220px">
-            <div style="background:#714B67;color:white;padding:5px 10px;font-size:10px;font-weight:700">Odoo ▸ CRM ▸ Oportunidades ▸ Dist. Fornes — Pack ERP</div>
-            <div style="padding:10px 12px">
-              <div style="display:flex;justify-content:space-between;margin-bottom:8px">
-                <div><div style="font-size:13px;font-weight:800">Implantación ERP — Distribuciones Fornes</div><div style="font-size:10px;color:#6C757D">Responsable: Javier Molina · Equipo: Comercial</div></div>
-                <span class="od-badge badge-orange" style="font-size:11px">Propuesta enviada</span>
-              </div>
-              <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px;font-size:10px">
-                <div style="background:#F3EEF8;border-radius:6px;padding:8px;text-align:center"><div style="font-size:16px;font-weight:800;color:#714B67">€34.200</div><div style="color:#6C757D;font-size:9px">Ingresos esperados</div></div>
-                <div style="background:#F8F9FA;border-radius:6px;padding:8px;text-align:center"><div style="font-size:16px;font-weight:800">75%</div><div style="color:#6C757D;font-size:9px">Probabilidad</div><div class="od-progress" style="margin-top:4px"><div class="od-progress-bar" style="width:75%"></div></div></div>
-                <div style="background:#F8F9FA;border-radius:6px;padding:8px;text-align:center"><div style="font-size:16px;font-weight:800">08/06</div><div style="color:#6C757D;font-size:9px">Cierre esperado</div></div>
-              </div>
-              <div style="font-size:10px;font-weight:800;color:#6C757D;text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px">Próxima actividad</div>
-              <div style="background:#FFF3CD;border:1px solid #FFD966;border-radius:6px;padding:8px;font-size:10px;display:flex;align-items:center;gap:8px">
-                <span style="font-size:1.2rem">📞</span>
-                <div><div style="font-weight:700">Llamada de seguimiento</div><div style="color:#6C757D">Mañana, 02/06/26 · 10:00h · Javier Molina</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="ss-label"><h4 data-lang="es">Oportunidad en el CRM</h4><h4 data-lang="en">CRM opportunity</h4><p data-lang="es">Pipeline visual con seguimiento y chatter</p><p data-lang="en">Visual pipeline with tracking and chatter</p></div>
+        <div class="ss-mock"><img src="img/ventas-comunicacion.webp" alt="Oportunidad en el CRM" loading="lazy"></div>
       </div>
       <div class="ss-item">
-        <div class="ss-label"><h4>Presupuesto de venta</h4><p>Del presupuesto al pedido en un clic</p></div>
-        <div class="ss-mock">
-          <div class="od-wrap" style="height:220px">
-            <div style="background:#714B67;color:white;padding:5px 10px;font-size:10px;font-weight:700">Odoo ▸ Ventas ▸ Presupuestos ▸ S00142</div>
-            <div style="padding:10px 12px">
-              <div style="display:flex;justify-content:space-between;margin-bottom:8px">
-                <div><div style="font-size:12px;font-weight:800">Presupuesto S00142</div><div style="font-size:10px;color:#6C757D">Dist. Fornes S.L. · 29/05/2026</div></div>
-                <div style="display:flex;gap:5px">
-                  <span class="od-badge badge-blue">Enviado</span>
-                  <button style="font-size:9px;background:#28A745;color:white;border:none;border-radius:4px;padding:3px 8px;cursor:pointer;font-weight:700">✓ Confirmar pedido</button>
-                </div>
-              </div>
-              <table style="width:100%;font-size:10px;border-collapse:collapse;margin-bottom:8px">
-                <thead><tr style="background:#F8F9FA"><th style="padding:4px 6px;text-align:left;color:#6C757D;font-size:9px">PRODUCTO</th><th style="padding:4px 6px;text-align:right;color:#6C757D;font-size:9px">CANT.</th><th style="padding:4px 6px;text-align:right;color:#6C757D;font-size:9px">P. UNIT.</th><th style="padding:4px 6px;text-align:right;color:#6C757D;font-size:9px">SUBTOTAL</th></tr></thead>
-                <tbody>
-                  <tr><td style="padding:4px 6px">Licencia Odoo Community (setup)</td><td style="padding:4px 6px;text-align:right">1</td><td style="padding:4px 6px;text-align:right">€497,00</td><td style="padding:4px 6px;text-align:right;font-weight:700">€497,00</td></tr>
-                  <tr><td style="padding:4px 6px">Soporte mensual</td><td style="padding:4px 6px;text-align:right">12</td><td style="padding:4px 6px;text-align:right">€147,00</td><td style="padding:4px 6px;text-align:right;font-weight:700">€1.764,00</td></tr>
-                </tbody>
-              </table>
-              <div style="display:flex;justify-content:flex-end;gap:16px;font-size:10px">
-                <span style="color:#6C757D">IVA 21%: €473,43</span>
-                <span style="font-weight:800;color:#714B67;font-size:13px">Total: €2.734,43</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="ss-label"><h4 data-lang="es">Presupuesto de venta</h4><h4 data-lang="en">Sales quotation</h4><p data-lang="es">Presupuestos y pedidos conectados</p><p data-lang="en">Connected quotes and orders</p></div>
+        <div class="ss-mock"><img src="img/ventas-presupuesto.webp" alt="Presupuesto de venta" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -2196,57 +2036,16 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
     <h2 class="sh">Inventario en acción</h2>
     <div class="ss-grid">
       <div class="ss-item">
-        <div class="ss-label"><h4>Ficha de producto con stock</h4><p>Stock actual, mínimo y previsión por almacén</p></div>
-        <div class="ss-mock">
-          <div class="od-wrap" style="height:220px">
-            <div style="background:#714B67;color:white;padding:5px 10px;font-size:10px;font-weight:700">Odoo ▸ Inventario ▸ Productos ▸ Monitor 27" 4K</div>
-            <div style="padding:10px 12px">
-              <div style="display:flex;justify-content:space-between;margin-bottom:10px">
-                <div><div style="font-size:13px;font-weight:800">Monitor 27" 4K UHD</div><div style="font-size:10px;color:#6C757D">Ref: MON-27-4K · Categoría: Electrónica</div></div>
-                <div style="display:flex;gap:5px">
-                  <button style="font-size:9px;background:#F8F9FA;border:1px solid var(--od-border);border-radius:4px;padding:3px 7px;cursor:pointer">📥 Recepciones</button>
-                  <button style="font-size:9px;background:#714B67;color:white;border:none;border-radius:4px;padding:3px 7px;cursor:pointer">📤 Movimientos</button>
-                </div>
-              </div>
-              <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px;text-align:center;font-size:10px">
-                <div style="background:#F3EEF8;border-radius:6px;padding:7px"><div style="font-size:18px;font-weight:800;color:#714B67">12</div><div style="color:#6C757D;font-size:9px">En stock</div></div>
-                <div style="background:#F8F9FA;border-radius:6px;padding:7px"><div style="font-size:18px;font-weight:800">5</div><div style="color:#6C757D;font-size:9px">Reservado</div></div>
-                <div style="background:#D4EDDA;border-radius:6px;padding:7px"><div style="font-size:18px;font-weight:800;color:#155724">7</div><div style="color:#6C757D;font-size:9px">Disponible</div></div>
-                <div style="background:#FFF3CD;border-radius:6px;padding:7px"><div style="font-size:18px;font-weight:800;color:#856404">8</div><div style="color:#6C757D;font-size:9px">En tránsito</div></div>
-              </div>
-              <div style="font-size:10px;font-weight:800;color:#6C757D;text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px">Por almacén</div>
-              <table style="width:100%;font-size:10px;border-collapse:collapse">
-                <thead><tr style="background:#F8F9FA"><th style="padding:4px 6px;text-align:left;color:#6C757D;font-size:9px">ALMACÉN</th><th style="padding:4px 6px;text-align:right;color:#6C757D;font-size:9px">A MANO</th><th style="padding:4px 6px;text-align:right;color:#6C757D;font-size:9px">PREVISTO</th></tr></thead>
-                <tbody>
-                  <tr><td style="padding:4px 6px">🏭 WH — Almacén Principal</td><td style="padding:4px 6px;text-align:right;font-weight:700">10</td><td style="padding:4px 6px;text-align:right">18</td></tr>
-                  <tr><td style="padding:4px 6px">🏪 MX — Almacén México</td><td style="padding:4px 6px;text-align:right;font-weight:700">2</td><td style="padding:4px 6px;text-align:right">5</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+        <div class="ss-label"><h4 data-lang="es">Compras y aprovisionamiento</h4><h4 data-lang="en">Purchasing</h4><p data-lang="es">Órdenes a proveedores y recepción</p><p data-lang="en">Supplier orders and goods receipt</p></div>
+        <div class="ss-mock"><img src="img/generico-hero.webp" alt="Compras y aprovisionamiento" loading="lazy"></div>
       </div>
       <div class="ss-item">
-        <div class="ss-label"><h4>Recepción de mercancía</h4><p>Valida la entrada de stock del proveedor</p></div>
-        <div class="ss-mock">
-          <div class="od-wrap" style="height:220px">
-            <div style="background:#714B67;color:white;padding:5px 10px;font-size:10px;font-weight:700">Odoo ▸ Inventario ▸ Recepciones ▸ WH/IN/00089</div>
-            <div style="padding:10px 12px">
-              <div style="display:flex;justify-content:space-between;margin-bottom:8px">
-                <div><div style="font-size:12px;font-weight:800">Recepción WH/IN/00089</div><div style="font-size:10px;color:#6C757D">Proveedor: Distribuciones Tec, S.L. · 01/06/2026</div></div>
-                <span class="od-badge badge-blue">Listo para validar</span>
-              </div>
-              <table style="width:100%;font-size:10px;border-collapse:collapse;margin-bottom:10px">
-                <thead><tr style="background:#F8F9FA"><th style="padding:4px 6px;text-align:left;color:#6C757D;font-size:9px">PRODUCTO</th><th style="padding:4px 6px;text-align:right;color:#6C757D;font-size:9px">PEDIDO</th><th style="padding:4px 6px;text-align:right;color:#6C757D;font-size:9px">RECIBIDO</th><th style="padding:4px 6px;text-align:left;color:#6C757D;font-size:9px">LOTE</th></tr></thead>
-                <tbody>
-                  <tr><td style="padding:4px 6px">Cable HDMI 2m</td><td style="padding:4px 6px;text-align:right">50</td><td style="padding:4px 6px;text-align:right;color:#28A745;font-weight:700">50</td><td style="padding:4px 6px">LOT-2026-089</td></tr>
-                  <tr><td style="padding:4px 6px">Teclado inalámbrico</td><td style="padding:4px 6px;text-align:right">30</td><td style="padding:4px 6px;text-align:right;color:#FD7E14;font-weight:700">25</td><td style="padding:4px 6px">LOT-2026-090</td></tr>
-                </tbody>
-              </table>
-              <button style="width:100%;background:#28A745;color:white;border:none;border-radius:6px;padding:8px;font-size:11px;font-weight:800;cursor:pointer;font-family:inherit">✓ Validar recepción</button>
-            </div>
-          </div>
-        </div>
+        <div class="ss-label"><h4 data-lang="es">Solicitud de oferta (RFQ)</h4><h4 data-lang="en">Request for quotation</h4><p data-lang="es">Compara proveedores y plazos</p><p data-lang="en">Compare vendors and lead times</p></div>
+        <div class="ss-mock"><img src="img/generico-flexible.webp" alt="Solicitud de oferta (RFQ)" loading="lazy"></div>
+      </div>
+      <div class="ss-item">
+        <div class="ss-label"><h4 data-lang="es">Catálogo de productos</h4><h4 data-lang="en">Product catalog</h4><p data-lang="es">Productos, variantes y precios</p><p data-lang="en">Products, variants and prices</p></div>
+        <div class="ss-mock"><img src="img/generico-gestion.webp" alt="Catálogo de productos" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -2318,56 +2117,12 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
     <h2 class="sh">Fabricación en acción</h2>
     <div class="ss-grid">
       <div class="ss-item">
-        <div class="ss-label"><h4>Lista de Materiales (BoM)</h4><p>Define los componentes de cada producto</p></div>
-        <div class="ss-mock">
-          <div class="od-wrap" style="height:220px">
-            <div style="background:#714B67;color:white;padding:5px 10px;font-size:10px;font-weight:700">Odoo ▸ Fabricación ▸ BoM ▸ Mesa Escritorio Pro</div>
-            <div style="padding:10px 12px">
-              <div style="display:flex;justify-content:space-between;margin-bottom:8px">
-                <div><div style="font-size:12px;font-weight:800">Mesa Escritorio Pro — v2.1</div><div style="font-size:10px;color:#6C757D">Tipo: Fabricar · Cantidad: 1 unidad</div></div>
-                <span class="od-badge badge-green">Activa</span>
-              </div>
-              <div style="font-size:10px;font-weight:800;color:#6C757D;text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px">Componentes (6)</div>
-              <table style="width:100%;font-size:10px;border-collapse:collapse">
-                <thead><tr style="background:#F8F9FA"><th style="padding:4px 6px;text-align:left;color:#6C757D;font-size:9px">COMPONENTE</th><th style="padding:4px 6px;text-align:right;color:#6C757D;font-size:9px">CANTIDAD</th><th style="padding:4px 6px;text-align:right;color:#6C757D;font-size:9px">COSTE</th><th style="padding:4px 6px;text-align:right;color:#6C757D;font-size:9px">STOCK</th></tr></thead>
-                <tbody>
-                  <tr><td style="padding:4px 6px">Tablero DM 180×80cm</td><td style="padding:4px 6px;text-align:right">1 ud</td><td style="padding:4px 6px;text-align:right">€45,00</td><td style="padding:4px 6px;text-align:right;color:#28A745">38</td></tr>
-                  <tr><td style="padding:4px 6px">Pata metálica ajustable</td><td style="padding:4px 6px;text-align:right">4 ud</td><td style="padding:4px 6px;text-align:right">€12,00</td><td style="padding:4px 6px;text-align:right;color:#28A745">124</td></tr>
-                  <tr><td style="padding:4px 6px">Tornillo M8×40 (pack 8)</td><td style="padding:4px 6px;text-align:right">2 ud</td><td style="padding:4px 6px;text-align:right">€1,50</td><td style="padding:4px 6px;text-align:right;color:#DC3545">3</td></tr>
-                  <tr><td style="padding:4px 6px">Acabado barniz mate</td><td style="padding:4px 6px;text-align:right">0.5 L</td><td style="padding:4px 6px;text-align:right">€8,00</td><td style="padding:4px 6px;text-align:right;color:#28A745">22</td></tr>
-                </tbody>
-              </table>
-              <div style="display:flex;justify-content:flex-end;margin-top:8px;font-size:10px">
-                <span style="background:#F3EEF8;padding:5px 10px;border-radius:6px;color:#714B67;font-weight:800">Coste total producción: €70,00</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="ss-label"><h4 data-lang="es">Planificación de órdenes de trabajo</h4><h4 data-lang="en">Work order planning</h4><p data-lang="es">Por centro de trabajo y estación</p><p data-lang="en">By work center and station</p></div>
+        <div class="ss-mock"><img src="img/planificacion-horas.webp" alt="Planificación de órdenes de trabajo" loading="lazy"></div>
       </div>
       <div class="ss-item">
-        <div class="ss-label"><h4>Orden de fabricación en progreso</h4><p>Seguimiento en tiempo real del proceso productivo</p></div>
-        <div class="ss-mock">
-          <div class="od-wrap" style="height:220px">
-            <div style="background:#714B67;color:white;padding:5px 10px;font-size:10px;font-weight:700">Odoo ▸ Fabricación ▸ MO/2026/0034</div>
-            <div style="padding:10px 12px">
-              <div style="display:flex;justify-content:space-between;margin-bottom:8px">
-                <div><div style="font-size:12px;font-weight:800">Mesa Escritorio Pro — 25 ud</div><div style="font-size:10px;color:#6C757D">Inicio: 01/06/26 · Fin previsto: 03/06/26</div></div>
-                <span class="od-badge badge-blue">En progreso</span>
-              </div>
-              <div style="margin-bottom:8px">
-                <div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:3px"><span style="font-weight:700">Progreso de producción</span><span style="color:#714B67;font-weight:700">14/25 finalizadas</span></div>
-                <div class="od-progress" style="height:10px"><div class="od-progress-bar" style="width:56%"></div></div>
-              </div>
-              <div style="font-size:10px;font-weight:800;color:#6C757D;text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px">Operaciones</div>
-              <div style="display:flex;flex-direction:column;gap:4px">
-                <div style="display:flex;align-items:center;gap:8px;padding:5px 8px;background:#D4EDDA;border-radius:5px;font-size:10px"><span style="color:#155724;font-size:12px">✓</span><span style="flex:1;font-weight:700">Corte y preparación</span><span style="color:#155724;font-weight:700">Centro Corte A</span></div>
-                <div style="display:flex;align-items:center;gap:8px;padding:5px 8px;background:#D1ECF1;border-radius:5px;font-size:10px"><span style="color:#0C5460;font-size:12px">▶</span><span style="flex:1;font-weight:700">Montaje</span><span style="color:#0C5460;font-weight:700">Centro Montaje 1</span></div>
-                <div style="display:flex;align-items:center;gap:8px;padding:5px 8px;background:#F8F9FA;border-radius:5px;font-size:10px"><span style="color:#6C757D;font-size:12px">○</span><span style="flex:1;color:#6C757D">Acabado y barnizado</span><span style="color:#6C757D">Centro Acabado</span></div>
-                <div style="display:flex;align-items:center;gap:8px;padding:5px 8px;background:#F8F9FA;border-radius:5px;font-size:10px"><span style="color:#6C757D;font-size:12px">○</span><span style="flex:1;color:#6C757D">Control de calidad</span><span style="color:#6C757D">QC Final</span></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="ss-label"><h4 data-lang="es">Plan maestro de producción</h4><h4 data-lang="en">Master production schedule</h4><p data-lang="es">Previsión y reaprovisionamiento</p><p data-lang="en">Forecast and replenishment</p></div>
+        <div class="ss-mock"><img src="img/generico-features.webp" alt="Plan maestro de producción" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -2439,80 +2194,12 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
     <h2 class="sh">RRHH en acción</h2>
     <div class="ss-grid">
       <div class="ss-item">
-        <div class="ss-label"><h4>Ficha del empleado</h4><p>Toda la información del empleado en un solo lugar</p></div>
-        <div class="ss-mock">
-          <div class="od-wrap" style="height:220px">
-            <div style="background:#714B67;color:white;padding:5px 10px;font-size:10px;font-weight:700">Odoo ▸ Empleados ▸ Javier Molina</div>
-            <div style="padding:10px 12px">
-              <div style="display:flex;gap:12px;margin-bottom:10px">
-                <div style="width:48px;height:48px;background:linear-gradient(135deg,#714B67,#00A09D);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;font-size:16px;font-weight:800;flex-shrink:0">JM</div>
-                <div>
-                  <div style="font-size:14px;font-weight:800">Javier Molina García</div>
-                  <div style="font-size:10px;color:#6C757D">CEO · Dirección General</div>
-                  <div style="font-size:10px;color:#6C757D">📧 jmolina@empresa.com · 📞 +34 963 123 456</div>
-                </div>
-              </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:10px;margin-bottom:10px">
-                <div style="background:#F8F9FA;border-radius:6px;padding:8px"><div style="color:#6C757D;margin-bottom:2px;font-size:9px">CONTRATO</div><div style="font-weight:700">Indefinido — Grupo I</div><div style="color:#6C757D">Desde 01/01/2020</div></div>
-                <div style="background:#F8F9FA;border-radius:6px;padding:8px"><div style="color:#6C757D;margin-bottom:2px;font-size:9px">VACACIONES</div><div style="font-weight:700;color:#28A745">18/22 días restantes</div><div class="od-progress" style="margin-top:4px"><div class="od-progress-bar" style="width:82%;background:#28A745"></div></div></div>
-              </div>
-              <div style="font-size:10px;font-weight:800;color:#6C757D;text-transform:uppercase;letter-spacing:.04em;margin-bottom:5px">Asistencia hoy</div>
-              <div style="background:#D4EDDA;border:1px solid #C3E6CB;border-radius:6px;padding:8px;font-size:10px;display:flex;justify-content:space-between">
-                <div><span style="color:#155724;font-weight:700">✓ Entrada: 08:32</span><div style="color:#6C757D;font-size:9px">Oficina Valencia</div></div>
-                <div style="text-align:right"><span style="color:#155724;font-weight:700">Horas: 7h 28m</span><div style="color:#6C757D;font-size:9px">Jornada: 8h</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="ss-label"><h4 data-lang="es">Empleados y departamentos</h4><h4 data-lang="en">Employees and departments</h4><p data-lang="es">Fichas, contactos y organigrama</p><p data-lang="en">Records, contacts and org chart</p></div>
+        <div class="ss-mock"><img src="img/rrhh-personal.webp" alt="Empleados y departamentos" loading="lazy"></div>
       </div>
       <div class="ss-item">
-        <div class="ss-label"><h4>Gestión de ausencias del equipo</h4><p>Aprueba vacaciones y permisos desde una vista unificada</p></div>
-        <div class="ss-mock">
-          <div class="od-wrap" style="height:220px">
-            <div style="background:#714B67;color:white;padding:5px 10px;font-size:10px;font-weight:700">Odoo ▸ Ausencias ▸ Por aprobar (2)</div>
-            <div style="padding:10px 12px">
-              <div style="font-size:12px;font-weight:800;margin-bottom:10px">Solicitudes pendientes de aprobación</div>
-              <div style="display:flex;flex-direction:column;gap:8px">
-                <div style="background:#FFF3CD;border:1px solid #FFD966;border-radius:6px;padding:10px">
-                  <div style="display:flex;justify-content:space-between;align-items:flex-start">
-                    <div style="font-size:10px">
-                      <div style="font-weight:800">Andrés Varela — Vacaciones</div>
-                      <div style="color:#6C757D">15/06/26 al 30/06/26 · 12 días laborables</div>
-                    </div>
-                    <div style="display:flex;gap:4px">
-                      <button style="font-size:9px;background:#28A745;color:white;border:none;border-radius:4px;padding:3px 8px;cursor:pointer;font-weight:700">✓ Aprobar</button>
-                      <button style="font-size:9px;background:#DC3545;color:white;border:none;border-radius:4px;padding:3px 8px;cursor:pointer;font-weight:700">✗ Rechazar</button>
-                    </div>
-                  </div>
-                </div>
-                <div style="background:#FFF3CD;border:1px solid #FFD966;border-radius:6px;padding:10px">
-                  <div style="display:flex;justify-content:space-between;align-items:flex-start">
-                    <div style="font-size:10px">
-                      <div style="font-weight:800">Laura Pons — Baja médica</div>
-                      <div style="color:#6C757D">01/06/26 · Baja IT · Adjunto: parte médico</div>
-                    </div>
-                    <div style="display:flex;gap:4px">
-                      <button style="font-size:9px;background:#28A745;color:white;border:none;border-radius:4px;padding:3px 8px;cursor:pointer;font-weight:700">✓ Confirmar</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div style="margin-top:10px;background:#F8F9FA;border-radius:6px;padding:8px;font-size:10px">
-                <div style="font-weight:800;margin-bottom:4px">Calendario equipo — Junio 2026</div>
-                <div style="display:flex;gap:3px">
-                  <div style="flex:1;background:#D4EDDA;border-radius:3px;height:12px;position:relative" title="En oficina"></div>
-                  <div style="flex:1;background:#FFF3CD;border-radius:3px;height:12px" title="Vacaciones"></div>
-                  <div style="flex:1;background:#F8D7DA;border-radius:3px;height:12px" title="Baja"></div>
-                  <div style="flex:1;background:#D4EDDA;border-radius:3px;height:12px"></div>
-                  <div style="flex:1;background:#D4EDDA;border-radius:3px;height:12px"></div>
-                </div>
-                <div style="display:flex;gap:10px;margin-top:4px;font-size:9px;color:#6C757D">
-                  <span>🟩 Presente</span><span>🟨 Vacaciones</span><span>🟥 Baja</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="ss-label"><h4 data-lang="es">Ausencias y vacaciones</h4><h4 data-lang="en">Time off and holidays</h4><p data-lang="es">Solicitudes y aprobaciones</p><p data-lang="en">Requests and approvals</p></div>
+        <div class="ss-mock"><img src="img/rrhh-ausencias.webp" alt="Ausencias y vacaciones" loading="lazy"></div>
       </div>
     </div>
   </div>
@@ -3606,9 +3293,14 @@ function go(id) {
   for (var i=0; i<pages.length; i++) pages[i].style.display = 'none';
   var el = document.getElementById('page-' + id);
   if (el) { el.style.display = 'block'; window.scrollTo({top:0, behavior:'smooth'}); }
-  if (id !== 'modules') {
-    var det = document.getElementById('mod-detail');
-    if (det) det.style.display = 'none';
+  var det = document.getElementById('mod-detail');
+  if (det) det.style.display = 'none';
+  if (id === 'modules') {
+    var ov = det ? det.previousElementSibling : null;
+    if (ov && ov.tagName === 'SECTION') ov.style.display = '';
+    var mtabs = document.querySelectorAll('.tab-mod');
+    for (var k=0; k<mtabs.length; k++) mtabs[k].classList.remove('active');
+    if (mtabs[0]) mtabs[0].classList.add('active');
   }
   setTimeout(initReveal, 120);
 }
@@ -3826,11 +3518,8 @@ function showMod(id) {
   var tabs = document.querySelectorAll('.tab-mod');
   var ids = ['accounting','crm','inventory','manufacturing','hr'];
   for (var t=0; t<tabs.length; t++) {
-    if (ids[t] === id) {
-      tabs[t].style.background='var(--navy)'; tabs[t].style.color='white'; tabs[t].style.borderColor='var(--navy)';
-    } else {
-      tabs[t].style.background='transparent'; tabs[t].style.color='var(--g3)'; tabs[t].style.borderColor='var(--g2)';
-    }
+    if (ids[t] === id) tabs[t].classList.add('active');
+    else tabs[t].classList.remove('active');
   }
   window.scrollTo({top:0, behavior:'smooth'});
 }
