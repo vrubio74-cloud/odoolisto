@@ -3454,7 +3454,7 @@ function submitTrial() {
   .then(function(r){ return r.json(); })
   .then(function(data){
     if (data.ok || data.next) {
-      try { gtag_report_conversion(); } catch(e){}
+      try { gtag('event', 'conversion', {'send_to': 'AW-18242312681/-7vWCNGzys4cEOmzzvpD'}); } catch(e){}
       try { gtag('event', 'solicitud_prueba'); } catch(e){}
       var wrap = document.getElementById('pf-wrap');
       var succ = document.getElementById('pf-succ');
