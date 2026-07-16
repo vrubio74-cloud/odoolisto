@@ -3801,16 +3801,30 @@ document.addEventListener('click', function(e) {
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closePopup();
 });
-// Show popup after 30 seconds - once every 7 days
+// Show popup: 60s OR exit-intent (desktop), whichever comes first — once every 7 days
 (function() {
+  var shown = false;
+  function maybeOpen() {
+    if (shown) return;
+    shown = true;
+    openPopup();
+  }
+  function armPopup() {
+    // Timer: 60 segundos
+    setTimeout(maybeOpen, 60000);
+    // Exit-intent (solo desktop): el ratón sale por la parte superior del viewport
+    document.addEventListener('mouseout', function(e) {
+      if (!e.relatedTarget && e.clientY <= 0) maybeOpen();
+    });
+  }
   try {
     var last = localStorage.getItem('ol_popup');
     var sevenDays = 7 * 24 * 60 * 60 * 1000;
     if (!last || Date.now() - parseInt(last) > sevenDays) {
-      setTimeout(openPopup, 15000);
+      armPopup();
     }
   } catch(e) {
-    setTimeout(openPopup, 15000);
+    armPopup();
   }
 })();
 // ── RESTORE LANG ───────────────────────────────────────────
