@@ -61,7 +61,7 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 - [x] `implantar odoo rapido` → PUBLICADO: 15 Jul 2026 → URL: https://odoolisto.com/#post10
 
 ### 🟡 PRIORIDAD LATAM — Tercera tanda
-- [ ] `implementar odoo mexico` → Título: "Implementar Odoo en México: guía completa 2026"
+- [x] `implementar odoo mexico` → PUBLICADO: 18 Jul 2026 → URL: https://odoolisto.com/#post11
 - [ ] `odoo vs aspel` → Título: "Odoo vs Aspel: qué ERP conviene más a tu empresa mexicana"
 - [ ] `odoo vs contpaq` → Título: "Odoo vs CONTPAQi: comparativa para pymes mexicanas 2026"
 - [ ] `odoo colombia` → Título: "Odoo para empresas en Colombia: guía de implantación 2026"
@@ -166,6 +166,7 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 | 2026-06-28 | erp barato pyme | Los 5 ERP más baratos para pymes en España (2026) | https://odoolisto.com/#post8 | ✅ Publicado |
 | 2026-07-13 | odoo vs sap pyme | Odoo vs SAP Business One: comparativa para pymes en 2026 | https://odoolisto.com/#post9 | ✅ Publicado |
 | 2026-07-15 | implantar odoo rapido | Cómo implantar Odoo en 3 días: la metodología de OdooListo | https://odoolisto.com/#post10 | ✅ Publicado |
+| 2026-07-18 | implementar odoo mexico | Implementar Odoo en México: guía completa 2026 | https://odoolisto.com/#post11 | ✅ Publicado |
 
 ---
 
