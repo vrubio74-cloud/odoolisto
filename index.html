@@ -925,6 +925,9 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   box-shadow:0 6px 28px rgba(37,211,102,.6);
 }
 .wa-bubble{
+  text-decoration:none;
+  display:block;
+  cursor:pointer;
   background:white;
   border-radius:12px;
   padding:10px 16px;
@@ -942,6 +945,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 .wa-float:hover .wa-bubble{
   opacity:1;
   transform:translateX(0);
+  pointer-events:auto;
 }
 @keyframes waPulse{
   0%,100%{box-shadow:0 4px 20px rgba(37,211,102,.45)}
@@ -950,6 +954,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 @media(max-width:600px){
   .wa-float{bottom:16px;right:16px}
   .wa-btn{width:52px;height:52px}
+  .wa-bubble{opacity:1;transform:translateX(0);pointer-events:auto;font-size:.78rem;padding:9px 14px}
 }
 
 /* ── HAMBURGER MOBILE MENU ─────────────────────── */
@@ -2050,9 +2055,9 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
     <p class="ss" data-lang="es">Módulos 100% estándar de Odoo Community 19. Sin desarrollos a medida. Activa solo lo que necesitas ahora y añade más cuando crezcas.</p><p class="ss" data-lang="en">100% standard Odoo Community 19 modules. No custom development. Fully integrated out of the box.</p>
     <p class="ss" style="color:rgba(255,255,255,.75)" data-lang="en">100% standard Odoo Community 19 modules. No custom development. Activate what you need now, add more as you grow.</p>
     <div style="display:flex;gap:10px;margin:24px 0;flex-wrap:wrap">
-      <span style="background:rgba(0,160,157,.1);color:var(--teal-dk);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:20px" data-lang="es">🟢 Pack S — desde €97/mes</span><span style="background:rgba(0,160,157,.1);color:var(--teal-dk);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:20px" data-lang="en">🟢 Pack S — from €97/month</span>
-      <span style="background:rgba(135,90,123,.1);color:var(--purple);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:20px" data-lang="es">🟣 Pack M — desde €147/mes</span><span style="background:rgba(135,90,123,.1);color:var(--purple);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:20px" data-lang="en">🟣 Pack M — from €147/month</span>
-      <span style="background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.25);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:20px" data-lang="es">⚫ Pack L — desde €197/mes</span><span style="background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.25);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:20px" data-lang="en">⚫ Pack L — from €197/month</span>
+      <a href="#precios" style="text-decoration:none;cursor:pointer"><span style="background:rgba(0,160,157,.1);color:var(--teal-dk);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:20px" data-lang="es">🟢 Pack S — desde €97/mes</span></a><a href="#precios" style="text-decoration:none;cursor:pointer"><span style="background:rgba(0,160,157,.1);color:var(--teal-dk);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:20px" data-lang="en">🟢 Pack S — from €97/month</span></a>
+      <a href="#precios" style="text-decoration:none;cursor:pointer"><span style="background:rgba(135,90,123,.1);color:var(--purple);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:20px" data-lang="es">🟣 Pack M — desde €147/mes</span></a><a href="#precios" style="text-decoration:none;cursor:pointer"><span style="background:rgba(135,90,123,.1);color:var(--purple);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:20px" data-lang="en">🟣 Pack M — from €147/month</span></a>
+      <a href="#precios" style="text-decoration:none;cursor:pointer"><span style="background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.25);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:20px" data-lang="es">⚫ Pack L — desde €197/mes</span></a><a href="#precios" style="text-decoration:none;cursor:pointer"><span style="background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.25);font-size:.75rem;font-weight:800;padding:5px 12px;border-radius:20px" data-lang="en">⚫ Pack L — from €197/month</span></a>
     </div>
     <div class="mg">
       <div class="mc" onclick="showMod('accounting')" style="border-left:4px solid var(--teal)"><div class="mc-ico">📊</div><h3 data-lang="es">Contabilidad</h3><h3 data-lang="en">Accounting</h3><p data-lang="es">Plan contable español, asientos automáticos, conciliación bancaria, VeriFactu y factura electrónica.</p><p data-lang="en">Spanish chart of accounts, automatic entries, bank reconciliation, VeriFactu and e-invoicing.</p><span class="mtag ms">Pack S</span></div>
@@ -2082,7 +2087,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 <div class="mod-hero">
   <div class="mhi">
     <div>
-      <div class="pack-badge">🟢 Incluido en Pack S, M y L</div>
+      <a href="#precios" class="pack-badge" style="text-decoration:none;cursor:pointer">🟢 Incluido en Pack S, M y L</a>
       <div class="mod-icon-big">📊</div>
       <h1>Contabilidad y<br><span>Facturación</span> completa</h1>
       <p>El módulo de contabilidad de Odoo cubre todo el ciclo financiero de tu empresa: desde la emisión de facturas hasta los informes para la AEAT. Con VeriFactu nativo y localización española completa desde el primer día.</p>
@@ -2169,7 +2174,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 <div class="mod-hero">
   <div class="mhi">
     <div>
-      <div class="pack-badge">🟢 Incluido en Pack S, M y L</div>
+      <a href="#precios" class="pack-badge" style="text-decoration:none;cursor:pointer">🟢 Incluido en Pack S, M y L</a>
       <div class="mod-icon-big">💼</div>
       <h1>CRM y <span>Ventas</span><br>integrados</h1>
       <p>Gestiona tu embudo de ventas completo: desde el primer contacto hasta la factura cobrada. Pipeline visual Kanban, presupuestos, pedidos y facturación conectados en un solo flujo sin duplicar datos.</p>
@@ -2247,7 +2252,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 <div class="mod-hero">
   <div class="mhi">
     <div>
-      <div class="pack-badge">🟣 Incluido en Pack M y L</div>
+      <a href="#precios" class="pack-badge" style="text-decoration:none;cursor:pointer">🟣 Incluido en Pack M y L</a>
       <div class="mod-icon-big">📦</div>
       <h1>Inventario y<br><span>Almacén</span> en tiempo real</h1>
       <p>Control de stock completo con trazabilidad por lote y número de serie. Gestiona múltiples almacenes, rutas de entrada y salida, y reglas de reabastecimiento automático desde una sola pantalla.</p>
@@ -2325,7 +2330,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 <div class="mod-hero">
   <div class="mhi">
     <div>
-      <div class="pack-badge">⚫ Incluido en Pack L</div>
+      <a href="#precios" class="pack-badge" style="text-decoration:none;cursor:pointer">⚫ Incluido en Pack L</a>
       <div class="mod-icon-big">🏭</div>
       <h1>Fabricación y<br><span>Producción</span> MRP</h1>
       <p>Planifica y ejecuta tus órdenes de fabricación con listas de materiales (BoM), rutas de producción y centros de trabajo. Conectado en tiempo real con inventario y compras para gestionar la cadena de suministro completa.</p>
@@ -2402,7 +2407,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 <div class="mod-hero">
   <div class="mhi">
     <div>
-      <div class="pack-badge">⚫ Incluido en Pack L</div>
+      <a href="#precios" class="pack-badge" style="text-decoration:none;cursor:pointer">⚫ Incluido en Pack L</a>
       <div class="mod-icon-big">👥</div>
       <h1>Recursos Humanos<br><span>completo</span></h1>
       <p>Gestiona el ciclo completo de tus empleados: contratos, ausencias, vacaciones, control horario y evaluaciones de desempeño. Con registro de jornada obligatorio en España incluido de serie.</p>
@@ -3938,8 +3943,8 @@ try { var sl = localStorage.getItem('ol_lang'); if (sl === 'en') setLang('en'); 
 
 <!-- ── WHATSAPP FLOATING BUTTON ─────────────────────────── -->
 <div class="wa-float">
-  <div class="wa-bubble" data-lang="es">💬 ¿Tienes dudas? Escríbenos</div>
-  <div class="wa-bubble" data-lang="en">💬 Questions? Chat with us</div>
+  <a class="wa-bubble" data-lang="es" href="https://wa.me/34644044808?text=Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" target="_blank" rel="noopener">💬 ¿Tienes dudas? Escríbenos</a>
+  <a class="wa-bubble" data-lang="en" href="https://wa.me/34644044808?text=Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" target="_blank" rel="noopener">💬 Questions? Chat with us</a>
   <a class="wa-btn" 
      href="https://wa.me/34644044808?text=Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" 
      target="_blank" 
