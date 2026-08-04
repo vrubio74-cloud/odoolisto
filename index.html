@@ -477,6 +477,21 @@ tbody td.ours{background:rgba(28,15,94,.03);font-weight:700;color:var(--navy)}
 .tsg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}
 /* ── Sección Seguridad y Confianza ── */
 ".seg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+/* ── Banda usuarios ilimitados ── */
+.coacc{display:flex;align-items:flex-start;gap:9px;font-size:.78rem;color:rgba(255,255,255,.8);line-height:1.5;margin:4px 0 13px;cursor:pointer;text-align:left}
+.coacc input{margin-top:2px;flex-shrink:0;width:16px;height:16px;accent-color:#00A09D;cursor:pointer}
+.unlim{max-width:760px;margin:26px auto 0;background:linear-gradient(135deg,rgba(0,160,157,.10),rgba(0,160,157,.03));border:1px solid rgba(0,160,157,.35);border-radius:var(--rlg);padding:20px 26px;text-align:center}
+.unlim-t{font-family:var(--serif);font-size:1.35rem;font-weight:800;color:var(--navy);margin-bottom:7px}
+.unlim-s{font-size:.88rem;color:var(--g3);line-height:1.6}
+/* ── Teaser OdooListo IA ── */
+.aiteaser{background:linear-gradient(135deg,#1A1240,#0E1B3C);border-radius:var(--rlg);padding:42px 34px;text-align:center;position:relative;overflow:hidden;border:1px solid rgba(122,110,255,.35)}
+.ai-pill{display:inline-block;background:rgba(155,140,255,.16);border:1px solid rgba(155,140,255,.5);color:#B9AEFF;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:16px}
+.ai-h{font-family:var(--serif);font-size:2rem;font-weight:800;color:#fff;margin-bottom:10px;line-height:1.2}
+.ai-sub{font-size:.95rem;color:rgba(255,255,255,.72);max-width:620px;margin:0 auto 24px;line-height:1.6}
+.ai-qs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:820px;margin:0 auto}
+.ai-q{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:10px 18px;font-size:.83rem;color:rgba(255,255,255,.9);font-style:italic}
+.ai-note{margin-top:22px;font-size:.8rem;color:rgba(185,174,255,.85);font-weight:600}
+@media(max-width:768px){.aiteaser{padding:32px 20px}.ai-h{font-size:1.5rem}.ai-q{font-size:.78rem;padding:8px 14px}.unlim-t{font-size:1.12rem}}
 /* ── Comparativa vs freemium/DIY ── */
 .vscmp{width:100%;border-collapse:collapse;margin-top:34px;font-size:.9rem}
 .vscmp th,.vscmp td{padding:13px 16px;text-align:left;border-bottom:1px solid var(--g2);vertical-align:top}
@@ -1345,6 +1360,12 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
       <h2 class="sh" data-lang="en">Simple, transparent, no surprises</h2>
       <p class="ss" style="margin:0 auto" data-lang="es">Setup único + suscripción mensual. Sin permanencia. Sin licencias. Servidor incluido.</p>
       <p class="ss" style="margin:0 auto" data-lang="en">One-time setup + monthly subscription. No lock-in. No licenses. Server included.</p>
+      <div class="unlim">
+        <div class="unlim-t" data-lang="es">👥 Usuarios ilimitados. Sí, ilimitados.</div>
+        <div class="unlim-t" data-lang="en">👥 Unlimited users. Yes, unlimited.</div>
+        <div class="unlim-s" data-lang="es">Mete a todo tu equipo —comercial, almacén, administración, dirección— y tu cuota no se mueve ni un euro. En el resto de ERP, cada persona que añades sube la factura <strong>todos los meses, para siempre</strong>.</div>
+        <div class="unlim-s" data-lang="en">Add your whole team —sales, warehouse, admin, management— and your fee doesn't move a cent. In every other ERP, each person you add raises the bill <strong>every month, forever</strong>.</div>
+      </div>
     </div>
     <div class="pg">
       <div class="pc reveal">
@@ -1352,7 +1373,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="pname" data-lang="es">Esencial</div><div class="pname" data-lang="en">Essential</div>
         <div class="psetup" data-lang="es">Setup único: <strong>€297</strong></div><div class="psetup" data-lang="en">One-time setup: <strong>€297</strong></div>
         <div class="pmrow"><span class="peur">€97</span><span class="pper" data-lang="es">/mes</span><span class="pper" data-lang="en">/month</span></div>
-        <div class="pusers" data-lang="es">Hasta 5 usuarios · Servidor incluido</div><div class="pusers" data-lang="en">Up to 5 users · Server included</div>
+        <div class="pusers" data-lang="es">👥 <strong>Usuarios ilimitados</strong> · Servidor incluido</div><div class="pusers" data-lang="en">👥 <strong>Unlimited users</strong> · Server included</div>
         <div class="pdiv"></div>
         <div class="pmods" data-lang="es">3 módulos incluidos</div><div class="pmods" data-lang="en">3 modules included</div>
         <ul class="ml"><li class="mi"><span class="mch">✓</span>Contabilidad / Accounting</li><li class="mi"><span class="mch">✓</span>Ventas / Sales</li><li class="mi"><span class="mch">✓</span>CRM</li></ul>
@@ -1364,7 +1385,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="pname" data-lang="es">Completo</div><div class="pname" data-lang="en">Complete</div>
         <div class="psetup" data-lang="es">Setup único: <strong>€497</strong></div><div class="psetup" data-lang="en">One-time setup: <strong>€497</strong></div>
         <div class="pmrow"><span class="peur">€147</span><span class="pper" data-lang="es">/mes</span><span class="pper" data-lang="en">/month</span></div>
-        <div class="pusers" data-lang="es">Hasta 15 usuarios · Servidor incluido</div><div class="pusers" data-lang="en">Up to 15 users · Server included</div>
+        <div class="pusers" data-lang="es">👥 <strong>Usuarios ilimitados</strong> · Servidor incluido</div><div class="pusers" data-lang="en">👥 <strong>Unlimited users</strong> · Server included</div>
         <div class="pdiv"></div>
         <div class="pmods" data-lang="es">6 módulos incluidos</div><div class="pmods" data-lang="en">6 modules included</div>
         <ul class="ml"><li class="mi"><span class="mch">✓</span>Contabilidad / Accounting</li><li class="mi"><span class="mch">✓</span>Ventas / Sales + CRM</li><li class="mi"><span class="mch">✓</span>Inventario / Inventory</li><li class="mi"><span class="mch">✓</span>Compras / Purchase</li><li class="mi"><span class="mch">✓</span>Proyectos / Projects</li><li class="mi"><span class="mch">✓</span>Facturación / Invoicing</li></ul>
@@ -1375,7 +1396,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="pname" data-lang="es">Avanzado</div><div class="pname" data-lang="en">Advanced</div>
         <div class="psetup" data-lang="es">Setup único: <strong>€697</strong></div><div class="psetup" data-lang="en">One-time setup: <strong>€697</strong></div>
         <div class="pmrow"><span class="peur">€197</span><span class="pper" data-lang="es">/mes</span><span class="pper" data-lang="en">/month</span></div>
-        <div class="pusers" data-lang="es">Hasta 40 usuarios · Servidor incluido</div><div class="pusers" data-lang="en">Up to 40 users · Server included</div>
+        <div class="pusers" data-lang="es">👥 <strong>Usuarios ilimitados</strong> · Servidor incluido</div><div class="pusers" data-lang="en">👥 <strong>Unlimited users</strong> · Server included</div>
         <div class="pdiv"></div>
         <div class="pmods" data-lang="es">9 módulos incluidos</div><div class="pmods" data-lang="en">9 modules included</div>
         <ul class="ml"><li class="mi"><span class="mch">✓</span><span data-lang="es">Todo el Pack M</span><span data-lang="en">All Pack M modules</span></li><li class="mi"><span class="mch">✓</span>RRHH / HR</li><li class="mi"><span class="mch">✓</span>Fabricación / Manufacturing</li><li class="mi"><span class="mch">✓</span>eCommerce</li></ul>
@@ -1407,7 +1428,8 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
           <tr><td data-lang="es">Inversión total año 1</td><td data-lang="en">Total year 1</td><td class="ours" style="color:var(--teal-dk);font-weight:800">~€1.900</td><td>~€700</td><td style="color:#DC2626;font-weight:800">€28K–70K</td><td style="color:#DC2626;font-weight:800">€40K–114K</td></tr>
           <tr><td data-lang="es">Tiempo implantación</td><td data-lang="en">Deploy time</td><td class="ours" style="color:var(--teal-dk);font-weight:800">3 días ✦</td><td data-lang="es">Inmediato (limitado)</td><td data-lang="en">Immediate (limited)</td><td data-lang="es" style="color:#DC2626">3–9 meses</td><td data-lang="en" style="color:#DC2626">3–9 months</td><td data-lang="es" style="color:#DC2626">6–18 meses</td><td data-lang="en" style="color:#DC2626">6–18 months</td></tr>
           <tr><td data-lang="es">Escalable a multinacional</td><td data-lang="en">Scales to enterprise</td><td class="ours"><span class="yes">✓</span></td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
-          <tr><td data-lang="es" data-lang="es">Sin licencias de usuario</li><li data-lang="en">No user licenses</td><td data-lang="en">No user licenses</td><td class="ours"><span class="yes">✓</span></td><td><span class="no">✗</span></td><td><span class="no">✗</span></td><td><span class="no">✗</span></td></tr>
+          <tr><td data-lang="es">Sin licencias de usuario</td><td data-lang="en">No user licenses</td><td class="ours"><span class="yes">✓</span></td><td><span class="no">✗</span></td><td><span class="no">✗</span></td><td><span class="no">✗</span></td></tr>
+          <tr><td data-lang="es"><strong>Coste al crecer el equipo</strong></td><td data-lang="en"><strong>Cost as your team grows</strong></td><td class="ours" style="color:var(--teal-dk);font-weight:800">€0 ✦</td><td data-lang="es" style="color:#DC2626">+€/usuario/mes</td><td data-lang="en" style="color:#DC2626">+€/user/month</td><td data-lang="es" style="color:#DC2626">+licencia/usuario</td><td data-lang="en" style="color:#DC2626">+license/user</td><td data-lang="es" style="color:#DC2626">+licencia/usuario</td><td data-lang="en" style="color:#DC2626">+license/user</td></tr>
           <tr><td data-lang="es">Servidor incluido</td><td data-lang="en">Server included</td><td class="ours"><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
           <tr><td>Odoo 19</td><td class="ours"><span class="yes">✓</span></td><td><span class="no">✗</span></td><td>Depende</td><td><span class="no">✗</span></td></tr>
           <tr><td>VeriFactu / CFDI</td><td class="ours"><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td>Depende</td><td><span class="yes">✓</span></td></tr>
@@ -1453,6 +1475,31 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="tq" data-lang="en">"The best part is knowing that as we grow, Odoo grows with us. We started with Pack M and are already adding manufacturing without changing systems."</div>
         <div class="ta"><div class="tav">LO</div><div><div class="tname">Lucía Ospina</div><div class="tco" data-lang="es">CEO · Industrias Ospina Ltda. · Bogotá</div><div class="tco" data-lang="en">CEO · Industrias Ospina Ltda. · Bogotá</div></div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="odoolisto-ia" style="background:var(--off);padding-top:10px">
+  <div class="si">
+    <div class="aiteaser reveal">
+      <div class="ai-pill" data-lang="es">🤖 Próximamente · Módulo estrella</div>
+      <div class="ai-pill" data-lang="en">🤖 Coming soon · Flagship module</div>
+      <h2 class="ai-h" data-lang="es">Pregúntale a tu empresa.</h2>
+      <h2 class="ai-h" data-lang="en">Just ask your company.</h2>
+      <p class="ai-sub" data-lang="es">Un ERP solo sirve si puedes sacar la información. Con <strong style="color:#B9AEFF">OdooListo IA</strong> se la pides hablando, como se la pedirías a tu mejor analista. Sin menús, sin informes, sin esperar a nadie.</p>
+      <p class="ai-sub" data-lang="en">An ERP is only useful if you can get the information out. With <strong style="color:#B9AEFF">OdooListo IA</strong> you just ask out loud, like you'd ask your best analyst. No menus, no reports, no waiting.</p>
+      <div class="ai-qs">
+        <div class="ai-q" data-lang="es">"¿Qué facturas tengo vencidas y cuánto suman?"</div>
+        <div class="ai-q" data-lang="en">"Which invoices are overdue and how much is that?"</div>
+        <div class="ai-q" data-lang="es">"¿Qué clientes me compraban el año pasado y este no?"</div>
+        <div class="ai-q" data-lang="en">"Which customers bought last year but not this one?"</div>
+        <div class="ai-q" data-lang="es">"¿Cuánto voy a facturar a cierre si sigo a este ritmo?"</div>
+        <div class="ai-q" data-lang="en">"What will I bill by year-end at this pace?"</div>
+        <div class="ai-q" data-lang="es">"Mándame en Excel las ventas del trimestre por cliente"</div>
+        <div class="ai-q" data-lang="en">"Email me last quarter's sales by customer in Excel"</div>
+      </div>
+      <div class="ai-note" data-lang="es">Se incluirá en el Pack Avanzado. Implanta tu Odoo hoy y estarás listo el día que se active.</div>
+      <div class="ai-note" data-lang="en">Will be included in the Advanced Pack. Deploy your Odoo today and be ready the day it goes live.</div>
     </div>
   </div>
 </section>
@@ -1534,9 +1581,9 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
       </div>
       <div class="segc reveal">
         <div class="segi">🔓</div>
-        <h3 data-lang="es">Tu copia, donde tú quieras</h3><h3 data-lang="en">Your backup, wherever you want</h3>
-        <p data-lang="es">Odoo Community es software libre y tus datos son tuyos. Te entregamos una copia completa de tu base de datos en el almacenamiento que tú elijas —tu nube o tu servidor por SFTP—, por un canal seguro. Sin lock-in.</p>
-        <p data-lang="en">Odoo Community is open source and your data is yours. We deliver a full copy of your database to the storage you choose —your cloud or your SFTP server— over a secure channel. No lock-in.</p>
+        <h3 data-lang="es">Tus datos, en tu casa cada día</h3><h3 data-lang="en">Your data, at home every day</h3>
+        <p data-lang="es"><strong>Cada día</strong> dejamos una copia completa donde tú nos digas: tu nube, tu servidor o tu NAS. Y tienes acceso a tu base de datos para integrar lo que necesites: tu BI, tu tienda, tus herramientas. Si algún día decides irte, <strong>no tienes que pedirnos nada: ya la tienes</strong>.</p>
+        <p data-lang="en"><strong>Every day</strong> we drop a full copy wherever you choose: your cloud, your server or your NAS. Plus database access to integrate whatever you need: your BI, your shop, your tools. If you ever decide to leave, <strong>you don't have to ask us for anything: you already have it</strong>.</p>
       </div>
       <div class="segc reveal">
         <div class="segi">🔒</div>
@@ -3336,6 +3383,11 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
           <li data-lang="es">Cancela cuando quieras desde tu portal</li><li data-lang="en">Cancel anytime from your portal</li>
           <li data-lang="es">Factura automática con IVA incluido</li><li data-lang="en">Automatic invoice with VAT included</li>
         </ul>
+        <label class="coacc">
+          <input type="checkbox" id="co-terms">
+          <span data-lang="es">He leído y acepto los <a onclick="go('terms')" style="color:#4DD9D6;font-weight:700;cursor:pointer;text-decoration:underline">Términos y Condiciones</a>, incluidos el alcance estándar del servicio (sin desarrollos a medida) y los recursos y límites de mi plan.</span>
+          <span data-lang="en">I have read and accept the <a onclick="go('terms')" style="color:#4DD9D6;font-weight:700;cursor:pointer;text-decoration:underline">Terms and Conditions</a>, including the standard scope of the service (no custom development) and my plan's resources and limits.</span>
+        </label>
         <button class="btn-t" style="width:100%;padding:13px;font-size:.95rem;animation:none" onclick="payStripe()"><span data-lang="es">💳 Pagar con tarjeta →</span><span data-lang="en">💳 Pay by card →</span></button>
         <p style="text-align:center;font-size:.72rem;color:var(--g3);margin-top:9px" data-lang="es">🔒 Procesado por Stripe — tus datos no tocan nuestros servidores</p>
         <p style="text-align:center;font-size:.72rem;color:var(--g3);margin-top:9px" data-lang="en">🔒 Processed by Stripe — your data never touches our servers</p>
@@ -3505,16 +3557,27 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   <h2 data-lang="es">2. El Servicio</h2><h2 data-lang="en">2. The Service</h2>
   <p data-lang="es">OdooListo proporciona: (a) implantación estándar de Odoo Community 19 sin desarrollos a medida; (b) alojamiento en servidores propios en España; (c) sesión de puesta en marcha por videollamada de 2–4 horas; (d) soporte básico por ticketing según el plan contratado.</p>
   <p data-lang="en">OdooListo provides: (a) standard Odoo Community 19 deployment without custom development; (b) hosting on dedicated servers in Spain; (c) go-live video session of 2–4 hours; (d) basic ticketing support per the contracted plan.</p>
-  <h2 data-lang="es">3. Precios y facturación</h2><h2 data-lang="en">3. Pricing and billing</h2>
+  <h2 data-lang="es">3. Recursos y límites del servicio</h2><h2 data-lang="en">3. Resources and service limits</h2>
+  <p data-lang="es"><strong>Usuarios ilimitados.</strong> Ningún plan limita el número de usuarios dados de alta en Odoo. Los recursos de servidor de cada plan están dimensionados para un número orientativo de usuarios trabajando simultáneamente: aproximadamente 15 (Pack S), 35 (Pack M) y 70 (Pack L).</p>
+  <p data-lang="en"><strong>Unlimited users.</strong> No plan limits the number of user accounts in Odoo. Each plan's server resources are sized for an indicative number of concurrent users: approximately 15 (Pack S), 35 (Pack M) and 70 (Pack L).</p>
+  <p data-lang="es"><strong>Almacenamiento incluido:</strong> 50 GB (Pack S), 150 GB (Pack M) y 300 GB (Pack L), incluyendo base de datos y archivos adjuntos. Al alcanzar el 80% se avisará al cliente y podrá ampliarse por bloques adicionales según tarifa vigente.</p>
+  <p data-lang="en"><strong>Included storage:</strong> 50 GB (Pack S), 150 GB (Pack M) and 300 GB (Pack L), including database and attachments. At 80% usage the client will be notified and may add extra blocks at the current rate.</p>
+  <p data-lang="es"><strong>Copia diaria y acceso a datos.</strong> Se realiza una copia diaria de la base de datos, entregada en el destino que indique el cliente (nube propia, servidor o NAS) por canal seguro. El cliente dispone de acceso de lectura a su base de datos para integraciones.</p>
+  <p data-lang="en"><strong>Daily backup and data access.</strong> A daily database backup is delivered to the destination the client specifies (own cloud, server or NAS) over a secure channel. The client has read access to their database for integrations.</p>
+  <p data-lang="es"><strong>OdooListo IA</strong> (cuando esté disponible, incluido en Pack Avanzado): hasta 200 consultas al mes. Las consultas adicionales podrán contratarse por bloques según tarifa vigente.</p>
+  <p data-lang="en"><strong>OdooListo IA</strong> (when available, included in the Advanced Pack): up to 200 queries per month. Additional queries may be purchased in blocks at the current rate.</p>
+  <p data-lang="es"><strong>Uso razonable.</strong> Los recursos están dimensionados para un uso normal de empresa. Si la operación del cliente supera de forma sostenida los límites indicados, OdooListo lo comunicará con antelación y propondrá el plan adecuado. En ningún caso se interrumpirá el servicio sin aviso previo.</p>
+  <p data-lang="en"><strong>Fair use.</strong> Resources are sized for normal business use. If the client's operation consistently exceeds these limits, OdooListo will give advance notice and propose a suitable plan. The service will never be interrupted without prior notice.</p>
+  <h2 data-lang="es">4. Precios y facturación</h2><h2 data-lang="en">4. Pricing and billing</h2>
   <p data-lang="es">Setup único + suscripción mensual recurrente. Precios sin IVA (21% para España peninsular y Baleares). La suscripción se renueva automáticamente salvo cancelación con 30 días de antelación.</p>
   <p data-lang="en">One-time setup + recurring monthly subscription. Prices exclude VAT (21% for mainland Spain and Balearic Islands). Subscription renews automatically unless cancelled with 30 days notice.</p>
-  <h2 data-lang="es">4. Garantía de puesta en marcha</h2><h2 data-lang="en">4. Go-live guarantee</h2>
+  <h2 data-lang="es">5. Garantía de puesta en marcha</h2><h2 data-lang="en">5. Go-live guarantee</h2>
   <p data-lang="es">OdooListo garantiza la puesta en marcha en 3 días hábiles desde la recepción de los datos correctamente cumplimentados. Si no se cumple por causas imputables a OdooListo, el Cliente tiene derecho al reembolso del setup.</p>
   <p data-lang="en">OdooListo guarantees go-live within 3 business days of receiving correctly completed data. If not met due to OdooListo's fault, the Customer is entitled to a setup refund.</p>
-  <h2 data-lang="es">5. Cancelación</h2><h2 data-lang="en">5. Cancellation</h2>
+  <h2 data-lang="es">6. Cancelación</h2><h2 data-lang="en">6. Cancellation</h2>
   <p data-lang="es">Cancelación en cualquier momento con 30 días de preaviso a <a href="mailto:info@odoolisto.com">info@odoolisto.com</a>. Se entrega exportación completa de datos en 15 días.</p>
   <p data-lang="en">Cancel anytime with 30 days notice to <a href="mailto:info@odoolisto.com">info@odoolisto.com</a>. Full data export delivered within 15 days.</p>
-  <h2 data-lang="es">6. Legislación y jurisdicción</h2><h2 data-lang="en">6. Governing law</h2>
+  <h2 data-lang="es">7. Legislación y jurisdicción</h2><h2 data-lang="en">7. Governing law</h2>
   <p data-lang="es">Legislación española. Juzgados y Tribunales de Valencia.</p>
   <p data-lang="en">Spanish law. Courts of Valencia, Spain.</p>
 </div></div></section>
@@ -3961,6 +4024,12 @@ var stripeLinks = {
   'l': 'https://buy.stripe.com/8x29AT0FEfvveC0dvogfu0a'
 };
 function payStripe() {
+  var acc = document.getElementById('co-terms');
+  if (acc && !acc.checked) {
+    alert('Para continuar, marca que aceptas los Términos y Condiciones.');
+    acc.focus();
+    return;
+  }
   var sel = document.querySelector('.po.sel');
   var packId = 's';
   if (sel) {
