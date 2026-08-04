@@ -4113,6 +4113,20 @@ document.addEventListener('keydown', function(e) {
     armPopup();
   }
 })();
+// ── RUTAS POR HASH (URLs directas para legal/Stripe) ───────
+(function(){
+  var map = {
+    '#terminos':'terms', '#terms':'terms',
+    '#privacidad':'privacy', '#privacy':'privacy',
+    '#legal':'legal', '#cookies':'cookies'
+  };
+  function routeHash(){
+    var t = map[(location.hash||'').toLowerCase()];
+    if (t) { try { go(t); } catch(e){} }
+  }
+  window.addEventListener('hashchange', routeHash);
+  routeHash();
+})();
 // ── RESTORE LANG ───────────────────────────────────────────
 try { var sl = localStorage.getItem('ol_lang'); if (sl === 'en') setLang('en'); } catch(e) {}
 
