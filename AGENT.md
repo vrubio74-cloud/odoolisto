@@ -64,7 +64,7 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 - [x] `implementar odoo mexico` → PUBLICADO: 18 Jul 2026 → URL: https://odoolisto.com/#post11
 - [x] `odoo vs aspel` → PUBLICADO: 30 Jul 2026 → URL: https://odoolisto.com/#post12
 - [x] `odoo vs contpaq` → PUBLICADO: 09 Ago 2026 → URL: https://odoolisto.com/#post13
-- [ ] `odoo colombia` → Título: "Odoo para empresas en Colombia: guía de implantación 2026"
+- [x] `odoo colombia` → PUBLICADO: 12 Ago 2026 → URL: https://odoolisto.com/#post14
 - [ ] `erp pyme mexico barato` → Título: "ERP barato para pymes en México: opciones y precios 2026"
 
 ---
@@ -169,6 +169,7 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 | 2026-07-18 | implementar odoo mexico | Implementar Odoo en México: guía completa 2026 | https://odoolisto.com/#post11 | ✅ Publicado |
 | 2026-07-30 | odoo vs aspel | Odoo vs Aspel: qué ERP conviene más a tu empresa mexicana | https://odoolisto.com/#post12 | ✅ Publicado |
 | 2026-08-09 | odoo vs contpaq | Odoo vs CONTPAQi: comparativa para pymes mexicanas 2026 | https://odoolisto.com/#post13 | ✅ Publicado |
+| 2026-08-12 | odoo colombia | Odoo para empresas en Colombia: guía de implantación 2026 | https://odoolisto.com/#post14 | ✅ Publicado |
 
 ---
 
@@ -183,5 +184,5 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 
 ---
 
-*Última actualización: 09 Ago 2026 (publicación post13 — odoo vs contpaq — por el agente automático)*
+*Última actualización: 12 Ago 2026 (publicación post14 — odoo colombia — por el agente automático)*
 *Agente configurado por: Athilan Pignus, S.L.*
