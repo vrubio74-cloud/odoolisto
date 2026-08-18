@@ -65,7 +65,14 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 - [x] `odoo vs aspel` → PUBLICADO: 30 Jul 2026 → URL: https://odoolisto.com/#post12
 - [x] `odoo vs contpaq` → PUBLICADO: 09 Ago 2026 → URL: https://odoolisto.com/#post13
 - [x] `odoo colombia` → PUBLICADO: 12 Ago 2026 → URL: https://odoolisto.com/#post14
-- [ ] `erp pyme mexico barato` → Título: "ERP barato para pymes en México: opciones y precios 2026"
+- [x] `erp pyme mexico barato` → PUBLICADO: 18 Ago 2026 → URL: https://odoolisto.com/#post15
+
+### 🔵 PRIORIDAD NUEVA — Cuarta tanda (añadida automáticamente 18 Ago 2026, todas las tandas anteriores ya publicadas)
+- [ ] `odoo vs sage 50cloud` → Título: "Odoo vs Sage 50cloud: qué ERP elegir para tu pyme en 2026"
+- [ ] `odoo para autonomos españa` → Título: "Odoo para autónomos en España: ¿merece la pena en 2026?"
+- [ ] `migrar de excel a odoo` → Título: "De Excel a Odoo: cómo migrar tu pyme sin perder datos en 2026"
+- [ ] `odoo para ecommerce pyme` → Título: "Odoo para eCommerce: el ERP con tienda online integrada para pymes"
+- [ ] `odoo pymes argentina` → Título: "Odoo para pymes en Argentina: precios e implantación 2026"
 
 ---
 
@@ -170,6 +177,7 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 | 2026-07-30 | odoo vs aspel | Odoo vs Aspel: qué ERP conviene más a tu empresa mexicana | https://odoolisto.com/#post12 | ✅ Publicado |
 | 2026-08-09 | odoo vs contpaq | Odoo vs CONTPAQi: comparativa para pymes mexicanas 2026 | https://odoolisto.com/#post13 | ✅ Publicado |
 | 2026-08-12 | odoo colombia | Odoo para empresas en Colombia: guía de implantación 2026 | https://odoolisto.com/#post14 | ✅ Publicado |
+| 2026-08-18 | erp pyme mexico barato | ERP barato para pymes en México: opciones y precios 2026 | https://odoolisto.com/#post15 | ✅ Publicado |
 
 ---
 
