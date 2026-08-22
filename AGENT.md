@@ -68,7 +68,7 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 - [x] `erp pyme mexico barato` → PUBLICADO: 18 Ago 2026 → URL: https://odoolisto.com/#post15
 
 ### 🔵 PRIORIDAD NUEVA — Cuarta tanda (añadida automáticamente 18 Ago 2026, todas las tandas anteriores ya publicadas)
-- [ ] `odoo vs sage 50cloud` → Título: "Odoo vs Sage 50cloud: qué ERP elegir para tu pyme en 2026"
+- [x] `odoo vs sage 50cloud` → PUBLICADO: 22 Ago 2026 → URL: https://odoolisto.com/#post16 *(título final ampliado a "Odoo vs Sage" para cubrir también Sage 200 y la migración 50→200; "Sage 50cloud" se menciona explícitamente en el cuerpo del artículo)*
 - [ ] `odoo para autonomos españa` → Título: "Odoo para autónomos en España: ¿merece la pena en 2026?"
 - [ ] `migrar de excel a odoo` → Título: "De Excel a Odoo: cómo migrar tu pyme sin perder datos en 2026"
 - [ ] `odoo para ecommerce pyme` → Título: "Odoo para eCommerce: el ERP con tienda online integrada para pymes"
@@ -178,6 +178,7 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 | 2026-08-09 | odoo vs contpaq | Odoo vs CONTPAQi: comparativa para pymes mexicanas 2026 | https://odoolisto.com/#post13 | ✅ Publicado |
 | 2026-08-12 | odoo colombia | Odoo para empresas en Colombia: guía de implantación 2026 | https://odoolisto.com/#post14 | ✅ Publicado |
 | 2026-08-18 | erp pyme mexico barato | ERP barato para pymes en México: opciones y precios 2026 | https://odoolisto.com/#post15 | ✅ Publicado |
+| 2026-08-22 | odoo vs sage 50cloud | Odoo vs Sage: comparativa completa para pymes españolas en 2026 | https://odoolisto.com/#post16 | ✅ Publicado |
 
 ---
 
@@ -192,5 +193,5 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 
 ---
 
-*Última actualización: 12 Ago 2026 (publicación post14 — odoo colombia — por el agente automático)*
+*Última actualización: 22 Ago 2026 (publicación post16 — odoo vs sage 50cloud — por el agente automático)*
 *Agente configurado por: Athilan Pignus, S.L.*
