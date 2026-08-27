@@ -9,6 +9,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-18242312681');
+  gtag('config', 'G-TTBKX48K3B');
 </script>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
@@ -4411,6 +4412,7 @@ function submitTrial() {
   .then(function(data){
     if (data.ok || data.next) {
       try { gtag('event', 'conversion', {'send_to': 'AW-18242312681/-7vWCNGzys4cEOmzzvpD'}); } catch(e){}
+      try { gtag('event', 'generate_lead', {'event_category':'prueba_gratis','event_label': co.value}); } catch(e){}
       try { gtag('event', 'solicitud_prueba'); } catch(e){}
       var wrap = document.getElementById('pf-wrap');
       var succ = document.getElementById('pf-succ');
@@ -4508,6 +4510,7 @@ function payStripe() {
     if (idParts.length > 1) packId = idParts[1];
   }
   var link = stripeLinks[packId] || stripeLinks['s'];
+  try { gtag('event', 'begin_checkout', {'event_category':'pago','event_label': 'Pack ' + packId.toUpperCase()}); } catch(e){}
   gtag_report_conversion();
   window.open(link, '_blank');
 }
