@@ -4588,7 +4588,11 @@ document.addEventListener('keydown', function(e) {
   var map = {
     '#terminos':'terms', '#terms':'terms',
     '#privacidad':'privacy', '#privacy':'privacy',
-    '#legal':'legal', '#cookies':'cookies'
+    '#legal':'legal', '#cookies':'cookies',
+    '#contratar':'checkout', '#checkout':'checkout', '#pago':'checkout',
+    '#modulos':'modules', '#modules':'modules',
+    '#nosotros':'about', '#about':'about',
+    '#blog':'blog', '#contacto':'contact', '#contact':'contact'
   };
   function routeHash(){
     var t = map[(location.hash||'').toLowerCase()];
