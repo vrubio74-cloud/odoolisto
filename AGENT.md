@@ -69,7 +69,7 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 
 ### 🔵 PRIORIDAD NUEVA — Cuarta tanda (añadida automáticamente 18 Ago 2026, todas las tandas anteriores ya publicadas)
 - [x] `odoo vs sage 50cloud` → PUBLICADO: 22 Ago 2026 → URL: https://odoolisto.com/#post16 *(título final ampliado a "Odoo vs Sage" para cubrir también Sage 200 y la migración 50→200; "Sage 50cloud" se menciona explícitamente en el cuerpo del artículo)*
-- [ ] `odoo para autonomos españa` → Título: "Odoo para autónomos en España: ¿merece la pena en 2026?"
+- [x] `odoo para autonomos españa` → PUBLICADO: 04 Sep 2026 → URL: https://odoolisto.com/#post17
 - [ ] `migrar de excel a odoo` → Título: "De Excel a Odoo: cómo migrar tu pyme sin perder datos en 2026"
 - [ ] `odoo para ecommerce pyme` → Título: "Odoo para eCommerce: el ERP con tienda online integrada para pymes"
 - [ ] `odoo pymes argentina` → Título: "Odoo para pymes en Argentina: precios e implantación 2026"
@@ -179,6 +179,7 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 | 2026-08-12 | odoo colombia | Odoo para empresas en Colombia: guía de implantación 2026 | https://odoolisto.com/#post14 | ✅ Publicado |
 | 2026-08-18 | erp pyme mexico barato | ERP barato para pymes en México: opciones y precios 2026 | https://odoolisto.com/#post15 | ✅ Publicado |
 | 2026-08-22 | odoo vs sage 50cloud | Odoo vs Sage: comparativa completa para pymes españolas en 2026 | https://odoolisto.com/#post16 | ✅ Publicado |
+| 2026-09-04 | odoo para autonomos españa | Odoo para autónomos en España: ¿merece la pena en 2026? | https://odoolisto.com/#post17 | ✅ Publicado |
 
 ---
 
