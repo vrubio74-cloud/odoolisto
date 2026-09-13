@@ -44,11 +44,11 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 
 ## KEYWORDS PENDIENTES DE PUBLICAR
 
-> **Nota de sincronización (15 Jul 2026):** este checklist no reflejaba el estado real del sitio — 9 artículos ya estaban publicados en index.html (post1-post9) sin haberse marcado aquí. Se ha reconciliado abajo. También se detectó que las páginas `page-post1` y `page-post2` tienen el contenido intercambiado en el HTML en vivo (la tarjeta "Odoo vs Holded" enlaza al contenido de "Cuánto cuesta implantar Odoo" y viceversa). No se ha corregido en este run por ir fuera del alcance de la tarea de publicación — requiere revisión manual o una tarea dedicada.
+> **Nota de sincronización (15 Jul 2026):** este checklist no reflejaba el estado real del sitio — 9 artículos ya estaban publicados en index.html (post1-post9) sin haberse marcado aquí. Se ha reconciliado abajo. También se detectó que las tarjetas del blog para `post1` y `post2` enlazaban al contenido equivocado (la tarjeta "Odoo vs Holded" apuntaba a `#post1`, cuyo div contenía el artículo de "Cuánto cuesta implantar Odoo", y viceversa). CORREGIDO el 13 Sep 2026: se intercambiaron los atributos `id` de los dos divs de contenido (`page-post1` ↔ `page-post2`) sin tocar el texto de los artículos ni los enlaces `go('post1')`/`go('post2')` existentes, de forma que las URLs ahora coinciden con los temas registrados en esta tabla.
 
 ### 🔴 PRIORIDAD ALTA — Publicar primero
 - [x] `odoo barato pymes españa` → PUBLICADO: 08 Jun 2026 → URL: https://odoolisto.com/#post4
-- [x] `odoo vs holded` → PUBLICADO: (fecha no confirmada, sincronizado 15 Jul 2026) → URL: https://odoolisto.com/#post2 *(ver nota de intercambio post1/post2 arriba)*
+- [x] `odoo vs holded` → PUBLICADO: (fecha no confirmada, sincronizado 15 Jul 2026) → URL: https://odoolisto.com/#post2
 - [x] `odoo community gratis` → PUBLICADO: 14 Jun 2026 → URL: https://odoolisto.com/#post5
 - [x] `verifactu odoo` → PUBLICADO: (fecha no confirmada, sincronizado 15 Jul 2026) → URL: https://odoolisto.com/#post3
 - [x] `kit digital odoo` → PUBLICADO: (Junio 2026, fecha exacta no confirmada) → URL: https://odoolisto.com/#post6
@@ -56,7 +56,7 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 ### 🟠 PRIORIDAD MEDIA — Segunda tanda
 - [x] `odoo community vs enterprise` → PUBLICADO: 23 Jun 2026 → URL: https://odoolisto.com/#post7
 - [x] `erp barato pyme` → PUBLICADO: 28 Jun 2026 → URL: https://odoolisto.com/#post8
-- [x] `cuanto cuesta implantar odoo` → PUBLICADO: (fecha no confirmada, sincronizado 15 Jul 2026) → URL: https://odoolisto.com/#post1 *(ver nota de intercambio post1/post2 arriba)*
+- [x] `cuanto cuesta implantar odoo` → PUBLICADO: (fecha no confirmada, sincronizado 15 Jul 2026) → URL: https://odoolisto.com/#post1
 - [x] `odoo vs sap pyme` → PUBLICADO: 13 Jul 2026 → URL: https://odoolisto.com/#post9
 - [x] `implantar odoo rapido` → PUBLICADO: 15 Jul 2026 → URL: https://odoolisto.com/#post10
 
