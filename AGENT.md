@@ -71,7 +71,7 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 - [x] `odoo vs sage 50cloud` → PUBLICADO: 22 Ago 2026 → URL: https://odoolisto.com/#post16 *(título final ampliado a "Odoo vs Sage" para cubrir también Sage 200 y la migración 50→200; "Sage 50cloud" se menciona explícitamente en el cuerpo del artículo)*
 - [x] `odoo para autonomos españa` → PUBLICADO: 04 Sep 2026 → URL: https://odoolisto.com/#post17
 - [x] `migrar de excel a odoo` → PUBLICADO: 2026-09-13 → URL: https://odoolisto.com/#post18
-- [ ] `odoo para ecommerce pyme` → Título: "Odoo para eCommerce: el ERP con tienda online integrada para pymes"
+- [x] `odoo para ecommerce pyme` → PUBLICADO: 16 Sep 2026 → URL: https://odoolisto.com/#post19
 - [ ] `odoo pymes argentina` → Título: "Odoo para pymes en Argentina: precios e implantación 2026"
 
 ---
@@ -181,6 +181,7 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 | 2026-08-22 | odoo vs sage 50cloud | Odoo vs Sage: comparativa completa para pymes españolas en 2026 | https://odoolisto.com/#post16 | ✅ Publicado |
 | 2026-09-04 | odoo para autonomos españa | Odoo para autónomos en España: ¿merece la pena en 2026? | https://odoolisto.com/#post17 | ✅ Publicado |
 | 2026-09-13 | migrar de excel a odoo | Migrar de Excel a Odoo: cómo hacerlo en tu pyme sin perder datos en 2026 | https://odoolisto.com/#post18 | ✅ Publicado |
+| 2026-09-16 | odoo para ecommerce pyme | Odoo para eCommerce: el ERP con tienda online integrada para pymes | https://odoolisto.com/#post19 | ✅ Publicado |
 
 ---
 
@@ -195,5 +196,5 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 
 ---
 
-*Última actualización: 13 Sep 2026 (publicación post18 — migrar de excel a odoo — por el agente automático)*
+*Última actualización: 16 Sep 2026 (publicación post19 — odoo para ecommerce pyme — por el agente automático)*
 *Agente configurado por: Athilan Pignus, S.L.*
