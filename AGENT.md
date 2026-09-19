@@ -44,11 +44,13 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 
 ## KEYWORDS PENDIENTES DE PUBLICAR
 
-> **Nota de sincronización (15 Jul 2026):** este checklist no reflejaba el estado real del sitio — 9 artículos ya estaban publicados en index.html (post1-post9) sin haberse marcado aquí. Se ha reconciliado abajo. También se detectó que las tarjetas del blog para `post1` y `post2` enlazaban al contenido equivocado (la tarjeta "Odoo vs Holded" apuntaba a `#post1`, cuyo div contenía el artículo de "Cuánto cuesta implantar Odoo", y viceversa). CORREGIDO el 13 Sep 2026: se intercambiaron los atributos `id` de los dos divs de contenido (`page-post1` ↔ `page-post2`) sin tocar el texto de los artículos ni los enlaces `go('post1')`/`go('post2')` existentes, de forma que las URLs ahora coinciden con los temas registrados en esta tabla.
+> **Nota de sincronización (15 Jul 2026):** este checklist no reflejaba el estado real del sitio — 9 artículos ya estaban publicados en index.html (post1-post9) sin haberse marcado aquí. Se ha reconciliado abajo. También se detectó que las páginas `page-post1` y `page-post2` tienen el contenido intercambiado en el HTML en vivo (la tarjeta "Odoo vs Holded" enlaza al contenido de "Cuánto cuesta implantar Odoo" y viceversa). Corregido el 13 Sep 2026 (commit 072219e, solo swap de IDs, contenido de los artículos intacto).
+>
+> **Nota de sincronización (19 Sep 2026):** este checklist volvió a desincronizarse — post18 (`migrar de excel a odoo`, 13 Sep 2026) y post19 (`odoo para ecommerce pyme`, 16 Sep 2026) ya estaban publicados en index.html sin marcarse aquí ni añadirse al sitemap.xml. Se ha reconciliado el checklist, el registro y el sitemap.xml en este run (que además publica post20). Recordatorio para runs futuros: **siempre verificar contra index.html en vivo (paso 2 del flujo de trabajo)** antes de redactar, no fiarse solo de este checklist.
 
 ### 🔴 PRIORIDAD ALTA — Publicar primero
 - [x] `odoo barato pymes españa` → PUBLICADO: 08 Jun 2026 → URL: https://odoolisto.com/#post4
-- [x] `odoo vs holded` → PUBLICADO: (fecha no confirmada, sincronizado 15 Jul 2026) → URL: https://odoolisto.com/#post2
+- [x] `odoo vs holded` → PUBLICADO: (fecha no confirmada, sincronizado 15 Jul 2026) → URL: https://odoolisto.com/#post2 *(ver nota de intercambio post1/post2 arriba — corregido 13 Sep 2026)*
 - [x] `odoo community gratis` → PUBLICADO: 14 Jun 2026 → URL: https://odoolisto.com/#post5
 - [x] `verifactu odoo` → PUBLICADO: (fecha no confirmada, sincronizado 15 Jul 2026) → URL: https://odoolisto.com/#post3
 - [x] `kit digital odoo` → PUBLICADO: (Junio 2026, fecha exacta no confirmada) → URL: https://odoolisto.com/#post6
@@ -56,7 +58,7 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 ### 🟠 PRIORIDAD MEDIA — Segunda tanda
 - [x] `odoo community vs enterprise` → PUBLICADO: 23 Jun 2026 → URL: https://odoolisto.com/#post7
 - [x] `erp barato pyme` → PUBLICADO: 28 Jun 2026 → URL: https://odoolisto.com/#post8
-- [x] `cuanto cuesta implantar odoo` → PUBLICADO: (fecha no confirmada, sincronizado 15 Jul 2026) → URL: https://odoolisto.com/#post1
+- [x] `cuanto cuesta implantar odoo` → PUBLICADO: (fecha no confirmada, sincronizado 15 Jul 2026) → URL: https://odoolisto.com/#post1 *(ver nota de intercambio post1/post2 arriba — corregido 13 Sep 2026)*
 - [x] `odoo vs sap pyme` → PUBLICADO: 13 Jul 2026 → URL: https://odoolisto.com/#post9
 - [x] `implantar odoo rapido` → PUBLICADO: 15 Jul 2026 → URL: https://odoolisto.com/#post10
 
@@ -70,9 +72,16 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 ### 🔵 PRIORIDAD NUEVA — Cuarta tanda (añadida automáticamente 18 Ago 2026, todas las tandas anteriores ya publicadas)
 - [x] `odoo vs sage 50cloud` → PUBLICADO: 22 Ago 2026 → URL: https://odoolisto.com/#post16 *(título final ampliado a "Odoo vs Sage" para cubrir también Sage 200 y la migración 50→200; "Sage 50cloud" se menciona explícitamente en el cuerpo del artículo)*
 - [x] `odoo para autonomos españa` → PUBLICADO: 04 Sep 2026 → URL: https://odoolisto.com/#post17
-- [x] `migrar de excel a odoo` → PUBLICADO: 2026-09-13 → URL: https://odoolisto.com/#post18
-- [x] `odoo para ecommerce pyme` → PUBLICADO: 16 Sep 2026 → URL: https://odoolisto.com/#post19
-- [ ] `odoo pymes argentina` → Título: "Odoo para pymes en Argentina: precios e implantación 2026"
+- [x] `migrar de excel a odoo` → PUBLICADO: 13 Sep 2026 → URL: https://odoolisto.com/#post18 *(publicado por un run anterior sin actualizar este checklist; reconciliado el 19 Sep 2026, ver nota de sincronización arriba)*
+- [x] `odoo para ecommerce pyme` → PUBLICADO: 16 Sep 2026 → URL: https://odoolisto.com/#post19 *(publicado por un run anterior sin actualizar este checklist; reconciliado el 19 Sep 2026, ver nota de sincronización arriba)*
+- [x] `odoo pymes argentina` → PUBLICADO: 19 Sep 2026 → URL: https://odoolisto.com/#post20
+
+### 🟣 PRIORIDAD QUINTA — Quinta tanda (añadida automáticamente 19 Sep 2026, todas las tandas anteriores ya publicadas)
+- [ ] `odoo pymes chile` → Título: "Odoo para pymes en Chile: precios e implantación 2026"
+- [ ] `odoo peru pymes` → Título: "Odoo para pymes en Perú: guía de implantación 2026"
+- [ ] `odoo punto de venta pyme` → Título: "Odoo TPV: punto de venta para pymes con stock y facturación integrados"
+- [ ] `odoo para gestorias y asesorias` → Título: "Odoo para gestorías y asesorías: gestión de clientes multi-empresa en 2026"
+- [ ] `odoo vs zoho pyme` → Título: "Odoo vs Zoho: qué ERP/CRM conviene a tu pyme en 2026"
 
 ---
 
@@ -142,7 +151,7 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 ### Cada vez que se ejecuta el agente:
 
 1. **Leer** este AGENT.md y encontrar la primera keyword marcada con `[ ]` en PRIORIDAD ALTA
-2. **Verificar contra el sitio en vivo** (index.html) que esa keyword no esté ya publicada bajo un post existente antes de redactar — este checklist puede desincronizarse si un run anterior no lo actualizó
+2. **Verificar contra el sitio en vivo** (index.html) que esa keyword no esté ya publicada bajo un post existente antes de redactar — este checklist puede desincronizarse si un run anterior no lo actualizó (ver notas de sincronización del 15 Jul y 19 Sep 2026 — ha ocurrido dos veces)
 3. **Buscar** en Google los 5 primeros resultados para esa keyword
 4. **Analizar** qué estructura, longitud y enfoque tienen los artículos que posicionan
 5. **Redactar** el artículo siguiendo las instrucciones de este documento (formato bilingüe es/en)
@@ -163,8 +172,8 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 
 | Fecha | Keyword | Título | URL | Estado |
 |-------|---------|--------|-----|--------|
-| (no confirmada) | cuanto cuesta implantar odoo | ¿Cuánto cuesta implantar Odoo en una pyme española en 2026? | https://odoolisto.com/#post1 | ✅ Publicado *(nota: contenido intercambiado con post2, ver arriba)* |
-| (no confirmada) | odoo vs holded | Odoo vs Holded en 2026: cuál elegir para tu pyme | https://odoolisto.com/#post2 | ✅ Publicado *(nota: contenido intercambiado con post1, ver arriba)* |
+| (no confirmada) | cuanto cuesta implantar odoo | ¿Cuánto cuesta implantar Odoo en una pyme española en 2026? | https://odoolisto.com/#post1 | ✅ Publicado |
+| (no confirmada) | odoo vs holded | Odoo vs Holded en 2026: cuál elegir para tu pyme | https://odoolisto.com/#post2 | ✅ Publicado |
 | (no confirmada) | verifactu odoo | VeriFactu y Odoo: todo lo que necesita saber tu pyme | https://odoolisto.com/#post3 | ✅ Publicado |
 | 2026-06-08 | odoo barato pymes españa | Odoo barato para pymes en España: precios reales 2026 | https://odoolisto.com/#post4 | ✅ Publicado |
 | 2026-06-14 | odoo community gratis | ¿Odoo Community es gratis? Todo lo que debes saber en 2026 | https://odoolisto.com/#post5 | ✅ Publicado |
@@ -180,8 +189,9 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 | 2026-08-18 | erp pyme mexico barato | ERP barato para pymes en México: opciones y precios 2026 | https://odoolisto.com/#post15 | ✅ Publicado |
 | 2026-08-22 | odoo vs sage 50cloud | Odoo vs Sage: comparativa completa para pymes españolas en 2026 | https://odoolisto.com/#post16 | ✅ Publicado |
 | 2026-09-04 | odoo para autonomos españa | Odoo para autónomos en España: ¿merece la pena en 2026? | https://odoolisto.com/#post17 | ✅ Publicado |
-| 2026-09-13 | migrar de excel a odoo | Migrar de Excel a Odoo: cómo hacerlo en tu pyme sin perder datos en 2026 | https://odoolisto.com/#post18 | ✅ Publicado |
+| 2026-09-13 | migrar de excel a odoo | De Excel a Odoo: cómo migrar tu pyme sin perder datos en 2026 | https://odoolisto.com/#post18 | ✅ Publicado |
 | 2026-09-16 | odoo para ecommerce pyme | Odoo para eCommerce: el ERP con tienda online integrada para pymes | https://odoolisto.com/#post19 | ✅ Publicado |
+| 2026-09-19 | odoo pymes argentina | Odoo para pymes en Argentina: precios e implantación 2026 | https://odoolisto.com/#post20 | ✅ Publicado |
 
 ---
 
@@ -196,5 +206,5 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 
 ---
 
-*Última actualización: 16 Sep 2026 (publicación post19 — odoo para ecommerce pyme — por el agente automático)*
+*Última actualización: 19 Sep 2026 (publicación post20 — odoo pymes argentina — por el agente automático; reconciliado checklist y sitemap con post18/post19 publicados en runs anteriores; añadida quinta tanda de keywords)*
 *Agente configurado por: Athilan Pignus, S.L.*

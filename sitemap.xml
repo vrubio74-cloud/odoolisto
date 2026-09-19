@@ -68,4 +68,11 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://odoolisto.com/#post20</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
