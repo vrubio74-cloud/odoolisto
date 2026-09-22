@@ -77,7 +77,7 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 - [x] `odoo pymes argentina` → PUBLICADO: 19 Sep 2026 → URL: https://odoolisto.com/#post20
 
 ### 🟣 PRIORIDAD QUINTA — Quinta tanda (añadida automáticamente 19 Sep 2026, todas las tandas anteriores ya publicadas)
-- [ ] `odoo pymes chile` → Título: "Odoo para pymes en Chile: precios e implantación 2026"
+- [x] `odoo pymes chile` → PUBLICADO: 22 Sep 2026 → URL: https://odoolisto.com/#post21
 - [ ] `odoo peru pymes` → Título: "Odoo para pymes en Perú: guía de implantación 2026"
 - [ ] `odoo punto de venta pyme` → Título: "Odoo TPV: punto de venta para pymes con stock y facturación integrados"
 - [ ] `odoo para gestorias y asesorias` → Título: "Odoo para gestorías y asesorías: gestión de clientes multi-empresa en 2026"
@@ -133,16 +133,18 @@ El formato real usado en el sitio en vivo (ver post7, post8, post9, post10) es b
 <!-- BLOG POST: [KEYWORD] -->
 <!-- DATE: [FECHA] -->
 <div id="page-post[N]" data-page="top" class="page" style="display:none">
-  ... contenido bilingüe es/en, ver post10 como referencia ...
-  <div class="post-cta">
-    <h3>¿Listo para implantar Odoo en 3 días?</h3>
-    <p>Desde €297. GO LIVE garantizado. Sin permanencia.</p>
-    <button class="btn-cta-post" onclick="go('checkout')">Ver packs →</button>
-  </div>
+... contenido bilingüe es/en, ver post10 como referencia ...
+<div class="post-cta">
+<h3>¿Listo para implantar Odoo en 3 días?</h3>
+<p>Desde €297. GO LIVE garantizado. Sin permanencia.</p>
+<button class="btn-cta-post" onclick="go('checkout')">Ver packs →</button>
+</div>
 </div>
 ```
 
 También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`, botón `onclick="go('postN')"`) y una entrada en `sitemap.xml` (`https://odoolisto.com/#postN`).
+
+> **Nota de implementación (22 Sep 2026, run post21):** al inspeccionar el HTML en vivo real de post17-post20 (no solo esta guía), el bloque CTA final no usa una clase `post-cta` — usa un `<div style="background:linear-gradient(135deg,#1C0F5E,#0d1e3a);border-radius:16px;padding:32px;text-align:center;margin-top:36px">` con `<h3>`/`<p>`/`<button class="btn-cta-post" onclick="go('checkout')">` duplicados en data-lang="es"/"en" dentro. El botón `btn-cta-post` sí es real y se reutiliza tal cual. Las tarjetas de blog (`.bc reveal`) tampoco usan `.bthumb`/`.bbody`/`.btag`/`.bmeta` (esas clases son CSS legacy de posts 1-6); las tarjetas reales usan `.bc-img`, `.bc-body`, `.bc-meta`, `.bc-cat`, `.bc-title`, `.bc-exc` y un botón `.btn-blog`. Usar post17-post20 como referencia real, no solo esta plantilla.
 
 ---
 
@@ -192,6 +194,7 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 | 2026-09-13 | migrar de excel a odoo | De Excel a Odoo: cómo migrar tu pyme sin perder datos en 2026 | https://odoolisto.com/#post18 | ✅ Publicado |
 | 2026-09-16 | odoo para ecommerce pyme | Odoo para eCommerce: el ERP con tienda online integrada para pymes | https://odoolisto.com/#post19 | ✅ Publicado |
 | 2026-09-19 | odoo pymes argentina | Odoo para pymes en Argentina: precios e implantación 2026 | https://odoolisto.com/#post20 | ✅ Publicado |
+| 2026-09-22 | odoo pymes chile | Odoo para pymes en Chile: precios e implantación 2026 | https://odoolisto.com/#post21 | ✅ Publicado |
 
 ---
 
@@ -206,5 +209,5 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 
 ---
 
-*Última actualización: 19 Sep 2026 (publicación post20 — odoo pymes argentina — por el agente automático; reconciliado checklist y sitemap con post18/post19 publicados en runs anteriores; añadida quinta tanda de keywords)*
+*Última actualización: 22 Sep 2026 (publicación post21 — odoo pymes chile — por el agente automático; verificado contra index.html, sitemap.xml y este checklist en vivo justo antes de publicar, confirmando post20/odoo pymes argentina como el último post existente y post21 como el siguiente slot libre; añadida nota de implementación sobre la estructura real del CTA y las tarjetas de blog en post17-post20)*
 *Agente configurado por: Athilan Pignus, S.L.*
