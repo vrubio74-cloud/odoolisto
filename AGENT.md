@@ -78,7 +78,7 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 
 ### 🟣 PRIORIDAD QUINTA — Quinta tanda (añadida automáticamente 19 Sep 2026, todas las tandas anteriores ya publicadas)
 - [x] `odoo pymes chile` → PUBLICADO: 22 Sep 2026 → URL: https://odoolisto.com/#post21
-- [ ] `odoo peru pymes` → Título: "Odoo para pymes en Perú: guía de implantación 2026"
+- [x] `odoo peru pymes` → PUBLICADO: 25 Sep 2026 → URL: https://odoolisto.com/#post22
 - [ ] `odoo punto de venta pyme` → Título: "Odoo TPV: punto de venta para pymes con stock y facturación integrados"
 - [ ] `odoo para gestorias y asesorias` → Título: "Odoo para gestorías y asesorías: gestión de clientes multi-empresa en 2026"
 - [ ] `odoo vs zoho pyme` → Título: "Odoo vs Zoho: qué ERP/CRM conviene a tu pyme en 2026"
@@ -195,6 +195,7 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 | 2026-09-16 | odoo para ecommerce pyme | Odoo para eCommerce: el ERP con tienda online integrada para pymes | https://odoolisto.com/#post19 | ✅ Publicado |
 | 2026-09-19 | odoo pymes argentina | Odoo para pymes en Argentina: precios e implantación 2026 | https://odoolisto.com/#post20 | ✅ Publicado |
 | 2026-09-22 | odoo pymes chile | Odoo para pymes en Chile: precios e implantación 2026 | https://odoolisto.com/#post21 | ✅ Publicado |
+| 2026-09-25 | odoo peru pymes | Odoo para pymes en Perú: guía de implantación 2026 | https://odoolisto.com/#post22 | ✅ Publicado |
 
 ---
 
@@ -209,5 +210,5 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 
 ---
 
-*Última actualización: 22 Sep 2026 (publicación post21 — odoo pymes chile — por el agente automático; verificado contra index.html, sitemap.xml y este checklist en vivo justo antes de publicar, confirmando post20/odoo pymes argentina como el último post existente y post21 como el siguiente slot libre; añadida nota de implementación sobre la estructura real del CTA y las tarjetas de blog en post17-post20)*
+*Última actualización: 25 Sep 2026 (publicación post22 — odoo peru pymes — por el agente automático; verificado contra index.html, sitemap.xml y este checklist en vivo antes de publicar, confirmando post21 como último post existente y post22 como siguiente slot libre)*
 *Agente configurado por: Athilan Pignus, S.L.*
