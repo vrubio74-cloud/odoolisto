@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Pago recibido · OdooListo</title>
+<link rel="icon" href="/logo.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18242312681"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18242312681');
+  gtag('config', 'G-TTBKX48K3B');
+</script>
+<script>
+// Compra real. Stripe redirige aquí tras el pago:
+//   https://odoolisto.com/gracias.html?pack=s&session_id={CHECKOUT_SESSION_ID}
+// Solo se registra si llega session_id, y una sola vez por sesión de Stripe
+// (transaction_id deduplica en GA4 y en Google Ads; localStorage evita recargas).
+(function(){
+  var PACKS = { 's':['Pack S', 297, 97], 'm':['Pack M', 497, 147], 'l':['Pack L', 697, 197] };
+  var q = new URLSearchParams(location.search);
+  var sid = q.get('session_id') || '';
+  var p = PACKS[(q.get('pack') || '').toLowerCase()];
+  if (!sid || sid.indexOf('{') > -1 || !p) return;
+  var key = 'ol_purchase_' + sid;
+  try { if (localStorage.getItem(key)) return; } catch(e){}
+  var value = p[1] + p[2]; // setup + primer mes: lo que se cobra hoy según el checkout
+  gtag('event', 'purchase', {
+    'transaction_id': sid, 'currency': 'EUR', 'value': value,
+    'items': [{'item_id': 'pack_' + q.get('pack').toLowerCase(), 'item_name': p[0], 'price': value, 'quantity': 1}]
+  });
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18242312681/CPhfCIapnMAcEOmzzvpD',
+    'transaction_id': sid, 'currency': 'EUR', 'value': value
+  });
+  try { localStorage.setItem(key, '1'); } catch(e){}
+})();
+</script>
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xenf784cuk");
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Playfair+Display:wght@700&display=swap">
+<style>
+:root{--navy:#1C0F5E;--teal:#00A09D;--teal-dk:#007E7B;--g4:#555;--off:#f7f5fb;
+  --sans:'Nunito',system-ui,sans-serif;--serif:'Playfair Display',Georgia,serif}
+*{box-sizing:border-box;margin:0}
+body{font-family:var(--sans);background:var(--off);color:var(--navy);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px}
+.box{background:#fff;max-width:560px;width:100%;border-radius:18px;padding:36px 28px;box-shadow:0 10px 40px rgba(28,15,94,.08)}
+.ok{width:56px;height:56px;border-radius:50%;background:var(--teal);color:#fff;font-size:1.7rem;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+h1{font-family:var(--serif);font-size:1.7rem;line-height:1.2;margin-bottom:12px}
+p{color:var(--g4);line-height:1.65;margin-bottom:14px}
+ol{padding-left:20px;color:var(--g4);line-height:1.7;margin-bottom:22px}
+ol li{margin-bottom:6px}
+.btn{display:block;text-align:center;background:var(--teal);color:#fff;font-weight:800;text-decoration:none;padding:14px;border-radius:12px;margin-bottom:10px}
+.btn:hover{background:var(--teal-dk)}
+.btn.sec{background:#fff;color:var(--navy);border:2px solid #e3def0}
+.home{display:block;text-align:center;margin-top:14px;color:var(--g4);font-size:.9rem}
+</style>
+</head>
+<body>
+<main class="box">
+  <div class="ok" aria-hidden="true">✓</div>
+  <h1>Pago recibido. Empezamos.</h1>
+  <p>Gracias por confiar en OdooListo. Stripe te enviará el recibo a tu correo en unos minutos.</p>
+  <ol>
+    <li>Reserva tu sesión de puesta en marcha.</li>
+    <li>Ten a mano los datos básicos de tu empresa (clientes, productos, datos fiscales).</li>
+    <li>Si tienes cualquier duda, escríbenos por WhatsApp.</li>
+  </ol>
+  <a class="btn" href="https://calendly.com/odoolisto/sesion-go-live-odoolisto" target="_blank" rel="noopener"
+     onclick="try{gtag('event','calendly_click',{'tipo':'puesta_en_marcha','ubicacion':'gracias','transport_type':'beacon'})}catch(e){}">📅 Reservar mi sesión de puesta en marcha</a>
+  <a class="btn sec" href="https://wa.me/34644044808?text=Hola,%20acabo%20de%20contratar%20OdooListo." target="_blank" rel="noopener"
+     onclick="try{gtag('event','whatsapp_click',{'ubicacion':'gracias','transport_type':'beacon'})}catch(e){}">💬 Escribirnos por WhatsApp</a>
+  <a class="home" href="/">Volver a odoolisto.com</a>
+</main>
+</body>
+</html>

@@ -19,16 +19,6 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "xenf784cuk");
 </script>
-<!-- Conversion tracking -->
-<script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') { window.location = url; }
-  };
-  gtag('event', 'conversion', {'send_to': 'AW-18242312681/CPhfCIapnMAcEOmzzvpD', 'transaction_id': '', 'event_callback': callback});
-  return false;
-}
-</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OdooListo — Odoo barato para pymes | €297 · En marcha en 3 días</title>
 <meta name="description" content="Odoo barato para pymes desde €297. Puesta en marcha en 3 días garantizada o te devolvemos el setup. Sin licencias. Especialistas desde 2014. España y Latam.">
@@ -1166,8 +1156,8 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <li class="pi active" onclick="selHP(this)"><div><div class="pn">Pack M ⭐</div><div class="pm" data-lang="es">Pack S + Inventario · Compras · Proyectos</div><div class="pm" data-lang="en">Pack S + Inventory · Purchase · Projects</div></div><div class="pp"><div class="ps">Setup €497</div><div class="pmo">€147/mes</div></div></li>
         <li class="pi" onclick="selHP(this)"><div><div class="pn">Pack L</div><div class="pm" data-lang="es">Pack M + RRHH · Fabricación · eCommerce</div><div class="pm" data-lang="en">Pack M + HR · Manufacturing · eCommerce</div></div><div class="pp"><div class="ps">Setup €697</div><div class="pmo">€197/mes</div></div></li>
       </ul>
-      <a class="hcta" onclick="go('checkout')" data-lang="es">Contratar este pack →</a>
-      <a class="hcta" onclick="go('checkout')" data-lang="en">Get this pack →</a>
+      <a class="hcta" onclick="goCheckout(heroPack())" data-lang="es">Contratar este pack →</a>
+      <a class="hcta" onclick="goCheckout(heroPack())" data-lang="en">Get this pack →</a>
     </div>
   </div>
 </section>
@@ -1360,7 +1350,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="pdiv"></div>
         <div class="pmods" data-lang="es">3 módulos incluidos</div><div class="pmods" data-lang="en">3 modules included</div>
         <ul class="ml"><li class="mi"><span class="mch">✓</span>Contabilidad / Accounting</li><li class="mi"><span class="mch">✓</span>Ventas / Sales</li><li class="mi"><span class="mch">✓</span>CRM</li></ul>
-        <a class="pcta" onclick="go('checkout')" data-lang="es">Empezar con Pack S</a><a class="pcta" onclick="go('checkout')" data-lang="en">Start with Pack S</a>
+        <a class="pcta" onclick="goCheckout('s')" data-lang="es">Empezar con Pack S</a><a class="pcta" onclick="goCheckout('s')" data-lang="en">Start with Pack S</a>
       </div>
       <div class="pc pcf reveal">
         <div class="pbadge" data-lang="es">⭐ Más popular</div><div class="pbadge" data-lang="en">⭐ Most popular</div>
@@ -1372,7 +1362,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="pdiv"></div>
         <div class="pmods" data-lang="es">6 módulos incluidos</div><div class="pmods" data-lang="en">6 modules included</div>
         <ul class="ml"><li class="mi"><span class="mch">✓</span>Contabilidad / Accounting</li><li class="mi"><span class="mch">✓</span>Ventas / Sales + CRM</li><li class="mi"><span class="mch">✓</span>Inventario / Inventory</li><li class="mi"><span class="mch">✓</span>Compras / Purchase</li><li class="mi"><span class="mch">✓</span>Proyectos / Projects</li><li class="mi"><span class="mch">✓</span>Facturación / Invoicing</li></ul>
-        <a class="pcta" onclick="go('checkout')" data-lang="es">Empezar con Pack M</a><a class="pcta" onclick="go('checkout')" data-lang="en">Start with Pack M</a>
+        <a class="pcta" onclick="goCheckout('m')" data-lang="es">Empezar con Pack M</a><a class="pcta" onclick="goCheckout('m')" data-lang="en">Start with Pack M</a>
       </div>
       <div class="pc reveal">
         <div class="ppack">Pack L</div>
@@ -1383,7 +1373,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="pdiv"></div>
         <div class="pmods" data-lang="es">9 módulos incluidos</div><div class="pmods" data-lang="en">9 modules included</div>
         <ul class="ml"><li class="mi"><span class="mch">✓</span><span data-lang="es">Todo el Pack M</span><span data-lang="en">All Pack M modules</span></li><li class="mi"><span class="mch">✓</span>RRHH / HR</li><li class="mi"><span class="mch">✓</span>Fabricación / Manufacturing</li><li class="mi"><span class="mch">✓</span>eCommerce</li></ul>
-        <a class="pcta" onclick="go('checkout')" data-lang="es">Empezar con Pack L</a><a class="pcta" onclick="go('checkout')" data-lang="en">Start with Pack L</a>
+        <a class="pcta" onclick="goCheckout('l')" data-lang="es">Empezar con Pack L</a><a class="pcta" onclick="goCheckout('l')" data-lang="en">Start with Pack L</a>
       </div>
     </div>
     <p class="pnote" data-lang="es">¿Necesitas algo específico? <a onclick="go('contact')">Habla con nosotros →</a></p>
@@ -3327,7 +3317,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   <h2>Contabilidad completa desde €297</h2>
   <p>VeriFactu nativo. Plan contable español. Sin configuración adicional.</p>
   <div class="cta-btns">
-    <button class="btn-t" onclick="gtag_report_conversion(); window.open('https://buy.stripe.com/fZubJ19caerr3Xmdvogfu07','_blank')">Contratar Pack S →</button>
+    <button class="btn-t" onclick="goCheckout('s')">Contratar Pack S →</button>
     <button class="btn-s" onclick="go('home')">Ver todos los packs</button>
   </div>
 </div>
@@ -3405,7 +3395,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   <h2>CRM y Ventas incluidos desde €297</h2>
   <p>Pipeline Kanban, presupuestos y pedidos conectados con contabilidad.</p>
   <div class="cta-btns">
-    <button class="btn-t" onclick="gtag_report_conversion(); window.open('https://buy.stripe.com/fZubJ19caerr3Xmdvogfu07','_blank')">Contratar Pack S →</button>
+    <button class="btn-t" onclick="goCheckout('s')">Contratar Pack S →</button>
     <button class="btn-s" onclick="go('home')">Ver todos los packs</button>
   </div>
 </div>
@@ -3483,7 +3473,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   <h2>Inventario incluido en Pack M desde €497</h2>
   <p>Multi-almacén, trazabilidad, reabastecimiento automático.</p>
   <div class="cta-btns">
-    <button class="btn-t" onclick="gtag_report_conversion(); window.open('https://buy.stripe.com/5kQ14nfAy4QR8dCbnggfu09','_blank')">Contratar Pack M →</button>
+    <button class="btn-t" onclick="goCheckout('m')">Contratar Pack M →</button>
     <button class="btn-s" onclick="go('home')">Ver todos los packs</button>
   </div>
 </div>
@@ -3560,7 +3550,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   <h2>Fabricación incluida en Pack L desde €697</h2>
   <p>MRP completo, BoM, centros de trabajo y control de calidad.</p>
   <div class="cta-btns">
-    <button class="btn-t" onclick="gtag_report_conversion(); window.open('https://buy.stripe.com/8x29AT0FEfvveC0dvogfu0a','_blank')">Contratar Pack L →</button>
+    <button class="btn-t" onclick="goCheckout('l')">Contratar Pack L →</button>
     <button class="btn-s" onclick="go('home')">Ver todos los packs</button>
   </div>
 </div>
@@ -3637,7 +3627,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   <h2>RRHH incluido en Pack L desde €697</h2>
   <p>Control horario legal, ausencias, contratos y evaluaciones.</p>
   <div class="cta-btns">
-    <button class="btn-t" onclick="gtag_report_conversion(); window.open('https://buy.stripe.com/8x29AT0FEfvveC0dvogfu0a','_blank')">Contratar Pack L →</button>
+    <button class="btn-t" onclick="goCheckout('l')">Contratar Pack L →</button>
     <button class="btn-s" onclick="go('home')">Ver todos los packs</button>
   </div>
 </div>
@@ -4994,6 +4984,7 @@ function go(id) {
   for (var i=0; i<pages.length; i++) pages[i].style.display = 'none';
   var el = document.getElementById('page-' + id);
   if (el) { el.style.display = 'block'; window.scrollTo({top:0, behavior:'smooth'}); }
+  if (el && id !== 'home') { try { gtag('event', 'page_view', {'page_location': location.origin + '/' + id + location.search, 'page_title': 'OdooListo · ' + id}); } catch(e){} }
   var det = document.getElementById('mod-detail');
   if (det) det.style.display = 'none';
   if (id === 'modules') {
@@ -5107,6 +5098,7 @@ function submitCF() {
   .then(function(r) { return r.json(); })
   .then(function(data) {
     if (data.ok || data.next) {
+      try { gtag('event', 'formulario_contacto', {'interes': interest ? interest.value : ''}); } catch(e){}
       var wrap = document.getElementById('cf-wrap');
       var succ = document.getElementById('cf-succ');
       if (wrap) wrap.style.display = 'none';
@@ -5151,7 +5143,6 @@ function submitTrial() {
     if (data.ok || data.next) {
       try { gtag('event', 'conversion', {'send_to': 'AW-18242312681/-7vWCNGzys4cEOmzzvpD'}); } catch(e){}
       try { gtag('event', 'generate_lead', {'event_category':'prueba_gratis','event_label': co.value}); } catch(e){}
-      try { gtag('event', 'solicitud_prueba'); } catch(e){}
       var wrap = document.getElementById('pf-wrap');
       var succ = document.getElementById('pf-succ');
       if (wrap) wrap.style.display = 'none';
@@ -5232,6 +5223,18 @@ var stripeLinks = {
   'm': 'https://buy.stripe.com/5kQ14nfAy4QR8dCbnggfu09',
   'l': 'https://buy.stripe.com/8x29AT0FEfvveC0dvogfu0a'
 };
+var PACK_PRICES = { 's':[297,97], 'm':[497,147], 'l':[697,197] };
+function goCheckout(packId) {
+  go('checkout');
+  var el = document.getElementById('po-' + packId);
+  var pr = PACK_PRICES[packId];
+  if (el && pr) selPack(el, packId, pr[0], pr[1]);
+}
+function heroPack() {
+  var items = document.querySelectorAll('.pi');
+  for (var i=0; i<items.length; i++) if (items[i].classList.contains('active')) return ['s','m','l'][i] || 'm';
+  return 'm';
+}
 function payStripe() {
   var acc = document.getElementById('co-terms');
   if (acc && !acc.checked) {
@@ -5247,8 +5250,9 @@ function payStripe() {
     if (idParts.length > 1) packId = idParts[1];
   }
   var link = stripeLinks[packId] || stripeLinks['s'];
-  try { gtag('event', 'begin_checkout', {'event_category':'pago','event_label': 'Pack ' + packId.toUpperCase()}); } catch(e){}
-  gtag_report_conversion();
+  var pr = PACK_PRICES[packId] || PACK_PRICES['s'];
+  try { gtag('event', 'begin_checkout', {'currency':'EUR','value': pr[0] + pr[1],'event_label': 'Pack ' + packId.toUpperCase(),
+    'items':[{'item_id':'pack_' + packId,'item_name':'Pack ' + packId.toUpperCase(),'price': pr[0] + pr[1],'quantity':1}]}); } catch(e){}
   window.open(link, '_blank');
 }
 
@@ -5334,12 +5338,25 @@ document.addEventListener('keydown', function(e) {
     '#blog':'blog', '#contacto':'contact', '#contact':'contact'
   };
   function routeHash(){
-    var t = map[(location.hash||'').toLowerCase()];
+    var h = (location.hash||'').toLowerCase();
+    var t = map[h];
+    if (!t && /^#post\d+$/.test(h) && document.getElementById('page-' + h.slice(1))) t = h.slice(1);
     if (t) { try { go(t); } catch(e){} }
   }
   window.addEventListener('hashchange', routeHash);
   routeHash();
 })();
+// ── CLICS SALIENTES: WHATSAPP Y CALENDLY ────────────────
+document.addEventListener('click', function(ev){
+  var a = ev.target.closest ? ev.target.closest('a[href]') : null;
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  var sec = a.closest('[id]'); var donde = sec ? sec.id : (a.className || 'otros');
+  try {
+    if (href.indexOf('wa.me/') > -1) gtag('event', 'whatsapp_click', {'ubicacion': donde, 'transport_type':'beacon'});
+    else if (href.indexOf('calendly.com/') > -1) gtag('event', 'calendly_click', {'tipo': href.indexOf('sesion-go-live') > -1 ? 'puesta_en_marcha' : 'demo', 'ubicacion': donde, 'transport_type':'beacon'});
+  } catch(e){}
+}, true);
 // ── RESTORE LANG ───────────────────────────────────────────
 try { var sl = localStorage.getItem('ol_lang'); if (sl === 'en') setLang('en'); } catch(e) {}
 
