@@ -84,8 +84,16 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 - [x] `odoo pymes chile` → PUBLICADO: 22 Sep 2026 → URL: https://odoolisto.com/#post21
 - [x] `odoo peru pymes` → PUBLICADO: 25 Sep 2026 → URL: https://odoolisto.com/#post22
 - [~] `odoo punto de venta pyme` → Título: "Odoo TPV: punto de venta para pymes con stock y facturación integrados" — **EN ESPERA (30 Sep 2026): el TPV no está en ningún pack. Saltar hasta que se defina la oferta.**
-- [ ] `odoo para gestorias y asesorias` → Título: "Odoo para gestorías y asesorías: gestión de clientes multi-empresa en 2026"
+- [~] `odoo para gestorias y asesorias` → Título: "Odoo para gestorías y asesorías: gestión de clientes multi-empresa en 2026" — **EN ESPERA (01 Oct 2026): la keyword exige vender la contabilidad multiempresa de los clientes de la gestoría (y, en la práctica, nóminas y modelos fiscales a escala), y ningún pack define esa oferta ni su precio por empresa. Saltar hasta que exista.**
 - [x] `odoo vs zoho pyme` → PUBLICADO: 30 Sep 2026 → URL: https://odoolisto.com/#post23
+
+### 🟤 PRIORIDAD SEXTA — Sexta tanda (añadida automáticamente 01 Oct 2026, sin keywords `[ ]` pendientes en tandas anteriores)
+> Elegidas por encajar con sectores del ICP (distribución, fabricación) y con el dolor real del gerente (cobros, datos), y por mapearse a un pack concreto.
+- [x] `odoo para empresas de distribucion` → PUBLICADO: 01 Oct 2026 → URL: https://odoolisto.com/#post24 *(Pack M)*
+- [ ] `erp para pequeña empresa` → Título: "ERP para pequeña empresa: cómo elegir sin pagar por usuario en 2026" *(keyword "de problema", más volumen)*
+- [ ] `controlar cobros pendientes pyme` → Título: "Cómo controlar los cobros pendientes de tu pyme con Odoo (facturas vencidas)" *(Pack S — Contabilidad; no prometer funciones de OdooListo IA sin verificarlas en la demo)*
+- [ ] `odoo crm pymes` → Título: "Odoo CRM para pymes: embudo comercial conectado con ventas y facturación" *(Pack S)*
+- [ ] `odoo fabricacion pyme` → Título: "Odoo Fabricación para pymes: órdenes de producción y escandallos sin Excel" *(Pack L; ojo: el planificador Gantt y PLM son de Enterprise)*
 
 ---
 
@@ -208,6 +216,7 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 | 2026-09-22 | odoo pymes chile | Odoo para pymes en Chile: precios e implantación 2026 | https://odoolisto.com/#post21 | ✅ Publicado |
 | 2026-09-25 | odoo peru pymes | Odoo para pymes en Perú: guía de implantación 2026 | https://odoolisto.com/#post22 | ✅ Publicado |
 | 2026-09-30 | odoo vs zoho pyme | Odoo vs Zoho: qué ERP/CRM conviene a tu pyme en 2026 | https://odoolisto.com/#post23 | ✅ Publicado |
+| 2026-10-01 | odoo para empresas de distribucion | Odoo para empresas de distribución: stock, compras y ventas en un solo sistema (2026) | https://odoolisto.com/#post24 | ✅ Publicado |
 
 ---
 
@@ -222,5 +231,5 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 
 ---
 
-*Última actualización: 30 Sep 2026 (post23 — odoo vs zoho pyme — publicado desde Claude Code; TPV en espera por no estar en ningún pack; reglas alineadas con el contexto de marca: sin GO LIVE, sin afirmaciones absolutas, packs actualizados)*
+*Última actualización: 01 Oct 2026 (post24 — odoo para empresas de distribucion — publicado desde Claude Code; gestorías en espera por exigir una oferta multiempresa que no está en ningún pack; añadida la sexta tanda de keywords)*
 *Agente configurado por: Athilan Pignus, S.L.*
