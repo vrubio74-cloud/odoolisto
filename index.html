@@ -8,12 +8,15 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'AW-18242312681');
-  gtag('config', 'G-TTBKX48K3B');
+  // Las pruebas en local no se miden
+  if (!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {
+    gtag('config', 'AW-18242312681');
+    gtag('config', 'G-TTBKX48K3B');
+  }
 </script>
 <!-- Microsoft Clarity -->
 <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
+    if (!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
@@ -1484,7 +1487,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
       <h2 class="ai-h" data-lang="en">Just ask your company.</h2>
       <p class="ai-sub" data-lang="es">Un ERP solo sirve si puedes sacar la información. Con <strong style="color:#B9AEFF">OdooListo IA</strong> se la pides escribiendo, como se la pedirías a tu mejor analista. Sin menús, sin informes, sin esperar a nadie.</p>
       <p class="ai-sub" data-lang="en">An ERP is only useful if you can get the information out. With <strong style="color:#B9AEFF">OdooListo IA</strong> you just ask in plain words, like you'd ask your best analyst. No menus, no reports, no waiting.</p>
-      <div class="ai-video" id="ai-video" data-yt="__VIDEO_IA_ID__" role="button" tabindex="0" aria-label="Ver OdooListo IA en acción">
+      <div class="ai-video" id="ai-video" data-yt="LgVmaks-PGs" role="button" tabindex="0" aria-label="Ver OdooListo IA en acción">
         <div class="ai-video-ph">▶ <span data-lang="es">Míralo en acción (50 s)</span><span data-lang="en">See it in action (50 s)</span></div>
       </div>
       <div class="ai-vnote" data-lang="es">Vídeo con datos de demostración.</div>
