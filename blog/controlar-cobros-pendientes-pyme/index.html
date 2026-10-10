@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<script>if (/\.pages\.dev$/.test(location.hostname)) location.replace('https://odoolisto.com' + location.pathname + location.search + location.hash);</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  if (!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {
+    gtag('config', 'AW-18242312681');
+    gtag('config', 'G-TTBKX48K3B');
+  }
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18242312681"></script>
+<script type="text/javascript">
+    if (!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xenf784cuk");
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo controlar los cobros pendientes de tu pyme con Odoo (facturas vencidas) | OdooListo</title>
+<meta name="description" content="Cómo controlar los cobros pendientes de tu pyme: facturas vencidas por cliente, plazos legales de pago y qué hace Odoo Community, sin depender de un Excel.">
+<link rel="canonical" href="https://odoolisto.com/blog/controlar-cobros-pendientes-pyme/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cómo controlar los cobros pendientes de tu pyme con Odoo (facturas vencidas) | OdooListo">
+<meta property="og:description" content="Cómo controlar los cobros pendientes de tu pyme: facturas vencidas por cliente, plazos legales de pago y qué hace Odoo Community, sin depender de un Excel.">
+<meta property="og:url" content="https://odoolisto.com/blog/controlar-cobros-pendientes-pyme/">
+<meta property="og:image" content="https://odoolisto.com/logo.png">
+<link rel="icon" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Cómo controlar los cobros pendientes de tu pyme con Odoo (facturas vencidas)", "description": "Cómo controlar los cobros pendientes de tu pyme: facturas vencidas por cliente, plazos legales de pago y qué hace Odoo Community, sin depender de un Excel.", "datePublished": "2026-10-10", "dateModified": "2026-10-10", "mainEntityOfPage": "https://odoolisto.com/blog/controlar-cobros-pendientes-pyme/", "inLanguage": "es", "author": {"@type": "Organization", "name": "OdooListo", "url": "https://odoolisto.com"}, "publisher": {"@type": "Organization", "name": "OdooListo", "logo": {"@type": "ImageObject", "url": "https://odoolisto.com/logo.png"}}}</script>
+</head>
+<body>
+<a class="ai-bar" href="/#ia">🤖 <strong>Nuevo: OdooListo IA.</strong> Pregúntale a tu empresa y te responde en segundos → Ver vídeo</a>
+<header class="bl-head">
+  <a class="bl-logo logo" href="/"><div class="logo-i"><svg viewBox="0 0 22 22" fill="none"><rect x="2" y="2" width="8" height="8" rx="2.5" fill="white" opacity=".95"/><rect x="12" y="2" width="8" height="8" rx="2.5" fill="white" opacity=".7"/><rect x="2" y="12" width="8" height="8" rx="2.5" fill="white" opacity=".7"/><rect x="12" y="12" width="8" height="8" rx="2.5" fill="#00A09D" opacity=".9"/></svg></div> OdooListo</a>
+  <nav class="bl-nav">
+    <a href="/blog/">Blog</a>
+    <a href="/#ia">OdooListo IA</a>
+    <a class="bl-cta" href="/#contratar">Contratar</a>
+  </nav>
+</header>
+<div class="bl-post" style="max-width:900px;margin:0 auto;padding:40px 5% 80px">
+<a style="background:none;border:1px solid var(--teal);color:var(--teal);font-weight:700;cursor:pointer;padding:8px 16px;border-radius:6px;margin-bottom:28px;font-size:.9rem" href="/blog/">← <span data-lang="es">Volver al Blog</span><span data-lang="en">Back to Blog</span></a>
+<div class="bp">
+  <div class="bpmeta" style="color:var(--g3);font-size:.85rem;margin-bottom:12px"><span>10 Oct 2026</span> · <span data-lang="es">Guías</span><span data-lang="en">Guides</span> · <span>9 min</span></div>
+  <h1 style="font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.4rem);color:var(--navy);line-height:1.2;margin-bottom:20px" data-lang="es">Cómo controlar los cobros pendientes de tu pyme con Odoo (facturas vencidas)</h1>
+  <h1 style="font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.4rem);color:var(--navy);line-height:1.2;margin-bottom:20px" data-lang="en">How to keep track of your SME's outstanding payments with Odoo (overdue invoices)</h1>
+  <p data-lang="es">¿Cuánto tardas en saber qué clientes te deben dinero? ¿Un día? ¿Dos, si administración está liada? Para muchas pymes, controlar los cobros pendientes significa pedir un Excel, esperar a que alguien lo cruce con el banco y fiarse de que nadie se ha dejado una factura por el camino. Mientras tanto, el dinero que ya has ganado sigue en la cuenta de tu cliente.</p>
+  <p data-lang="en">How long does it take you to know which customers owe you money? A day? Two, if accounts is swamped? For many SMEs, tracking outstanding payments means asking for a spreadsheet, waiting for someone to match it against the bank and trusting nobody missed an invoice along the way. Meanwhile, money you have already earned is still sitting in your customer's account.</p>
+  <p data-lang="es">El problema no suele ser que falte la información. Las facturas existen, las fechas de vencimiento también. Lo que falla es que están repartidas entre el programa de facturación, el banco y la memoria de alguien. En esta guía te contamos qué dice la ley sobre plazos de pago, cómo montar un control de cobros que funcione sin hojas de cálculo y qué hace exactamente Odoo Community en este terreno, incluido lo que no hace.</p>
+  <p data-lang="en">The problem is rarely missing information. The invoices exist, and so do the due dates. What fails is that they are spread across the invoicing program, the bank and somebody's memory. In this guide we explain what the law says about payment terms, how to set up payment tracking that works without spreadsheets, and exactly what Odoo Community does here, including what it does not.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Por qué controlar los cobros pendientes es urgente en una pyme</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">Why tracking outstanding payments is urgent for an SME</h2>
+  <p data-lang="es">En España, la Ley 3/2004 de lucha contra la morosidad fija que, entre empresas, el plazo de pago no puede superar los 60 días naturales, aunque el contrato diga otra cosa. Si no se pacta nada, el plazo general es de 30 días.</p>
+  <p data-lang="en">In Spain, Law 3/2004 on late payment states that, between businesses, the payment term cannot exceed 60 calendar days, whatever the contract says. If nothing is agreed, the default term is 30 days.</p>
+  <p data-lang="es">La realidad va por otro lado. Según la nota del Gobierno tras el Consejo Estatal de la Pyme (2 de julio de 2026), el periodo medio de pago empresarial es de 64 días según el Banco de España y de 67 según la Plataforma Multisectorial contra la Morosidad. Es decir: de media, las empresas cobran por encima del límite legal.</p>
+  <p data-lang="en">Reality is different. According to the Government's note after the State SME Council (2 July 2026), the average business payment period is 64 days according to the Bank of Spain and 67 according to the Multisector Platform Against Late Payment. In other words, on average, companies get paid beyond the legal limit.</p>
+  <p data-lang="es">Para una pyme, cada factura que se cobra tarde es tesorería que no tienes para pagar nóminas, proveedores o impuestos. Y lo peor no son los clientes que pagan tarde: son las facturas vencidas que nadie reclama porque nadie sabe que están ahí.</p>
+  <p data-lang="en">For an SME, every invoice paid late is cash you do not have for payroll, suppliers or taxes. And the worst part is not the customers who pay late: it is the overdue invoices nobody chases because nobody knows they are there.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Cómo se controlan hoy los cobros pendientes: Excel frente a un ERP</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">How outstanding payments are tracked today: spreadsheet vs ERP</h2>
+  <p data-lang="es">La mayoría de pymes que vienen de hojas de cálculo o de programas antiguos siguen un circuito parecido: se emite la factura en un sitio, el cobro llega al banco y alguien, cada cierto tiempo, cruza las dos cosas a mano. Funciona mientras hay pocos clientes. Cuando crecen, el control llega tarde.</p>
+  <p data-lang="en">Most SMEs coming from spreadsheets or older programs follow a similar loop: the invoice is issued in one place, the payment lands in the bank and someone, every now and then, matches the two by hand. It works while there are few customers. As they grow, control arrives too late.</p>
+  <div style="overflow-x:auto;margin:18px 0"><table style="width:100%;border-collapse:collapse;font-size:.88rem">
+    <thead><tr style="background:var(--navy);color:white"><th style="padding:11px 14px;text-align:left" data-lang="es">Tarea</th><th style="padding:11px 14px;text-align:left" data-lang="en">Task</th><th style="padding:11px 14px;text-align:center" data-lang="es">Con Excel</th><th style="padding:11px 14px;text-align:center" data-lang="en">With a spreadsheet</th><th style="padding:11px 14px;text-align:center" data-lang="es">Con Odoo Community</th><th style="padding:11px 14px;text-align:center" data-lang="en">With Odoo Community</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Saber qué facturas están vencidas</td><td style="padding:10px 14px;" data-lang="en">Know which invoices are overdue</td><td style="padding:10px 10px;text-align:center;" data-lang="es">Filtrar a mano, si la hoja está al día</td><td style="padding:10px 10px;text-align:center;" data-lang="en">Filter by hand, if the sheet is up to date</td><td style="padding:10px 10px;text-align:center;" data-lang="es">Filtro «Vencidas» en la lista de facturas</td><td style="padding:10px 10px;text-align:center;" data-lang="en">"Overdue" filter on the invoice list</td></tr>
+      <tr style="border-bottom:1px solid #eee;background:#f9f9fb"><td style="padding:10px 14px;" data-lang="es">Cuánto debe cada cliente</td><td style="padding:10px 14px;" data-lang="en">How much each customer owes</td><td style="padding:10px 10px;text-align:center;" data-lang="es">Tabla dinámica que alguien prepara</td><td style="padding:10px 10px;text-align:center;" data-lang="en">A pivot table somebody builds</td><td style="padding:10px 10px;text-align:center;" data-lang="es">Agrupar por cliente, con el importe pendiente sumado</td><td style="padding:10px 10px;text-align:center;" data-lang="en">Group by customer, with the amount due totalled</td></tr>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Marcar una factura como cobrada</td><td style="padding:10px 14px;" data-lang="en">Mark an invoice as paid</td><td style="padding:10px 10px;text-align:center;" data-lang="es">Otra columna que actualizar</td><td style="padding:10px 10px;text-align:center;" data-lang="en">Another column to update</td><td style="padding:10px 10px;text-align:center;" data-lang="es">Registrar el pago en la propia factura; el asiento se genera solo</td><td style="padding:10px 10px;text-align:center;" data-lang="en">Register the payment on the invoice itself; the journal entry is created automatically</td></tr>
+      <tr><td style="padding:10px 14px;" data-lang="es">Recordar a quién llamar</td><td style="padding:10px 14px;" data-lang="en">Remember whom to call</td><td style="padding:10px 10px;text-align:center;" data-lang="es">Notas sueltas o la memoria</td><td style="padding:10px 10px;text-align:center;" data-lang="en">Loose notes or memory</td><td style="padding:10px 10px;text-align:center;" data-lang="es">Actividad programada en la factura, con responsable y fecha</td><td style="padding:10px 10px;text-align:center;" data-lang="en">Scheduled activity on the invoice, with owner and date</td></tr>
+    </tbody>
+  </table></div>
+  <p data-lang="es">Si hoy tu control de cobros vive en una hoja de cálculo, te puede interesar también <a href="/blog/migrar-de-excel-a-odoo/" style="color:var(--teal);cursor:pointer">cómo pasar de Excel a Odoo sin perder datos</a>.</p>
+  <p data-lang="en">If your payment tracking lives in a spreadsheet today, you may also like <a href="/blog/migrar-de-excel-a-odoo/" style="color:var(--teal);cursor:pointer">how to move from Excel to Odoo without losing data</a>.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Cómo controlar los cobros pendientes con Odoo, paso a paso</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">How to track outstanding payments with Odoo, step by step</h2>
+  <p data-lang="es">En Odoo, la factura, el cliente y el cobro están en la misma base de datos. Eso permite montar un control sencillo con lo que trae la edición Community, sin módulos extra:</p>
+  <p data-lang="en">In Odoo, the invoice, the customer and the payment live in the same database. That lets you build simple tracking with what the Community edition ships, without extra modules:</p>
+  <ol style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es">
+    <li><strong>Define plazos de pago por cliente.</strong> 30 días, 60 días, o pagos fraccionados en varios vencimientos. Odoo calcula la fecha de vencimiento de cada factura y la muestra en la lista con los días que faltan o los que lleva de retraso. También admite un descuento por pronto pago si lo usas.</li>
+    <li><strong>Usa el filtro de facturas vencidas.</strong> En la lista de facturas de cliente, el filtro «Vencidas» enseña solo las que han pasado su fecha y no están cobradas.</li>
+    <li><strong>Agrupa por cliente.</strong> Con un clic ves cuánto te debe cada uno, sumado. Puedes agrupar también por fecha de vencimiento para ver qué vence esta semana.</li>
+    <li><strong>Programa una actividad.</strong> En la factura vencida, crea una actividad («Llamar al cliente», «Enviar recordatorio») con responsable y fecha. Cada persona ve en su panel lo que tiene pendiente.</li>
+    <li><strong>Reenvía la factura por correo</strong> desde la propia ficha, para que el cliente la tenga a mano.</li>
+    <li><strong>Registra el cobro</strong> cuando llegue. La factura pasa a «Pagada» y desaparece de la lista de vencidas.</li>
+  </ol>
+  <ol style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en">
+    <li><strong>Set payment terms per customer.</strong> 30 days, 60 days, or instalments with several due dates. Odoo calculates each invoice's due date and shows it in the list with the days remaining or the days overdue. It also supports an early-payment discount if you use one.</li>
+    <li><strong>Use the overdue invoices filter.</strong> In the customer invoice list, the "Overdue" filter shows only those past their due date and still unpaid.</li>
+    <li><strong>Group by customer.</strong> One click shows how much each one owes, totalled. You can also group by due date to see what falls due this week.</li>
+    <li><strong>Schedule an activity.</strong> On the overdue invoice, create an activity ("Call the customer", "Send a reminder") with an owner and a date. Everyone sees their pending tasks on their dashboard.</li>
+    <li><strong>Resend the invoice by email</strong> from the invoice itself, so the customer has it at hand.</li>
+    <li><strong>Register the payment</strong> when it arrives. The invoice moves to "Paid" and drops off the overdue list.</li>
+  </ol>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="es">Lo que Odoo Community no hace (y conviene saber)</h3>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="en">What Odoo Community does not do (and you should know)</h3>
+  <p data-lang="es">Preferimos decirlo antes de que lo descubras: el seguimiento automático de cobros por niveles (recordatorios que se envían solos a los 15, 30 o 45 días) y el informe de antigüedad de saldos son funciones de Odoo Enterprise, no de Community. Con Community el control es igual de fiable, pero los recordatorios los lanza una persona a partir de la lista de vencidas. Si quieres ver todas las diferencias entre ediciones, lo explicamos en <a href="/blog/odoo-community-vs-enterprise/" style="color:var(--teal);cursor:pointer">Odoo Community vs Enterprise</a>.</p>
+  <p data-lang="en">We would rather say it before you find out: automatic tiered payment follow-up (reminders sent on their own at 15, 30 or 45 days) and the aged receivables report are Odoo Enterprise features, not Community ones. With Community, tracking is just as reliable, but reminders are triggered by a person working from the overdue list. For all the differences between editions, see <a href="/blog/odoo-community-vs-enterprise/" style="color:var(--teal);cursor:pointer">Odoo Community vs Enterprise</a>.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Una rutina semanal para no perder ningún cobro pendiente</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">A weekly routine so no outstanding payment slips through</h2>
+  <p data-lang="es">La herramienta ayuda, pero el control de cobros es un hábito. Esta rutina cabe en un rato los lunes por la mañana:</p>
+  <p data-lang="en">The tool helps, but payment tracking is a habit. This routine fits into a short slot on Monday mornings:</p>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es"><li><strong>Abre la lista de facturas vencidas agrupada por cliente.</strong> Empieza por los importes más altos, no por los más antiguos.</li><li><strong>Separa el retraso puntual del cliente que siempre paga tarde.</strong> Al primero le basta un correo; al segundo conviene llamarle y, quizá, revisar sus condiciones de pago.</li><li><strong>Asigna una actividad a cada factura que haya que reclamar</strong>, con nombre y fecha. Lo que no tiene responsable no se hace.</li><li><strong>Mira lo que vence esta semana.</strong> Un aviso amable antes del vencimiento evita muchos retrasos.</li><li><strong>Registra los cobros recibidos</strong> para que la lista de la semana siguiente sea real.</li></ul>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en"><li><strong>Open the overdue invoice list grouped by customer.</strong> Start with the largest amounts, not the oldest.</li><li><strong>Tell a one-off delay apart from the customer who always pays late.</strong> The first needs an email; the second deserves a call and, perhaps, a review of their payment terms.</li><li><strong>Assign an activity to every invoice that needs chasing</strong>, with a name and a date. What has no owner does not get done.</li><li><strong>Check what falls due this week.</strong> A friendly note before the due date prevents many delays.</li><li><strong>Register the payments received</strong> so next week's list is accurate.</li></ul>
+  <p data-lang="es">Un apunte sobre los plazos: si vendes a otras empresas en España, recuerda que pactar más de 60 días no es válido según la Ley 3/2004. Configurar los plazos de pago en Odoo dentro de ese límite te ayuda a que la factura ya salga bien.</p>
+  <p data-lang="en">A note on terms: if you sell to other businesses in Spain, remember that agreeing to more than 60 days is not valid under Law 3/2004. Setting up payment terms in Odoo within that limit helps every invoice go out right from the start.</p>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="es">Y si prefieres preguntar en lugar de filtrar</h3>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="en">And if you would rather ask than filter</h3>
+  <p data-lang="es">El Pack L incluye OdooListo IA, que permite consultar facturas, ventas y otros datos de tu Odoo escribiendo la pregunta en lenguaje natural, por ejemplo: «¿Qué facturas tengo vencidas y cuánto suman?». Te prepara el listado y abre la vista correspondiente en Odoo. Para ser claros con su alcance: consulta y analiza, pero no envía correos a tus clientes ni registra pagos; eso sigue haciéndolo una persona.</p>
+  <p data-lang="en">Pack L includes OdooListo AI, which lets you query invoices, sales and other data in your Odoo by typing the question in plain language, for example: "Which invoices are overdue and how much do they add up to?". It prepares the list and opens the matching view in Odoo. To be clear about its scope: it queries and analyses, but it does not email your customers or register payments; a person still does that.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">¿Por qué OdooListo?</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">Why OdooListo?</h2>
+  <p data-lang="es">Para controlar los cobros pendientes con Odoo te basta la Contabilidad, que va incluida desde el Pack S. Lo que suele frenar a una pyme no es la herramienta, sino la idea de un proyecto de implantación de semanas. Nosotros lo hemos industrializado:</p>
+  <p data-lang="en">To track outstanding payments with Odoo, Accounting is all you need, and it is included from Pack S. What usually holds an SME back is not the tool but the idea of a weeks-long implementation project. We have industrialized it:</p>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es"><li><strong>Puesta en marcha en 3 días hábiles</strong>, o te devolvemos el setup.</li><li><strong>Plazos de pago y localización española configurados</strong> con tus clientes y datos básicos.</li><li><strong>Usuarios ilimitados:</strong> administración, comerciales y gerencia ven la misma lista de cobros sin que tu cuota se mueva.</li><li><strong>Tus datos, en tu casa:</strong> copia de seguridad diaria entregada a ti. Si algún día decides irte, ya la tienes.</li><li><strong>Servidor en España</strong> (Barcelona), sin licencias y sin permanencia.</li></ul>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en"><li><strong>Up and running in 3 business days</strong>, or we refund the setup.</li><li><strong>Payment terms and Spanish localization configured</strong> with your customers and core data.</li><li><strong>Unlimited users:</strong> accounts, sales and management see the same payments list without your fee moving.</li><li><strong>Your data, at home:</strong> daily backup delivered to you. If you ever decide to leave, you already have it.</li><li><strong>Server in Spain</strong> (Barcelona), no licenses and no lock-in.</li></ul>
+  <div style="overflow-x:auto;margin:18px 0"><table style="width:100%;border-collapse:collapse;font-size:.88rem">
+    <thead><tr style="background:var(--navy);color:white"><th style="padding:11px 14px;text-align:left" data-lang="es">Pack</th><th style="padding:11px 14px;text-align:left" data-lang="en">Pack</th><th style="padding:11px 14px;text-align:center" data-lang="es">Setup</th><th style="padding:11px 14px;text-align:center" data-lang="en">Setup</th><th style="padding:11px 14px;text-align:center" data-lang="es">Mensual</th><th style="padding:11px 14px;text-align:center" data-lang="en">Monthly</th><th style="padding:11px 14px;text-align:center" data-lang="es">Módulos</th><th style="padding:11px 14px;text-align:center" data-lang="en">Modules</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Pack S — Esencial</td><td style="padding:10px 14px;" data-lang="en">Pack S — Essential</td><td style="padding:10px 10px;text-align:center;" data-lang="es">297 €</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€297</td><td style="padding:10px 10px;text-align:center;" data-lang="es">97 €/mes</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€97/mo</td><td style="padding:10px 10px;text-align:center;" data-lang="es">Contabilidad, Ventas, CRM</td><td style="padding:10px 10px;text-align:center;" data-lang="en">Accounting, Sales, CRM</td></tr>
+      <tr style="border-bottom:1px solid #eee;background:#f9f9fb"><td style="padding:10px 14px;" data-lang="es">Pack M — Completo</td><td style="padding:10px 14px;" data-lang="en">Pack M — Complete</td><td style="padding:10px 10px;text-align:center;" data-lang="es">497 €</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€497</td><td style="padding:10px 10px;text-align:center;" data-lang="es">147 €/mes</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€147/mo</td><td style="padding:10px 10px;text-align:center;" data-lang="es">+ Inventario, Compras, Proyectos</td><td style="padding:10px 10px;text-align:center;" data-lang="en">+ Inventory, Purchasing, Projects</td></tr>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Pack L — Avanzado</td><td style="padding:10px 14px;" data-lang="en">Pack L — Advanced</td><td style="padding:10px 10px;text-align:center;" data-lang="es">697 €</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€697</td><td style="padding:10px 10px;text-align:center;" data-lang="es">197 €/mes</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€197/mo</td><td style="padding:10px 10px;text-align:center;" data-lang="es">+ RRHH, Fabricación, eCommerce, OdooListo IA</td><td style="padding:10px 10px;text-align:center;" data-lang="en">+ HR, Manufacturing, eCommerce, OdooListo AI</td></tr>
+    </tbody>
+  </table></div>
+  <p data-lang="es">Y lo decimos claro: no es para todo el mundo. No hacemos desarrollos a medida dentro del pack ni instalamos módulos de pago de terceros para automatizar reclamaciones. Si tu volumen de facturas pide un seguimiento automático, te lo decimos antes de que pagues. Puedes ver <a href="/blog/implantar-odoo-rapido/" style="color:var(--teal);cursor:pointer">cómo trabajamos en 3 días</a> o leer <a href="/blog/erp-para-pequena-empresa/" style="color:var(--teal);cursor:pointer">cómo elegir un ERP para pequeña empresa</a>.</p>
+  <p data-lang="en">And to be clear: it is not for everyone. We do not do custom development inside the pack, nor install paid third-party modules to automate collections. If your invoice volume calls for automatic follow-up, we tell you before you pay. See <a href="/blog/implantar-odoo-rapido/" style="color:var(--teal);cursor:pointer">how we work in 3 days</a> or read <a href="/blog/erp-para-pequena-empresa/" style="color:var(--teal);cursor:pointer">how to choose an ERP for a small business</a>.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Preguntas frecuentes sobre cobros pendientes en una pyme</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">Frequently asked questions about outstanding payments in an SME</h2>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿Cuál es el plazo máximo de pago entre empresas en España?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">What is the maximum payment term between businesses in Spain?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">Según la Ley 3/2004 de lucha contra la morosidad, 60 días naturales como máximo, aunque el contrato diga otra cosa. Si no se pacta plazo, se aplica el general de 30 días. Para casos concretos, consulta con tu asesoría.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">Under Law 3/2004 on late payment, 60 calendar days at most, whatever the contract says. If no term is agreed, the default 30 days applies. For specific cases, check with your accountant.</p></details>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿Odoo Community envía recordatorios de pago automáticos?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">Does Odoo Community send automatic payment reminders?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">No. El seguimiento automático por niveles es una función de Odoo Enterprise. En Community ves las facturas vencidas por cliente, programas actividades de reclamación y reenvías la factura por correo, pero el recordatorio lo lanza una persona.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">No. Tiered automatic follow-up is an Odoo Enterprise feature. In Community you see overdue invoices by customer, schedule collection activities and resend the invoice by email, but a person triggers the reminder.</p></details>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿Qué pack necesito para controlar los cobros pendientes?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">Which pack do I need to track outstanding payments?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">El Pack S (297 € de setup y 97 €/mes) ya incluye Contabilidad y Ventas, que es lo necesario para facturar, ver vencimientos y registrar cobros. Si además quieres consultar tus datos en lenguaje natural con OdooListo IA, está en el Pack L.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">Pack S (€297 setup and €97/month) already includes Accounting and Sales, which is what you need to invoice, see due dates and register payments. If you also want to query your data in plain language with OdooListo AI, it is in Pack L.</p></details>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿Puedo traer las facturas pendientes de mi programa actual?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">Can I bring in the unpaid invoices from my current program?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">Sí. Durante la puesta en marcha importamos clientes y datos básicos. Las facturas pendientes de cobro que quieras seguir controlando desde Odoo se valoran según el formato en que puedas exportarlas.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">Yes. During setup we import customers and core data. Unpaid invoices you want to keep tracking from Odoo are assessed depending on the format you can export them in.</p></details>
+
+  <p data-lang="es" style="margin-top:28px">En resumen, controlar los cobros pendientes de tu pyme no exige un departamento financiero: exige que la factura, el vencimiento y el cobro estén en el mismo sitio, y una rutina semanal para revisarlos. Odoo Community te da lo primero; lo segundo depende de ti. Si quieres dejar de esperar dos días por un Excel, podemos tenerlo funcionando esta misma semana.</p>
+  <p data-lang="en" style="margin-top:28px">In short, tracking your SME's outstanding payments does not require a finance department: it requires the invoice, the due date and the payment to live in the same place, plus a weekly routine to review them. Odoo Community gives you the first; the second is up to you. If you want to stop waiting two days for a spreadsheet, we can have it running this very week.</p>
+
+  <div style="background:linear-gradient(135deg,#1C0F5E,#0d1e3a);border-radius:16px;padding:32px;text-align:center;margin-top:36px">
+    <h3 style="color:white;font-family:var(--serif);font-size:1.4rem;margin-bottom:10px" data-lang="es">Sabe quién te debe dinero sin pedir un Excel</h3>
+    <h3 style="color:white;font-family:var(--serif);font-size:1.4rem;margin-bottom:10px" data-lang="en">Know who owes you money without asking for a spreadsheet</h3>
+    <p style="color:rgba(255,255,255,.85);margin-bottom:22px;font-size:.95rem" data-lang="es">Desde 297 €. En marcha en 3 días o te devolvemos el setup. Sin permanencia.</p>
+    <p style="color:rgba(255,255,255,.85);margin-bottom:22px;font-size:.95rem" data-lang="en">From €297. Up and running in 3 days or your setup back. No lock-in.</p>
+    <a class="btn-cta-post" href="/#contratar" style="background:white;color:var(--navy);border:none;padding:14px 32px;border-radius:30px;font-weight:800;font-size:.95rem;cursor:pointer;font-family:var(--sans)" data-lang="es">Ver packs →</a>
+    <a class="btn-cta-post" href="/#contratar" style="background:white;color:var(--navy);border:none;padding:14px 32px;border-radius:30px;font-weight:800;font-size:.95rem;cursor:pointer;font-family:var(--sans)" data-lang="en">See packs →</a>
+  </div>
+</div>
+</div>
+
+<footer class="bl-foot">OdooListo · Athilan Pignus, S.L. · <a href="/">Inicio</a> · <a href="/blog/">Blog</a> · <a href="/#terminos">Términos</a> · <a href="/#privacidad">Privacidad</a></footer>
+<div class="wa-float">
+  <a class="wa-bubble" data-lang="es" href="https://wa.me/34644044808?text=Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" target="_blank" rel="noopener">💬 ¿Tienes dudas? Escríbenos</a>
+  <a class="wa-bubble" data-lang="en" href="https://wa.me/34644044808?text=Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" target="_blank" rel="noopener">💬 Questions? Chat with us</a>
+  <a class="wa-btn" 
+     href="https://wa.me/34644044808?text=Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" 
+     target="_blank" 
+     rel="noopener"
+     aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2C7.373 2 2 7.373 2 14c0 2.12.554 4.11 1.524 5.832L2 26l4.354-1.497A11.94 11.94 0 0014 26c6.627 0 12-5.373 12-12S20.627 2 14 2z" fill="white"/>
+      <path d="M19.5 16.8c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z" fill="#25D366"/>
+    </svg>
+  </a>
+</div>
+<script>
+var BLOG_SLUGS = {"post26": "controlar-cobros-pendientes-pyme", "post25": "erp-para-pequena-empresa", "post24": "odoo-para-empresas-de-distribucion", "post23": "odoo-vs-zoho-pyme", "post22": "odoo-peru-pymes", "post21": "odoo-pymes-chile", "post20": "odoo-pymes-argentina", "post19": "odoo-para-ecommerce-pyme", "post18": "migrar-de-excel-a-odoo", "post17": "odoo-para-autonomos-espana", "post16": "odoo-vs-sage-50cloud", "post15": "erp-pyme-mexico-barato", "post14": "odoo-colombia", "post13": "odoo-vs-contpaq", "post12": "odoo-vs-aspel", "post11": "implementar-odoo-mexico", "post10": "implantar-odoo-rapido", "post9": "odoo-vs-sap-pyme", "post8": "erp-barato-pyme", "post7": "odoo-community-vs-enterprise", "post6": "kit-digital-odoo", "post5": "odoo-community-gratis", "post4": "odoo-barato-pymes-espana", "post3": "verifactu-odoo", "post2": "cuanto-cuesta-implantar-odoo", "post1": "odoo-vs-holded"};
+function go(id){
+  var m = {'home':'/','checkout':'/#contratar','modules':'/#modulos','about':'/#nosotros','contact':'/#contacto','terms':'/#terminos','privacy':'/#privacidad','legal':'/#legal','cookies':'/#cookies','blog':'/blog/'};
+  if (BLOG_SLUGS[id]) { location.href = '/blog/' + BLOG_SLUGS[id] + '/'; return; }
+  location.href = m[id] || '/';
+}
+function goCheckout(){ location.href = '/#contratar'; }
+function openVideo(id){ window.open('https://www.youtube.com/watch?v=' + id, '_blank', 'noopener'); }
+function setLang(){}
+document.addEventListener('click', function(ev){
+  var a = ev.target.closest ? ev.target.closest('a[href]') : null;
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  try {
+    if (href.indexOf('wa.me/') > -1) gtag('event', 'whatsapp_click', {'ubicacion': 'blog', 'transport_type':'beacon'});
+    else if (href.indexOf('calendly.com/') > -1) gtag('event', 'calendly_click', {'tipo': 'demo', 'ubicacion': 'blog', 'transport_type':'beacon'});
+    else if (href.indexOf('/#contratar') > -1) gtag('event', 'blog_cta_click', {'transport_type':'beacon'});
+  } catch(e){}
+}, true);
+</script>
+</body>
+</html>

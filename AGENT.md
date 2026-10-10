@@ -91,7 +91,7 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 > Elegidas por encajar con sectores del ICP (distribución, fabricación) y con el dolor real del gerente (cobros, datos), y por mapearse a un pack concreto.
 - [x] `odoo para empresas de distribucion` → PUBLICADO: 01 Oct 2026 → URL: https://odoolisto.com/#post24 *(Pack M)*
 - [x] `erp para pequeña empresa` → PUBLICADO: 10 Oct 2026 → URL: https://odoolisto.com/#post25 *(Pack S/M; comparativa de cuota por usuario con Holded y Odoo Enterprise, precios de octubre 2026)*
-- [ ] `controlar cobros pendientes pyme` → Título: "Cómo controlar los cobros pendientes de tu pyme con Odoo (facturas vencidas)" *(Pack S — Contabilidad; no prometer funciones de OdooListo IA sin verificarlas en la demo)*
+- [x] `controlar cobros pendientes pyme` → PUBLICADO: 10 Oct 2026 → URL: https://odoolisto.com/blog/controlar-cobros-pendientes-pyme/ *(Pack S; deja claro que el seguimiento automático por niveles y el informe de antigüedad de saldos son de Enterprise)*
 - [ ] `odoo crm pymes` → Título: "Odoo CRM para pymes: embudo comercial conectado con ventas y facturación" *(Pack S)*
 - [ ] `odoo fabricacion pyme` → Título: "Odoo Fabricación para pymes: órdenes de producción y escandallos sin Excel" *(Pack L; ojo: el planificador Gantt y PLM son de Enterprise)*
 
@@ -228,6 +228,7 @@ crear `blog/<slug>/index.html`. Haz commit de `blog/`, `assets/` y `sitemap.xml`
 | 2026-09-30 | odoo vs zoho pyme | Odoo vs Zoho: qué ERP/CRM conviene a tu pyme en 2026 | https://odoolisto.com/#post23 | ✅ Publicado |
 | 2026-10-01 | odoo para empresas de distribucion | Odoo para empresas de distribución: stock, compras y ventas en un solo sistema (2026) | https://odoolisto.com/#post24 | ✅ Publicado |
 | 2026-10-10 | erp para pequeña empresa | ERP para pequeña empresa: cómo elegir sin pagar por usuario en 2026 | https://odoolisto.com/#post25 | ✅ Publicado |
+| 2026-10-10 | controlar cobros pendientes pyme | Cómo controlar los cobros pendientes de tu pyme con Odoo (facturas vencidas) | https://odoolisto.com/blog/controlar-cobros-pendientes-pyme/ | ✅ Publicado |
 
 ---
 
@@ -242,5 +243,5 @@ crear `blog/<slug>/index.html`. Haz commit de `blog/`, `assets/` y `sitemap.xml`
 
 ---
 
-*Última actualización: 10 Oct 2026 (post25 — erp para pequeña empresa — publicado desde Claude Code)*
+*Última actualización: 10 Oct 2026 (post26 — controlar cobros pendientes pyme — primera página real en /blog/<slug>/, publicado desde Claude Code)*
 *Agente configurado por: Athilan Pignus, S.L.*
