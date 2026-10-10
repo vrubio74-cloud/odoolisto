@@ -90,7 +90,7 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 ### 🟤 PRIORIDAD SEXTA — Sexta tanda (añadida automáticamente 01 Oct 2026, sin keywords `[ ]` pendientes en tandas anteriores)
 > Elegidas por encajar con sectores del ICP (distribución, fabricación) y con el dolor real del gerente (cobros, datos), y por mapearse a un pack concreto.
 - [x] `odoo para empresas de distribucion` → PUBLICADO: 01 Oct 2026 → URL: https://odoolisto.com/#post24 *(Pack M)*
-- [ ] `erp para pequeña empresa` → Título: "ERP para pequeña empresa: cómo elegir sin pagar por usuario en 2026" *(keyword "de problema", más volumen)*
+- [x] `erp para pequeña empresa` → PUBLICADO: 10 Oct 2026 → URL: https://odoolisto.com/#post25 *(Pack S/M; comparativa de cuota por usuario con Holded y Odoo Enterprise, precios de octubre 2026)*
 - [ ] `controlar cobros pendientes pyme` → Título: "Cómo controlar los cobros pendientes de tu pyme con Odoo (facturas vencidas)" *(Pack S — Contabilidad; no prometer funciones de OdooListo IA sin verificarlas en la demo)*
 - [ ] `odoo crm pymes` → Título: "Odoo CRM para pymes: embudo comercial conectado con ventas y facturación" *(Pack S)*
 - [ ] `odoo fabricacion pyme` → Título: "Odoo Fabricación para pymes: órdenes de producción y escandallos sin Excel" *(Pack L; ojo: el planificador Gantt y PLM son de Enterprise)*
@@ -217,6 +217,7 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 | 2026-09-25 | odoo peru pymes | Odoo para pymes en Perú: guía de implantación 2026 | https://odoolisto.com/#post22 | ✅ Publicado |
 | 2026-09-30 | odoo vs zoho pyme | Odoo vs Zoho: qué ERP/CRM conviene a tu pyme en 2026 | https://odoolisto.com/#post23 | ✅ Publicado |
 | 2026-10-01 | odoo para empresas de distribucion | Odoo para empresas de distribución: stock, compras y ventas en un solo sistema (2026) | https://odoolisto.com/#post24 | ✅ Publicado |
+| 2026-10-10 | erp para pequeña empresa | ERP para pequeña empresa: cómo elegir sin pagar por usuario en 2026 | https://odoolisto.com/#post25 | ✅ Publicado |
 
 ---
 
@@ -231,5 +232,5 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 
 ---
 
-*Última actualización: 01 Oct 2026 (post24 — odoo para empresas de distribucion — publicado desde Claude Code; gestorías en espera por exigir una oferta multiempresa que no está en ningún pack; añadida la sexta tanda de keywords)*
+*Última actualización: 10 Oct 2026 (post25 — erp para pequeña empresa — publicado desde Claude Code)*
 *Agente configurado por: Athilan Pignus, S.L.*
