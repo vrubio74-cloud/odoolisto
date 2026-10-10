@@ -20,8 +20,8 @@
     })(window, document, "clarity", "script", "xenf784cuk");
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OdooListo — Odoo barato para pymes | €297 · En marcha en 3 días</title>
-<meta name="description" content="Odoo barato para pymes desde €297. Puesta en marcha en 3 días garantizada o te devolvemos el setup. Sin licencias. Especialistas desde 2014. España y Latam.">
+<title>OdooListo — Odoo con IA para pymes | €297 · En marcha en 3 días</title>
+<meta name="description" content="Odoo para pymes desde €297, ahora con OdooListo IA: pregúntale a tu ERP y te responde en segundos. En marcha en 3 días o te devolvemos el setup. Sin licencias.">
 <meta name="keywords" content="odoo barato, odoo rapido, erp barato pyme, odoo gratis, odoo economico, implantar odoo pyme, odoo community españa, implementacion odoo rapida, erp pyme barato, alternativa holded, odoo 19 pyme, partner odoo españa, implementar odoo mexico, odoo community latam, verifactu odoo, kit digital odoo, odoo precio, odoo mas barato, erp gratuito pyme, odoo express, puesta en marcha odoo 3 dias, odoo sin licencias, erp cloud barato, odoo vs holded precio, odoo pyme precio">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="author" content="OdooListo — Athilan Pignus, S.L.">
@@ -482,6 +482,25 @@ tbody td.ours{background:rgba(28,15,94,.03);font-weight:700;color:var(--navy)}
 .ai-qs{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:820px;margin:0 auto}
 .ai-q{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:22px;padding:10px 18px;font-size:.83rem;color:rgba(255,255,255,.9);font-style:italic}
 .ai-note{margin-top:22px;font-size:.8rem;color:rgba(185,174,255,.85);font-weight:600}
+.ai-video{position:relative;max-width:760px;margin:0 auto 6px;aspect-ratio:16/9;border-radius:14px;overflow:hidden;background:#0e0628 center/cover no-repeat;cursor:pointer;border:1px solid rgba(155,140,255,.35)}
+.ai-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.ai-video-ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:8px;color:#fff;font-weight:800;font-size:1rem;background:rgba(14,6,40,.35)}
+.ai-vnote{font-size:.72rem;color:rgba(255,255,255,.5);margin-bottom:22px}
+.ai-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:820px;margin:26px auto 0;text-align:left}
+.ai-col{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:18px 20px}
+.ai-col h3{color:#fff;font-size:1rem;margin-bottom:10px}
+.ai-col ul{margin:0;padding-left:18px;color:rgba(255,255,255,.82);font-size:.86rem;line-height:1.6}
+.ai-col p{margin-top:10px;font-size:.8rem;color:rgba(185,174,255,.85)}
+.ai-col-no{border-color:rgba(255,255,255,.08)}
+.ai-ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.ai-demo{border-color:rgba(255,255,255,.3);color:#fff;text-decoration:none}
+.ai-bar{display:block;background:linear-gradient(90deg,#1C0F5E,#3b1d8f);color:#fff;text-align:center;font-size:.84rem;font-weight:700;padding:9px 16px;cursor:pointer;text-decoration:none}
+.ai-bar strong{color:#B9AEFF}
+@media(max-width:768px){.ai-cols{grid-template-columns:1fr}.ai-bar{font-size:.78rem}}
+/* Móvil: nada puede ser más ancho que la pantalla */
+body{overflow-x:clip}
+@media(max-width:768px){table{display:block!important;width:auto!important;max-width:100%!important;min-width:0!important;overflow-x:auto;-webkit-overflow-scrolling:touch}}
+@media(max-width:600px){.nav-actions a[href*="billing.stripe.com"]{display:none!important}}
 @media(max-width:768px){.aiteaser{padding:32px 20px}.ai-h{font-size:1.5rem}.ai-q{font-size:.78rem;padding:8px 14px}.unlim-t{font-size:1.12rem}}
 /* ── Comparativa vs freemium/DIY ── */
 .vscmp{width:100%;border-collapse:collapse;margin-top:34px;font-size:.9rem}
@@ -1063,6 +1082,8 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 </div>
 
 <!-- NAV -->
+<a class="ai-bar" onclick="goIA()" data-lang="es">🤖 <strong>Nuevo: OdooListo IA.</strong> Pregúntale a tu empresa y te responde en segundos → Ver vídeo</a>
+<a class="ai-bar" onclick="goIA()" data-lang="en">🤖 <strong>New: OdooListo IA.</strong> Ask your company and get answers in seconds → Watch video</a>
 <nav>
   <div class="ni">
     <div class="logo" onclick="go('home')">
@@ -1101,6 +1122,8 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   <li><a onclick="go('about');closeMobNav()"><span data-lang="es">Nosotros</span><span data-lang="en">About</span></a></li>
   <li><a onclick="go('blog');closeMobNav()">Blog</a></li>
   <li><a onclick="go('contact');closeMobNav()"><span data-lang="es">Contacto</span><span data-lang="en">Contact</span></a></li>
+  <li><a onclick="goIA();closeMobNav()">🤖 OdooListo IA</a></li>
+  <li><a href="https://billing.stripe.com/p/login/14AaEX1JIcjj1Pe9f8gfu00" target="_blank" rel="noopener"><span data-lang="es">👤 Mi cuenta</span><span data-lang="en">👤 My account</span></a></li>
   <li class="mob-cta">
     <a onclick="go('checkout');closeMobNav()"><span data-lang="es">Contratar →</span><span data-lang="en">Get started →</span></a>
   </li>
@@ -1154,7 +1177,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
       <ul class="plist">
         <li class="pi" onclick="selHP(this)"><div><div class="pn">Pack S</div><div class="pm" data-lang="es">Contabilidad · Ventas · CRM</div><div class="pm" data-lang="en">Accounting · Sales · CRM</div></div><div class="pp"><div class="ps">Setup €297</div><div class="pmo">€97/mes</div></div></li>
         <li class="pi active" onclick="selHP(this)"><div><div class="pn">Pack M ⭐</div><div class="pm" data-lang="es">Pack S + Inventario · Compras · Proyectos</div><div class="pm" data-lang="en">Pack S + Inventory · Purchase · Projects</div></div><div class="pp"><div class="ps">Setup €497</div><div class="pmo">€147/mes</div></div></li>
-        <li class="pi" onclick="selHP(this)"><div><div class="pn">Pack L</div><div class="pm" data-lang="es">Pack M + RRHH · Fabricación · eCommerce</div><div class="pm" data-lang="en">Pack M + HR · Manufacturing · eCommerce</div></div><div class="pp"><div class="ps">Setup €697</div><div class="pmo">€197/mes</div></div></li>
+        <li class="pi" onclick="selHP(this)"><div><div class="pn">Pack L</div><div class="pm" data-lang="es">Pack M + RRHH · Fabricación · eCommerce · <strong>OdooListo IA</strong></div><div class="pm" data-lang="en">Pack M + HR · Manufacturing · eCommerce · <strong>OdooListo IA</strong></div></div><div class="pp"><div class="ps">Setup €697</div><div class="pmo">€197/mes</div></div></li>
       </ul>
       <a class="hcta" onclick="goCheckout(heroPack())" data-lang="es">Contratar este pack →</a>
       <a class="hcta" onclick="goCheckout(heroPack())" data-lang="en">Get this pack →</a>
@@ -1372,7 +1395,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="pusers" data-lang="es">👥 <strong>Usuarios ilimitados</strong> · Servidor incluido</div><div class="pusers" data-lang="en">👥 <strong>Unlimited users</strong> · Server included</div>
         <div class="pdiv"></div>
         <div class="pmods" data-lang="es">9 módulos incluidos</div><div class="pmods" data-lang="en">9 modules included</div>
-        <ul class="ml"><li class="mi"><span class="mch">✓</span><span data-lang="es">Todo el Pack M</span><span data-lang="en">All Pack M modules</span></li><li class="mi"><span class="mch">✓</span>RRHH / HR</li><li class="mi"><span class="mch">✓</span>Fabricación / Manufacturing</li><li class="mi"><span class="mch">✓</span>eCommerce</li></ul>
+        <ul class="ml"><li class="mi"><span class="mch">✓</span><span data-lang="es">Todo el Pack M</span><span data-lang="en">All Pack M modules</span></li><li class="mi"><span class="mch">✓</span>RRHH / HR</li><li class="mi"><span class="mch">✓</span>Fabricación / Manufacturing</li><li class="mi"><span class="mch">✓</span>eCommerce</li><li class="mi"><span class="mch">🤖</span><span data-lang="es"><strong>OdooListo IA</strong> · 200 consultas/mes</span><span data-lang="en"><strong>OdooListo IA</strong> · 200 queries/month</span></li></ul>
         <a class="pcta" onclick="goCheckout('l')" data-lang="es">Empezar con Pack L</a><a class="pcta" onclick="goCheckout('l')" data-lang="en">Start with Pack L</a>
       </div>
     </div>
@@ -1455,12 +1478,17 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 <section class="sec" id="odoolisto-ia" style="background:var(--off);padding-top:10px">
   <div class="si">
     <div class="aiteaser reveal">
-      <div class="ai-pill" data-lang="es">🤖 Próximamente · Módulo estrella</div>
-      <div class="ai-pill" data-lang="en">🤖 Coming soon · Flagship module</div>
+      <div class="ai-pill" data-lang="es">🤖 Nuevo · Ya disponible</div>
+      <div class="ai-pill" data-lang="en">🤖 New · Available now</div>
       <h2 class="ai-h" data-lang="es">Pregúntale a tu empresa.</h2>
       <h2 class="ai-h" data-lang="en">Just ask your company.</h2>
-      <p class="ai-sub" data-lang="es">Un ERP solo sirve si puedes sacar la información. Con <strong style="color:#B9AEFF">OdooListo IA</strong> se la pides hablando, como se la pedirías a tu mejor analista. Sin menús, sin informes, sin esperar a nadie.</p>
-      <p class="ai-sub" data-lang="en">An ERP is only useful if you can get the information out. With <strong style="color:#B9AEFF">OdooListo IA</strong> you just ask out loud, like you'd ask your best analyst. No menus, no reports, no waiting.</p>
+      <p class="ai-sub" data-lang="es">Un ERP solo sirve si puedes sacar la información. Con <strong style="color:#B9AEFF">OdooListo IA</strong> se la pides escribiendo, como se la pedirías a tu mejor analista. Sin menús, sin informes, sin esperar a nadie.</p>
+      <p class="ai-sub" data-lang="en">An ERP is only useful if you can get the information out. With <strong style="color:#B9AEFF">OdooListo IA</strong> you just ask in plain words, like you'd ask your best analyst. No menus, no reports, no waiting.</p>
+      <div class="ai-video" id="ai-video" data-yt="__VIDEO_IA_ID__" role="button" tabindex="0" aria-label="Ver OdooListo IA en acción">
+        <div class="ai-video-ph">▶ <span data-lang="es">Míralo en acción (50 s)</span><span data-lang="en">See it in action (50 s)</span></div>
+      </div>
+      <div class="ai-vnote" data-lang="es">Vídeo con datos de demostración.</div>
+      <div class="ai-vnote" data-lang="en">Video uses demo data.</div>
       <div class="ai-qs">
         <div class="ai-q" data-lang="es">"¿Qué facturas tengo vencidas y cuánto suman?"</div>
         <div class="ai-q" data-lang="en">"Which invoices are overdue and how much is that?"</div>
@@ -1468,11 +1496,49 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <div class="ai-q" data-lang="en">"Which customers bought last year but not this one?"</div>
         <div class="ai-q" data-lang="es">"¿Cuánto voy a facturar a cierre si sigo a este ritmo?"</div>
         <div class="ai-q" data-lang="en">"What will I bill by year-end at this pace?"</div>
-        <div class="ai-q" data-lang="es">"Mándame en Excel las ventas del trimestre por cliente"</div>
-        <div class="ai-q" data-lang="en">"Email me last quarter's sales by customer in Excel"</div>
+        <div class="ai-q" data-lang="es">"¿Qué productos se me van a quedar sin stock?"</div>
+        <div class="ai-q" data-lang="en">"Which products are about to run out of stock?"</div>
       </div>
-      <div class="ai-note" data-lang="es">Se incluirá en el Pack Avanzado. Implanta tu Odoo hoy y estarás listo el día que se active.</div>
-      <div class="ai-note" data-lang="en">Will be included in the Advanced Pack. Deploy your Odoo today and be ready the day it goes live.</div>
+      <div class="ai-cols">
+        <div class="ai-col">
+          <h3 data-lang="es">Qué hace</h3><h3 data-lang="en">What it does</h3>
+          <ul data-lang="es">
+            <li>Te responde sobre ventas, pedidos, facturas, márgenes, previsiones y stock</li>
+            <li>Agrupa por cliente, producto, estado o periodo</li>
+            <li>Te prepara el listado filtrado y te abre la pantalla de Odoo</li>
+            <li>Avisa de riesgos de stock, horas sin facturar y servicios que se pasan de lo vendido</li>
+            <li>Da de alta clientes y productos: te enseña un resumen y <strong>no guarda nada sin tu confirmación</strong></li>
+          </ul>
+          <ul data-lang="en">
+            <li>Answers about sales, orders, invoices, margins, forecasts and stock</li>
+            <li>Groups by customer, product, status or period</li>
+            <li>Prepares the filtered list and opens the Odoo screen for you</li>
+            <li>Flags stock risks, unbilled hours and services running over</li>
+            <li>Creates customers and products: shows you a summary and <strong>saves nothing without your confirmation</strong></li>
+          </ul>
+        </div>
+        <div class="ai-col ai-col-no">
+          <h3 data-lang="es">Qué no hace (todavía)</h3><h3 data-lang="en">What it doesn't do (yet)</h3>
+          <ul data-lang="es">
+            <li>No crea pedidos, presupuestos ni facturas</li>
+            <li>No confirma pedidos ni cambia estados</li>
+            <li>No registra pagos</li>
+          </ul>
+          <ul data-lang="en">
+            <li>It doesn't create orders, quotes or invoices</li>
+            <li>It doesn't confirm orders or change statuses</li>
+            <li>It doesn't record payments</li>
+          </ul>
+          <p data-lang="es">Preferimos decírtelo antes de que lo contrates.</p>
+          <p data-lang="en">We'd rather tell you before you buy.</p>
+        </div>
+      </div>
+      <div class="ai-note" data-lang="es">Incluido en el Pack Avanzado · 200 consultas al mes</div>
+      <div class="ai-note" data-lang="en">Included in the Advanced Pack · 200 queries per month</div>
+      <div class="ai-ctas">
+        <button class="btn-t" onclick="goCheckout('l')"><span data-lang="es">Ver el Pack Avanzado →</span><span data-lang="en">See the Advanced Pack →</span></button>
+        <a class="btn-s ai-demo" href="https://calendly.com/odoolisto/demo-gratuita-odoo-community-19" target="_blank" rel="noopener"><span data-lang="es">📅 Pide una demo</span><span data-lang="en">📅 Book a demo</span></a>
+      </div>
     </div>
   </div>
 </section>
@@ -4945,15 +5011,15 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
     <div class="psel" style="max-width:620px;margin:28px 0 0">
       <h4 data-lang="es">1. Selecciona tu pack</h4><h4 data-lang="en">1. Select your pack</h4>
       <div class="po sel" id="po-s" onclick="selPack(this,'s',297,97)">
-        <div><label data-lang="es">Pack S — Esencial (3 módulos, ≤5 usuarios)</label><label data-lang="en">Pack S — Essential (3 modules, ≤5 users)</label><div class="posub" data-lang="es">Contabilidad · Ventas · CRM</div><div class="posub" data-lang="en">Accounting · Sales · CRM</div></div>
+        <div><label data-lang="es">Pack S — Esencial (3 módulos, usuarios ilimitados)</label><label data-lang="en">Pack S — Essential (3 modules, unlimited users)</label><div class="posub" data-lang="es">Contabilidad · Ventas · CRM</div><div class="posub" data-lang="en">Accounting · Sales · CRM</div></div>
         <span>€297 + €97/mes</span>
       </div>
       <div class="po" id="po-m" onclick="selPack(this,'m',497,147)">
-        <div><label data-lang="es">Pack M — Completo (6 módulos, ≤15 usuarios) ⭐</label><label data-lang="en">Pack M — Complete (6 modules, ≤15 users) ⭐</label><div class="posub" data-lang="es">+ Inventario · Compras · Proyectos</div><div class="posub" data-lang="en">+ Inventory · Purchase · Projects</div></div>
+        <div><label data-lang="es">Pack M — Completo (6 módulos, usuarios ilimitados) ⭐</label><label data-lang="en">Pack M — Complete (6 modules, unlimited users) ⭐</label><div class="posub" data-lang="es">+ Inventario · Compras · Proyectos</div><div class="posub" data-lang="en">+ Inventory · Purchase · Projects</div></div>
         <span>€497 + €147/mes</span>
       </div>
       <div class="po" id="po-l" onclick="selPack(this,'l',697,197)">
-        <div><label data-lang="es">Pack L — Avanzado (9 módulos, ≤40 usuarios)</label><label data-lang="en">Pack L — Advanced (9 modules, ≤40 users)</label><div class="posub" data-lang="es">+ RRHH · Fabricación · eCommerce</div><div class="posub" data-lang="en">+ HR · Manufacturing · eCommerce</div></div>
+        <div><label data-lang="es">Pack L — Avanzado (9 módulos, usuarios ilimitados)</label><label data-lang="en">Pack L — Advanced (9 modules, unlimited users)</label><div class="posub" data-lang="es">+ RRHH · Fabricación · eCommerce · OdooListo IA (200 consultas/mes)</div><div class="posub" data-lang="en">+ HR · Manufacturing · eCommerce · OdooListo IA (200 queries/month)</div></div>
         <span>€697 + €197/mes</span>
       </div>
     </div>
@@ -5743,10 +5809,37 @@ document.addEventListener('keydown', function(e) {
     var h = (location.hash||'').toLowerCase();
     var t = map[h];
     if (!t && /^#post\d+$/.test(h) && document.getElementById('page-' + h.slice(1))) t = h.slice(1);
+    if (h === '#ia' || h === '#odoolisto-ia') { try { goIA(); } catch(e){} return; }
     if (t) { try { go(t); } catch(e){} }
   }
   window.addEventListener('hashchange', routeHash);
   routeHash();
+})();
+// ── ODOOLISTO IA: VÍDEO ────────────────────────────────
+function loadAIVideo(withSound) {
+  var box = document.getElementById('ai-video');
+  if (!box || box.dataset.loaded) return;
+  var id = box.getAttribute('data-yt');
+  box.dataset.loaded = '1';
+  box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&mute=' + (withSound ? 0 : 1) + '&playsinline=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="OdooListo IA"></iframe>';
+  try { gtag('event', 'video_ia', {'accion': withSound ? 'clic' : 'auto_silencio'}); } catch(e){}
+}
+function goIA() {
+  go('home');
+  setTimeout(function(){ var s = document.getElementById('odoolisto-ia'); if (s) s.scrollIntoView(); }, 600);
+  try { gtag('event', 'anuncio_ia_click'); } catch(e){}
+}
+(function(){
+  var box = document.getElementById('ai-video');
+  if (!box) return;
+  var id = box.getAttribute('data-yt');
+  box.style.backgroundImage = 'url(https://i.ytimg.com/vi/' + id + '/hqdefault.jpg)';
+  box.addEventListener('click', function(){ loadAIVideo(true); });
+  box.addEventListener('keydown', function(e){ if (e.key === 'Enter') loadAIVideo(true); });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { loadAIVideo(false); io.disconnect(); } }); }, {threshold: .6});
+    io.observe(box);
+  }
 })();
 // ── CLICS SALIENTES: WHATSAPP Y CALENDLY ────────────────
 document.addEventListener('click', function(ev){
