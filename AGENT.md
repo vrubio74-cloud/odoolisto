@@ -48,6 +48,15 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 
 ## KEYWORDS PENDIENTES DE PUBLICAR
 
+### 🤖 PRIORIDAD MÁXIMA — Tanda IA (añadida 11 oct 2026: lanzamiento de OdooListo IA)
+> Cada artículo debe enlazar a `https://odoolisto.com/odoo-con-ia/` y describir OdooListo IA solo con su alcance real (consulta, analiza, abre listados, da de alta clientes y productos con confirmación; NO crea pedidos ni facturas, NO cambia estados, NO registra pagos). 200 consultas/mes en el Pack Avanzado. Nada de «la única», «la primera», «exclusiva».
+- [ ] `erp con inteligencia artificial para pymes`
+- [ ] `odoo inteligencia artificial`
+- [ ] `como sacar informes de odoo sin saber usarlo`
+- [ ] `clientes que dejan de comprar como detectarlos`
+- [ ] `previsión de ventas pyme con erp`
+- [ ] `control de stock pyme alertas de rotura`
+
 > **Nota de sincronización (15 Jul 2026):** este checklist no reflejaba el estado real del sitio — 9 artículos ya estaban publicados en index.html (post1-post9) sin haberse marcado aquí. Se ha reconciliado abajo. También se detectó que las páginas `page-post1` y `page-post2` tienen el contenido intercambiado en el HTML en vivo (la tarjeta "Odoo vs Holded" enlaza al contenido de "Cuánto cuesta implantar Odoo" y viceversa). Corregido el 13 Sep 2026 (commit 072219e, solo swap de IDs, contenido de los artículos intacto).
 >
 > **Nota de sincronización (19 Sep 2026):** este checklist volvió a desincronizarse — post18 (`migrar de excel a odoo`, 13 Sep 2026) y post19 (`odoo para ecommerce pyme`, 16 Sep 2026) ya estaban publicados en index.html sin marcarse aquí ni añadirse al sitemap.xml. Se ha reconciliado el checklist, el registro y el sitemap.xml en este run (que además publica post20). Recordatorio para runs futuros: **siempre verificar contra index.html en vivo (paso 2 del flujo de trabajo)** antes de redactar, no fiarse solo de este checklist.

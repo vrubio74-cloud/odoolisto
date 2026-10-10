@@ -14,6 +14,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SITE = "https://odoolisto.com"
 MESES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"]
 POSTS_DIR = ROOT / "blog" / "posts"
+LANDING_DIR = ROOT / "landing"
 
 HASH_PAGES = {
     "home": "/", "checkout": "/#contratar", "modules": "/#modulos", "about": "/#nosotros",
@@ -39,12 +40,12 @@ TRACKING = """<script>
     })(window, document, "clarity", "script", "xenf784cuk");
 </script>"""
 
-HEADER = """<a class="ai-bar" href="/#ia">🤖 <strong>Nuevo: OdooListo IA.</strong> Pregúntale a tu empresa y te responde en segundos → Ver vídeo</a>
+HEADER = """<a class="ai-bar" href="/odoo-con-ia/">🤖 <strong>Nuevo: OdooListo IA.</strong> Pregúntale a tu empresa y te responde en segundos → Ver vídeo</a>
 <header class="bl-head">
   <a class="bl-logo logo" href="/"><div class="logo-i"><svg viewBox="0 0 22 22" fill="none"><rect x="2" y="2" width="8" height="8" rx="2.5" fill="white" opacity=".95"/><rect x="12" y="2" width="8" height="8" rx="2.5" fill="white" opacity=".7"/><rect x="2" y="12" width="8" height="8" rx="2.5" fill="white" opacity=".7"/><rect x="12" y="12" width="8" height="8" rx="2.5" fill="#00A09D" opacity=".9"/></svg></div> OdooListo</a>
   <nav class="bl-nav">
     <a href="/blog/">Blog</a>
-    <a href="/#ia">OdooListo IA</a>
+    <a href="/odoo-con-ia/">OdooListo IA</a>
     <a class="bl-cta" href="/#contratar">Contratar</a>
   </nav>
 </header>"""
@@ -64,6 +65,25 @@ EXTRA_CSS = """
 .bl-foot{text-align:center;padding:30px 5%;color:var(--g3);font-size:.82rem;border-top:1px solid var(--g1)}
 .bl-foot a{color:var(--teal)}
 @media(max-width:600px){.bl-nav a:not(.bl-cta){display:none}}
+.lp-hero{background:linear-gradient(160deg,#0e0628 0%,#1C0F5E 55%,#0d1e3a 100%);color:#fff;padding:56px 5% 46px}
+.lp-in{max-width:900px;margin:0 auto}
+.lp-hero h1{font-family:var(--serif);font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.15;margin:6px 0 16px}
+.lp-sub{font-size:1.05rem;color:rgba(255,255,255,.82);line-height:1.65;max-width:720px}
+.lp-ctas{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.lp-ctas a{text-decoration:none}
+.lp-demo{border-color:rgba(255,255,255,.35);color:#fff}
+.lp-sec{padding:34px 5%}
+.lp-sec h2{font-family:var(--serif);color:var(--navy);font-size:1.6rem;margin:10px 0 12px}
+.lp-sec p{color:var(--g4);line-height:1.7}
+.lp-note{font-size:.78rem;color:var(--g3);text-align:center}
+.lp-qs{columns:2;gap:20px;color:var(--navy);font-style:italic;line-height:1.9}
+.lp-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.lp-col{background:var(--off);border:1px solid var(--g1);border-radius:14px;padding:18px 22px}
+.lp-col h2{font-size:1.25rem}
+.lp-col ul{color:var(--g4);line-height:1.65;padding-left:18px}
+.lp-sec details{border:1px solid var(--g1);border-radius:10px;padding:12px 16px;margin-bottom:8px}
+.lp-sec summary{font-weight:700;color:var(--navy);cursor:pointer}
+@media(max-width:700px){.lp-cols{grid-template-columns:1fr}.lp-qs{columns:1}}
 """
 
 SCRIPTS = """<script>
@@ -76,6 +96,19 @@ function go(id){
 function goCheckout(){ location.href = '/#contratar'; }
 function openVideo(id){ window.open('https://www.youtube.com/watch?v=' + id, '_blank', 'noopener'); }
 function setLang(){}
+(function(){
+  var box = document.getElementById('ai-video');
+  if (!box) return;
+  var id = box.getAttribute('data-yt');
+  box.style.backgroundImage = 'url(https://i.ytimg.com/vi/' + id + '/hqdefault.jpg)';
+  function load(sound){
+    if (box.dataset.loaded) return; box.dataset.loaded = '1';
+    box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&mute=' + (sound ? 0 : 1) + '&playsinline=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="OdooListo IA"></iframe>';
+    try { gtag('event', 'video_ia', {'accion': sound ? 'clic' : 'auto_silencio', 'ubicacion': 'landing'}); } catch(e){}
+  }
+  box.addEventListener('click', function(){ load(true); });
+  if ('IntersectionObserver' in window) { var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { load(false); io.disconnect(); } }); }, {threshold:.6}); io.observe(box); }
+})();
 document.addEventListener('click', function(ev){
   var a = ev.target.closest ? ev.target.closest('a[href]') : null;
   if (!a) return;
@@ -194,8 +227,25 @@ def main():
         page("Blog de OdooListo · Odoo para pymes", "Guías prácticas para poner Odoo en marcha en tu pyme: precios, comparativas con Holded, Sage o Zoho, VeriFactu y Odoo por país.",
              f"{SITE}/blog/", listing, scripts), encoding="utf-8")
 
+    landings = []
+    for f in sorted(LANDING_DIR.glob("*.html")) if LANDING_DIR.exists() else []:
+        raw = f.read_text(encoding="utf-8")
+        m = re.match(r"<!-- META (\{.*?\}) -->\n", raw, re.S)
+        meta = json.loads(m.group(1)); body = link_internal(raw[m.end():], slugs)
+        canonical = f"{SITE}/{meta['slug']}/"
+        faqs = [{"@type": "Question", "name": re.sub(r"<[^>]+>", "", q).strip(),
+                 "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"<[^>]+>", "", a).strip()}}
+                for q, a in re.findall(r"<summary>(.*?)</summary>\s*<p>(.*?)</p>", body, re.S)]
+        ld = {"@context": "https://schema.org", "@graph": [
+            {"@type": "WebPage", "name": meta["title"], "description": meta["description"], "url": canonical, "inLanguage": "es"}]
+            + ([{"@type": "FAQPage", "mainEntity": faqs}] if faqs else [])}
+        out = ROOT / meta["slug"] / "index.html"
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(page(meta["title"], meta["description"], canonical, body, scripts, ld), encoding="utf-8")
+        landings.append(meta)
+
     today = datetime.date.today().isoformat()
-    urls = [(f"{SITE}/", today, "1.0"), (f"{SITE}/blog/", today, "0.8")] + \
+    urls = [(f"{SITE}/", today, "1.0")] + [(f"{SITE}/{l['slug']}/", l["date"], "0.9") for l in landings] + [(f"{SITE}/blog/", today, "0.8")] + \
            [(f"{SITE}/blog/{p['slug']}/", p["date"], "0.7") for p in posts]
     sm = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + \
          "".join(f"  <url><loc>{u}</loc><lastmod>{d}</lastmod><priority>{pr}</priority></url>\n" for u, d, pr in urls) + "</urlset>\n"
@@ -203,7 +253,7 @@ def main():
 
     # Mapa postN → slug para la portada (enlaces antiguos /#postN)
     (ROOT / "assets" / "blog-slugs.json").write_text(json.dumps(slugs, ensure_ascii=False), encoding="utf-8")
-    print(f"{len(posts)} artículos · blog/index.html · sitemap.xml · assets/site.css")
+    print(f"{len(posts)} artículos · {len(landings)} landings · blog/index.html · sitemap.xml · assets/site.css")
 
 
 if __name__ == "__main__":

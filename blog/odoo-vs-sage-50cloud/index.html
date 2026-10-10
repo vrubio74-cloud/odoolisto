@@ -36,12 +36,12 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Odoo vs Sage: comparativa completa para pymes españolas en 2026", "description": "Tu gestoría lleva años trabajando con Sage y da por hecho que tu pyme debería usarlo también. Es una recomendación razonable — Sage tiene alrededor del…", "datePublished": "2026-08-22", "dateModified": "2026-08-22", "mainEntityOfPage": "https://odoolisto.com/blog/odoo-vs-sage-50cloud/", "inLanguage": "es", "author": {"@type": "Organization", "name": "OdooListo", "url": "https://odoolisto.com"}, "publisher": {"@type": "Organization", "name": "OdooListo", "logo": {"@type": "ImageObject", "url": "https://odoolisto.com/logo.png"}}}</script>
 </head>
 <body>
-<a class="ai-bar" href="/#ia">🤖 <strong>Nuevo: OdooListo IA.</strong> Pregúntale a tu empresa y te responde en segundos → Ver vídeo</a>
+<a class="ai-bar" href="/odoo-con-ia/">🤖 <strong>Nuevo: OdooListo IA.</strong> Pregúntale a tu empresa y te responde en segundos → Ver vídeo</a>
 <header class="bl-head">
   <a class="bl-logo logo" href="/"><div class="logo-i"><svg viewBox="0 0 22 22" fill="none"><rect x="2" y="2" width="8" height="8" rx="2.5" fill="white" opacity=".95"/><rect x="12" y="2" width="8" height="8" rx="2.5" fill="white" opacity=".7"/><rect x="2" y="12" width="8" height="8" rx="2.5" fill="white" opacity=".7"/><rect x="12" y="12" width="8" height="8" rx="2.5" fill="#00A09D" opacity=".9"/></svg></div> OdooListo</a>
   <nav class="bl-nav">
     <a href="/blog/">Blog</a>
-    <a href="/#ia">OdooListo IA</a>
+    <a href="/odoo-con-ia/">OdooListo IA</a>
     <a class="bl-cta" href="/#contratar">Contratar</a>
   </nav>
 </header>
@@ -180,6 +180,19 @@ function go(id){
 function goCheckout(){ location.href = '/#contratar'; }
 function openVideo(id){ window.open('https://www.youtube.com/watch?v=' + id, '_blank', 'noopener'); }
 function setLang(){}
+(function(){
+  var box = document.getElementById('ai-video');
+  if (!box) return;
+  var id = box.getAttribute('data-yt');
+  box.style.backgroundImage = 'url(https://i.ytimg.com/vi/' + id + '/hqdefault.jpg)';
+  function load(sound){
+    if (box.dataset.loaded) return; box.dataset.loaded = '1';
+    box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&mute=' + (sound ? 0 : 1) + '&playsinline=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="OdooListo IA"></iframe>';
+    try { gtag('event', 'video_ia', {'accion': sound ? 'clic' : 'auto_silencio', 'ubicacion': 'landing'}); } catch(e){}
+  }
+  box.addEventListener('click', function(){ load(true); });
+  if ('IntersectionObserver' in window) { var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { load(false); io.disconnect(); } }); }, {threshold:.6}); io.observe(box); }
+})();
 document.addEventListener('click', function(ev){
   var a = ev.target.closest ? ev.target.closest('a[href]') : null;
   if (!a) return;
