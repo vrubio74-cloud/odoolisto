@@ -230,6 +230,21 @@ tbody td.ours{background:rgba(28,15,94,.03);font-weight:700;color:var(--navy)}
 .ai-col-no{border-color:rgba(255,255,255,.08)}
 .ai-ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
 .ai-demo{border-color:rgba(255,255,255,.3);color:#fff;text-decoration:none}
+.hnew{display:inline-flex;align-items:center;gap:10px;background:rgba(155,140,255,.16);border:1px solid rgba(155,140,255,.55);color:#fff;border-radius:30px;padding:6px 16px 6px 6px;font-size:.88rem;font-weight:700;cursor:pointer;margin-bottom:18px;text-decoration:none;animation:hnewpulse 2.6s ease-in-out infinite}
+.hnew-tag{background:linear-gradient(90deg,#9B8CFF,#4DD9D6);color:#0e0628;border-radius:20px;padding:4px 10px;font-size:.7rem;font-weight:900;letter-spacing:.08em}
+@keyframes hnewpulse{0%,100%{box-shadow:0 0 0 0 rgba(155,140,255,.45)}50%{box-shadow:0 0 0 8px rgba(155,140,255,0)}}
+.hai{background:rgba(14,6,40,.72);border:1px solid rgba(155,140,255,.45);border-radius:20px;padding:18px;box-shadow:0 24px 60px rgba(0,0,0,.35);backdrop-filter:blur(8px);align-self:center;width:100%;max-width:440px;justify-self:end}
+.hai-top{display:flex;align-items:center;gap:8px;color:#fff;font-weight:800;font-size:.92rem;margin-bottom:12px}
+.hai-dot{width:9px;height:9px;border-radius:50%;background:#4DD9D6;box-shadow:0 0 10px #4DD9D6}
+.hai-demo{margin-left:auto;font-size:.66rem;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em}
+.hai-chat{min-height:230px;display:flex;flex-direction:column;gap:10px}
+.hai-q{align-self:flex-end;background:#00A09D;color:#fff;border-radius:14px 14px 4px 14px;padding:10px 13px;font-size:.88rem;max-width:88%}
+.hai-a{align-self:flex-start;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.92);border-radius:14px 14px 14px 4px;padding:11px 13px;font-size:.86rem;max-width:94%;line-height:1.5}
+.hai-a strong{color:#B9AEFF;font-size:1.05rem}
+.hai-typing{opacity:.6;font-style:italic}
+.hai-play{width:100%;margin-top:12px;background:linear-gradient(90deg,#6E5BFF,#00A09D);color:#fff;border:none;border-radius:12px;padding:12px;font-weight:800;font-size:.92rem;cursor:pointer}
+.hai-foot{text-align:center;color:rgba(185,174,255,.85);font-size:.75rem;font-weight:600;margin-top:9px}
+@media(max-width:768px){.hai{margin-top:22px;max-width:none}.hai-chat{min-height:200px}.hnew{font-size:.8rem}}
 .ai-bar{display:block;background:linear-gradient(90deg,#1C0F5E,#3b1d8f);color:#fff;text-align:center;font-size:.84rem;font-weight:700;padding:9px 16px;cursor:pointer;text-decoration:none}
 .ai-bar strong{color:#B9AEFF}
 @media(max-width:768px){.ai-cols{grid-template-columns:1fr}.ai-bar{font-size:.78rem}}

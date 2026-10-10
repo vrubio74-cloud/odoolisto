@@ -495,6 +495,22 @@ tbody td.ours{background:rgba(28,15,94,.03);font-weight:700;color:var(--navy)}
 .ai-col-no{border-color:rgba(255,255,255,.08)}
 .ai-ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
 .ai-demo{border-color:rgba(255,255,255,.3);color:#fff;text-decoration:none}
+.hnew{display:inline-flex;align-items:center;gap:10px;background:rgba(155,140,255,.16);border:1px solid rgba(155,140,255,.55);color:#fff;border-radius:30px;padding:6px 16px 6px 6px;font-size:.88rem;font-weight:700;cursor:pointer;margin-bottom:18px;text-decoration:none;animation:hnewpulse 2.6s ease-in-out infinite}
+.hnew-tag{background:linear-gradient(90deg,#9B8CFF,#4DD9D6);color:#0e0628;border-radius:20px;padding:4px 10px;font-size:.7rem;font-weight:900;letter-spacing:.08em}
+@keyframes hnewpulse{0%,100%{box-shadow:0 0 0 0 rgba(155,140,255,.45)}50%{box-shadow:0 0 0 8px rgba(155,140,255,0)}}
+.hai{background:rgba(14,6,40,.72);border:1px solid rgba(155,140,255,.45);border-radius:20px;padding:18px;box-shadow:0 24px 60px rgba(0,0,0,.35);backdrop-filter:blur(8px);align-self:center;width:100%;max-width:440px;justify-self:end}
+.hai-top{display:flex;align-items:center;gap:8px;color:#fff;font-weight:800;font-size:.92rem;margin-bottom:12px}
+.hai-dot{width:9px;height:9px;border-radius:50%;background:#4DD9D6;box-shadow:0 0 10px #4DD9D6}
+.hai-demo{margin-left:auto;font-size:.66rem;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.06em}
+.hai-chat{min-height:230px;display:flex;flex-direction:column;gap:10px}
+.hai-q{align-self:flex-end;background:#00A09D;color:#fff;border-radius:14px 14px 4px 14px;padding:10px 13px;font-size:.88rem;max-width:88%}
+.hai-a{align-self:flex-start;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.92);border-radius:14px 14px 14px 4px;padding:11px 13px;font-size:.86rem;max-width:94%;line-height:1.5}
+.hai-a strong{color:#B9AEFF;font-size:1.05rem}
+.hai-typing{opacity:.6;font-style:italic}
+.hai-play{width:100%;margin-top:12px;background:linear-gradient(90deg,#6E5BFF,#00A09D);color:#fff;border:none;border-radius:12px;padding:12px;font-weight:800;font-size:.92rem;cursor:pointer}
+.hai-foot{text-align:center;color:rgba(185,174,255,.85);font-size:.75rem;font-weight:600;margin-top:9px}
+.hai-m{display:none}
+@media(max-width:768px){.hai-d{display:none}.hai-m{display:block;margin:4px 0 18px;max-width:none;padding:14px;cursor:pointer}.hai-m .hai-chat{min-height:150px}.hai-m .hai-q,.hai-m .hai-a{font-size:.82rem}.hnew{font-size:.8rem}}
 .ai-bar{display:block;background:linear-gradient(90deg,#1C0F5E,#3b1d8f);color:#fff;text-align:center;font-size:.84rem;font-weight:700;padding:9px 16px;cursor:pointer;text-decoration:none}
 .ai-bar strong{color:#B9AEFF}
 @media(max-width:768px){.ai-cols{grid-template-columns:1fr}.ai-bar{font-size:.78rem}}
@@ -1136,14 +1152,15 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   <div class="hgrid"></div>
   <div class="hin">
     <div>
-      <div class="hbadge">
-        <span data-lang="es">✦ 12 años implantando Odoo · 300+ empresas · España &amp; Latam</span>
-        <span data-lang="en">✦ 12 years deploying Odoo · 300+ companies · Spain &amp; LatAm</span>
+      <a class="hnew" onclick="goIA()"><span class="hnew-tag">NOVEDAD</span><span data-lang="es">OdooListo IA ya está aquí →</span><span data-lang="en">OdooListo IA is here →</span></a>
+      <h1 data-lang="es">Pregúntale a tu Odoo.<br><em>Te responde en segundos.</em></h1>
+      <h1 data-lang="en">Ask your Odoo.<br><em>Get answers in seconds.</em></h1>
+      <p class="hsub" data-lang="es">OdooListo IA integrada en tu ERP: le escribes como a una persona y te dice quién te debe, qué clientes has perdido o qué se te va a agotar. Y tu Odoo, en marcha en <strong style="color:white">3 días hábiles</strong> desde <strong style="color:white">€297</strong>, sin licencias.</p>
+      <p class="hsub" data-lang="en">OdooListo IA built into your ERP: write to it like you would to a person and it tells you who owes you money, which customers you've lost or what's about to run out. And your Odoo, up and running in <strong style="color:white">3 business days</strong> from <strong style="color:white">€297</strong>, no licenses.</p>
+      <div class="hai hai-m" onclick="goIA()" role="button" aria-label="Ver OdooListo IA en acción">
+        <div class="hai-top"><span class="hai-dot"></span> OdooListo IA <span class="hai-demo" data-lang="es">Demo · ▶ Vídeo</span><span class="hai-demo" data-lang="en">Demo · ▶ Video</span></div>
+        <div class="hai-chat"></div>
       </div>
-      <h1 data-lang="es">Tu negocio en marcha<br>con Odoo. <em>En 3 días.</em></h1>
-      <h1 data-lang="en">Your business up and running<br>with Odoo. <em>In 3 days.</em></h1>
-      <p class="hsub" data-lang="es">Ponemos en marcha tu Odoo Community 19 en <strong style="color:white">3 días hábiles</strong>, con un consultor real acompañándote. Todo incluido desde <strong style="color:white">€297</strong>, sin licencias. Nadie más en España lo garantiza.</p>
-      <p class="hsub" data-lang="en">We get your Odoo Community 19 up and running in <strong style="color:white">3 business days</strong>, with a real consultant guiding you. All included from <strong style="color:white">€297</strong>, no licenses. No one else in Spain can guarantee this.</p>
       <div class="hctas">
         <button class="btn-t" onclick="openMod('m-trial')"><span data-lang="es">🚀 Prueba gratis 15 días →</span><span data-lang="en">🚀 Free 15-day trial →</span></button>
         <button class="btn-s" onclick="go('checkout')" style="border-color:rgba(255,255,255,.25);color:rgba(255,255,255,.9)"><span data-lang="es">Contratar ahora</span><span data-lang="en">Get started</span></button>
@@ -1172,16 +1189,12 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         🛡️ <span data-lang="es">Puesta en marcha en 3 días o te devolvemos el setup — sin condiciones</span><span data-lang="en">Up and running in 3 days or we refund the setup — unconditionally</span>
       </div>
     </div>
-    <div class="hcard">
-      <div class="hct" data-lang="es">Elige tu pack</div>
-      <div class="hct" data-lang="en">Choose your pack</div>
-      <ul class="plist">
-        <li class="pi" onclick="selHP(this)"><div><div class="pn">Pack S</div><div class="pm" data-lang="es">Contabilidad · Ventas · CRM</div><div class="pm" data-lang="en">Accounting · Sales · CRM</div></div><div class="pp"><div class="ps">Setup €297</div><div class="pmo">€97/mes</div></div></li>
-        <li class="pi active" onclick="selHP(this)"><div><div class="pn">Pack M ⭐</div><div class="pm" data-lang="es">Pack S + Inventario · Compras · Proyectos</div><div class="pm" data-lang="en">Pack S + Inventory · Purchase · Projects</div></div><div class="pp"><div class="ps">Setup €497</div><div class="pmo">€147/mes</div></div></li>
-        <li class="pi" onclick="selHP(this)"><div><div class="pn">Pack L</div><div class="pm" data-lang="es">Pack M + RRHH · Fabricación · eCommerce · <strong>OdooListo IA</strong></div><div class="pm" data-lang="en">Pack M + HR · Manufacturing · eCommerce · <strong>OdooListo IA</strong></div></div><div class="pp"><div class="ps">Setup €697</div><div class="pmo">€197/mes</div></div></li>
-      </ul>
-      <a class="hcta" onclick="goCheckout(heroPack())" data-lang="es">Contratar este pack →</a>
-      <a class="hcta" onclick="goCheckout(heroPack())" data-lang="en">Get this pack →</a>
+    <div class="hai hai-d" role="img" aria-label="Ejemplo de conversación con OdooListo IA">
+      <div class="hai-top"><span class="hai-dot"></span> OdooListo IA <span class="hai-demo" data-lang="es">Datos de demostración</span><span class="hai-demo" data-lang="en">Demo data</span></div>
+      <div class="hai-chat"></div>
+      <button class="hai-play" onclick="goIA()"><span data-lang="es">▶ Ver la IA en acción (50 s)</span><span data-lang="en">▶ See it in action (50 s)</span></button>
+      <div class="hai-foot" data-lang="es">Incluida en el Pack Avanzado · 200 consultas/mes</div>
+      <div class="hai-foot" data-lang="en">Included in the Advanced Pack · 200 queries/month</div>
     </div>
   </div>
 </section>
@@ -1608,10 +1621,10 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
     </div>
     <div class="seg">
       <div class="segc reveal">
-        <div class="segi">🇪🇸</div>
-        <h3 data-lang="es">Servidores en España</h3><h3 data-lang="en">Servers in Spain</h3>
-        <p data-lang="es">Tu Odoo se aloja en un datacenter en Barcelona (Clouding.io), dentro de la UE. Tus datos nunca salen de territorio europeo — cumplimiento RGPD nativo.</p>
-        <p data-lang="en">Your Odoo is hosted in a Barcelona datacenter (Clouding.io), inside the EU. Your data never leaves European soil — GDPR-native by design.</p>
+        <div class="segi">🇪🇺</div>
+        <h3 data-lang="es">Servidores en la Unión Europea</h3><h3 data-lang="en">Servers in the European Union</h3>
+        <p data-lang="es">Tu Odoo se aloja en un centro de datos profesional en la Unión Europea (Finlandia). Tus datos no salen de la UE — cumplimiento RGPD nativo.</p>
+        <p data-lang="en">Your Odoo is hosted in a professional data centre in the European Union (Finland). Your data stays in the EU — GDPR-native by design.</p>
       </div>
       <div class="segc reveal">
         <div class="segi">💾</div>
@@ -1654,13 +1667,13 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
       <h2 class="sh" data-lang="en">Frequently asked questions</h2>
     </div>
     <div class="flist">
-      <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Qué incluye el servidor incluido?</span><span data-lang="en">What does "server included" mean?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Tu instancia Odoo Community 19 se aloja en nuestros servidores dedicados en España. Incluye almacenamiento, copias de seguridad diarias automáticas, SSL y mantenimiento técnico. Sin hosting aparte.</span><span data-lang="en">Your Odoo Community 19 instance is hosted on our dedicated servers in Spain. Includes storage, daily automatic backups, SSL and server maintenance. No separate hosting needed.</span></div></div>
+      <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Qué incluye el servidor incluido?</span><span data-lang="en">What does "server included" mean?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Tu instancia Odoo Community 19 se aloja en nuestros servidores dedicados en la Unión Europea. Incluye almacenamiento, copias de seguridad diarias automáticas, SSL y mantenimiento técnico. Sin hosting aparte.</span><span data-lang="en">Your Odoo Community 19 instance is hosted on our dedicated servers in the European Union. Includes storage, daily automatic backups, SSL and server maintenance. No separate hosting needed.</span></div></div>
       <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Puedo cancelar cuando quiera?</span><span data-lang="en">Can I cancel anytime?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Sí. Sin permanencia ni penalización. Avisas con 30 días y te exportamos todos tus datos en formato estándar.</span><span data-lang="en">Yes. No lock-in, no penalty. Give 30 days notice and we export all your data in standard format.</span></div></div>
       <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Odoo Community es gratuito en licencias?</span><span data-lang="en">Is Odoo Community license-free?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Sí. Odoo Community es 100% open source y gratuito en licencias. Si en el futuro necesitas Odoo Enterprise, te ayudamos a migrar sin perder datos.</span><span data-lang="en">Yes. Odoo Community is 100% open source and free of licenses. If you ever need Odoo Enterprise, we help you migrate without data loss.</span></div></div>
       <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Hacéis desarrollos a medida?</span><span data-lang="en">Do you do custom development?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">No. OdooListo es implantación 100% estándar. Esto mantiene precios bajos y plazos de 3 días. Para desarrollos a medida te referimos a un partner Gold.</span><span data-lang="en">No. OdooListo is 100% standard deployment. This keeps prices low and timelines at 3 days. For custom development we refer you to a Gold partner.</span></div></div>
       <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Es compatible con VeriFactu?</span><span data-lang="en">Is it VeriFactu compliant?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Sí. Odoo Community 19 incluye compatibilidad nativa con VeriFactu y localización española completa. Incluido desde el primer día sin coste adicional.</span><span data-lang="en">Yes. Odoo Community 19 includes native VeriFactu support and full Spanish localization. Included from day one at no extra cost.</span></div></div>
       <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Qué soporte tengo tras la puesta en marcha?</span><span data-lang="en">What support after go-live?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Soporte por ticket en horario laboral con <strong>primera respuesta garantizada según tu pack</strong>: 4h en Pack S, 2h en Pack M y 1h en Pack L (horas laborables). Para necesidades adicionales hay bolsas de horas a €45/h.</span><span data-lang="en">Ticket support during business hours with <strong>guaranteed first response by pack</strong>: 4h on Pack S, 2h on Pack M, 1h on Pack L (business hours). For additional needs there are hour bundles at €45/h.</span></div></div>
-      <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Dónde están alojados mis datos?</span><span data-lang="en">Where is my data hosted?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">En un datacenter en Barcelona (Clouding.io), en territorio español y de la Unión Europea. Cumplimiento RGPD nativo, sin transferencias fuera de Europa. El datacenter cuenta con seguridad física 24/7, videovigilancia, sistemas anti-incendios y suministro eléctrico redundante.</span><span data-lang="en">In a Barcelona datacenter (Clouding.io), on Spanish and EU territory. GDPR-native, no transfers outside Europe. The datacenter has 24/7 physical security, video surveillance, fire-suppression systems and redundant power.</span></div></div>
+      <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Dónde están alojados mis datos?</span><span data-lang="en">Where is my data hosted?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">En un centro de datos profesional en la Unión Europea (Finlandia). Cumplimiento RGPD nativo, sin transferencias fuera de la UE. Además, cada día te dejamos una copia completa de tus datos donde tú digas.</span><span data-lang="en">In a professional data centre in the European Union (Finland). GDPR-native, no transfers outside the EU. And every day we leave a full copy of your data wherever you choose.</span></div></div>
       <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Cómo saco mis datos si algún día me voy?</span><span data-lang="en">How do I get my data out if I ever leave?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Odoo Community es software libre: tus datos son tuyos. Te entregamos una exportación completa de tu base de datos en formato estándar cuando la pidas, mediante un enlace seguro. Sin lock-in: tu Odoo puede moverse a cualquier hosting o partner.</span><span data-lang="en">Odoo Community is open source: your data is yours. We provide a full export of your database in standard format whenever you ask, via a secure link. No lock-in: your Odoo can move to any host or partner.</span></div></div>
       <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Puedo tener siempre una copia en mi propio sistema?</span><span data-lang="en">Can I always keep a copy on my own system?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Sí. Además de tu backup diario en nuestros servidores, puedes recibir una copia completa de tu base de datos en el almacenamiento que tú controles —tu nube (Google Drive, Dropbox, tu propio S3…) o un servidor tuyo por SFTP—, por un canal seguro, bajo petición o de forma periódica. Así siempre tienes una copia en tu poder, independiente de OdooListo.</span><span data-lang="en">Yes. On top of your daily backup on our servers, you can receive a full copy of your database in storage you control —your cloud (Google Drive, Dropbox, your own S3…) or your own SFTP server— over a secure channel, on request or on a schedule. That way you always hold a copy, independent from OdooListo.</span></div></div>
       <div class="fi"><button class="fq" onclick="tFaq(this)"><span data-lang="es">¿Qué pasa si OdooListo dejara de operar?</span><span data-lang="en">What if OdooListo stopped operating?</span><span class="ficon">+</span></button><div class="fa"><span data-lang="es">Tu Odoo no depende de que nosotros existamos. Es software libre corriendo en un servidor estándar; con tu base de datos exportada puedes trasladarlo a cualquier proveedor. Nunca quedas atrapado.</span><span data-lang="en">Your Odoo does not depend on us existing. It is open-source software running on a standard server; with your exported database you can move it to any provider. You are never trapped.</span></div></div>
@@ -2496,8 +2509,8 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   <p data-lang="es">Los presentes Términos regulan la contratación y uso del servicio de implantación express de Odoo Community prestado por Athilan Pignus, S.L. (OdooListo) a empresas y profesionales.</p>
   <p data-lang="en">These Terms govern the contracting and use of the Odoo Community express deployment service provided by Athilan Pignus, S.L. (OdooListo) to companies and professionals.</p>
   <h2 data-lang="es">2. El Servicio</h2><h2 data-lang="en">2. The Service</h2>
-  <p data-lang="es">OdooListo proporciona: (a) implantación estándar de Odoo Community 19 sin desarrollos a medida; (b) alojamiento en servidores propios en España; (c) sesión de puesta en marcha por videollamada de 2–4 horas; (d) soporte básico por ticketing según el plan contratado.</p>
-  <p data-lang="en">OdooListo provides: (a) standard Odoo Community 19 deployment without custom development; (b) hosting on dedicated servers in Spain; (c) go-live video session of 2–4 hours; (d) basic ticketing support per the contracted plan.</p>
+  <p data-lang="es">OdooListo proporciona: (a) implantación estándar de Odoo Community 19 sin desarrollos a medida; (b) alojamiento en servidores propios en la Unión Europea; (c) sesión de puesta en marcha por videollamada de 2–4 horas; (d) soporte básico por ticketing según el plan contratado.</p>
+  <p data-lang="en">OdooListo provides: (a) standard Odoo Community 19 deployment without custom development; (b) hosting on dedicated servers in the European Union; (c) go-live video session of 2–4 hours; (d) basic ticketing support per the contracted plan.</p>
   <h2 data-lang="es">3. Recursos y límites del servicio</h2><h2 data-lang="en">3. Resources and service limits</h2>
   <p data-lang="es"><strong>Usuarios ilimitados.</strong> Ningún plan limita el número de usuarios dados de alta en Odoo. Los recursos de servidor de cada plan están dimensionados para un número orientativo de usuarios trabajando simultáneamente: aproximadamente 15 (Pack S), 35 (Pack M) y 70 (Pack L).</p>
   <p data-lang="en"><strong>Unlimited users.</strong> No plan limits the number of user accounts in Odoo. Each plan's server resources are sized for an indicative number of concurrent users: approximately 15 (Pack S), 35 (Pack M) and 70 (Pack L).</p>
@@ -2976,7 +2989,7 @@ function goCheckout(packId) {
   if (el && pr) selPack(el, packId, pr[0], pr[1]);
 }
 function heroPack() {
-  var items = document.querySelectorAll('.pi');
+  var items = document.querySelectorAll('.hcard .pi');
   for (var i=0; i<items.length; i++) if (items[i].classList.contains('active')) return ['s','m','l'][i] || 'm';
   return 'm';
 }
@@ -3093,6 +3106,39 @@ document.addEventListener('keydown', function(e) {
   }
   window.addEventListener('hashchange', routeHash);
   routeHash();
+})();
+// ── PORTADA: CHAT DE DEMOSTRACIÓN ─────────────────────
+(function(){
+  var boxes = document.querySelectorAll('.hai-chat');
+  if (!boxes.length) return;
+  var box = null;
+  function pick(){ for (var i=0;i<boxes.length;i++) if (boxes[i].offsetParent) return boxes[i]; return boxes[0]; }
+  var en = function(){ return document.body.classList.contains('en'); };
+  var D = [
+    {q:['¿Qué clientes me compraban el año pasado y este no?','Which customers bought last year but not this year?'],
+     a:['<strong>9 clientes.</strong> El año pasado te compraron <strong>142.537 €</strong>; este año, 0 €. Te abro el listado en Odoo.','<strong>9 customers.</strong> They bought <strong>€142,537</strong> last year; this year, €0. Opening the list in Odoo.']},
+    {q:['¿Qué facturas tengo vencidas y cuánto suman?','Which invoices are overdue and how much is that?'],
+     a:['<strong>14 facturas · 96.113 €.</strong> Tres clientes concentran dos tercios de la deuda.','<strong>14 invoices · €96,113.</strong> Three customers account for two thirds of it.']},
+    {q:['¿Qué productos se me van a agotar?','Which products are about to run out?'],
+     a:['<strong>3 productos</strong> con menos de tres semanas de stock. El primero, en <strong>8 días</strong>: el que más vendes.','<strong>3 products</strong> under three weeks of stock. The first one in <strong>8 days</strong>: your best seller.']}
+  ];
+  var k = 0, reduced = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function add(cls, html){ var d = document.createElement('div'); d.className = cls; d.innerHTML = html; box.appendChild(d); return d; }
+  function step(){
+    var it = D[k % D.length], L = en() ? 1 : 0; k++;
+    box = pick(); box.innerHTML = '';
+    var q = add('hai-q', ''), txt = it.q[L], n = 0;
+    if (reduced) { q.textContent = txt; add('hai-a', it.a[L]); setTimeout(step, 7000); return; }
+    var t = setInterval(function(){
+      q.textContent = txt.slice(0, ++n);
+      if (n >= txt.length) {
+        clearInterval(t);
+        var a = add('hai-a hai-typing', en() ? 'Checking your Odoo…' : 'Consultando tu Odoo…');
+        setTimeout(function(){ a.className = 'hai-a'; a.innerHTML = it.a[L]; setTimeout(step, 4200); }, 1100);
+      }
+    }, 38);
+  }
+  step();
 })();
 // ── ODOOLISTO IA: VÍDEO ────────────────────────────────
 function loadAIVideo(withSound) {
