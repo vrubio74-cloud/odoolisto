@@ -1,109 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <url>
-    <loc>https://odoolisto.com/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://odoolisto.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://odoolisto.com/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://odoolisto.com/"/>
-    <lastmod>2026-07-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://odoolisto.com/#post12</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://odoolisto.com/#post13</loc>
-    <lastmod>2026-08-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://odoolisto.com/#post14</loc>
-    <lastmod>2026-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://odoolisto.com/#post15</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://odoolisto.com/#post16</loc>
-    <lastmod>2026-08-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://odoolisto.com/#post17</loc>
-    <lastmod>2026-09-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://odoolisto.com/#post18</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://odoolisto.com/#post19</loc>
-    <lastmod>2026-09-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://odoolisto.com/#post20</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-
-  <url>
-    <loc>https://odoolisto.com/#post21</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://odoolisto.com/#post22</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://odoolisto.com/#post23</loc>
-    <lastmod>2026-09-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://odoolisto.com/#post24</loc>
-    <lastmod>2026-10-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://odoolisto.com/#post25</loc>
-    <lastmod>2026-10-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://odoolisto.com/</loc><lastmod>2026-10-10</lastmod><priority>1.0</priority></url>
+  <url><loc>https://odoolisto.com/blog/</loc><lastmod>2026-10-10</lastmod><priority>0.8</priority></url>
+  <url><loc>https://odoolisto.com/blog/erp-para-pequena-empresa/</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-para-empresas-de-distribucion/</loc><lastmod>2026-10-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-vs-zoho-pyme/</loc><lastmod>2026-09-30</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-peru-pymes/</loc><lastmod>2026-09-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-pymes-chile/</loc><lastmod>2026-09-22</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-pymes-argentina/</loc><lastmod>2026-09-19</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-para-ecommerce-pyme/</loc><lastmod>2026-09-16</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/migrar-de-excel-a-odoo/</loc><lastmod>2026-09-13</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-para-autonomos-espana/</loc><lastmod>2026-09-04</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-vs-sage-50cloud/</loc><lastmod>2026-08-22</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/erp-pyme-mexico-barato/</loc><lastmod>2026-08-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-colombia/</loc><lastmod>2026-08-12</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-vs-contpaq/</loc><lastmod>2026-08-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-vs-aspel/</loc><lastmod>2026-07-30</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/implementar-odoo-mexico/</loc><lastmod>2026-07-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/implantar-odoo-rapido/</loc><lastmod>2026-07-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-vs-sap-pyme/</loc><lastmod>2026-07-13</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/erp-barato-pyme/</loc><lastmod>2026-06-28</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-community-vs-enterprise/</loc><lastmod>2026-06-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/kit-digital-odoo/</loc><lastmod>2026-06-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-community-gratis/</loc><lastmod>2026-06-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-barato-pymes-espana/</loc><lastmod>2026-06-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/verifactu-odoo/</loc><lastmod>2026-06-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/cuanto-cuesta-implantar-odoo/</loc><lastmod>2026-06-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://odoolisto.com/blog/odoo-vs-holded/</loc><lastmod>2026-06-01</lastmod><priority>0.7</priority></url>
 </urlset>

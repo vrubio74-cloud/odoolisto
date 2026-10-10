@@ -142,26 +142,36 @@ Eres el agente de contenido SEO de **OdooListo** (Athilan Pignus, S.L.). Tu misi
 
 ---
 
-## FORMATO DE SALIDA HTML
+## FORMATO DE SALIDA HTML — desde el 10 oct 2026
 
-El formato real usado en el sitio en vivo (ver post7, post8, post9, post10) es bilingüe: cada texto (H1, H2, p, li, details/summary) se duplica con `data-lang="es"` y `data-lang="en"`, alternando visibilidad vía `document.body.classList` y la función `setLang()`. Cada post es un `<div id="page-postN" data-page="top" class="page" style="display:none">` con navegación mediante `go('postN')`. Usa **ese formato bilingüe** como plantilla canónica para los próximos artículos (no el formato mono-idioma antiguo de post1-post6), ya que es el patrón vigente del sitio.
+> **Cambio importante (10 oct 2026).** Los artículos ya **no van dentro de `index.html`**.
+> Cada artículo es una página real en `https://odoolisto.com/blog/<slug>/`, que Google sí
+> indexa. Antes vivían en `/#postN` y Google no veía ninguno: en 3 meses el blog trajo
+> 14 clics. Los `/#postN` antiguos redirigen solos a la página nueva.
 
-```html
-<!-- BLOG POST: [KEYWORD] -->
-<!-- DATE: [FECHA] -->
-<div id="page-post[N]" data-page="top" class="page" style="display:none">
-... contenido bilingüe es/en, ver post10 como referencia ...
-<div class="post-cta">
-<h3>¿Listo para implantar Odoo en 3 días?</h3>
-<p>Desde €297. En marcha en 3 días o te devolvemos el setup. Sin permanencia.</p>
-<button class="btn-cta-post" onclick="go('checkout')">Ver packs →</button>
-</div>
-</div>
+**Lo que escribe el agente es un solo fichero:** `blog/posts/<slug>.html`
+
+- `<slug>` = la keyword en minúsculas, sin tildes, con guiones (`odoo vs zoho pyme` → `odoo-vs-zoho-pyme`).
+- **Primera línea obligatoria**, en JSON válido:
+  ```html
+  <!-- META {"n": 26, "slug": "odoo-vs-zoho-pyme", "title": "Título visible del artículo", "description": "Meta description de 140-155 caracteres", "date": "2026-10-13", "category": "Comparativa", "readtime": "9 min"} -->
+  ```
+  `n` = siguiente número libre (mira el mayor `n` en `blog/posts/`).
+- Después, el cuerpo dentro de `<div class="bl-post" style="max-width:900px;margin:0 auto;padding:40px 5% 80px"> … </div>`,
+  con el mismo HTML bilingüe de siempre (`data-lang="es"` / `data-lang="en"`). Copia la estructura de
+  `blog/posts/odoo-vs-zoho-pyme.html` como referencia.
+- Enlaces internos: `onclick="go('postN')"`, `go('checkout')` o `go('blog')` siguen valiendo: el
+  generador los convierte en enlaces reales. Si lo escribes a mano, usa `href="/blog/<slug>/"`.
+- CTA final igual que hasta ahora (`btn-cta-post` con `go('checkout')`).
+- **No tocar `index.html` ni `sitemap.xml` a mano.** No hay tarjeta que añadir: el listado
+  `/blog/`, el sitemap y la página del artículo los genera el script.
+
+**Generar y comprobar:**
+```bash
+python3 tools/build_blog.py
 ```
-
-También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`, botón `onclick="go('postN')"`) y una entrada en `sitemap.xml` (`https://odoolisto.com/#postN`).
-
-> **Nota de implementación (22 Sep 2026, run post21):** al inspeccionar el HTML en vivo real de post17-post20 (no solo esta guía), el bloque CTA final no usa una clase `post-cta` — usa un `<div style="background:linear-gradient(135deg,#1C0F5E,#0d1e3a);border-radius:16px;padding:32px;text-align:center;margin-top:36px">` con `<h3>`/`<p>`/`<button class="btn-cta-post" onclick="go('checkout')">` duplicados en data-lang="es"/"en" dentro. El botón `btn-cta-post` sí es real y se reutiliza tal cual. Las tarjetas de blog (`.bc reveal`) tampoco usan `.bthumb`/`.bbody`/`.btag`/`.bmeta` (esas clases son CSS legacy de posts 1-6); las tarjetas reales usan `.bc-img`, `.bc-body`, `.bc-meta`, `.bc-cat`, `.bc-title`, `.bc-exc` y un botón `.btn-blog`. Usar post17-post20 como referencia real, no solo esta plantilla.
+Debe imprimir `N artículos · blog/index.html · sitemap.xml · assets/site.css` sin errores, y
+crear `blog/<slug>/index.html`. Haz commit de `blog/`, `assets/` y `sitemap.xml`.
 
 ---
 
@@ -170,13 +180,13 @@ También añade la tarjeta correspondiente en `#page-blog` (`class="bc reveal"`,
 ### Cada vez que se ejecuta el agente:
 
 1. **Leer** este AGENT.md y encontrar la primera keyword marcada con `[ ]` (las marcadas `[~]` están en espera: saltarlas)
-2. **Verificar contra el sitio en vivo** (index.html) que esa keyword no esté ya publicada bajo un post existente antes de redactar — este checklist puede desincronizarse si un run anterior no lo actualizó (ver notas de sincronización del 15 Jul y 19 Sep 2026 — ha ocurrido dos veces)
+2. **Verificar** que esa keyword no esté ya publicada: busca su slug en `blog/posts/` (y en el registro de abajo)
 3. **Buscar** en Google los 5 primeros resultados para esa keyword
 4. **Analizar** qué estructura, longitud y enfoque tienen los artículos que posicionan
 5. **Redactar** el artículo siguiendo las instrucciones de este documento (formato bilingüe es/en)
-6. **Generar** el HTML completo del artículo
-7. **Insertar** el artículo en el index.html de OdooListo (justo después de `</div><!-- /home -->`)
-8. **Actualizar** el sitemap.xml con la nueva URL
+6. **Escribir** `blog/posts/<slug>.html` con la línea META (ver «Formato de salida»)
+7. **Generar** con `python3 tools/build_blog.py` (crea la página, el listado del blog y el sitemap)
+8. **Comprobar** que existe `blog/<slug>/index.html` y que el título y la descripción son los correctos
 9. **Desplegar**: commit y `git push origin main` desde el repositorio local `~/code/odoolisto` (SSH, sin tokens en ficheros). El push a `main` dispara GitHub Actions → Cloudflare Pages automáticamente
 10. **Marcar** la keyword como completada: `[ ]` → `[x] PUBLICADO: [fecha]`
 11. **Actualizar** este AGENT.md con el resultado, incluyendo una fila en el registro de artículos publicados
