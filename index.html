@@ -2856,6 +2856,7 @@ function submitCF() {
   .then(function(r) { return r.json(); })
   .then(function(data) {
     if (data.ok || data.next) {
+      try { gtag('event', 'conversion', {'send_to': 'AW-18242312681/NO0wCJ7sj5kdEOmzzvpD'}); } catch(e){}
       try { gtag('event', 'formulario_contacto', {'interes': interest ? interest.value : ''}); } catch(e){}
       var wrap = document.getElementById('cf-wrap');
       var succ = document.getElementById('cf-succ');
