@@ -23,7 +23,21 @@
     })(window, document, 'clarity', 'script', 'xenf784cuk');
   }
 
+  // Píxel de Meta (conjunto de datos «OdooListo web»): solo con consentimiento
+  var META_PIXEL = '1653138256227151';
+  function loadMeta() {
+    if (LOCAL || window.fbq) return;
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = [];
+      t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', META_PIXEL);
+    fbq('track', 'PageView');
+  }
+
   function grant() {
+    loadMeta();
     if (typeof gtag === 'function') {
       gtag('consent', 'update', {
         ad_storage: 'granted', ad_user_data: 'granted',
@@ -61,20 +75,48 @@
     var d = document.createElement('div'); d.id = 'olcb'; d.setAttribute('role', 'dialog');
     d.setAttribute('aria-label', en ? 'Cookies' : 'Cookies');
     d.innerHTML = en
-      ? '<p>We use analytics and advertising cookies (Google, Microsoft Clarity) only if you accept them. <a href="/#cookies">Cookie policy</a>.</p>' +
+      ? '<p>We use analytics and advertising cookies (Google, Meta, Microsoft Clarity) only if you accept them. <a href="/#cookies">Cookie policy</a>.</p>' +
         '<div class="b"><button class="r" type="button">Reject</button><button class="a" type="button">Accept</button></div>'
-      : '<p>Usamos cookies de análisis y publicidad (Google, Microsoft Clarity) solo si las aceptas. <a href="/#cookies">Política de cookies</a>.</p>' +
+      : '<p>Usamos cookies de análisis y publicidad (Google, Meta, Microsoft Clarity) solo si las aceptas. <a href="/#cookies">Política de cookies</a>.</p>' +
         '<div class="b"><button class="r" type="button">Rechazar</button><button class="a" type="button">Aceptar</button></div>';
     d.querySelector('.r').onclick = function () { set('none'); deny(); d.remove(); };
     d.querySelector('.a').onclick = function () { set('all'); grant(); d.remove(); };
     document.body.appendChild(d);
   }
 
+  // Reenvía a Meta los eventos de conversión que la web ya manda a GA4 (solo si el píxel está cargado)
+  var MAP = { generate_lead: 'Lead', begin_checkout: 'InitiateCheckout', purchase: 'Purchase', formulario_contacto: 'Contact' };
+  window.dataLayer = window.dataLayer || [];
+  var push = window.dataLayer.push;
+  window.dataLayer.push = function () {
+    var a = arguments[0];
+    try {
+      if (a && a[0] === 'event' && MAP[a[1]] && typeof window.fbq === 'function') {
+        var p = a[2] || {}, d = {};
+        if (p.value) { d.value = p.value; d.currency = p.currency || 'EUR'; }
+        window.fbq('track', MAP[a[1]], d, p.transaction_id ? { eventID: p.transaction_id } : undefined);
+      }
+    } catch (e) {}
+    return push.apply(window.dataLayer, arguments);
+  };
+
   // Reabrir el banner (enlace «Cambiar mis preferencias de cookies»)
   window.olConsentOpen = function () { banner(); };
 
   var c = get();
-  if (c === 'all') { loadClarity(); }
+  if (c === 'all') {
+    loadClarity(); loadMeta();
+    // Eventos lanzados antes de cargar este script (p. ej. purchase en /gracias)
+    try {
+      window.dataLayer.forEach(function (a) {
+        if (a && a[0] === 'event' && MAP[a[1]] && typeof window.fbq === 'function') {
+          var p = a[2] || {}, d = {};
+          if (p.value) { d.value = p.value; d.currency = p.currency || 'EUR'; }
+          window.fbq('track', MAP[a[1]], d, p.transaction_id ? { eventID: p.transaction_id } : undefined);
+        }
+      });
+    } catch (e) {}
+  }
   else if (c !== 'none') {
     if (document.body) banner(); else document.addEventListener('DOMContentLoaded', banner);
   }
