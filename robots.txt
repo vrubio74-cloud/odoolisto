@@ -1,5 +1,5 @@
 # robots.txt — odoolisto.com
-# Athilan Pignus, S.L. · CIF B40567612
+# Praxya Formaplus, S.L. · CIF B40567604
 # Actualizado: 2026-07-28
 
 User-agent: *

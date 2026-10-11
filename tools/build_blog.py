@@ -175,7 +175,7 @@ def page(title, description, canonical, body, scripts, jsonld=None, og_type="web
 <body>
 {HEADER}
 {body}
-<footer class="bl-foot">OdooListo · Athilan Pignus, S.L. · <a href="/">Inicio</a> · <a href="/blog/">Blog</a> · <a href="/#terminos">Términos</a> · <a href="/#privacidad">Privacidad</a></footer>
+<footer class="bl-foot">OdooListo · Praxya Formaplus, S.L. · <a href="/">Inicio</a> · <a href="/blog/">Blog</a> · <a href="/#terminos">Términos</a> · <a href="/#privacidad">Privacidad</a></footer>
 {WA_FLOAT}
 {scripts}
 </body>
