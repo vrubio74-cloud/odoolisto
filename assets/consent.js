@@ -100,6 +100,7 @@
 
   // Reenvía a Meta los eventos de conversión que la web ya manda a GA4 (solo si el píxel está cargado)
   var MAP = { generate_lead: 'Lead', begin_checkout: 'InitiateCheckout', purchase: 'Purchase', formulario_contacto: 'Contact' };
+  var UMAP = { generate_lead: 'sign_up', begin_checkout: 'begin_checkout', purchase: 'purchase', formulario_contacto: 'contact' };
   window.dataLayer = window.dataLayer || [];
   var push = window.dataLayer.push;
   window.dataLayer.push = function () {
@@ -112,7 +113,7 @@
       }
       if (a && a[0] === 'event' && MAP[a[1]] && window.__olUet) {
         var q = a[2] || {}; window.uetq = window.uetq || [];
-        window.uetq.push('event', a[1], q.value ? { revenue_value: q.value, currency: q.currency || 'EUR' } : {});
+        window.uetq.push('event', UMAP[a[1]], q.value ? { revenue_value: q.value, currency: q.currency || 'EUR' } : {});
       }
     } catch (e) {}
     return push.apply(window.dataLayer, arguments);
@@ -134,7 +135,7 @@
         }
         if (a && a[0] === 'event' && MAP[a[1]] && window.__olUet) {
           var q = a[2] || {}; window.uetq = window.uetq || [];
-          window.uetq.push('event', a[1], q.value ? { revenue_value: q.value, currency: q.currency || 'EUR' } : {});
+          window.uetq.push('event', UMAP[a[1]], q.value ? { revenue_value: q.value, currency: q.currency || 'EUR' } : {});
         }
       });
     } catch (e) {}
