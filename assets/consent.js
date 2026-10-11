@@ -100,7 +100,7 @@
 
   // Reenvía a Meta los eventos de conversión que la web ya manda a GA4 (solo si el píxel está cargado)
   var MAP = { generate_lead: 'Lead', begin_checkout: 'InitiateCheckout', purchase: 'Purchase', formulario_contacto: 'Contact' };
-  var UMAP = { generate_lead: 'sign_up', begin_checkout: 'begin_checkout', purchase: 'purchase', formulario_contacto: 'contact' };
+  var UMAP = { generate_lead: 'signup', begin_checkout: 'begin_checkout', purchase: 'purchase', formulario_contacto: 'contact' };
   window.dataLayer = window.dataLayer || [];
   var push = window.dataLayer.push;
   window.dataLayer.push = function () {
