@@ -11,6 +11,9 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Consent Mode v2: denegado hasta que el visitante acepte (assets/consent.js)
+  gtag('consent', 'default', {ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', analytics_storage:'denied', wait_for_update:500});
+  try { if (localStorage.getItem('ol_consent') === 'all') gtag('consent', 'update', {ad_storage:'granted', ad_user_data:'granted', ad_personalization:'granted', analytics_storage:'granted'}); } catch(e) {}
   gtag('js', new Date());
   // Las pruebas en local no se miden
   if (!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {
@@ -18,14 +21,8 @@
     gtag('config', 'G-TTBKX48K3B');
   }
 </script>
-<!-- Microsoft Clarity -->
-<script type="text/javascript">
-    if (!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xenf784cuk");
-</script>
+<!-- Microsoft Clarity: se carga solo con consentimiento (assets/consent.js) -->
+<script src="/assets/consent.js" defer></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OdooListo — Odoo con IA para pymes | €297 · En marcha en 3 días</title>
 <meta name="description" content="Odoo para pymes desde €297, ahora con OdooListo IA: pregúntale a tu ERP y te responde en segundos. En marcha en 3 días o te devolvemos el setup. Sin licencias.">
@@ -1086,17 +1083,6 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 </head>
 <body>
 
-<!-- COOKIE BANNER -->
-<div id="cb">
-  <p data-lang="es">Usamos cookies propias y de terceros para mejorar tu experiencia. <a onclick="go('cookies')">Política de cookies</a>.</p>
-  <p data-lang="en">We use own and third-party cookies to improve your experience. <a onclick="go('cookies')">Cookie policy</a>.</p>
-  <div class="cbb">
-    <button class="cbr" onclick="closeCb()" data-lang="es">Solo esenciales</button>
-    <button class="cbr" onclick="closeCb()" data-lang="en">Essential only</button>
-    <button class="cba" onclick="closeCb()" data-lang="es">Aceptar todas</button>
-    <button class="cba" onclick="closeCb()" data-lang="en">Accept all</button>
-  </div>
-</div>
 
 <!-- NAV -->
 <a class="ai-bar" onclick="goIA()" data-lang="es">🤖 <strong>Nuevo: OdooListo IA.</strong> Pregúntale a tu empresa y te responde en segundos → Ver vídeo</a>
@@ -2548,13 +2534,15 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   <h2 data-lang="es">Cookies que utilizamos</h2><h2 data-lang="en">Cookies we use</h2>
   <table><thead><tr><th>Cookie</th><th data-lang="es">Tipo</th><th data-lang="en">Type</th><th data-lang="es">Finalidad</th><th data-lang="en">Purpose</th><th data-lang="es">Duración</th><th data-lang="en">Duration</th></tr></thead><tbody>
     <tr><td>odoolisto_lang</td><td data-lang="es">Esencial</td><td data-lang="en">Essential</td><td data-lang="es">Idioma elegido</td><td data-lang="en">Selected language</td><td data-lang="es">1 año</td><td data-lang="en">1 year</td></tr>
-    <tr><td>odoolisto_cb</td><td data-lang="es">Esencial</td><td data-lang="en">Essential</td><td data-lang="es">Aceptación de cookies</td><td data-lang="en">Cookie acceptance</td><td data-lang="es">1 año</td><td data-lang="en">1 year</td></tr>
-    <tr><td>_ga, _ga_*</td><td data-lang="es">Analítica</td><td data-lang="en">Analytics</td><td data-lang="es">Estadísticas de uso anónimas (Google Analytics)</td><td data-lang="en">Anonymous usage statistics (Google Analytics)</td><td data-lang="es">2 años</td><td data-lang="en">2 years</td></tr>
+    <tr><td>_ga, _ga_*</td><td data-lang="es">Analítica</td><td data-lang="en">Analytics</td><td data-lang="es">Estadísticas de uso (Google Analytics). Solo si aceptas</td><td data-lang="en">Usage statistics (Google Analytics). Only if you accept</td><td data-lang="es">2 años</td><td data-lang="en">2 years</td></tr>
+    <tr><td>_gcl_*</td><td data-lang="es">Publicidad</td><td data-lang="en">Advertising</td><td data-lang="es">Medir conversiones de anuncios (Google Ads). Solo si aceptas</td><td data-lang="en">Ad conversion measurement (Google Ads). Only if you accept</td><td data-lang="es">90 días</td><td data-lang="en">90 days</td></tr>
+    <tr><td>_clck, _clsk</td><td data-lang="es">Analítica</td><td data-lang="en">Analytics</td><td data-lang="es">Mapas de calor y grabaciones anónimas (Microsoft Clarity). Solo si aceptas</td><td data-lang="en">Heatmaps and anonymous recordings (Microsoft Clarity). Only if you accept</td><td data-lang="es">1 año</td><td data-lang="en">1 year</td></tr>
+    <tr><td>ol_consent</td><td data-lang="es">Esencial</td><td data-lang="en">Essential</td><td data-lang="es">Guarda tu elección sobre cookies</td><td data-lang="en">Stores your cookie choice</td><td data-lang="es">Hasta que la cambies</td><td data-lang="en">Until you change it</td></tr>
     <tr><td>stripe_*</td><td data-lang="es">Funcional</td><td data-lang="en">Functional</td><td data-lang="es">Pagos seguros (Stripe)</td><td data-lang="en">Secure payments (Stripe)</td><td data-lang="es">Sesión</td><td data-lang="en">Session</td></tr>
   </tbody></table>
   <h2 data-lang="es">Gestión</h2><h2 data-lang="en">Management</h2>
-  <p data-lang="es">Puedes aceptar todas, rechazar las no esenciales, o configurar tu navegador para bloquearlas. Rechazar cookies analíticas no afecta al funcionamiento del servicio.</p>
-  <p data-lang="en">You can accept all, reject non-essential ones, or configure your browser to block them. Rejecting analytics cookies does not affect service operation.</p>
+  <p data-lang="es">Las cookies de análisis y publicidad solo se activan si las aceptas en el aviso. Rechazarlas no afecta al funcionamiento del servicio. <a onclick="olConsentOpen()" style="cursor:pointer;text-decoration:underline">Cambiar mis preferencias de cookies</a>.</p>
+  <p data-lang="en">Analytics and advertising cookies are only enabled if you accept them in the notice. Rejecting them does not affect the service. <a onclick="olConsentOpen()" style="cursor:pointer;text-decoration:underline">Change my cookie preferences</a>.</p>
 </div></div></section>
 </div>
 
@@ -2930,12 +2918,6 @@ function submitTF() {
 }
 
 // ── COOKIES ────────────────────────────────────────────────
-function closeCb() {
-  var cb = document.getElementById('cb');
-  if (cb) cb.style.display = 'none';
-  try { localStorage.setItem('ol_cb', '1'); } catch(e) {}
-}
-try { if (localStorage.getItem('ol_cb')) { var cb2 = document.getElementById('cb'); if(cb2) cb2.style.display='none'; } } catch(e) {}
 
 // ── STICKY CTA ─────────────────────────────────────────────
 window.addEventListener('scroll', function() {

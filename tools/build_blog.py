@@ -25,6 +25,8 @@ HASH_PAGES = {
 TRACKING = """<script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', analytics_storage:'denied', wait_for_update:500});
+  try { if (localStorage.getItem('ol_consent') === 'all') gtag('consent', 'update', {ad_storage:'granted', ad_user_data:'granted', ad_personalization:'granted', analytics_storage:'granted'}); } catch(e) {}
   gtag('js', new Date());
   if (!/^(localhost|127\\.0\\.0\\.1)$/.test(location.hostname)) {
     gtag('config', 'AW-18242312681');
@@ -32,13 +34,7 @@ TRACKING = """<script>
   }
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18242312681"></script>
-<script type="text/javascript">
-    if (!/^(localhost|127\\.0\\.0\\.1)$/.test(location.hostname)) (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xenf784cuk");
-</script>"""
+<script src="/assets/consent.js" defer></script>"""
 
 HEADER = """<a class="ai-bar" href="/odoo-con-ia/">🤖 <strong>Nuevo: OdooListo IA.</strong> Pregúntale a tu empresa y te responde en segundos → Ver vídeo</a>
 <header class="bl-head">
