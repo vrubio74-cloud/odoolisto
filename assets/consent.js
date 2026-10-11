@@ -36,8 +36,22 @@
     fbq('track', 'PageView');
   }
 
+  // Microsoft Ads UET (etiqueta «OdooListo web»): solo con consentimiento
+  var UET_ID = '187280237';
+  function loadUet() {
+    if (LOCAL || window.__olUet) return;
+    window.__olUet = true;
+    (function (w, d, t, r, u) {
+      var f, n, i; w[u] = w[u] || [];
+      f = function () { var o = { ti: UET_ID, enableAutoSpaTracking: true }; o.q = w[u]; w[u] = new UET(o); w[u].push('pageLoad'); };
+      n = d.createElement(t); n.src = r; n.async = 1;
+      n.onload = n.onreadystatechange = function () { var s = this.readyState; s && s !== 'loaded' && s !== 'complete' || (f(), n.onload = n.onreadystatechange = null); };
+      i = d.getElementsByTagName(t)[0]; i.parentNode.insertBefore(n, i);
+    })(window, document, 'script', '//bat.bing.com/bat.js', 'uetq');
+  }
+
   function grant() {
-    loadMeta();
+    loadMeta(); loadUet();
     if (typeof gtag === 'function') {
       gtag('consent', 'update', {
         ad_storage: 'granted', ad_user_data: 'granted',
@@ -75,9 +89,9 @@
     var d = document.createElement('div'); d.id = 'olcb'; d.setAttribute('role', 'dialog');
     d.setAttribute('aria-label', en ? 'Cookies' : 'Cookies');
     d.innerHTML = en
-      ? '<p>We use analytics and advertising cookies (Google, Meta, Microsoft Clarity) only if you accept them. <a href="/#cookies">Cookie policy</a>.</p>' +
+      ? '<p>We use analytics and advertising cookies (Google, Meta, Microsoft) only if you accept them. <a href="/#cookies">Cookie policy</a>.</p>' +
         '<div class="b"><button class="r" type="button">Reject</button><button class="a" type="button">Accept</button></div>'
-      : '<p>Usamos cookies de análisis y publicidad (Google, Meta, Microsoft Clarity) solo si las aceptas. <a href="/#cookies">Política de cookies</a>.</p>' +
+      : '<p>Usamos cookies de análisis y publicidad (Google, Meta, Microsoft) solo si las aceptas. <a href="/#cookies">Política de cookies</a>.</p>' +
         '<div class="b"><button class="r" type="button">Rechazar</button><button class="a" type="button">Aceptar</button></div>';
     d.querySelector('.r').onclick = function () { set('none'); deny(); d.remove(); };
     d.querySelector('.a').onclick = function () { set('all'); grant(); d.remove(); };
@@ -96,6 +110,10 @@
         if (p.value) { d.value = p.value; d.currency = p.currency || 'EUR'; }
         window.fbq('track', MAP[a[1]], d, p.transaction_id ? { eventID: p.transaction_id } : undefined);
       }
+      if (a && a[0] === 'event' && MAP[a[1]] && window.__olUet) {
+        var q = a[2] || {}; window.uetq = window.uetq || [];
+        window.uetq.push('event', a[1], q.value ? { revenue_value: q.value, currency: q.currency || 'EUR' } : {});
+      }
     } catch (e) {}
     return push.apply(window.dataLayer, arguments);
   };
@@ -105,7 +123,7 @@
 
   var c = get();
   if (c === 'all') {
-    loadClarity(); loadMeta();
+    loadClarity(); loadMeta(); loadUet();
     // Eventos lanzados antes de cargar este script (p. ej. purchase en /gracias)
     try {
       window.dataLayer.forEach(function (a) {
@@ -113,6 +131,10 @@
           var p = a[2] || {}, d = {};
           if (p.value) { d.value = p.value; d.currency = p.currency || 'EUR'; }
           window.fbq('track', MAP[a[1]], d, p.transaction_id ? { eventID: p.transaction_id } : undefined);
+        }
+        if (a && a[0] === 'event' && MAP[a[1]] && window.__olUet) {
+          var q = a[2] || {}; window.uetq = window.uetq || [];
+          window.uetq.push('event', a[1], q.value ? { revenue_value: q.value, currency: q.currency || 'EUR' } : {});
         }
       });
     } catch (e) {}
