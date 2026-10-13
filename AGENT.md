@@ -50,7 +50,7 @@ Eres el agente de contenido SEO de **OdooListo** (Praxya Formaplus, S.L.). Tu mi
 
 ### 🤖 PRIORIDAD MÁXIMA — Tanda IA (añadida 11 oct 2026: lanzamiento de OdooListo IA)
 > Cada artículo debe enlazar a `https://odoolisto.com/odoo-con-ia/` y describir OdooListo IA solo con su alcance real (consulta, analiza, abre listados, da de alta clientes y productos con confirmación; NO crea pedidos ni facturas, NO cambia estados, NO registra pagos). 200 consultas/mes en el Pack Avanzado. Nada de «la única», «la primera», «exclusiva».
-- [ ] `erp con inteligencia artificial para pymes`
+- [x] `erp con inteligencia artificial para pymes` → PUBLICADO: 13 Oct 2026 → URL: https://odoolisto.com/blog/erp-con-inteligencia-artificial-para-pymes/ *(Pack L; aclara que la app de IA nativa de Odoo 19 no está en el código de Community)*
 - [ ] `odoo inteligencia artificial`
 - [ ] `como sacar informes de odoo sin saber usarlo`
 - [ ] `clientes que dejan de comprar como detectarlos`
@@ -238,6 +238,7 @@ crear `blog/<slug>/index.html`. Haz commit de `blog/`, `assets/` y `sitemap.xml`
 | 2026-10-01 | odoo para empresas de distribucion | Odoo para empresas de distribución: stock, compras y ventas en un solo sistema (2026) | https://odoolisto.com/#post24 | ✅ Publicado |
 | 2026-10-10 | erp para pequeña empresa | ERP para pequeña empresa: cómo elegir sin pagar por usuario en 2026 | https://odoolisto.com/#post25 | ✅ Publicado |
 | 2026-10-10 | controlar cobros pendientes pyme | Cómo controlar los cobros pendientes de tu pyme con Odoo (facturas vencidas) | https://odoolisto.com/blog/controlar-cobros-pendientes-pyme/ | ✅ Publicado |
+| 2026-10-13 | erp con inteligencia artificial para pymes | ERP con inteligencia artificial para pymes: qué hace de verdad y qué preguntar antes | https://odoolisto.com/blog/erp-con-inteligencia-artificial-para-pymes/ | ✅ Publicado |
 
 ---
 
@@ -252,5 +253,5 @@ crear `blog/<slug>/index.html`. Haz commit de `blog/`, `assets/` y `sitemap.xml`
 
 ---
 
-*Última actualización: 10 Oct 2026 (post26 — controlar cobros pendientes pyme — primera página real en /blog/<slug>/, publicado desde Claude Code)*
+*Última actualización: 13 Oct 2026 (post27 — erp con inteligencia artificial para pymes — primera de la tanda IA, publicado desde Claude Code)*
 *Agente configurado por: Praxya Formaplus, S.L.*
