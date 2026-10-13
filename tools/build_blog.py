@@ -206,6 +206,20 @@ def main():
               "author": {"@type": "Organization", "name": "OdooListo", "url": SITE},
               "publisher": {"@type": "Organization", "name": "OdooListo",
                             "logo": {"@type": "ImageObject", "url": f"{SITE}/logo.png"}}}
+        # FAQ schema: version en espanol de cada <details> (summary + p con data-lang="es")
+        faqs = []
+        for d in re.findall(r"<details[^>]*>(.*?)</details>", body, re.S):
+            # bilingue: la version es; solo en espanol (posts antiguos): el primer summary/p sin data-lang="en"
+            q = (re.search(r'<summary[^>]*data-lang="es"[^>]*>(.*?)</summary>', d, re.S)
+                 or re.search(r'<summary(?![^>]*data-lang="en")[^>]*>(.*?)</summary>', d, re.S))
+            a = (re.search(r'<p[^>]*data-lang="es"[^>]*>(.*?)</p>', d, re.S)
+                 or re.search(r'<p(?![^>]*data-lang="en")[^>]*>(.*?)</p>', d, re.S))
+            if q and a:
+                faqs.append({"@type": "Question", "name": re.sub(r"<[^>]+>", "", q.group(1)).strip(),
+                             "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"<[^>]+>", "", a.group(1)).strip()}})
+        if faqs:
+            ld = {"@context": "https://schema.org", "@graph": [
+                {k: v for k, v in ld.items() if k != "@context"}, {"@type": "FAQPage", "mainEntity": faqs}]}
         out = ROOT / "blog" / p["slug"] / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(page(f"{p['title']} | OdooListo", p["description"], canonical, body, scripts, ld, "article"),
