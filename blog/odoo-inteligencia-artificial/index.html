@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<script>if (/\.pages\.dev$/.test(location.hostname)) location.replace('https://odoolisto.com' + location.pathname + location.search + location.hash);</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', analytics_storage:'denied', wait_for_update:500});
+  try { if (localStorage.getItem('ol_consent') === 'all') gtag('consent', 'update', {ad_storage:'granted', ad_user_data:'granted', ad_personalization:'granted', analytics_storage:'granted'}); } catch(e) {}
+  gtag('js', new Date());
+  if (!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {
+    gtag('config', 'AW-18242312681');
+    gtag('config', 'G-TTBKX48K3B');
+  }
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18242312681"></script>
+<script src="/assets/consent.js" defer></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odoo e inteligencia artificial: qué trae Odoo 19 y cómo tenerla en Community | OdooListo</title>
+<meta name="description" content="Odoo e inteligencia artificial en 2026: qué hace la IA de Odoo 19, por qué no viene en Community, cuánto cuesta en Enterprise y cómo añadirla a tu pyme.">
+<link rel="canonical" href="https://odoolisto.com/blog/odoo-inteligencia-artificial/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Odoo e inteligencia artificial: qué trae Odoo 19 y cómo tenerla en Community | OdooListo">
+<meta property="og:description" content="Odoo e inteligencia artificial en 2026: qué hace la IA de Odoo 19, por qué no viene en Community, cuánto cuesta en Enterprise y cómo añadirla a tu pyme.">
+<meta property="og:url" content="https://odoolisto.com/blog/odoo-inteligencia-artificial/">
+<meta property="og:image" content="https://odoolisto.com/logo.png">
+<link rel="icon" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Odoo e inteligencia artificial: qué trae Odoo 19 y cómo tenerla en Community", "description": "Odoo e inteligencia artificial en 2026: qué hace la IA de Odoo 19, por qué no viene en Community, cuánto cuesta en Enterprise y cómo añadirla a tu pyme.", "datePublished": "2026-10-15", "dateModified": "2026-10-15", "mainEntityOfPage": "https://odoolisto.com/blog/odoo-inteligencia-artificial/", "inLanguage": "es", "author": {"@type": "Organization", "name": "OdooListo", "url": "https://odoolisto.com"}, "publisher": {"@type": "Organization", "name": "OdooListo", "logo": {"@type": "ImageObject", "url": "https://odoolisto.com/logo.png"}}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Odoo Community tiene inteligencia artificial?", "acceptedAnswer": {"@type": "Answer", "text": "No de serie. La aplicación de IA de Odoo 19 no está en el código de Community; va con Enterprise. En Community se añade con módulos, como OdooListo IA, incluido en el Pack L."}}, {"@type": "Question", "name": "¿Qué modelos de IA usa Odoo 19?", "acceptedAnswer": {"@type": "Answer", "text": "Según la documentación oficial, la app de IA de Odoo admite modelos de OpenAI (ChatGPT) y de Google (Gemini). En Odoo.sh e instalaciones propias necesitas tu propia clave, con el coste que marque el proveedor."}}, {"@type": "Question", "name": "¿La IA de Odoo puede modificar mis datos?", "acceptedAnswer": {"@type": "Answer", "text": "El asistente estándar de Odoo 19 no hace cambios en la base de datos. Los agentes configurados con herramientas sí pueden, por ejemplo creando leads. OdooListo IA solo da de alta clientes y productos, y siempre pide confirmación antes de guardar."}}, {"@type": "Question", "name": "¿Cuánto cuesta tener IA en Odoo?", "acceptedAnswer": {"@type": "Answer", "text": "En Odoo Enterprise, la IA agéntica figura en el plan Personalizado: 22,90 €/usuario/mes el primer año y 27,90 € después (orientativo, sin IVA, octubre 2026). Con OdooListo, el Pack L cuesta 697 € de setup y 197 €/mes con usuarios ilimitados y 200 consultas al mes."}}, {"@type": "Question", "name": "¿Puedo ver OdooListo IA funcionando antes de contratar?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. En la página de OdooListo IA tienes un vídeo con datos de demostración y puedes pedir una demo gratuita."}}]}]}</script>
+</head>
+<body>
+<a class="ai-bar" href="/odoo-con-ia/">🤖 <strong>Nuevo: OdooListo IA.</strong> Pregúntale a tu empresa y te responde en segundos → Ver vídeo</a>
+<header class="bl-head">
+  <a class="bl-logo logo" href="/"><div class="logo-i"><svg viewBox="0 0 22 22" fill="none"><rect x="2" y="2" width="8" height="8" rx="2.5" fill="white" opacity=".95"/><rect x="12" y="2" width="8" height="8" rx="2.5" fill="white" opacity=".7"/><rect x="2" y="12" width="8" height="8" rx="2.5" fill="white" opacity=".7"/><rect x="12" y="12" width="8" height="8" rx="2.5" fill="#00A09D" opacity=".9"/></svg></div> OdooListo</a>
+  <nav class="bl-nav">
+    <a href="/blog/">Blog</a>
+    <a href="/odoo-con-ia/">OdooListo IA</a>
+    <a class="bl-cta" href="/#contratar">Contratar</a>
+  </nav>
+</header>
+<div class="bl-post" style="max-width:900px;margin:0 auto;padding:40px 5% 80px">
+<a style="background:none;border:1px solid var(--teal);color:var(--teal);font-weight:700;cursor:pointer;padding:8px 16px;border-radius:6px;margin-bottom:28px;font-size:.9rem" href="/blog/">← <span data-lang="es">Volver al Blog</span><span data-lang="en">Back to Blog</span></a>
+<div class="bp">
+  <div class="bpmeta" style="color:var(--g3);font-size:.85rem;margin-bottom:12px"><span>15 Oct 2026</span> · <span data-lang="es">Guías</span><span data-lang="en">Guides</span> · <span>9 min</span></div>
+  <h1 style="font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.4rem);color:var(--navy);line-height:1.2;margin-bottom:20px" data-lang="es">Odoo e inteligencia artificial: qué trae Odoo 19 y cómo tenerla en Community</h1>
+  <h1 style="font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.4rem);color:var(--navy);line-height:1.2;margin-bottom:20px" data-lang="en">Odoo and artificial intelligence: what Odoo 19 brings and how to get it on Community</h1>
+  <p data-lang="es">Si buscas información sobre Odoo e inteligencia artificial, verás vídeos de agentes que crean oportunidades solos, campos que se rellenan por su cuenta y un asistente que se abre con Ctrl+K. Todo eso existe en Odoo 19. Lo que casi nunca se explica es en qué edición viene, cuánto cuesta y qué parte de esa inteligencia artificial llega a una pyme que trabaja con Odoo Community.</p>
+  <p data-lang="en">If you are looking into Odoo and artificial intelligence, you will see videos of agents creating opportunities on their own, fields that fill themselves in and an assistant that opens with Ctrl+K. All of that exists in Odoo 19. What is rarely explained is which edition it comes with, how much it costs and how much of that AI reaches an SME running Odoo Community.</p>
+  <p data-lang="es">En esta guía repasamos, con la documentación oficial de Odoo en la mano, qué hace la IA de Odoo 19, por qué no está en Community, qué pagarías por tenerla en Enterprise y qué alternativas hay si no quieres pagar licencias por usuario. Sin humo: también te contamos lo que no hace.</p>
+  <p data-lang="en">In this guide we go through, with Odoo's official documentation at hand, what the Odoo 19 AI does, why it is not in Community, what you would pay to have it on Enterprise and what alternatives exist if you do not want to pay per-user licenses. No hype: we also tell you what it does not do.</p>
+  <p data-lang="es">Si lo que te interesa es el panorama general de los ERP con IA, no solo Odoo, empieza por nuestra guía de <a href="/blog/erp-con-inteligencia-artificial-para-pymes/" style="color:var(--teal);cursor:pointer">ERP con inteligencia artificial para pymes</a>.</p>
+  <p data-lang="en">If you are interested in the bigger picture of AI-powered ERPs, not just Odoo, start with our guide to <a href="/blog/erp-con-inteligencia-artificial-para-pymes/" style="color:var(--teal);cursor:pointer">AI-powered ERP for SMEs</a>.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Qué trae la inteligencia artificial de Odoo 19</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">What the Odoo 19 artificial intelligence brings</h2>
+  <p data-lang="es">Odoo 19 incorpora una aplicación llamada IA. Según la documentación oficial de la versión 19.0, de ella cuelgan varias funciones distintas, que conviene no mezclar:</p>
+  <p data-lang="en">Odoo 19 includes an app called AI. According to the official 19.0 documentation, several different features hang off it, and it is worth not mixing them up:</p>
+  <div style="overflow-x:auto;margin:18px 0"><table style="width:100%;border-collapse:collapse;font-size:.88rem">
+    <thead><tr style="background:var(--navy);color:white"><th style="padding:11px 14px;text-align:left" data-lang="es">Función</th><th style="padding:11px 14px;text-align:left" data-lang="en">Feature</th><th style="padding:11px 14px;text-align:left" data-lang="es">Qué hace</th><th style="padding:11px 14px;text-align:left" data-lang="en">What it does</th><th style="padding:11px 14px;text-align:left" data-lang="es">Lo que conviene saber</th><th style="padding:11px 14px;text-align:left" data-lang="en">Worth knowing</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Ask AI (asistente)</td><td style="padding:10px 14px;" data-lang="en">Ask AI (assistant)</td><td style="padding:10px 14px;" data-lang="es">Se abre desde cualquier pantalla con Ctrl+K. Responde preguntas, abre vistas, traduce, resume conversaciones y mejora textos</td><td style="padding:10px 14px;" data-lang="en">Opens from any screen with Ctrl+K. Answers questions, opens views, translates, summarizes threads and improves text</td><td style="padding:10px 14px;" data-lang="es">La documentación dice que el agente estándar no puede hacer cambios en la base de datos</td><td style="padding:10px 14px;" data-lang="en">The documentation says the standard agent cannot make changes to the database</td></tr>
+      <tr style="border-bottom:1px solid #eee;background:#f9f9fb"><td style="padding:10px 14px;" data-lang="es">Agentes de IA</td><td style="padding:10px 14px;" data-lang="en">AI agents</td><td style="padding:10px 14px;" data-lang="es">Asistentes configurables con instrucciones, «temas» y herramientas; pueden consultar PDF, enlaces o artículos de Knowledge</td><td style="padding:10px 14px;" data-lang="en">Configurable assistants with instructions, "topics" and tools; they can use PDFs, links or Knowledge articles as sources</td><td style="padding:10px 14px;" data-lang="es">Con herramientas sí ejecutan acciones; el ejemplo oficial es crear leads en el CRM. Funcionan con modelos de ChatGPT o Gemini</td><td style="padding:10px 14px;" data-lang="en">With tools they do take actions; the official example is creating CRM leads. They run on ChatGPT or Gemini models</td></tr>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Campos de IA</td><td style="padding:10px 14px;" data-lang="en">AI fields</td><td style="padding:10px 14px;" data-lang="es">Campos que generan un valor a partir del propio registro: descripciones de producto, resúmenes de notas</td><td style="padding:10px 14px;" data-lang="en">Fields that generate a value from the record itself: product descriptions, note summaries</td><td style="padding:10px 14px;" data-lang="es">Una tarea programada rellena una vez al día los campos de IA vacíos</td><td style="padding:10px 14px;" data-lang="en">A scheduled action fills empty AI fields once a day</td></tr>
+      <tr style="background:#f9f9fb"><td style="padding:10px 14px;" data-lang="es">Otras funciones</td><td style="padding:10px 14px;" data-lang="en">Other features</td><td style="padding:10px 14px;" data-lang="es">Clasificación de documentos, chat en vivo con IA, acciones automáticas, plantillas de correo y transcripción de voz</td><td style="padding:10px 14px;" data-lang="en">Document sorting, AI live chat, automated actions, email templates and voice transcription</td><td style="padding:10px 14px;" data-lang="es">Cada una se configura por separado</td><td style="padding:10px 14px;" data-lang="en">Each one is set up separately</td></tr>
+    </tbody>
+  </table></div>
+  <p data-lang="es">Es un conjunto potente, sobre todo para empresas con procesos muy definidos y alguien que dedique tiempo a configurar agentes y supervisarlos. Para el gerente de una pyme de 10 personas, la pieza que más cambia el día a día es la más sencilla: poder preguntar y obtener el dato sin saber dónde está el menú.</p>
+  <p data-lang="en">It is a powerful set, especially for companies with well-defined processes and someone who can spend time configuring agents and supervising them. For the manager of a 10-person SME, the piece that changes daily work most is the simplest one: being able to ask and get the figure without knowing where the menu is.</p>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="es">Quién paga el modelo de lenguaje</h3>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="en">Who pays for the language model</h3>
+  <p data-lang="es">La IA de Odoo funciona con proveedores externos: la documentación cita OpenAI (ChatGPT) y Gemini. En Odoo Online no es obligatorio poner una clave propia; en Odoo.sh y en instalaciones propias, sí. Y la propia documentación advierte de que usar esas claves puede tener costes adicionales con el proveedor.</p>
+  <p data-lang="en">Odoo's AI runs on external providers: the documentation names OpenAI (ChatGPT) and Gemini. On Odoo Online you do not have to add your own key; on Odoo.sh and self-hosted installs, you do. And the documentation itself warns that using those keys may involve additional fees with the provider.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Odoo inteligencia artificial: ¿Community o Enterprise?</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">Odoo artificial intelligence: Community or Enterprise?</h2>
+  <p data-lang="es">Aquí está la duda que más se repite. La aplicación de IA de Odoo 19 <strong>no forma parte del código de Odoo Community</strong>: el módulo no está en el repositorio público de la versión 19.0 (comprobado el 15 de octubre de 2026). Va con Odoo Enterprise, que se paga por usuario.</p>
+  <p data-lang="en">Here is the most repeated question. The Odoo 19 AI app <strong>is not part of the Odoo Community code</strong>: the module is not in the public repository for version 19.0 (checked on 15 October 2026). It comes with Odoo Enterprise, which is paid per user.</p>
+  <p data-lang="es">Y dentro de Enterprise, no todo está en todos los planes. En la página de precios de Odoo, la «IA agéntica» aparece junto a Studio entre las ventajas del plan Personalizado, no del Estándar:</p>
+  <p data-lang="en">And within Enterprise, not everything is in every plan. On Odoo's pricing page, "agentic AI" appears next to Studio among the features of the Custom plan, not the Standard one:</p>
+  <div style="overflow-x:auto;margin:18px 0"><table style="width:100%;border-collapse:collapse;font-size:.88rem">
+    <thead><tr style="background:var(--navy);color:white"><th style="padding:11px 14px;text-align:left" data-lang="es">Plan Odoo Enterprise</th><th style="padding:11px 14px;text-align:left" data-lang="en">Odoo Enterprise plan</th><th style="padding:11px 14px;text-align:left" data-lang="es">Primer año</th><th style="padding:11px 14px;text-align:left" data-lang="en">First year</th><th style="padding:11px 14px;text-align:left" data-lang="es">Desde el segundo año</th><th style="padding:11px 14px;text-align:left" data-lang="en">From year two</th><th style="padding:11px 14px;text-align:left" data-lang="es">IA agéntica</th><th style="padding:11px 14px;text-align:left" data-lang="en">Agentic AI</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Estándar</td><td style="padding:10px 14px;" data-lang="en">Standard</td><td style="padding:10px 14px;" data-lang="es">11,90 €/usuario/mes</td><td style="padding:10px 14px;" data-lang="en">€11.90/user/month</td><td style="padding:10px 14px;" data-lang="es">14,80 €/usuario/mes</td><td style="padding:10px 14px;" data-lang="en">€14.80/user/month</td><td style="padding:10px 14px;" data-lang="es">No figura en el plan</td><td style="padding:10px 14px;" data-lang="en">Not listed in the plan</td></tr>
+      <tr style="background:#f9f9fb"><td style="padding:10px 14px;" data-lang="es">Personalizado</td><td style="padding:10px 14px;" data-lang="en">Custom</td><td style="padding:10px 14px;" data-lang="es">22,90 €/usuario/mes</td><td style="padding:10px 14px;" data-lang="en">€22.90/user/month</td><td style="padding:10px 14px;" data-lang="es">27,90 €/usuario/mes</td><td style="padding:10px 14px;" data-lang="en">€27.90/user/month</td><td style="padding:10px 14px;" data-lang="es">Sí, junto con Studio</td><td style="padding:10px 14px;" data-lang="en">Yes, together with Studio</td></tr>
+    </tbody>
+  </table></div>
+  <p data-lang="es" style="font-size:.85rem;color:var(--g3)"><em>Precios orientativos, sin IVA, octubre 2026, con pago anual. Fuente: odoo.com/es_ES/pricing. No incluyen implantación.</em></p>
+  <p data-lang="en" style="font-size:.85rem;color:var(--g3)"><em>Indicative prices, excluding VAT, October 2026, billed annually. Source: odoo.com/es_ES/pricing. Implementation not included.</em></p>
+  <p data-lang="es">Haz la cuenta con tu plantilla: con 10 usuarios en el plan Personalizado, a partir del segundo año son unos 279 € al mes solo en licencias, y cada persona nueva sube la cuota. Además, la misma página aclara que los créditos de compras dentro de la aplicación (IAP), entre ellos la lectura automática de facturas de proveedor y gastos, no están incluidos en ningún plan.</p>
+  <p data-lang="en">Do the maths with your own team: with 10 users on the Custom plan, from year two that is around €279 a month in licenses alone, and every new person raises the fee. The same page also states that in-app purchase (IAP) credits, including automatic scanning of supplier invoices and expenses, are not included in any plan.</p>
+  <p data-lang="es">Si todavía estás decidiendo edición, en <a href="/blog/odoo-community-vs-enterprise/" style="color:var(--teal);cursor:pointer">Odoo Community vs Enterprise</a> tienes el resto de diferencias, más allá de la IA.</p>
+  <p data-lang="en">If you are still choosing an edition, <a href="/blog/odoo-community-vs-enterprise/" style="color:var(--teal);cursor:pointer">Odoo Community vs Enterprise</a> covers the other differences, beyond AI.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Cómo tener inteligencia artificial en Odoo Community</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">How to get artificial intelligence on Odoo Community</h2>
+  <p data-lang="es">Que la app oficial no venga en Community no significa que Community se quede sin IA. Significa que llega por otra vía. Hay tres caminos:</p>
+  <p data-lang="en">The official app not coming with Community does not mean Community has no AI. It means it arrives another way. There are three paths:</p>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es">
+    <li><strong>Módulos de terceros.</strong> En la tienda de aplicaciones de Odoo hay conectores con modelos de lenguaje para Community. Antes de instalar uno, revisa quién lo publica, si está probado en la versión 19 y a qué servidor envía tus datos.</li>
+    <li><strong>Desarrollo a medida.</strong> Un programador puede conectar Odoo con el modelo que elijas. Es flexible, pero es un proyecto con su coste y su mantenimiento en cada actualización.</li>
+    <li><strong>Un módulo incluido en tu implantación.</strong> Es nuestro caso: OdooListo IA viene en el Pack L, instalado y configurado, sin licencias por usuario.</li>
+  </ul>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en">
+    <li><strong>Third-party modules.</strong> The Odoo app store has language-model connectors for Community. Before installing one, check who publishes it, whether it is tested on version 19 and which server it sends your data to.</li>
+    <li><strong>Custom development.</strong> A developer can connect Odoo to the model of your choice. It is flexible, but it is a project with its own cost and maintenance on every upgrade.</li>
+    <li><strong>A module included in your implementation.</strong> That is our case: OdooListo AI comes with Pack L, installed and configured, with no per-user licenses.</li>
+  </ul>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="es">Qué hace OdooListo IA (y qué no)</h3>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="en">What OdooListo AI does (and does not)</h3>
+  <p data-lang="es"><a href="/odoo-con-ia/" style="color:var(--teal);cursor:pointer">OdooListo IA</a> es un módulo propio sobre Odoo Community 19, pensado para el gerente que quiere preguntarle a su empresa sin aprender el sistema. Su alcance actual, sin adornos:</p>
+  <p data-lang="en"><a href="/odoo-con-ia/" style="color:var(--teal);cursor:pointer">OdooListo AI</a> is an in-house module on Odoo Community 19, designed for the manager who wants to ask their company questions without learning the system. Its current scope, without embellishment:</p>
+  <div style="overflow-x:auto;margin:18px 0"><table style="width:100%;border-collapse:collapse;font-size:.88rem">
+    <thead><tr style="background:var(--navy);color:white"><th style="padding:11px 14px;text-align:left" data-lang="es">Sí hace</th><th style="padding:11px 14px;text-align:left" data-lang="en">It does</th><th style="padding:11px 14px;text-align:left" data-lang="es">No hace (todavía)</th><th style="padding:11px 14px;text-align:left" data-lang="en">It does not (yet)</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Responde sobre ventas, pedidos, facturas, márgenes, previsiones y stock con los informes de tu Odoo</td><td style="padding:10px 14px;" data-lang="en">Answers about sales, orders, invoices, margins, forecasts and stock using your Odoo reports</td><td style="padding:10px 14px;" data-lang="es">Crear pedidos, presupuestos, facturas ni oportunidades</td><td style="padding:10px 14px;" data-lang="en">Create orders, quotations, invoices or opportunities</td></tr>
+      <tr style="border-bottom:1px solid #eee;background:#f9f9fb"><td style="padding:10px 14px;" data-lang="es">Busca registros y los agrupa por cliente, producto, estado o periodo</td><td style="padding:10px 14px;" data-lang="en">Finds records and groups them by customer, product, status or period</td><td style="padding:10px 14px;" data-lang="es">Confirmar pedidos ni cambiar estados</td><td style="padding:10px 14px;" data-lang="en">Confirm orders or change statuses</td></tr>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Prepara el listado filtrado y abre la pantalla correspondiente en Odoo</td><td style="padding:10px 14px;" data-lang="en">Prepares the filtered list and opens the matching Odoo screen</td><td style="padding:10px 14px;" data-lang="es">Registrar pagos</td><td style="padding:10px 14px;" data-lang="en">Register payments</td></tr>
+      <tr style="background:#f9f9fb"><td style="padding:10px 14px;" data-lang="es">Da de alta clientes y productos, con resumen y confirmación antes de guardar</td><td style="padding:10px 14px;" data-lang="en">Creates customers and products, with a summary and confirmation before saving</td><td style="padding:10px 14px;" data-lang="es">Enviar correos ni instalar nada</td><td style="padding:10px 14px;" data-lang="en">Send emails or install anything</td></tr>
+    </tbody>
+  </table></div>
+  <p data-lang="es">Las preguntas que más se le hacen son las que un gerente responde hoy a ojo:</p>
+  <p data-lang="en">The questions it gets asked most are the ones a manager answers by gut feeling today:</p>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es">
+    <li>«¿Qué facturas tengo vencidas y cuánto suman?»</li>
+    <li>«¿Qué clientes me compraban el año pasado y este no?»</li>
+    <li>«¿Cuánto voy a facturar a cierre si sigo a este ritmo?»</li>
+  </ul>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en">
+    <li>"Which invoices are overdue and how much do they add up to?"</li>
+    <li>"Which customers bought from me last year and not this year?"</li>
+    <li>"How much will I invoice by year-end at this pace?"</li>
+  </ul>
+  <p data-lang="es">La primera, por cierto, es un buen punto de partida si te preocupa la tesorería: lo explicamos en <a href="/blog/controlar-cobros-pendientes-pyme/" style="color:var(--teal);cursor:pointer">cómo controlar los cobros pendientes de tu pyme</a>. El Pack L incluye 200 consultas al mes.</p>
+  <p data-lang="en">The first one, by the way, is a good starting point if cash flow worries you: we explain it in <a href="/blog/controlar-cobros-pendientes-pyme/" style="color:var(--teal);cursor:pointer">how to keep track of your SME's outstanding payments</a>. Pack L includes 200 queries per month.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Qué preguntar antes de activar IA en tu Odoo</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">What to ask before turning on AI in your Odoo</h2>
+  <p data-lang="es">Sea con la app oficial, con un módulo de terceros o con el nuestro, estas cuatro preguntas evitan sorpresas:</p>
+  <p data-lang="en">Whether with the official app, a third-party module or ours, these four questions avoid surprises:</p>
+  <ol style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es">
+    <li><strong>¿Qué puede cambiar en mis datos?</strong> Consultar no tiene riesgo; crear o modificar registros, sí. Pide la lista y si te pide confirmación antes de guardar.</li>
+    <li><strong>¿Quién paga el modelo de lenguaje?</strong> Si necesitas una clave propia de OpenAI o Gemini, ese gasto va aparte y varía con el uso.</li>
+    <li><strong>¿Cuánto sube la cuota si más gente la usa?</strong> En los planes por usuario, dar acceso a la IA a todo el equipo también es pagar más licencias.</li>
+    <li><strong>¿Mis datos están bien registrados?</strong> La IA responde con lo que hay en el ERP. Si media empresa sigue en Excel, la respuesta será rápida pero incompleta.</li>
+  </ol>
+  <ol style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en">
+    <li><strong>What can it change in my data?</strong> Querying is risk-free; creating or changing records is not. Ask for the list and whether it asks for confirmation before saving.</li>
+    <li><strong>Who pays for the language model?</strong> If you need your own OpenAI or Gemini key, that cost is separate and varies with usage.</li>
+    <li><strong>How much does the fee rise if more people use it?</strong> On per-user plans, giving the whole team access to AI also means paying for more licenses.</li>
+    <li><strong>Is my data properly recorded?</strong> AI answers with what is in the ERP. If half the company still lives in Excel, the answer will be fast but incomplete.</li>
+  </ol>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">¿Por qué OdooListo?</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">Why OdooListo?</h2>
+  <p data-lang="es">La IA solo sirve encima de un Odoo que funciona. Por eso lo primero que hacemos es la puesta en marcha, con precio cerrado y metodología industrializada: un Odoo Community 19 estándar operativo en 3 días hábiles, o te devolvemos el setup.</p>
+  <p data-lang="en">AI is only useful on top of an Odoo that works. That is why the first thing we do is the setup, at a fixed price and with an industrialized method: a standard, working Odoo Community 19 in 3 business days, or your setup back.</p>
+  <div style="overflow-x:auto;margin:18px 0"><table style="width:100%;border-collapse:collapse;font-size:.88rem">
+    <thead><tr style="background:var(--navy);color:white"><th style="padding:11px 14px;text-align:left" data-lang="es">Pack</th><th style="padding:11px 14px;text-align:left" data-lang="en">Pack</th><th style="padding:11px 14px;text-align:left" data-lang="es">Setup</th><th style="padding:11px 14px;text-align:left" data-lang="en">Setup</th><th style="padding:11px 14px;text-align:left" data-lang="es">Mensual</th><th style="padding:11px 14px;text-align:left" data-lang="en">Monthly</th><th style="padding:11px 14px;text-align:left" data-lang="es">Módulos</th><th style="padding:11px 14px;text-align:left" data-lang="en">Modules</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Pack S — Esencial</td><td style="padding:10px 14px;" data-lang="en">Pack S — Essential</td><td style="padding:10px 14px;" data-lang="es">297 €</td><td style="padding:10px 14px;" data-lang="en">€297</td><td style="padding:10px 14px;" data-lang="es">97 €/mes</td><td style="padding:10px 14px;" data-lang="en">€97/month</td><td style="padding:10px 14px;" data-lang="es">Contabilidad, Ventas, CRM</td><td style="padding:10px 14px;" data-lang="en">Accounting, Sales, CRM</td></tr>
+      <tr style="border-bottom:1px solid #eee;background:#f9f9fb"><td style="padding:10px 14px;" data-lang="es">Pack M — Completo</td><td style="padding:10px 14px;" data-lang="en">Pack M — Complete</td><td style="padding:10px 14px;" data-lang="es">497 €</td><td style="padding:10px 14px;" data-lang="en">€497</td><td style="padding:10px 14px;" data-lang="es">147 €/mes</td><td style="padding:10px 14px;" data-lang="en">€147/month</td><td style="padding:10px 14px;" data-lang="es">+ Inventario, Compras, Proyectos</td><td style="padding:10px 14px;" data-lang="en">+ Inventory, Purchasing, Projects</td></tr>
+      <tr><td style="padding:10px 14px;" data-lang="es">Pack L — Avanzado</td><td style="padding:10px 14px;" data-lang="en">Pack L — Advanced</td><td style="padding:10px 14px;" data-lang="es">697 €</td><td style="padding:10px 14px;" data-lang="en">€697</td><td style="padding:10px 14px;" data-lang="es">197 €/mes</td><td style="padding:10px 14px;" data-lang="en">€197/month</td><td style="padding:10px 14px;" data-lang="es">+ RRHH, Fabricación, eCommerce, OdooListo IA</td><td style="padding:10px 14px;" data-lang="en">+ HR, Manufacturing, eCommerce, OdooListo AI</td></tr>
+    </tbody>
+  </table></div>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es">
+    <li><strong>Usuarios ilimitados:</strong> la cuota no se mueve aunque metas a todo el equipo.</li>
+    <li><strong>Tus datos son tuyos:</strong> servidor en la Unión Europea y copia de seguridad diaria entregada a ti.</li>
+    <li><strong>Sin licencias ni permanencia:</strong> es software libre; si un día te vas, te llevas tu base de datos.</li>
+  </ul>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en">
+    <li><strong>Unlimited users:</strong> the fee does not move even if you bring in the whole team.</li>
+    <li><strong>Your data is yours:</strong> server in the European Union and a daily backup delivered to you.</li>
+    <li><strong>No licenses, no lock-in:</strong> it is open-source software; if you leave one day, you take your database with you.</li>
+  </ul>
+  <p data-lang="es">Y lo decimos claro: no es para todo el mundo. Si necesitas agentes que creen pedidos o facturas por su cuenta, OdooListo IA hoy no lo hace, y preferimos que lo sepas antes de contratar. Tampoco hacemos desarrollos a medida dentro del pack. Si quieres saber cómo trabajamos, mira <a href="/blog/implantar-odoo-rapido/" style="color:var(--teal);cursor:pointer">cómo ponemos Odoo en marcha en 3 días</a>.</p>
+  <p data-lang="en">And to be clear: it is not for everyone. If you need agents that create orders or invoices on their own, OdooListo AI does not do that today, and we would rather you know before you buy. Nor do we do custom development inside the pack. To see how we work, read <a href="/blog/implantar-odoo-rapido/" style="color:var(--teal);cursor:pointer">how we get Odoo running in 3 days</a>.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Preguntas frecuentes sobre Odoo e inteligencia artificial</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">Frequently asked questions about Odoo and artificial intelligence</h2>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿Odoo Community tiene inteligencia artificial?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">Does Odoo Community have artificial intelligence?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">No de serie. La aplicación de IA de Odoo 19 no está en el código de Community; va con Enterprise. En Community se añade con módulos, como OdooListo IA, incluido en el Pack L.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">Not out of the box. The Odoo 19 AI app is not in the Community code; it comes with Enterprise. On Community it is added through modules, such as OdooListo AI, included in Pack L.</p></details>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿Qué modelos de IA usa Odoo 19?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">Which AI models does Odoo 19 use?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">Según la documentación oficial, la app de IA de Odoo admite modelos de OpenAI (ChatGPT) y de Google (Gemini). En Odoo.sh e instalaciones propias necesitas tu propia clave, con el coste que marque el proveedor.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">According to the official documentation, the Odoo AI app supports OpenAI (ChatGPT) and Google (Gemini) models. On Odoo.sh and self-hosted installs you need your own key, at whatever cost the provider charges.</p></details>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿La IA de Odoo puede modificar mis datos?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">Can Odoo AI change my data?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">El asistente estándar de Odoo 19 no hace cambios en la base de datos. Los agentes configurados con herramientas sí pueden, por ejemplo creando leads. OdooListo IA solo da de alta clientes y productos, y siempre pide confirmación antes de guardar.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">The standard Odoo 19 assistant does not make database changes. Agents configured with tools can, for example by creating leads. OdooListo AI only creates customers and products, and always asks for confirmation before saving.</p></details>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿Cuánto cuesta tener IA en Odoo?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">How much does AI in Odoo cost?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">En Odoo Enterprise, la IA agéntica figura en el plan Personalizado: 22,90 €/usuario/mes el primer año y 27,90 € después (orientativo, sin IVA, octubre 2026). Con OdooListo, el Pack L cuesta 697 € de setup y 197 €/mes con usuarios ilimitados y 200 consultas al mes.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">On Odoo Enterprise, agentic AI is listed in the Custom plan: €22.90/user/month the first year and €27.90 afterwards (indicative, excl. VAT, October 2026). With OdooListo, Pack L costs €697 setup and €197/month with unlimited users and 200 queries per month.</p></details>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿Puedo ver OdooListo IA funcionando antes de contratar?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">Can I see OdooListo AI working before buying?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">Sí. En la página de OdooListo IA tienes un vídeo con datos de demostración y puedes pedir una demo gratuita.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">Yes. The OdooListo AI page has a video with demo data and you can request a free demo.</p></details>
+  <p data-lang="es" style="margin-top:28px">En resumen, Odoo e inteligencia artificial ya van de la mano en la versión 19, pero la IA oficial vive en Enterprise y se paga por usuario. Si trabajas con Community, la pregunta no es si puedes tener IA, sino cómo: con un módulo de terceros, con un desarrollo o incluida en tu implantación. Nosotros podemos dejarte Odoo y OdooListo IA funcionando en 3 días hábiles.</p>
+  <p data-lang="en" style="margin-top:28px">In short, Odoo and artificial intelligence already go hand in hand in version 19, but the official AI lives in Enterprise and is paid per user. If you run Community, the question is not whether you can have AI, but how: with a third-party module, custom development or included in your implementation. We can have Odoo and OdooListo AI running for you in 3 business days.</p>
+
+  <div style="background:linear-gradient(135deg,#1C0F5E,#0d1e3a);border-radius:16px;padding:32px;text-align:center;margin-top:36px">
+    <h3 style="color:white;font-family:var(--serif);font-size:1.4rem;margin-bottom:10px" data-lang="es">Pregúntale a tu empresa, sin pagar por usuario</h3>
+    <h3 style="color:white;font-family:var(--serif);font-size:1.4rem;margin-bottom:10px" data-lang="en">Ask your company, without paying per user</h3>
+    <p style="color:rgba(255,255,255,.85);margin-bottom:22px;font-size:.95rem" data-lang="es">Desde 297 €. En marcha en 3 días o te devolvemos el setup. OdooListo IA incluida en el Pack L. Sin permanencia.</p>
+    <p style="color:rgba(255,255,255,.85);margin-bottom:22px;font-size:.95rem" data-lang="en">From €297. Up and running in 3 days or your setup back. OdooListo AI included in Pack L. No lock-in.</p>
+    <a class="btn-cta-post" href="/#contratar" style="background:white;color:var(--navy);border:none;padding:14px 32px;border-radius:30px;font-weight:800;font-size:.95rem;cursor:pointer;font-family:var(--sans)" data-lang="es">Ver packs →</a>
+    <a class="btn-cta-post" href="/#contratar" style="background:white;color:var(--navy);border:none;padding:14px 32px;border-radius:30px;font-weight:800;font-size:.95rem;cursor:pointer;font-family:var(--sans)" data-lang="en">See packs →</a>
+  </div>
+</div>
+</div>
+
+<footer class="bl-foot">OdooListo · Praxya Formaplus, S.L. · <a href="/">Inicio</a> · <a href="/blog/">Blog</a> · <a href="/#terminos">Términos</a> · <a href="/#privacidad">Privacidad</a></footer>
+<div class="wa-float">
+  <a class="wa-bubble" data-lang="es" href="https://wa.me/34644044808?text=Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" target="_blank" rel="noopener">💬 ¿Tienes dudas? Escríbenos</a>
+  <a class="wa-bubble" data-lang="en" href="https://wa.me/34644044808?text=Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" target="_blank" rel="noopener">💬 Questions? Chat with us</a>
+  <a class="wa-btn" 
+     href="https://wa.me/34644044808?text=Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" 
+     target="_blank" 
+     rel="noopener"
+     aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2C7.373 2 2 7.373 2 14c0 2.12.554 4.11 1.524 5.832L2 26l4.354-1.497A11.94 11.94 0 0014 26c6.627 0 12-5.373 12-12S20.627 2 14 2z" fill="white"/>
+      <path d="M19.5 16.8c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z" fill="#25D366"/>
+    </svg>
+  </a>
+</div>
+<script>
+var BLOG_SLUGS = {"post28": "odoo-inteligencia-artificial", "post27": "erp-con-inteligencia-artificial-para-pymes", "post26": "controlar-cobros-pendientes-pyme", "post25": "erp-para-pequena-empresa", "post24": "odoo-para-empresas-de-distribucion", "post23": "odoo-vs-zoho-pyme", "post22": "odoo-peru-pymes", "post21": "odoo-pymes-chile", "post20": "odoo-pymes-argentina", "post19": "odoo-para-ecommerce-pyme", "post18": "migrar-de-excel-a-odoo", "post17": "odoo-para-autonomos-espana", "post16": "odoo-vs-sage-50cloud", "post15": "erp-pyme-mexico-barato", "post14": "odoo-colombia", "post13": "odoo-vs-contpaq", "post12": "odoo-vs-aspel", "post11": "implementar-odoo-mexico", "post10": "implantar-odoo-rapido", "post9": "odoo-vs-sap-pyme", "post8": "erp-barato-pyme", "post7": "odoo-community-vs-enterprise", "post6": "kit-digital-odoo", "post5": "odoo-community-gratis", "post4": "odoo-barato-pymes-espana", "post3": "verifactu-odoo", "post2": "cuanto-cuesta-implantar-odoo", "post1": "odoo-vs-holded"};
+function go(id){
+  var m = {'home':'/','checkout':'/#contratar','modules':'/#modulos','about':'/#nosotros','contact':'/#contacto','terms':'/#terminos','privacy':'/#privacidad','legal':'/#legal','cookies':'/#cookies','blog':'/blog/'};
+  if (BLOG_SLUGS[id]) { location.href = '/blog/' + BLOG_SLUGS[id] + '/'; return; }
+  location.href = m[id] || '/';
+}
+function goCheckout(){ location.href = '/#contratar'; }
+function openVideo(id){ window.open('https://www.youtube.com/watch?v=' + id, '_blank', 'noopener'); }
+function setLang(){}
+(function(){
+  var box = document.getElementById('ai-video');
+  if (!box) return;
+  var id = box.getAttribute('data-yt');
+  box.style.backgroundImage = 'url(https://i.ytimg.com/vi/' + id + '/hqdefault.jpg)';
+  function load(sound){
+    if (box.dataset.loaded) return; box.dataset.loaded = '1';
+    box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&mute=' + (sound ? 0 : 1) + '&playsinline=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="OdooListo IA"></iframe>';
+    try { gtag('event', 'video_ia', {'accion': sound ? 'clic' : 'auto_silencio', 'ubicacion': 'landing'}); } catch(e){}
+  }
+  box.addEventListener('click', function(){ load(true); });
+  if ('IntersectionObserver' in window) { var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { load(false); io.disconnect(); } }); }, {threshold:.6}); io.observe(box); }
+})();
+document.addEventListener('click', function(ev){
+  var a = ev.target.closest ? ev.target.closest('a[href]') : null;
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  try {
+    if (href.indexOf('wa.me/') > -1) gtag('event', 'whatsapp_click', {'ubicacion': 'blog', 'transport_type':'beacon'});
+    else if (href.indexOf('calendly.com/') > -1) gtag('event', 'calendly_click', {'tipo': 'demo', 'ubicacion': 'blog', 'transport_type':'beacon'});
+    else if (href.indexOf('/#contratar') > -1) gtag('event', 'blog_cta_click', {'transport_type':'beacon'});
+  } catch(e){}
+}, true);
+</script>
+</body>
+</html>
