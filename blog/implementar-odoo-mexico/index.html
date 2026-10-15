@@ -168,7 +168,11 @@ document.addEventListener('click', function(ev){
   if (!a) return;
   var href = a.getAttribute('href') || '';
   try {
-    if (href.indexOf('wa.me/') > -1) gtag('event', 'whatsapp_click', {'ubicacion': 'blog', 'transport_type':'beacon'});
+    if (href.indexOf('wa.me/') > -1) {
+      if (!a.dataset.waBase) a.dataset.waBase = href;
+      a.setAttribute('href', a.dataset.waBase + encodeURIComponent(' (ref: ' + location.pathname.replace(/^[/]|[/]$/g, '') + ')'));
+      gtag('event', 'whatsapp_click', {'ubicacion': 'blog', 'transport_type':'beacon'});
+    }
     else if (href.indexOf('calendly.com/') > -1) gtag('event', 'calendly_click', {'tipo': 'demo', 'ubicacion': 'blog', 'transport_type':'beacon'});
     else if (href.indexOf('/#contratar') > -1) gtag('event', 'blog_cta_click', {'transport_type':'beacon'});
   } catch(e){}

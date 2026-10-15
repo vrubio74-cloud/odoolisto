@@ -3158,7 +3158,11 @@ document.addEventListener('click', function(ev){
   var href = a.getAttribute('href') || '';
   var sec = a.closest('[id]'); var donde = sec ? sec.id : (a.className || 'otros');
   try {
-    if (href.indexOf('wa.me/') > -1) gtag('event', 'whatsapp_click', {'ubicacion': donde, 'transport_type':'beacon'});
+    if (href.indexOf('wa.me/') > -1) {
+      if (!a.dataset.waBase) a.dataset.waBase = href;
+      a.setAttribute('href', a.dataset.waBase + encodeURIComponent(' (ref: web/' + String(donde).replace(/\s+/g, '-') + ')'));
+      gtag('event', 'whatsapp_click', {'ubicacion': donde, 'transport_type':'beacon'});
+    }
     else if (href.indexOf('calendly.com/') > -1) gtag('event', 'calendly_click', {'tipo': href.indexOf('sesion-go-live') > -1 ? 'puesta_en_marcha' : 'demo', 'ubicacion': donde, 'transport_type':'beacon'});
   } catch(e){}
 }, true);
