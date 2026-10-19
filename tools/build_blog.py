@@ -179,7 +179,7 @@ def page(title, description, canonical, body, scripts, jsonld=None, og_type="web
 <body>
 {HEADER}
 {body}
-<footer class="bl-foot">OdooListo · Praxya Formaplus, S.L. · <a href="/">Inicio</a> · <a href="/blog/">Blog</a> · <a href="/#terminos">Términos</a> · <a href="/#privacidad">Privacidad</a></footer>
+<footer class="bl-foot">OdooListo · Praxya Formaplus, S.L. · <a href="/">Inicio</a> · <a href="/blog/">Blog</a> · <a href="/#terminos">Términos</a> · <a href="/#privacidad">Privacidad</a><br>Parte del grupo <a href="https://axentoo.com/es/" target="_blank" rel="noopener">Axentoo</a>: OdooListo, Campus Cleverit y El Sastre de Odoo.</footer>
 {WA_FLOAT}
 {scripts}
 </body>
