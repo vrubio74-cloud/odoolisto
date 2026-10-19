@@ -291,6 +291,32 @@ body.en label[data-lang="en"]{display:block!important}
 .reveal{opacity:1;transform:none}
 .reveal.vis{opacity:1;transform:none}
 
+/* ── GRUPO AXENTOO ───────────────────────────────────────── */
+.gbar{background:#0b0620;color:#B8AFD6;font-size:.74rem;font-weight:600;padding:6px 5%}
+.gbar-i{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:6px 16px;flex-wrap:wrap}
+.gbar a{color:#E6E1F5;text-decoration:none}
+.gbar a:hover{color:#fff;text-decoration:underline}
+.gbar .gb-g{color:#fff;font-weight:800;letter-spacing:.02em}
+.gbar .gb-on{color:var(--teal);font-weight:800}
+.gbar .gb-d{color:#8A80AD;font-weight:500}
+.gbar .gb-s{color:#4a3f70}
+@media(max-width:768px){.gbar{font-size:.7rem;padding:5px 12px}.gbar .gb-d,.gbar .gb-s{display:none!important}.gbar-i{gap:4px 12px}}
+.grupo{background:var(--off);padding:64px 5%;border-top:1px solid var(--g1)}
+.grupo-i{max-width:1140px;margin:0 auto}
+.grupo h2{font-size:1.6rem;color:var(--navy);text-align:center;margin:0 0 8px}
+.grupo .gsub{text-align:center;color:var(--g3);max-width:640px;margin:0 auto 32px;font-size:.95rem}
+.grupo-c,body.en .grupo-c[data-lang="en"]{display:grid!important;grid-template-columns:repeat(3,1fr);gap:18px}
+body:not(.en) .grupo-c[data-lang="en"],body.en .grupo-c[data-lang="es"]{display:none!important}
+.gcard{background:#fff;border:1px solid var(--g2);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:8px;text-decoration:none;color:var(--g4);transition:transform .15s,box-shadow .15s}
+a.gcard:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(28,15,94,.1)}
+.gcard .gk{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--purple)}
+.gcard strong{font-size:1.1rem;color:var(--navy)}
+.gcard p{margin:0;font-size:.88rem;line-height:1.5;color:var(--g3)}
+.gcard .gl{margin-top:auto;font-weight:800;color:var(--teal);font-size:.86rem}
+.gcard.on{border:2px solid var(--teal)}
+.grupo .gfoot{text-align:center;margin-top:22px;font-size:.86rem;color:var(--g3)}
+.grupo .gfoot a{color:var(--teal);font-weight:800}
+@media(max-width:768px){.grupo-c,body.en .grupo-c[data-lang="en"]{grid-template-columns:1fr}.grupo{padding:48px 16px}}
 /* ── NAV ───────────────────────────────────────────────────── */
 nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--g1);padding:0 5%}
 .ni{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;gap:18px}
@@ -1079,6 +1105,19 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
 <body>
 
 
+<!-- GRUPO AXENTOO -->
+<div class="gbar" data-lang="es"><div class="gbar-i">
+  <a class="gb-g" href="https://axentoo.com/es/" target="_blank" rel="noopener">Grupo Axentoo</a><span class="gb-s">|</span>
+  <span class="gb-on">OdooListo<span class="gb-d"> · implantación</span></span>
+  <a href="https://campuscleverit.es/" target="_blank" rel="noopener">Campus Cleverit<span class="gb-d"> · formación</span></a>
+  <a href="https://odooalamedida.com/es/" target="_blank" rel="noopener">El Sastre de Odoo<span class="gb-d"> · desarrollo con IA</span></a>
+</div></div>
+<div class="gbar" data-lang="en"><div class="gbar-i">
+  <a class="gb-g" href="https://axentoo.com/en/" target="_blank" rel="noopener">Axentoo Group</a><span class="gb-s">|</span>
+  <span class="gb-on">OdooListo<span class="gb-d"> · deployment</span></span>
+  <a href="https://campuscleverit.es/" target="_blank" rel="noopener">Campus Cleverit<span class="gb-d"> · training</span></a>
+  <a href="https://odootailor.com/en/" target="_blank" rel="noopener">Odoo Tailor<span class="gb-d"> · AI development</span></a>
+</div></div>
 <!-- NAV -->
 <a class="ai-bar" onclick="goIA()" data-lang="es">🤖 <strong>Nuevo: OdooListo IA.</strong> Pregúntale a tu empresa y te responde en segundos → Ver vídeo</a>
 <a class="ai-bar" onclick="goIA()" data-lang="en">🤖 <strong>New: OdooListo IA.</strong> Ask your company and get answers in seconds → Watch video</a>
@@ -1673,6 +1712,26 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
       <button class="btn-t" onclick="go('checkout')" style="font-size:.97rem;padding:14px 32px"><span data-lang="es">Contratar ahora →</span><span data-lang="en">Get started →</span></button>
       <a href="https://calendly.com/odoolisto/demo-gratuita-odoo-community-19" target="_blank" class="btn-s" style="border-color:rgba(255,255,255,.28);color:white;font-size:.97rem;padding:14px 28px"><span data-lang="es">📅 Hablar con un consultor</span><span data-lang="en">📅 Talk to a consultant</span></a>
     </div>
+  </div>
+</section>
+<section class="grupo" id="grupo">
+  <div class="grupo-i">
+    <h2 data-lang="es">Del mismo grupo: Axentoo</h2>
+    <h2 data-lang="en">From the same group: Axentoo</h2>
+    <p class="gsub" data-lang="es">OdooListo es una de las tres líneas de Axentoo. Si lo tuyo no es una implantación nueva, quizá te encaje alguna de las otras.</p>
+    <p class="gsub" data-lang="en">OdooListo is one of Axentoo's three lines. If yours isn't a new deployment, one of the others may fit.</p>
+    <div class="grupo-c" data-lang="es">
+      <div class="gcard on"><span class="gk">Estás aquí</span><strong>OdooListo</strong><p>Odoo Community llave en mano para pymes, con IA incluida. Para empezar con Odoo.</p></div>
+      <a class="gcard" href="https://odooalamedida.com/es/" target="_blank" rel="noopener"><span class="gk">Ya usas Odoo</span><strong>El Sastre de Odoo</strong><p>Cambios y desarrollos a medida en tu Odoo, hechos con IA y revisados por un experto. Cuota mensual, sin permanencia.</p><span class="gl">Ver El Sastre →</span></a>
+      <a class="gcard" href="https://campuscleverit.es/" target="_blank" rel="noopener"><span class="gk">Quieres aprender</span><strong>Campus Cleverit</strong><p>Formación técnica de Odoo para quien lo programa o lo implanta: cursos online y planes para equipos.</p><span class="gl">Ver Campus →</span></a>
+    </div>
+    <div class="grupo-c" data-lang="en">
+      <div class="gcard on"><span class="gk">You are here</span><strong>OdooListo</strong><p>Turnkey Odoo Community for small businesses, AI included. To get started with Odoo.</p></div>
+      <a class="gcard" href="https://odootailor.com/en/" target="_blank" rel="noopener"><span class="gk">Already on Odoo</span><strong>Odoo Tailor</strong><p>Custom changes and developments in your Odoo, built with AI and reviewed by an expert. Monthly fee, no lock-in.</p><span class="gl">See Odoo Tailor →</span></a>
+      <a class="gcard" href="https://campuscleverit.es/" target="_blank" rel="noopener"><span class="gk">Want to learn</span><strong>Campus Cleverit</strong><p>Technical Odoo training for developers and implementers: online courses and team plans (in Spanish).</p><span class="gl">See Campus →</span></a>
+    </div>
+    <p class="gfoot" data-lang="es">Conoce el grupo en <a href="https://axentoo.com/es/" target="_blank" rel="noopener">axentoo.com</a></p>
+    <p class="gfoot" data-lang="en">Meet the group at <a href="https://axentoo.com/en/" target="_blank" rel="noopener">axentoo.com</a></p>
   </div>
 </section>
 </div><!-- /home -->
