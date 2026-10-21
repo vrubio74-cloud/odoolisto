@@ -284,6 +284,8 @@ body.en li[data-lang="en"]{display:list-item!important}
 body.en a[data-lang="en"]{display:inline!important}
 body.en button[data-lang="en"]{display:inline-flex!important}
 body.en label[data-lang="en"]{display:block!important}
+body.en ul[data-lang="en"]{display:grid!important}
+body.en strong[data-lang="en"],body.en small[data-lang="en"]{display:block!important}
 /* .page visibility controlled by inline styles */
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
@@ -714,7 +716,23 @@ body{overflow-x:clip}
 .cba{background:#00A09D;color:white;border:none;padding:7px 16px;border-radius:7px;font-family:inherit;font-weight:700;font-size:.78rem;cursor:pointer}
 
 /* ── STICKY CTA ────────────────────────────────────────────── */
-#scta{position:fixed;bottom:22px;right:22px;z-index:300;display:none}
+#scta{position:fixed;bottom:22px;left:22px;z-index:300;display:none;align-items:center;gap:8px;background:var(--teal);color:#fff;border:0;border-radius:999px;padding:12px 20px;font:800 .9rem var(--sans);box-shadow:0 8px 28px rgba(0,160,157,.45);cursor:pointer;animation:pulse 2.4s infinite}
+#scta small{font-weight:600;opacity:.85}
+@media(max-width:768px){#scta{left:12px;bottom:14px;padding:11px 16px;font-size:.84rem}#scta small{display:none}}
+body.mod-open #scta{display:none!important}
+.trialband{background:linear-gradient(135deg,#0f5e5c,#00A09D);color:#fff;padding:56px 5%}
+.trialband .tbi{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center}
+.trialband h2{color:#fff;font-size:1.9rem;margin:0 0 10px}
+.trialband p{color:rgba(255,255,255,.9);margin:0 0 6px}
+.trialband ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:9px}
+.trialband li{display:flex;gap:9px;font-weight:600}
+.trialband li::before{content:"✓";font-weight:900}
+.trialband .tbc{background:#fff;border-radius:16px;padding:24px;text-align:center;color:var(--navy)}
+.trialband .tbc strong{display:block;font-size:1.25rem;margin-bottom:6px}
+.trialband .tbc .btn-t{width:100%;justify-content:center;margin-top:12px}
+.trialband .tbc small{display:block;color:var(--g3);margin-top:10px;font-size:.78rem}
+@media(max-width:768px){.trialband .tbi{grid-template-columns:1fr}.trialband{padding:44px 16px}.trialband h2{font-size:1.5rem}}
+
 #scta.vis{display:flex}
 
 /* ── FOOTER ────────────────────────────────────────────────── */
@@ -1433,8 +1451,37 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
         <a class="pcta" onclick="goCheckout('l')" data-lang="es">Empezar con Pack L</a><a class="pcta" onclick="goCheckout('l')" data-lang="en">Start with Pack L</a>
       </div>
     </div>
-    <p class="pnote" data-lang="es">¿Necesitas algo específico? <a onclick="go('contact')">Habla con nosotros →</a></p>
-    <p class="pnote" data-lang="en">Need something specific? <a onclick="go('contact')">Talk to us →</a></p>
+    <p class="pnote" data-lang="es">¿Prefieres probar antes? <a onclick="openMod('m-trial')">Prueba gratis 15 días, sin tarjeta →</a> · ¿Algo específico? <a onclick="go('contact')">Habla con nosotros →</a></p>
+    <p class="pnote" data-lang="en">Rather try first? <a onclick="openMod('m-trial')">Free 15-day trial, no card →</a> · Something specific? <a onclick="go('contact')">Talk to us →</a></p>
+  </div>
+</section>
+<section class="trialband" id="prueba-gratis">
+  <div class="tbi">
+    <div>
+      <h2 data-lang="es">¿Aún no lo tienes claro? Pruébalo 15 días gratis.</h2>
+      <h2 data-lang="en">Not sure yet? Try it free for 15 days.</h2>
+      <p data-lang="es">Antes de pagar nada, toca un Odoo real y comprueba si encaja con tu empresa.</p>
+      <p data-lang="en">Before paying anything, get your hands on a real Odoo and see if it fits your business.</p>
+      <ul data-lang="es">
+        <li>Un Odoo funcionando, con datos de ejemplo para que no empieces de cero</li>
+        <li>Acceso por email en menos de 24 h laborables</li>
+        <li>Sin tarjeta y sin compromiso: si no te convence, no pasa nada</li>
+      </ul>
+      <ul data-lang="en">
+        <li>A working Odoo with sample data, so you don't start from scratch</li>
+        <li>Access by email within 24 business hours</li>
+        <li>No card, no commitment: if it's not for you, no problem</li>
+      </ul>
+    </div>
+    <div class="tbc">
+      <strong data-lang="es">Tu Odoo de prueba, listo en 24 h</strong>
+      <strong data-lang="en">Your trial Odoo, ready in 24 h</strong>
+      <span data-lang="es">Solo te pedimos nombre, empresa y email.</span>
+      <span data-lang="en">We only need your name, company and email.</span>
+      <button class="btn-t" onclick="openMod('m-trial')"><span data-lang="es">🚀 Quiero mi prueba gratis</span><span data-lang="en">🚀 Get my free trial</span></button>
+      <small data-lang="es">Días laborables, de 9 a 18 h (hora de España).</small>
+      <small data-lang="en">Business days, 9am–6pm (Spain time).</small>
+    </div>
   </div>
 </section>
 
@@ -2678,6 +2725,7 @@ footer{background:var(--navy);padding:48px 5% 30px;border-top:1px solid rgba(255
   </div>
 </div>
 
+<button id="scta" type="button" onclick="openMod('m-trial')"><span data-lang="es">🚀 Prueba gratis 15 días <small>· sin tarjeta</small></span><span data-lang="en">🚀 Free 15-day trial <small>· no card</small></span></button>
 <!-- Trial Modal -->
 <div class="mov" id="m-trial">
   <div class="mbox">
@@ -2858,10 +2906,12 @@ function closeVideo(){
 function openMod(id) {
   var mel = document.getElementById(id);
   if (mel) mel.classList.add('open');
+  document.body.classList.add('mod-open');
 }
 function closeMod(id) {
   var mel = document.getElementById(id);
   if (mel) mel.classList.remove('open');
+  document.body.classList.remove('mod-open');
 }
 var movEls = document.querySelectorAll('.mov');
 for (var mi=0; mi<movEls.length; mi++) {
