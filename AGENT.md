@@ -52,7 +52,7 @@ Eres el agente de contenido SEO de **OdooListo** (Praxya Formaplus, S.L.). Tu mi
 > Cada artículo debe enlazar a `https://odoolisto.com/odoo-con-ia/` y describir OdooListo IA solo con su alcance real (consulta, analiza, abre listados, da de alta clientes y productos con confirmación; NO crea pedidos ni facturas, NO cambia estados, NO registra pagos). 200 consultas/mes en el Pack Avanzado. Nada de «la única», «la primera», «exclusiva».
 - [x] `erp con inteligencia artificial para pymes` → PUBLICADO: 13 Oct 2026 → URL: https://odoolisto.com/blog/erp-con-inteligencia-artificial-para-pymes/ *(Pack L; aclara que la app de IA nativa de Odoo 19 no está en el código de Community)*
 - [x] `odoo inteligencia artificial` → PUBLICADO: 15 Oct 2026 → URL: https://odoolisto.com/blog/odoo-inteligencia-artificial/ *(Pack L; qué trae la app de IA de Odoo 19, que no está en Community, y que la «IA agéntica» figura en el plan Personalizado de Enterprise; precios de octubre 2026)*
-- [ ] `como sacar informes de odoo sin saber usarlo`
+- [x] `como sacar informes de odoo sin saber usarlo` → PUBLICADO: 22 Oct 2026 → URL: https://odoolisto.com/blog/como-sacar-informes-de-odoo-sin-saber-usarlo/ *(Pack L para OdooListo IA; informes estándar de Community en todos los packs; aclara que Spreadsheet/Documents y la antigüedad de saldos son de Enterprise)*
 - [ ] `clientes que dejan de comprar como detectarlos`
 - [ ] `previsión de ventas pyme con erp`
 - [ ] `control de stock pyme alertas de rotura`
@@ -240,6 +240,7 @@ crear `blog/<slug>/index.html`. Haz commit de `blog/`, `assets/` y `sitemap.xml`
 | 2026-10-10 | controlar cobros pendientes pyme | Cómo controlar los cobros pendientes de tu pyme con Odoo (facturas vencidas) | https://odoolisto.com/blog/controlar-cobros-pendientes-pyme/ | ✅ Publicado |
 | 2026-10-13 | erp con inteligencia artificial para pymes | ERP con inteligencia artificial para pymes: qué hace de verdad y qué preguntar antes | https://odoolisto.com/blog/erp-con-inteligencia-artificial-para-pymes/ | ✅ Publicado |
 | 2026-10-15 | odoo inteligencia artificial | Odoo e inteligencia artificial: qué trae Odoo 19 y cómo tenerla en Community | https://odoolisto.com/blog/odoo-inteligencia-artificial/ | ✅ Publicado |
+| 2026-10-22 | como sacar informes de odoo sin saber usarlo | Cómo sacar informes de Odoo sin saber usarlo: guía para gerentes de pyme | https://odoolisto.com/blog/como-sacar-informes-de-odoo-sin-saber-usarlo/ | ✅ Publicado |
 
 ---
 
@@ -254,5 +255,5 @@ crear `blog/<slug>/index.html`. Haz commit de `blog/`, `assets/` y `sitemap.xml`
 
 ---
 
-*Última actualización: 15 Oct 2026 (post28 `odoo inteligencia artificial` publicado)*
+*Última actualización: 22 Oct 2026 (post29 `como sacar informes de odoo sin saber usarlo` publicado)*
 *Agente configurado por: Praxya Formaplus, S.L.*

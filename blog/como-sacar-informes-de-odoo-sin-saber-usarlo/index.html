@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<script>if (/\.pages\.dev$/.test(location.hostname)) location.replace('https://odoolisto.com' + location.pathname + location.search + location.hash);</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', analytics_storage:'denied', wait_for_update:500});
+  try { if (localStorage.getItem('ol_consent') === 'all') gtag('consent', 'update', {ad_storage:'granted', ad_user_data:'granted', ad_personalization:'granted', analytics_storage:'granted'}); } catch(e) {}
+  gtag('js', new Date());
+  if (!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {
+    gtag('config', 'AW-18242312681');
+    gtag('config', 'G-TTBKX48K3B');
+  }
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18242312681"></script>
+<script src="/assets/consent.js" defer></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo sacar informes de Odoo sin saber usarlo: guía para gerentes de pyme | OdooListo</title>
+<meta name="description" content="Cómo sacar informes de Odoo sin saber usarlo: filtros, vista pivote y Excel en Community, y cómo preguntarle a tu ERP en lenguaje natural con OdooListo IA.">
+<link rel="canonical" href="https://odoolisto.com/blog/como-sacar-informes-de-odoo-sin-saber-usarlo/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cómo sacar informes de Odoo sin saber usarlo: guía para gerentes de pyme | OdooListo">
+<meta property="og:description" content="Cómo sacar informes de Odoo sin saber usarlo: filtros, vista pivote y Excel en Community, y cómo preguntarle a tu ERP en lenguaje natural con OdooListo IA.">
+<meta property="og:url" content="https://odoolisto.com/blog/como-sacar-informes-de-odoo-sin-saber-usarlo/">
+<meta property="og:image" content="https://odoolisto.com/logo.png">
+<link rel="icon" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Cómo sacar informes de Odoo sin saber usarlo: guía para gerentes de pyme", "description": "Cómo sacar informes de Odoo sin saber usarlo: filtros, vista pivote y Excel en Community, y cómo preguntarle a tu ERP en lenguaje natural con OdooListo IA.", "datePublished": "2026-10-22", "dateModified": "2026-10-22", "mainEntityOfPage": "https://odoolisto.com/blog/como-sacar-informes-de-odoo-sin-saber-usarlo/", "inLanguage": "es", "author": {"@type": "Organization", "name": "OdooListo", "url": "https://odoolisto.com"}, "publisher": {"@type": "Organization", "name": "OdooListo", "logo": {"@type": "ImageObject", "url": "https://odoolisto.com/logo.png"}}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Se pueden exportar los informes de Odoo Community a Excel?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. La vista pivote tiene un botón para descargarla en formato .xlsx, y desde cualquier lista puedes seleccionar registros y exportarlos. Lo que no trae Community es la hoja de cálculo integrada de Odoo, que forma parte de Documents, una aplicación de Enterprise."}}, {"@type": "Question", "name": "¿Necesito saber programar para sacar informes de Odoo?", "acceptedAnswer": {"@type": "Answer", "text": "No. Los filtros, la agrupación, la vista pivote y la vista gráfico se manejan con clics. Con OdooListo IA ni siquiera necesitas saber en qué menú está el dato: escribes la pregunta y te abre el listado filtrado."}}, {"@type": "Question", "name": "¿OdooListo IA puede modificar mis datos?", "acceptedAnswer": {"@type": "Answer", "text": "Solo puede dar de alta clientes y productos, y siempre te enseña un resumen y te pide confirmación antes de guardar. No crea pedidos ni facturas, no cambia estados y no registra pagos."}}, {"@type": "Question", "name": "¿En qué pack está OdooListo IA?", "acceptedAnswer": {"@type": "Answer", "text": "En el Pack L — Avanzado (697 € de setup y 197 €/mes), con 200 consultas al mes. Los informes estándar de Odoo Community (filtros, pivote, gráficos y exportación a Excel) están en todos los packs."}}]}]}</script>
+</head>
+<body>
+<a class="ai-bar" href="/odoo-con-ia/">🤖 <strong>Nuevo: OdooListo IA.</strong> Pregúntale a tu empresa y te responde en segundos → Ver vídeo</a>
+<header class="bl-head">
+  <a class="bl-logo logo" href="/"><div class="logo-i"><svg viewBox="0 0 22 22" fill="none"><rect x="2" y="2" width="8" height="8" rx="2.5" fill="white" opacity=".95"/><rect x="12" y="2" width="8" height="8" rx="2.5" fill="white" opacity=".7"/><rect x="2" y="12" width="8" height="8" rx="2.5" fill="white" opacity=".7"/><rect x="12" y="12" width="8" height="8" rx="2.5" fill="#00A09D" opacity=".9"/></svg></div> OdooListo</a>
+  <nav class="bl-nav">
+    <a href="/blog/">Blog</a>
+    <a href="/odoo-con-ia/">OdooListo IA</a>
+    <a class="bl-cta" href="/#contratar">Contratar</a>
+  </nav>
+</header>
+<div class="bl-post" style="max-width:900px;margin:0 auto;padding:40px 5% 80px">
+<a style="background:none;border:1px solid var(--teal);color:var(--teal);font-weight:700;cursor:pointer;padding:8px 16px;border-radius:6px;margin-bottom:28px;font-size:.9rem" href="/blog/">← <span data-lang="es">Volver al Blog</span><span data-lang="en">Back to Blog</span></a>
+<div class="bp">
+  <div class="bpmeta" style="color:var(--g3);font-size:.85rem;margin-bottom:12px"><span>22 Oct 2026</span> · <span data-lang="es">Guía</span><span data-lang="en">Guide</span> · <span>8 min</span></div>
+  <h1 style="font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.4rem);color:var(--navy);line-height:1.2;margin-bottom:20px" data-lang="es">Cómo sacar informes de Odoo sin saber usarlo: guía para gerentes de pyme</h1>
+  <h1 style="font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.4rem);color:var(--navy);line-height:1.2;margin-bottom:20px" data-lang="en">How to get reports out of Odoo without knowing how to use it: a guide for SME managers</h1>
+  <p data-lang="es">Si buscas cómo sacar informes de Odoo sin saber usarlo, seguramente te suena esta escena: necesitas saber cuánto te deben tus clientes, se lo pides a administración y el Excel llega dos días después. Para entonces la cifra ya ha cambiado. Tienes un ERP que lo sabe todo de tu empresa, pero la información está encerrada detrás de menús que no tienes tiempo de aprender.</p>
+  <p data-lang="en">If you are looking for how to get reports out of Odoo without knowing how to use it, this scene probably sounds familiar: you need to know how much your customers owe you, you ask the office, and the spreadsheet arrives two days later. By then the figure has already changed. You have an ERP that knows everything about your business, but the information is locked behind menus you have no time to learn.</p>
+  <p data-lang="es">No es un problema tuyo. El motivo real por el que muchos ERP fracasan en las pymes no es la implantación: es que casi nadie sabe sacar los datos. En esta guía te enseñamos dos caminos. El primero, los informes que Odoo Community trae de serie, explicados para quien no es técnico. El segundo, preguntarle a tu Odoo por escrito, como se lo preguntarías a una persona, y recibir la respuesta en segundos.</p>
+  <p data-lang="en">It is not your fault. The real reason many ERPs fail in SMEs is not the implementation: it is that hardly anyone knows how to get the data out. In this guide we show you two paths. First, the reports that Odoo Community includes out of the box, explained for non-technical people. Second, asking your Odoo in writing, as you would ask a person, and getting the answer in seconds.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Por qué cuesta tanto sacar informes de un ERP</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">Why getting reports out of an ERP is so hard</h2>
+  <p data-lang="es">Un ERP guarda cada venta, cada factura y cada movimiento de almacén. El problema es que esos datos están organizados para que el sistema funcione, no para que el gerente los lea. Para responder a una pregunta sencilla hay que saber en qué aplicación está el dato, qué filtro aplicar y cómo agruparlo.</p>
+  <p data-lang="en">An ERP stores every sale, every invoice and every warehouse movement. The problem is that this data is organized so the system works, not so the manager can read it. To answer a simple question you need to know which app holds the data, which filter to apply and how to group it.</p>
+  <p data-lang="es">Por eso, en la práctica, el gerente depende de otra persona:</p>
+  <p data-lang="en">That is why, in practice, the manager depends on someone else:</p>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es"><li><strong>Espera:</strong> el administrativo saca el dato cuando puede, no cuando tú lo necesitas.</li><li><strong>Datos viejos:</strong> el Excel es una foto de hace dos días, y las decisiones de cobros o compras no esperan.</li><li><strong>Preguntas que no se hacen:</strong> si cada consulta cuesta un correo y una espera, solo se pregunta lo urgente. Lo importante, como qué clientes han dejado de comprar, se queda sin mirar.</li></ul>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en"><li><strong>Waiting:</strong> the office pulls the data when they can, not when you need it.</li><li><strong>Stale data:</strong> the spreadsheet is a snapshot from two days ago, and decisions on collections or purchasing cannot wait.</li><li><strong>Questions never asked:</strong> if each query costs an email and a wait, you only ask what is urgent. What matters, such as which customers have stopped buying, goes unchecked.</li></ul>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Cómo sacar informes de Odoo Community paso a paso</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">How to get reports out of Odoo Community step by step</h2>
+  <p data-lang="es">La buena noticia es que Odoo Community ya trae herramientas de informes en casi todas sus aplicaciones. No hace falta programar nada. Basta con conocer cuatro piezas, que son las mismas en Ventas, Facturación, Compras o Inventario.</p>
+  <p data-lang="en">The good news is that Odoo Community already includes reporting tools in almost every app. No programming is needed. You only need to know four pieces, which are the same in Sales, Invoicing, Purchasing or Inventory.</p>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="es">1. Filtros: quedarte solo con lo que te interesa</h3>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="en">1. Filters: keep only what you care about</h3>
+  <p data-lang="es">En la barra de búsqueda de cualquier lista hay un menú de filtros. Por ejemplo, en la lista de facturas de cliente puedes quedarte con las que están vencidas y sin pagar. Si combinas varios filtros, Odoo los aplica a la vez.</p>
+  <p data-lang="en">The search bar of any list has a filters menu. For example, in the customer invoice list you can keep only those that are overdue and unpaid. If you combine several filters, Odoo applies them together.</p>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="es">2. Agrupar: ver los totales por cliente, producto o mes</h3>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="en">2. Group by: see totals per customer, product or month</h3>
+  <p data-lang="es">En el mismo menú está la opción de agrupar. Agrupa las facturas vencidas por cliente y verás, de un vistazo, quién te debe más. Agrupa las ventas por mes y verás la tendencia del año.</p>
+  <p data-lang="en">The same menu has a group-by option. Group overdue invoices by customer and you will see at a glance who owes you the most. Group sales by month and you will see the year's trend.</p>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="es">3. Vista pivote y gráfico: el «Excel» que ya lleva dentro Odoo</h3>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="en">3. Pivot and graph views: the "spreadsheet" already inside Odoo</h3>
+  <p data-lang="es">Los análisis de Ventas, Compras o Facturación se abren en vista pivote (una tabla dinámica) o en vista gráfico (barras, líneas o circular). Según la documentación oficial de Odoo 19, en el pivote eliges qué medir (importe, cantidad, número de registros) y qué poner en filas y columnas con los botones de más y menos.</p>
+  <p data-lang="en">The Sales, Purchasing or Invoicing analyses open in pivot view (a pivot table) or graph view (bar, line or pie). According to Odoo 19's official documentation, in the pivot you choose what to measure (amount, quantity, number of records) and what to put in rows and columns using the plus and minus buttons.</p>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="es">4. Exportar a Excel y guardar en favoritos</h3>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="en">4. Export to Excel and save as a favorite</h3>
+  <p data-lang="es">El pivote tiene un botón para descargarlo en formato .xlsx, y desde una lista puedes seleccionar registros y exportarlos. Cuando un informe te sirva, guárdalo en favoritos: la próxima vez estará a un clic, con los mismos filtros y agrupaciones.</p>
+  <p data-lang="en">The pivot has a button to download it in .xlsx format, and from a list you can select records and export them. When a report is useful, save it as a favorite: next time it will be one click away, with the same filters and groupings.</p>
+
+  <div style="overflow-x:auto;margin:18px 0"><table style="width:100%;border-collapse:collapse;font-size:.88rem">
+    <thead><tr style="background:var(--navy);color:white"><th style="padding:11px 14px;text-align:left" data-lang="es">Lo que quieres saber</th><th style="padding:11px 14px;text-align:left" data-lang="en">What you want to know</th><th style="padding:11px 14px;text-align:left" data-lang="es">Dónde mirarlo en Odoo Community</th><th style="padding:11px 14px;text-align:left" data-lang="en">Where to look in Odoo Community</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Qué facturas están vencidas</td><td style="padding:10px 14px;" data-lang="en">Which invoices are overdue</td><td style="padding:10px 14px;" data-lang="es">Facturas de cliente → filtro de vencidas → agrupar por cliente</td><td style="padding:10px 14px;" data-lang="en">Customer invoices → overdue filter → group by customer</td></tr>
+      <tr style="border-bottom:1px solid #eee;background:#f9f9fb"><td style="padding:10px 14px;" data-lang="es">Ventas del trimestre por cliente</td><td style="padding:10px 14px;" data-lang="en">Quarterly sales per customer</td><td style="padding:10px 14px;" data-lang="es">Análisis de ventas → vista pivote → filas por cliente, columnas por mes</td><td style="padding:10px 14px;" data-lang="en">Sales analysis → pivot view → rows by customer, columns by month</td></tr>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Qué productos se venden más</td><td style="padding:10px 14px;" data-lang="en">Which products sell best</td><td style="padding:10px 14px;" data-lang="es">Análisis de ventas → vista gráfico → agrupar por producto</td><td style="padding:10px 14px;" data-lang="en">Sales analysis → graph view → group by product</td></tr>
+      <tr><td style="padding:10px 14px;" data-lang="es">Qué tengo en stock</td><td style="padding:10px 14px;" data-lang="en">What I have in stock</td><td style="padding:10px 14px;" data-lang="es">Inventario → existencias → agrupar por almacén o producto</td><td style="padding:10px 14px;" data-lang="en">Inventory → stock → group by warehouse or product</td></tr>
+    </tbody>
+  </table></div>
+  <p data-lang="es"><em>Los nombres exactos de menús y filtros pueden variar ligeramente según la versión y los módulos instalados.</em></p>
+  <p data-lang="en"><em>Exact menu and filter names may vary slightly depending on the version and installed modules.</em></p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Lo que Odoo Community no trae (y conviene saber antes)</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">What Odoo Community does not include (and you should know beforehand)</h2>
+  <p data-lang="es">Preferimos decirlo claro. Algunas herramientas de informes son de Odoo Enterprise, no de Community:</p>
+  <p data-lang="en">We would rather say it plainly. Some reporting tools belong to Odoo Enterprise, not Community:</p>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es"><li><strong>Hojas de cálculo integradas:</strong> según la documentación oficial, el módulo Spreadsheet forma parte de Odoo Documents, una aplicación de Enterprise. En Community, la alternativa es descargar el pivote a Excel.</li><li><strong>Informes contables avanzados</strong>, como el informe de antigüedad de saldos: también son de Enterprise. En Community controlas los vencimientos desde la lista de facturas, como explicamos en <a href="/blog/controlar-cobros-pendientes-pyme/" style="color:var(--teal);cursor:pointer">cómo controlar los cobros pendientes de tu pyme</a>.</li></ul>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en"><li><strong>Built-in spreadsheets:</strong> according to the official documentation, the Spreadsheet module is part of Odoo Documents, an Enterprise app. In Community, the alternative is downloading the pivot to Excel.</li><li><strong>Advanced accounting reports</strong>, such as the aged balance report: also Enterprise. In Community you track due dates from the invoice list, as we explain in <a href="/blog/controlar-cobros-pendientes-pyme/" style="color:var(--teal);cursor:pointer">how to control your SME's outstanding collections</a>.</li></ul>
+  <p data-lang="es">Si quieres ver todas las diferencias entre ediciones, las repasamos en <a href="/blog/odoo-community-vs-enterprise/" style="color:var(--teal);cursor:pointer">Odoo Community vs Enterprise</a>.</p>
+  <p data-lang="en">To see every difference between editions, we cover them in <a href="/blog/odoo-community-vs-enterprise/" style="color:var(--teal);cursor:pointer">Odoo Community vs Enterprise</a>.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Sacar informes de Odoo preguntando: OdooListo IA</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">Getting reports out of Odoo by asking: OdooListo AI</h2>
+  <p data-lang="es">Los filtros y el pivote funcionan, pero exigen saber dónde está cada cosa. Si lo que quieres es no tener que aprenderlo, existe otro camino: escribir la pregunta. Eso es <a href="/odoo-con-ia/" style="color:var(--teal);cursor:pointer">OdooListo IA</a>, un módulo propio incluido en el Pack L.</p>
+  <p data-lang="en">Filters and pivots work, but they require knowing where everything is. If you would rather not learn it, there is another path: type the question. That is <a href="/odoo-con-ia/" style="color:var(--teal);cursor:pointer">OdooListo AI</a>, our own module included in Pack L.</p>
+  <p data-lang="es">Algunas preguntas que un gerente puede escribir tal cual:</p>
+  <p data-lang="en">Some questions a manager can type as is:</p>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es"><li>«¿Qué facturas tengo vencidas y cuánto suman?»</li><li>«¿Qué clientes me compraban el año pasado y este no?»</li><li>«Enséñame las ventas del trimestre por cliente.»</li><li>«¿Qué productos están en riesgo de quedarse sin stock?»</li></ul>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en"><li>"Which invoices are overdue and how much do they add up to?"</li><li>"Which customers bought from me last year but not this year?"</li><li>"Show me this quarter's sales by customer."</li><li>"Which products are at risk of running out of stock?"</li></ul>
+  <p data-lang="es">OdooListo IA consulta los informes del ERP, agrupa por cliente, producto, estado o periodo y te abre la pantalla de Odoo con el listado ya filtrado. Desde ahí lo descargas a Excel con el botón de siempre, si lo necesitas para tu gestoría o para una reunión.</p>
+  <p data-lang="en">OdooListo AI queries the ERP's reports, groups by customer, product, status or period, and opens the Odoo screen with the list already filtered. From there you download it to Excel with the usual button, if you need it for your accountant or a meeting.</p>
+  <p data-lang="es">Y su alcance, sin adornos: también puede dar de alta clientes y productos, siempre enseñándote un resumen y pidiendo confirmación antes de guardar. No crea pedidos, presupuestos ni facturas, no cambia estados, no registra pagos y no envía correos. El Pack L incluye 200 consultas al mes.</p>
+  <p data-lang="en">And its scope, plainly: it can also create customers and products, always showing you a summary and asking for confirmation before saving. It does not create orders, quotations or invoices, change statuses, register payments or send emails. Pack L includes 200 queries per month.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">¿Por qué OdooListo?</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">Why OdooListo?</h2>
+  <p data-lang="es">Sacar informes de Odoo solo es posible si los datos están bien cargados desde el principio. Si vienes de hojas de cálculo, te contamos cómo hacerlo en <a href="/blog/migrar-de-excel-a-odoo/" style="color:var(--teal);cursor:pointer">de Excel a Odoo sin perder datos</a>. Nosotros dejamos tu Odoo Community configurado con tus datos básicos, listo para consultar.</p>
+  <p data-lang="en">Getting reports out of Odoo only works if the data is loaded properly from day one. If you are coming from spreadsheets, we explain how in <a href="/blog/migrar-de-excel-a-odoo/" style="color:var(--teal);cursor:pointer">from Excel to Odoo without losing data</a>. We leave your Odoo Community configured with your core data, ready to query.</p>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es"><li><strong>Puesta en marcha en 3 días hábiles</strong>, o te devolvemos el setup.</li><li><strong>Usuarios ilimitados:</strong> da acceso a informes a quien lo necesite; tu cuota no se mueve ni un euro.</li><li><strong>Tus datos, en tu casa:</strong> copia de seguridad diaria entregada a ti. Si algún día decides irte, ya la tienes.</li><li><strong>Servidor en la Unión Europea</strong>, sin licencias y sin permanencia.</li><li><strong>Especialistas desde 2014</strong>, de OpenERP v5 a Odoo 19 y 20.</li></ul>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en"><li><strong>Up and running in 3 business days</strong>, or we refund the setup.</li><li><strong>Unlimited users:</strong> give report access to whoever needs it; your fee does not move a single euro.</li><li><strong>Your data, at home:</strong> daily backup delivered to you. If you ever decide to leave, you already have it.</li><li><strong>Server in the European Union</strong>, no licenses and no lock-in.</li><li><strong>Specialists since 2014</strong>, from OpenERP v5 to Odoo 19 and 20.</li></ul>
+  <div style="overflow-x:auto;margin:18px 0"><table style="width:100%;border-collapse:collapse;font-size:.88rem">
+    <thead><tr style="background:var(--navy);color:white"><th style="padding:11px 14px;text-align:left" data-lang="es">Pack</th><th style="padding:11px 14px;text-align:left" data-lang="en">Pack</th><th style="padding:11px 14px;text-align:center" data-lang="es">Setup</th><th style="padding:11px 14px;text-align:center" data-lang="en">Setup</th><th style="padding:11px 14px;text-align:center" data-lang="es">Mensual</th><th style="padding:11px 14px;text-align:center" data-lang="en">Monthly</th><th style="padding:11px 14px;text-align:center" data-lang="es">Módulos</th><th style="padding:11px 14px;text-align:center" data-lang="en">Modules</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Pack S — Esencial</td><td style="padding:10px 14px;" data-lang="en">Pack S — Essential</td><td style="padding:10px 10px;text-align:center;" data-lang="es">297 €</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€297</td><td style="padding:10px 10px;text-align:center;" data-lang="es">97 €/mes</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€97/mo</td><td style="padding:10px 10px;text-align:center;" data-lang="es">Contabilidad, Ventas, CRM</td><td style="padding:10px 10px;text-align:center;" data-lang="en">Accounting, Sales, CRM</td></tr>
+      <tr style="border-bottom:1px solid #eee;background:#f9f9fb"><td style="padding:10px 14px;" data-lang="es">Pack M — Completo</td><td style="padding:10px 14px;" data-lang="en">Pack M — Complete</td><td style="padding:10px 10px;text-align:center;" data-lang="es">497 €</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€497</td><td style="padding:10px 10px;text-align:center;" data-lang="es">147 €/mes</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€147/mo</td><td style="padding:10px 10px;text-align:center;" data-lang="es">+ Inventario, Compras, Proyectos</td><td style="padding:10px 10px;text-align:center;" data-lang="en">+ Inventory, Purchasing, Projects</td></tr>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Pack L — Avanzado</td><td style="padding:10px 14px;" data-lang="en">Pack L — Advanced</td><td style="padding:10px 10px;text-align:center;" data-lang="es">697 €</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€697</td><td style="padding:10px 10px;text-align:center;" data-lang="es">197 €/mes</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€197/mo</td><td style="padding:10px 10px;text-align:center;" data-lang="es">+ RRHH, Fabricación, eCommerce, OdooListo IA</td><td style="padding:10px 10px;text-align:center;" data-lang="en">+ HR, Manufacturing, eCommerce, OdooListo AI</td></tr>
+    </tbody>
+  </table></div>
+  <p data-lang="es">Lo decimos claro: no es para todo el mundo. Si necesitas informes a medida, con un diseño concreto o cálculos propios de tu sector, eso es un desarrollo y no entra en el pack; se valora aparte, y te lo decimos antes de que pagues. Puedes ver <a href="/blog/implantar-odoo-rapido/" style="color:var(--teal);cursor:pointer">cómo trabajamos en 3 días</a> o ir directamente a <a href="/#contratar" style="color:var(--teal);cursor:pointer">los packs disponibles</a>.</p>
+  <p data-lang="en">To be clear: it is not for everyone. If you need custom reports, with a specific layout or calculations unique to your industry, that is development work and is not in the pack; it is quoted separately, and we tell you before you pay. See <a href="/blog/implantar-odoo-rapido/" style="color:var(--teal);cursor:pointer">how we work in 3 days</a> or go straight to <a href="/#contratar" style="color:var(--teal);cursor:pointer">the available packs</a>.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Preguntas frecuentes sobre cómo sacar informes de Odoo</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">Frequently asked questions about getting reports out of Odoo</h2>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿Se pueden exportar los informes de Odoo Community a Excel?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">Can Odoo Community reports be exported to Excel?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">Sí. La vista pivote tiene un botón para descargarla en formato .xlsx, y desde cualquier lista puedes seleccionar registros y exportarlos. Lo que no trae Community es la hoja de cálculo integrada de Odoo, que forma parte de Documents, una aplicación de Enterprise.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">Yes. The pivot view has a button to download it in .xlsx format, and from any list you can select records and export them. What Community lacks is Odoo's built-in spreadsheet, which is part of Documents, an Enterprise app.</p></details>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿Necesito saber programar para sacar informes de Odoo?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">Do I need to know how to code to get reports out of Odoo?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">No. Los filtros, la agrupación, la vista pivote y la vista gráfico se manejan con clics. Con OdooListo IA ni siquiera necesitas saber en qué menú está el dato: escribes la pregunta y te abre el listado filtrado.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">No. Filters, group-by, pivot view and graph view are all handled with clicks. With OdooListo AI you do not even need to know which menu holds the data: you type the question and it opens the filtered list.</p></details>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿OdooListo IA puede modificar mis datos?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">Can OdooListo AI change my data?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">Solo puede dar de alta clientes y productos, y siempre te enseña un resumen y te pide confirmación antes de guardar. No crea pedidos ni facturas, no cambia estados y no registra pagos.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">It can only create customers and products, and it always shows you a summary and asks for confirmation before saving. It does not create orders or invoices, change statuses or register payments.</p></details>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿En qué pack está OdooListo IA?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">Which pack includes OdooListo AI?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">En el Pack L — Avanzado (697 € de setup y 197 €/mes), con 200 consultas al mes. Los informes estándar de Odoo Community (filtros, pivote, gráficos y exportación a Excel) están en todos los packs.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">In Pack L — Advanced (€697 setup and €197/month), with 200 queries per month. Odoo Community's standard reports (filters, pivot, graphs and Excel export) are in every pack.</p></details>
+
+  <p data-lang="es" style="margin-top:28px">En resumen: para saber cómo sacar informes de Odoo sin saber usarlo, empieza por filtros, agrupaciones y el pivote, y guarda en favoritos los que uses cada semana. Y si prefieres preguntar en vez de buscar, OdooListo IA te da la respuesta sin llamar a nadie ni abrir un Excel.</p>
+  <p data-lang="en" style="margin-top:28px">In short: to get reports out of Odoo without knowing how to use it, start with filters, group-by and the pivot, and save the ones you use every week as favorites. And if you would rather ask than search, OdooListo AI gives you the answer without calling anyone or opening a spreadsheet.</p>
+
+  <div style="background:linear-gradient(135deg,#1C0F5E,#0d1e3a);border-radius:16px;padding:32px;text-align:center;margin-top:36px">
+    <h3 style="color:white;font-family:var(--serif);font-size:1.4rem;margin-bottom:10px" data-lang="es">Tus datos, cuando los necesitas</h3>
+    <h3 style="color:white;font-family:var(--serif);font-size:1.4rem;margin-bottom:10px" data-lang="en">Your data, when you need it</h3>
+    <p style="color:rgba(255,255,255,.85);margin-bottom:22px;font-size:.95rem" data-lang="es">Desde 297 €. En marcha en 3 días o te devolvemos el setup. OdooListo IA incluida en el Pack L. Sin permanencia.</p>
+    <p style="color:rgba(255,255,255,.85);margin-bottom:22px;font-size:.95rem" data-lang="en">From €297. Up and running in 3 days or your setup back. OdooListo AI included in Pack L. No lock-in.</p>
+    <a class="btn-cta-post" href="/#contratar" style="background:white;color:var(--navy);border:none;padding:14px 32px;border-radius:30px;font-weight:800;font-size:.95rem;cursor:pointer;font-family:var(--sans)" data-lang="es">Ver packs →</a>
+    <a class="btn-cta-post" href="/#contratar" style="background:white;color:var(--navy);border:none;padding:14px 32px;border-radius:30px;font-weight:800;font-size:.95rem;cursor:pointer;font-family:var(--sans)" data-lang="en">See packs →</a>
+  </div>
+</div>
+</div>
+
+<footer class="bl-foot">OdooListo · Praxya Formaplus, S.L. · <a href="/">Inicio</a> · <a href="/blog/">Blog</a> · <a href="/#terminos">Términos</a> · <a href="/#privacidad">Privacidad</a><br>Parte del grupo <a href="https://axentoo.com/es/" target="_blank" rel="noopener">Axentoo</a>: OdooListo, Campus Cleverit y El Sastre de Odoo.</footer>
+<div class="wa-float">
+  <a class="wa-bubble" data-lang="es" href="https://wa.me/34644044808?text=%5BOdooListo%5D%20Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" target="_blank" rel="noopener">💬 ¿Tienes dudas? Escríbenos</a>
+  <a class="wa-bubble" data-lang="en" href="https://wa.me/34644044808?text=%5BOdooListo%5D%20Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" target="_blank" rel="noopener">💬 Questions? Chat with us</a>
+  <a class="wa-btn" 
+     href="https://wa.me/34644044808?text=%5BOdooListo%5D%20Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" 
+     target="_blank" 
+     rel="noopener"
+     aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2C7.373 2 2 7.373 2 14c0 2.12.554 4.11 1.524 5.832L2 26l4.354-1.497A11.94 11.94 0 0014 26c6.627 0 12-5.373 12-12S20.627 2 14 2z" fill="white"/>
+      <path d="M19.5 16.8c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z" fill="#25D366"/>
+    </svg>
+  </a>
+</div>
+<script>
+var BLOG_SLUGS = {"post29": "como-sacar-informes-de-odoo-sin-saber-usarlo", "post28": "odoo-inteligencia-artificial", "post27": "erp-con-inteligencia-artificial-para-pymes", "post26": "controlar-cobros-pendientes-pyme", "post25": "erp-para-pequena-empresa", "post24": "odoo-para-empresas-de-distribucion", "post23": "odoo-vs-zoho-pyme", "post22": "odoo-peru-pymes", "post21": "odoo-pymes-chile", "post20": "odoo-pymes-argentina", "post19": "odoo-para-ecommerce-pyme", "post18": "migrar-de-excel-a-odoo", "post17": "odoo-para-autonomos-espana", "post16": "odoo-vs-sage-50cloud", "post15": "erp-pyme-mexico-barato", "post14": "odoo-colombia", "post13": "odoo-vs-contpaq", "post12": "odoo-vs-aspel", "post11": "implementar-odoo-mexico", "post10": "implantar-odoo-rapido", "post9": "odoo-vs-sap-pyme", "post8": "erp-barato-pyme", "post7": "odoo-community-vs-enterprise", "post6": "kit-digital-odoo", "post5": "odoo-community-gratis", "post4": "odoo-barato-pymes-espana", "post3": "verifactu-odoo", "post2": "cuanto-cuesta-implantar-odoo", "post1": "odoo-vs-holded"};
+function go(id){
+  var m = {'home':'/','checkout':'/#contratar','modules':'/#modulos','about':'/#nosotros','contact':'/#contacto','terms':'/#terminos','privacy':'/#privacidad','legal':'/#legal','cookies':'/#cookies','blog':'/blog/'};
+  if (BLOG_SLUGS[id]) { location.href = '/blog/' + BLOG_SLUGS[id] + '/'; return; }
+  location.href = m[id] || '/';
+}
+function goCheckout(){ location.href = '/#contratar'; }
+function openVideo(id){ window.open('https://www.youtube.com/watch?v=' + id, '_blank', 'noopener'); }
+function setLang(){}
+(function(){
+  var box = document.getElementById('ai-video');
+  if (!box) return;
+  var id = box.getAttribute('data-yt');
+  box.style.backgroundImage = 'url(https://i.ytimg.com/vi/' + id + '/hqdefault.jpg)';
+  function load(sound){
+    if (box.dataset.loaded) return; box.dataset.loaded = '1';
+    box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&mute=' + (sound ? 0 : 1) + '&playsinline=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="OdooListo IA"></iframe>';
+    try { gtag('event', 'video_ia', {'accion': sound ? 'clic' : 'auto_silencio', 'ubicacion': 'landing'}); } catch(e){}
+  }
+  box.addEventListener('click', function(){ load(true); });
+  if ('IntersectionObserver' in window) { var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { load(false); io.disconnect(); } }); }, {threshold:.6}); io.observe(box); }
+})();
+document.addEventListener('click', function(ev){
+  var a = ev.target.closest ? ev.target.closest('a[href]') : null;
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  try {
+    if (href.indexOf('wa.me/') > -1) {
+      if (!a.dataset.waBase) a.dataset.waBase = href;
+      a.setAttribute('href', a.dataset.waBase + encodeURIComponent(' (ref: ' + location.pathname.replace(/^[/]|[/]$/g, '') + ')'));
+      gtag('event', 'whatsapp_click', {'ubicacion': 'blog', 'transport_type':'beacon'});
+    }
+    else if (href.indexOf('calendly.com/') > -1) gtag('event', 'calendly_click', {'tipo': 'demo', 'ubicacion': 'blog', 'transport_type':'beacon'});
+    else if (href.indexOf('/#contratar') > -1) gtag('event', 'blog_cta_click', {'transport_type':'beacon'});
+  } catch(e){}
+}, true);
+</script>
+</body>
+</html>
