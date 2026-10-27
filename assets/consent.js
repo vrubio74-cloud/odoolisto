@@ -4,6 +4,7 @@
  *   - actualiza el consentimiento de Google (GA4 + Ads)
  *   - carga Microsoft Clarity
  *   - avisa a window.olOnConsent (para píxeles futuros, p. ej. Meta)
+ * Además mide los clics a Calendly y WhatsApp como conversión secundaria (Google y Microsoft).
  * Elección guardada en localStorage 'ol_consent' = 'all' | 'none'.
  */
 (function () {
@@ -70,6 +71,20 @@
       });
     }
   }
+
+  // Clic en Calendly o WhatsApp: conversión secundaria «Clic Calendly o WhatsApp - OdooListo»
+  // (Google: solo informes; Microsoft: objetivo «contact», fuera de las pujas).
+  // No cuentan los enlaces para quien ya ha contratado (sesión de puesta en marcha).
+  var CONV_CONTACTO = 'AW-18242312681/vTJXCJi566sdEOmzzvpD';
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    if (!/calendly\.com|wa\.me|api\.whatsapp\.com/.test(href)) return;
+    if (/sesion-go-live|acabo%20de%20contratar|just%20signed%20up/i.test(href)) return;
+    try { if (typeof gtag === 'function') gtag('event', 'conversion', { send_to: CONV_CONTACTO, transport_type: 'beacon' }); } catch (err) {}
+    if (window.__olUet) { window.uetq = window.uetq || []; window.uetq.push('event', 'contact', {}); }
+  }, true);
 
   var css = '#olcb{position:fixed;left:16px;right:16px;bottom:16px;z-index:9999;max-width:760px;margin:0 auto;' +
     'background:#1C0F5E;color:#fff;border-radius:14px;padding:16px 18px;box-shadow:0 10px 40px rgba(0,0,0,.25);' +
