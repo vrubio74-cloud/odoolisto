@@ -126,7 +126,7 @@ Eres el agente de contenido SEO de **OdooListo** (Praxya Formaplus, S.L.). Tu mi
 - **Keyword principal:** aparece en H1, primer párrafo, al menos 2 H2, y conclusión
 - **Keywords secundarias:** 3-5 keywords relacionadas distribuidas naturalmente
 - **Links internos:** mínimo 2 links a secciones de odoolisto.com
-- **Meta description:** 140-155 caracteres con keyword principal
+- **Meta description:** 140-155 caracteres con keyword principal, escrita para el buscador (qué resuelve el artículo). Nunca el primer párrafo copiado ni terminada en «…»
 - **Schema FAQ:** lo genera `tools/build_blog.py` a partir de los `<details>` (toma la versión `data-lang="es"` de `<summary>` y `<p>`). Basta con escribir las preguntas frecuentes con ese formato
 
 ### Tono y estilo
