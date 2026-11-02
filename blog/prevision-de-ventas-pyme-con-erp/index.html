@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<script>if (/\.pages\.dev$/.test(location.hostname)) location.replace('https://odoolisto.com' + location.pathname + location.search + location.hash);</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied', analytics_storage:'denied', wait_for_update:500});
+  try { if (localStorage.getItem('ol_consent') === 'all') gtag('consent', 'update', {ad_storage:'granted', ad_user_data:'granted', ad_personalization:'granted', analytics_storage:'granted'}); } catch(e) {}
+  gtag('js', new Date());
+  if (!/^(localhost|127\.0\.0\.1)$/.test(location.hostname)) {
+    gtag('config', 'AW-18242312681');
+    gtag('config', 'G-TTBKX48K3B');
+  }
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18242312681"></script>
+<script src="/assets/consent.js" defer></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Previsión de ventas para pymes con un ERP: cómo saber cuánto vas a facturar | OdooListo</title>
+<meta name="description" content="Previsión de ventas para tu pyme con un ERP: cómo calcularla en Odoo Community con el histórico y el embudo del CRM, y cómo preguntársela a OdooListo IA.">
+<link rel="canonical" href="https://odoolisto.com/blog/prevision-de-ventas-pyme-con-erp/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Previsión de ventas para pymes con un ERP: cómo saber cuánto vas a facturar | OdooListo">
+<meta property="og:description" content="Previsión de ventas para tu pyme con un ERP: cómo calcularla en Odoo Community con el histórico y el embudo del CRM, y cómo preguntársela a OdooListo IA.">
+<meta property="og:url" content="https://odoolisto.com/blog/prevision-de-ventas-pyme-con-erp/">
+<meta property="og:image" content="https://odoolisto.com/logo.png">
+<link rel="icon" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "BlogPosting", "headline": "Previsión de ventas para pymes con un ERP: cómo saber cuánto vas a facturar", "description": "Previsión de ventas para tu pyme con un ERP: cómo calcularla en Odoo Community con el histórico y el embudo del CRM, y cómo preguntársela a OdooListo IA.", "datePublished": "2026-11-02", "dateModified": "2026-11-02", "mainEntityOfPage": "https://odoolisto.com/blog/prevision-de-ventas-pyme-con-erp/", "inLanguage": "es", "author": {"@type": "Organization", "name": "OdooListo", "url": "https://odoolisto.com"}, "publisher": {"@type": "Organization", "name": "OdooListo", "logo": {"@type": "ImageObject", "url": "https://odoolisto.com/logo.png"}}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuánto histórico necesito para hacer una previsión de ventas?", "acceptedAnswer": {"@type": "Answer", "text": "Con un año completo ya puedes corregir por estacionalidad; con dos o tres, la previsión es más estable. Si empiezas hoy con el ERP, puedes cargar las ventas de años anteriores como datos básicos o empezar por la previsión por embudo, que no depende del histórico."}}, {"@type": "Question", "name": "¿Odoo Community tiene previsión de ventas o hace falta Enterprise?", "acceptedAnswer": {"@type": "Answer", "text": "El CRM de Odoo Community 19 incluye el informe de previsión, que agrupa las oportunidades por mes de cierre previsto y suma el ingreso prorrateado por probabilidad. El análisis de ventas en vista pivote también es de Community y se descarga a Excel."}}, {"@type": "Question", "name": "¿Cada cuánto conviene revisar la previsión de ventas?", "acceptedAnswer": {"@type": "Answer", "text": "Una vez al mes, al cerrar el mes, es suficiente para la mayoría de pymes. Es también el momento de limpiar el embudo: cerrar como perdidas las oportunidades paradas y actualizar fechas y probabilidades."}}, {"@type": "Question", "name": "¿OdooListo IA hace la previsión de ventas sola?", "acceptedAnswer": {"@type": "Answer", "text": "Responde cuando le preguntas, con los datos que ya tiene tu Odoo: escribes «¿cuánto voy a facturar a cierre si sigo a este ritmo?» y te contesta y te abre la vista correspondiente. No envía avisos por su cuenta. Está incluida en el Pack L, con 200 consultas al mes."}}]}]}</script>
+</head>
+<body>
+<a class="ai-bar" href="/odoo-con-ia/">🤖 <strong>Nuevo: OdooListo IA.</strong> Pregúntale a tu empresa y te responde en segundos → Ver vídeo</a>
+<header class="bl-head">
+  <a class="bl-logo logo" href="/"><div class="logo-i"><svg viewBox="0 0 22 22" fill="none"><rect x="2" y="2" width="8" height="8" rx="2.5" fill="white" opacity=".95"/><rect x="12" y="2" width="8" height="8" rx="2.5" fill="white" opacity=".7"/><rect x="2" y="12" width="8" height="8" rx="2.5" fill="white" opacity=".7"/><rect x="12" y="12" width="8" height="8" rx="2.5" fill="#00A09D" opacity=".9"/></svg></div> OdooListo</a>
+  <nav class="bl-nav">
+    <a href="/blog/">Blog</a>
+    <a href="/odoo-con-ia/">OdooListo IA</a>
+    <a class="bl-cta" href="/#contratar">Contratar</a>
+  </nav>
+</header>
+<div class="bl-post" style="max-width:900px;margin:0 auto;padding:40px 5% 80px">
+<a style="background:none;border:1px solid var(--teal);color:var(--teal);font-weight:700;cursor:pointer;padding:8px 16px;border-radius:6px;margin-bottom:28px;font-size:.9rem" href="/blog/">← <span data-lang="es">Volver al Blog</span><span data-lang="en">Back to Blog</span></a>
+<div class="bp">
+  <div class="bpmeta" style="color:var(--g3);font-size:.85rem;margin-bottom:12px"><span>02 Nov 2026</span> · <span data-lang="es">Guía</span><span data-lang="en">Guide</span> · <span>8 min</span></div>
+  <h1 style="font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.4rem);color:var(--navy);line-height:1.2;margin-bottom:20px" data-lang="es">Previsión de ventas para pymes con un ERP: cómo saber cuánto vas a facturar</h1>
+  <h1 style="font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.4rem);color:var(--navy);line-height:1.2;margin-bottom:20px" data-lang="en">Sales forecasting for SMEs with an ERP: how to know what you will invoice</h1>
+  <p data-lang="es">«¿Cuánto vamos a facturar este año?» Es la pregunta que te hace el banco cuando pides una póliza, la que te haces tú antes de contratar a alguien y la que casi todos los gerentes responden a ojo. La previsión de ventas de una pyme suele vivir en la cabeza del dueño o en un Excel que alguien actualiza cuando se acuerda.</p>
+  <p data-lang="en">"How much are we going to invoice this year?" It is the question the bank asks when you apply for a credit line, the one you ask yourself before hiring someone, and the one almost every manager answers by gut feeling. An SME's sales forecast usually lives in the owner's head or in a spreadsheet someone updates when they remember.</p>
+  <p data-lang="es">La buena noticia es que, si tus ventas están en un ERP, la previsión ya está medio hecha. El histórico dice a qué ritmo vendes y el embudo comercial dice qué puede entrar en los próximos meses. En esta guía te explicamos cómo hacer una previsión de ventas para tu pyme con un ERP como Odoo Community, con dos métodos sencillos, los errores que la estropean y cómo preguntársela a tu Odoo por escrito.</p>
+  <p data-lang="en">The good news is that, if your sales are in an ERP, the forecast is already half done. The history tells you the pace at which you sell, and the sales pipeline tells you what may come in over the coming months. In this guide we explain how to build a sales forecast for your SME with an ERP such as Odoo Community, with two simple methods, the mistakes that spoil it and how to ask your Odoo for it in writing.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Por qué la previsión de ventas de una pyme falla tan a menudo</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">Why SME sales forecasts fail so often</h2>
+  <p data-lang="es">Un ERP no adivina el futuro. Lo que hace es darte datos fiables y en un solo sitio sobre los que construir la previsión. Cuando la previsión sale mal, casi nunca es por la fórmula: es por los datos.</p>
+  <p data-lang="en">An ERP does not predict the future. What it does is give you reliable data, in one place, on which to build the forecast. When the forecast goes wrong, it is almost never because of the formula: it is because of the data.</p>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es"><li><strong>Las ventas están repartidas:</strong> unas en el programa de facturación, otras en el Excel del comercial y otras en el correo. Nadie tiene la foto completa.</li><li><strong>Se mira el total, no el ritmo:</strong> saber que llevas 300.000 € facturados no dice si vas bien o mal sin compararlo con el mismo punto del año pasado.</li><li><strong>Se ignora la estacionalidad:</strong> si diciembre es tu mejor mes, proyectar con la media de agosto te dará una cifra baja; y al revés.</li><li><strong>El embudo está inflado:</strong> oportunidades que nadie ha tocado en meses siguen ahí, con su importe, sumando ventas que no van a llegar.</li></ul>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en"><li><strong>Sales are scattered:</strong> some in the invoicing software, some in the salesperson's spreadsheet and some in email. Nobody has the full picture.</li><li><strong>People look at the total, not the pace:</strong> knowing you have invoiced €300,000 does not tell you whether you are doing well or badly unless you compare it with the same point last year.</li><li><strong>Seasonality is ignored:</strong> if December is your best month, projecting with August's average will give you a low figure, and vice versa.</li><li><strong>The pipeline is inflated:</strong> opportunities nobody has touched in months are still there, with their amount, adding up sales that will not come in.</li></ul>
+  <p data-lang="es">Si hoy tus ventas están en hojas de cálculo, el primer paso no es la previsión: es juntar los datos. Lo explicamos en <a href="/blog/migrar-de-excel-a-odoo/" style="color:var(--teal);cursor:pointer">cómo migrar de Excel a Odoo sin perder datos</a>.</p>
+  <p data-lang="en">If your sales live in spreadsheets today, the first step is not the forecast: it is bringing the data together. We explain it in <a href="/blog/migrar-de-excel-a-odoo/" style="color:var(--teal);cursor:pointer">how to move from Excel to Odoo without losing data</a>.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Dos formas de hacer la previsión de ventas con un ERP</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">Two ways to build a sales forecast with an ERP</h2>
+  <p data-lang="es">Para la mayoría de pymes bastan dos métodos, y lo ideal es usar los dos y comparar. Uno mira hacia atrás (lo que ya has vendido) y otro hacia delante (lo que tienes en negociación).</p>
+  <p data-lang="en">For most SMEs two methods are enough, and ideally you use both and compare. One looks back (what you have already sold) and the other looks ahead (what you have under negotiation).</p>
+
+  <div style="overflow-x:auto;margin:18px 0"><table style="width:100%;border-collapse:collapse;font-size:.88rem">
+    <thead><tr style="background:var(--navy);color:white"><th style="padding:11px 14px;text-align:left" data-lang="es">Método</th><th style="padding:11px 14px;text-align:left" data-lang="en">Method</th><th style="padding:11px 14px;text-align:left" data-lang="es">Qué usa</th><th style="padding:11px 14px;text-align:left" data-lang="en">What it uses</th><th style="padding:11px 14px;text-align:left" data-lang="es">Para quién encaja</th><th style="padding:11px 14px;text-align:left" data-lang="en">Who it suits</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Por ritmo (histórico)</td><td style="padding:10px 14px;" data-lang="en">Run rate (history)</td><td style="padding:10px 14px;" data-lang="es">Ventas o facturas de este año y del anterior</td><td style="padding:10px 14px;" data-lang="en">Sales or invoices from this year and last year</td><td style="padding:10px 14px;" data-lang="es">Venta recurrente: distribución, comercio, alimentación</td><td style="padding:10px 14px;" data-lang="en">Recurring sales: distribution, retail, food</td></tr>
+      <tr style="border-bottom:1px solid #eee;background:#f9f9fb"><td style="padding:10px 14px;" data-lang="es">Por embudo (CRM)</td><td style="padding:10px 14px;" data-lang="en">Pipeline (CRM)</td><td style="padding:10px 14px;" data-lang="es">Oportunidades abiertas, su importe, su probabilidad y su fecha de cierre prevista</td><td style="padding:10px 14px;" data-lang="en">Open opportunities, their amount, probability and expected closing date</td><td style="padding:10px 14px;" data-lang="es">Venta por proyecto o presupuesto: construcción, ingeniería, servicios profesionales</td><td style="padding:10px 14px;" data-lang="en">Project or quote-based sales: construction, engineering, professional services</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="es">Método 1: previsión por ritmo, con el análisis de ventas</h3>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="en">Method 1: run-rate forecast, with the sales analysis</h3>
+  <p data-lang="es">La pregunta es simple: si sigo vendiendo a este ritmo, ¿dónde acabo el año? En Odoo Community se responde con el análisis de ventas en vista pivote (una tabla dinámica, como la de Excel):</p>
+  <p data-lang="en">The question is simple: if I keep selling at this pace, where will I end the year? In Odoo Community it is answered with the sales analysis in pivot view (a pivot table, like Excel's):</p>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es"><li>Pon la fecha, agrupada por mes, en las filas, y el año en las columnas. Como medida, el importe sin impuestos.</li><li>Suma lo vendido este año hasta el último mes cerrado y divídelo por los meses transcurridos. Eso es tu ritmo mensual.</li><li>Corrige por estacionalidad: mira qué parte del total del año pasado se vendió en los meses que te faltan. Si noviembre y diciembre fueron el 22 % del año pasado, no los proyectes como dos meses medios.</li></ul>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en"><li>Put the date, grouped by month, in the rows and the year in the columns. As the measure, the untaxed amount.</li><li>Add up this year's sales up to the last closed month and divide by the months elapsed. That is your monthly pace.</li><li>Correct for seasonality: check what share of last year's total was sold in the months you have left. If November and December were 22% of last year, do not project them as two average months.</li></ul>
+  <p data-lang="es">Un ejemplo con cifras inventadas: a 31 de octubre llevas 410.000 €. Por ritmo puro serían 41.000 € al mes y 492.000 € a cierre. Pero si el año pasado noviembre y diciembre fueron el 22 % del total, lo vendido hasta octubre es el 78 %, y la previsión corregida sube a unos 525.000 €. Treinta mil euros de diferencia para decidir si contratas o no.</p>
+  <p data-lang="en">An example with made-up figures: by October 31 you have €410,000. At pure run rate that is €41,000 a month and €492,000 at year end. But if last year November and December were 22% of the total, what you sold up to October is 78%, and the corrected forecast rises to about €525,000. Thirty thousand euros of difference when deciding whether to hire or not.</p>
+  <p data-lang="es">Si nunca has montado un pivote, en <a href="/blog/como-sacar-informes-de-odoo-sin-saber-usarlo/" style="color:var(--teal);cursor:pointer">cómo sacar informes de Odoo sin saber usarlo</a> te explicamos filtros, agrupaciones y descarga a Excel paso a paso.</p>
+  <p data-lang="en">If you have never built a pivot, in <a href="/blog/como-sacar-informes-de-odoo-sin-saber-usarlo/" style="color:var(--teal);cursor:pointer">how to get reports out of Odoo without knowing how to use it</a> we explain filters, group-by and export to Excel step by step.</p>
+
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="es">Método 2: previsión por embudo, con el informe de previsión del CRM</h3>
+  <h3 style="font-family:var(--serif);color:var(--navy);margin:22px 0 8px;font-size:1.1rem" data-lang="en">Method 2: pipeline forecast, with the CRM forecast report</h3>
+  <p data-lang="es">Si vendes por presupuesto, el histórico dice poco: un proyecto grande cambia el año. Aquí manda el embudo. El CRM de Odoo Community incluye un informe de previsión (en CRM, menú Informes, «Previsión»; en inglés, <em>Forecast</em>) que, según la documentación oficial de Odoo 19, muestra las oportunidades abiertas en columnas por mes según su fecha de cierre prevista.</p>
+  <p data-lang="en">If you sell by quotation, history says little: one large project changes the year. Here the pipeline rules. Odoo Community's CRM includes a forecast report (in CRM, Reporting menu, "Forecast") which, according to Odoo 19's official documentation, shows open opportunities in monthly columns based on their expected closing date.</p>
+  <p data-lang="es">Lo útil es cómo suma: cada columna no da el importe bruto, sino el ingreso prorrateado, es decir, el ingreso esperado multiplicado por la probabilidad. Una oportunidad de 20.000 € al 20 % cuenta 4.000 €; una de 5.000 € al 90 % cuenta 4.500 €. Así una oferta grande pero verde no infla la previsión. El informe también se puede ver en gráfico, pivote o lista.</p>
+  <p data-lang="en">What makes it useful is how it adds up: each column does not show the gross amount, but the prorated revenue, that is, expected revenue multiplied by probability. A €20,000 opportunity at 20% counts €4,000; a €5,000 one at 90% counts €4,500. That way a large but early-stage offer does not inflate the forecast. The report can also be viewed as a graph, pivot or list.</p>
+  <p data-lang="es">Para que funcione, el equipo comercial tiene que mantener tres datos al día en cada oportunidad: importe, probabilidad y fecha de cierre prevista. Y una vez al mes, alguien tiene que cerrar como perdidas las que ya no van a ningún sitio.</p>
+  <p data-lang="en">For it to work, the sales team has to keep three fields up to date on every opportunity: amount, probability and expected closing date. And once a month, someone has to mark as lost the ones that are going nowhere.</p>
+  <p data-lang="es"><em>Los nombres exactos de menús y medidas pueden variar ligeramente según la versión, el idioma y los módulos instalados.</em></p>
+  <p data-lang="en"><em>Exact menu and measure names may vary slightly depending on the version, language and installed modules.</em></p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">De la previsión de ventas a la previsión de caja</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">From sales forecast to cash forecast</h2>
+  <p data-lang="es">Facturar no es cobrar. Una previsión de ventas que no mira los cobros te puede decir que el año va bien mientras la cuenta del banco dice lo contrario. Dos comprobaciones sencillas en tu ERP:</p>
+  <p data-lang="en">Invoicing is not collecting. A sales forecast that ignores collections can tell you the year is going well while the bank account says the opposite. Two simple checks in your ERP:</p>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es"><li><strong>Facturas vencidas:</strong> cuánto te deben ya y quién. Si una parte importante de lo facturado no se cobra a tiempo, tu previsión de caja tiene que descontarlo. Lo explicamos en <a href="/blog/controlar-cobros-pendientes-pyme/" style="color:var(--teal);cursor:pointer">cómo controlar los cobros pendientes de tu pyme</a>.</li><li><strong>Clientes que bajan:</strong> la previsión por ritmo da por hecho que tus clientes siguen comprando. Si alguno grande ha dejado de hacerlo, corrige antes. Te lo contamos en <a href="/blog/clientes-que-dejan-de-comprar-como-detectarlos/" style="color:var(--teal);cursor:pointer">clientes que dejan de comprar: cómo detectarlos a tiempo</a>.</li></ul>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en"><li><strong>Overdue invoices:</strong> how much you are already owed and by whom. If a significant part of what you invoice is not collected on time, your cash forecast has to discount it. We explain it in <a href="/blog/controlar-cobros-pendientes-pyme/" style="color:var(--teal);cursor:pointer">how to control your SME's outstanding collections</a>.</li><li><strong>Customers who drop:</strong> the run-rate forecast assumes your customers keep buying. If a large one has stopped, correct it early. We cover it in <a href="/blog/clientes-que-dejan-de-comprar-como-detectarlos/" style="color:var(--teal);cursor:pointer">customers who stop buying: how to spot them in time</a>.</li></ul>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Previsión de ventas preguntando: OdooListo IA</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">Sales forecasting by asking: OdooListo AI</h2>
+  <p data-lang="es">Los dos métodos funcionan, pero hay que saber montar el pivote y acordarse de hacerlo. La alternativa es escribir la pregunta tal cual. Eso es <a href="/odoo-con-ia/" style="color:var(--teal);cursor:pointer">OdooListo IA</a>, un módulo propio incluido en el Pack L:</p>
+  <p data-lang="en">Both methods work, but you need to know how to build the pivot and remember to do it. The alternative is to type the question as is. That is <a href="/odoo-con-ia/" style="color:var(--teal);cursor:pointer">OdooListo AI</a>, our own module included in Pack L:</p>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es"><li>«¿Cuánto voy a facturar a cierre si sigo a este ritmo?»</li><li>«Compárame las ventas de este año, mes a mes, con las del año pasado.»</li><li>«Mándame en Excel las ventas del trimestre por cliente.»</li></ul>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en"><li>"How much will I invoice at year end if I keep this pace?"</li><li>"Compare this year's sales, month by month, with last year's."</li><li>"Send me this quarter's sales by customer in Excel."</li></ul>
+  <p data-lang="es">OdooListo IA consulta los informes del ERP (ventas, facturas, márgenes, previsiones y stock), agrupa por cliente, producto o periodo y te abre en Odoo la vista correspondiente. La previsión que te da sale de tus propios datos: si los datos están incompletos, la respuesta también. Su alcance, sin adornos: también da de alta clientes y productos, siempre con un resumen y pidiendo confirmación antes de guardar. No crea pedidos, presupuestos, facturas ni oportunidades, no cambia estados, no registra pagos y no envía correos. El Pack L incluye 200 consultas al mes.</p>
+  <p data-lang="en">OdooListo AI queries the ERP's reports (sales, invoices, margins, forecasts and stock), groups by customer, product or period and opens the matching view in Odoo. The forecast it gives you comes from your own data: if the data is incomplete, so is the answer. Its scope, plainly: it can also create customers and products, always with a summary and asking for confirmation before saving. It does not create orders, quotations, invoices or opportunities, change statuses, register payments or send emails. Pack L includes 200 queries per month.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">¿Por qué OdooListo?</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">Why OdooListo?</h2>
+  <p data-lang="es">Una previsión de ventas solo es tan buena como los datos que tiene debajo. Dejamos tu Odoo Community configurado con Ventas, CRM y Contabilidad y tus datos básicos, para que el histórico empiece a acumularse desde el primer día.</p>
+  <p data-lang="en">A sales forecast is only as good as the data underneath it. We leave your Odoo Community configured with Sales, CRM and Accounting and your core data, so your history starts building up from day one.</p>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="es"><li><strong>Puesta en marcha en 3 días hábiles</strong>, o te devolvemos el setup.</li><li><strong>Usuarios ilimitados:</strong> que todos tus comerciales mantengan su embudo al día; tu cuota no se mueve ni un euro.</li><li><strong>Tus datos, en tu casa:</strong> copia de seguridad diaria entregada a ti. Si algún día decides irte, ya la tienes.</li><li><strong>Servidor en la Unión Europea</strong>, sin licencias y sin permanencia.</li><li><strong>Especialistas desde 2014</strong>, de OpenERP v5 a Odoo 19 y 20.</li></ul>
+  <ul style="margin:10px 0 16px 20px;line-height:1.7" data-lang="en"><li><strong>Up and running in 3 business days</strong>, or we refund the setup.</li><li><strong>Unlimited users:</strong> let all your salespeople keep their pipeline up to date; your fee does not move a single euro.</li><li><strong>Your data, at home:</strong> daily backup delivered to you. If you ever decide to leave, you already have it.</li><li><strong>Server in the European Union</strong>, no licenses and no lock-in.</li><li><strong>Specialists since 2014</strong>, from OpenERP v5 to Odoo 19 and 20.</li></ul>
+  <div style="overflow-x:auto;margin:18px 0"><table style="width:100%;border-collapse:collapse;font-size:.88rem">
+    <thead><tr style="background:var(--navy);color:white"><th style="padding:11px 14px;text-align:left" data-lang="es">Pack</th><th style="padding:11px 14px;text-align:left" data-lang="en">Pack</th><th style="padding:11px 14px;text-align:center" data-lang="es">Setup</th><th style="padding:11px 14px;text-align:center" data-lang="en">Setup</th><th style="padding:11px 14px;text-align:center" data-lang="es">Mensual</th><th style="padding:11px 14px;text-align:center" data-lang="en">Monthly</th><th style="padding:11px 14px;text-align:center" data-lang="es">Módulos</th><th style="padding:11px 14px;text-align:center" data-lang="en">Modules</th></tr></thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Pack S — Esencial</td><td style="padding:10px 14px;" data-lang="en">Pack S — Essential</td><td style="padding:10px 10px;text-align:center;" data-lang="es">297 €</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€297</td><td style="padding:10px 10px;text-align:center;" data-lang="es">97 €/mes</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€97/mo</td><td style="padding:10px 10px;text-align:center;" data-lang="es">Contabilidad, Ventas, CRM</td><td style="padding:10px 10px;text-align:center;" data-lang="en">Accounting, Sales, CRM</td></tr>
+      <tr style="border-bottom:1px solid #eee;background:#f9f9fb"><td style="padding:10px 14px;" data-lang="es">Pack M — Completo</td><td style="padding:10px 14px;" data-lang="en">Pack M — Complete</td><td style="padding:10px 10px;text-align:center;" data-lang="es">497 €</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€497</td><td style="padding:10px 10px;text-align:center;" data-lang="es">147 €/mes</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€147/mo</td><td style="padding:10px 10px;text-align:center;" data-lang="es">+ Inventario, Compras, Proyectos</td><td style="padding:10px 10px;text-align:center;" data-lang="en">+ Inventory, Purchasing, Projects</td></tr>
+      <tr style="border-bottom:1px solid #eee"><td style="padding:10px 14px;" data-lang="es">Pack L — Avanzado</td><td style="padding:10px 14px;" data-lang="en">Pack L — Advanced</td><td style="padding:10px 10px;text-align:center;" data-lang="es">697 €</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€697</td><td style="padding:10px 10px;text-align:center;" data-lang="es">197 €/mes</td><td style="padding:10px 10px;text-align:center;" data-lang="en">€197/mo</td><td style="padding:10px 10px;text-align:center;" data-lang="es">+ RRHH, Fabricación, eCommerce, Multiempresa, OdooListo IA</td><td style="padding:10px 10px;text-align:center;" data-lang="en">+ HR, Manufacturing, eCommerce, Multi-company, OdooListo AI</td></tr>
+    </tbody>
+  </table></div>
+  <p data-lang="es">El análisis de ventas y el informe de previsión del CRM están desde el Pack S. OdooListo IA, en el Pack L. Lo decimos claro: no es para todo el mundo. Si necesitas un modelo estadístico de previsión a medida o un cuadro de mando propio de tu sector, eso es un desarrollo y no entra en el pack; se valora aparte, y te lo decimos antes de que pagues. Puedes ver <a href="/blog/implantar-odoo-rapido/" style="color:var(--teal);cursor:pointer">cómo trabajamos en 3 días</a> o ir directamente a <a href="/#contratar" style="color:var(--teal);cursor:pointer">los packs disponibles</a>.</p>
+  <p data-lang="en">The sales analysis and the CRM forecast report are included from Pack S. OdooListo AI, in Pack L. To be clear: it is not for everyone. If you need a custom statistical forecasting model or a dashboard specific to your industry, that is development work and is not in the pack; it is quoted separately, and we tell you before you pay. See <a href="/blog/implantar-odoo-rapido/" style="color:var(--teal);cursor:pointer">how we work in 3 days</a> or go straight to <a href="/#contratar" style="color:var(--teal);cursor:pointer">the available packs</a>.</p>
+
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="es">Preguntas frecuentes sobre la previsión de ventas en una pyme</h2>
+  <h2 style="font-family:var(--serif);color:var(--navy);margin:32px 0 12px" data-lang="en">Frequently asked questions about SME sales forecasting</h2>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿Cuánto histórico necesito para hacer una previsión de ventas?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">How much history do I need to build a sales forecast?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">Con un año completo ya puedes corregir por estacionalidad; con dos o tres, la previsión es más estable. Si empiezas hoy con el ERP, puedes cargar las ventas de años anteriores como datos básicos o empezar por la previsión por embudo, que no depende del histórico.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">With one full year you can already correct for seasonality; with two or three, the forecast is more stable. If you are starting with the ERP today, you can load previous years' sales as core data or start with the pipeline forecast, which does not depend on history.</p></details>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿Odoo Community tiene previsión de ventas o hace falta Enterprise?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">Does Odoo Community have sales forecasting or do I need Enterprise?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">El CRM de Odoo Community 19 incluye el informe de previsión, que agrupa las oportunidades por mes de cierre previsto y suma el ingreso prorrateado por probabilidad. El análisis de ventas en vista pivote también es de Community y se descarga a Excel.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">Odoo Community 19's CRM includes the forecast report, which groups opportunities by expected closing month and adds up revenue prorated by probability. The sales analysis in pivot view is also part of Community and can be downloaded to Excel.</p></details>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿Cada cuánto conviene revisar la previsión de ventas?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">How often should I review the sales forecast?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">Una vez al mes, al cerrar el mes, es suficiente para la mayoría de pymes. Es también el momento de limpiar el embudo: cerrar como perdidas las oportunidades paradas y actualizar fechas y probabilidades.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">Once a month, at month end, is enough for most SMEs. It is also the time to clean up the pipeline: mark stalled opportunities as lost and update dates and probabilities.</p></details>
+
+  <details style="border:1px solid #ddd;border-radius:8px;padding:14px 18px;margin-bottom:10px"><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="es">¿OdooListo IA hace la previsión de ventas sola?</summary><summary style="font-weight:700;color:var(--navy);cursor:pointer" data-lang="en">Does OdooListo AI do the sales forecast on its own?</summary><p style="margin-top:10px;color:var(--g4)" data-lang="es">Responde cuando le preguntas, con los datos que ya tiene tu Odoo: escribes «¿cuánto voy a facturar a cierre si sigo a este ritmo?» y te contesta y te abre la vista correspondiente. No envía avisos por su cuenta. Está incluida en el Pack L, con 200 consultas al mes.</p><p style="margin-top:10px;color:var(--g4)" data-lang="en">It answers when you ask, using the data already in your Odoo: you type "how much will I invoice at year end if I keep this pace?" and it replies and opens the matching view. It does not send alerts on its own. It is included in Pack L, with 200 queries per month.</p></details>
+
+  <p data-lang="es" style="margin-top:28px">En resumen: la previsión de ventas de una pyme con un ERP no necesita fórmulas complicadas, necesita datos completos. Mira el ritmo de este año frente al anterior, corrige por estacionalidad, contrástalo con el embudo del CRM y descuenta lo que no se cobra. Y si prefieres preguntar en vez de montar el informe, OdooListo IA te da la cifra sin llamar a nadie ni abrir un Excel.</p>
+  <p data-lang="en" style="margin-top:28px">In short: an SME's sales forecast with an ERP does not need complicated formulas, it needs complete data. Look at this year's pace against last year's, correct for seasonality, check it against the CRM pipeline and discount what is not collected. And if you would rather ask than build the report, OdooListo AI gives you the figure without calling anyone or opening a spreadsheet.</p>
+
+  <div style="background:linear-gradient(135deg,#1C0F5E,#0d1e3a);border-radius:16px;padding:32px;text-align:center;margin-top:36px">
+    <h3 style="color:white;font-family:var(--serif);font-size:1.4rem;margin-bottom:10px" data-lang="es">Deja de calcular a ojo cuánto vas a facturar</h3>
+    <h3 style="color:white;font-family:var(--serif);font-size:1.4rem;margin-bottom:10px" data-lang="en">Stop guessing what you will invoice</h3>
+    <p style="color:rgba(255,255,255,.85);margin-bottom:22px;font-size:.95rem" data-lang="es">Desde 297 €. En marcha en 3 días o te devolvemos el setup. OdooListo IA incluida en el Pack L. Sin permanencia.</p>
+    <p style="color:rgba(255,255,255,.85);margin-bottom:22px;font-size:.95rem" data-lang="en">From €297. Up and running in 3 days or your setup back. OdooListo AI included in Pack L. No lock-in.</p>
+    <a class="btn-cta-post" href="/#contratar" style="background:white;color:var(--navy);border:none;padding:14px 32px;border-radius:30px;font-weight:800;font-size:.95rem;cursor:pointer;font-family:var(--sans)" data-lang="es">Ver packs →</a>
+    <a class="btn-cta-post" href="/#contratar" style="background:white;color:var(--navy);border:none;padding:14px 32px;border-radius:30px;font-weight:800;font-size:.95rem;cursor:pointer;font-family:var(--sans)" data-lang="en">See packs →</a>
+  </div>
+</div>
+</div>
+
+<footer class="bl-foot">OdooListo · Praxya Formaplus, S.L. · <a href="/">Inicio</a> · <a href="/blog/">Blog</a> · <a href="/#terminos">Términos</a> · <a href="/#privacidad">Privacidad</a><br>Parte del grupo <a href="https://axentoo.com/es/" target="_blank" rel="noopener">Axentoo</a>: OdooListo, Campus Cleverit y El Sastre de Odoo.</footer>
+<div class="wa-float">
+  <a class="wa-bubble" data-lang="es" href="https://wa.me/34644044808?text=%5BOdooListo%5D%20Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" target="_blank" rel="noopener">💬 ¿Tienes dudas? Escríbenos</a>
+  <a class="wa-bubble" data-lang="en" href="https://wa.me/34644044808?text=%5BOdooListo%5D%20Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" target="_blank" rel="noopener">💬 Questions? Chat with us</a>
+  <a class="wa-btn" 
+     href="https://wa.me/34644044808?text=%5BOdooListo%5D%20Hola,%20me%20interesa%20saber%20más%20sobre%20OdooListo.%20¿Podéis%20ayudarme?" 
+     target="_blank" 
+     rel="noopener"
+     aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M14 2C7.373 2 2 7.373 2 14c0 2.12.554 4.11 1.524 5.832L2 26l4.354-1.497A11.94 11.94 0 0014 26c6.627 0 12-5.373 12-12S20.627 2 14 2z" fill="white"/>
+      <path d="M19.5 16.8c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z" fill="#25D366"/>
+    </svg>
+  </a>
+</div>
+<script>
+var BLOG_SLUGS = {"post31": "prevision-de-ventas-pyme-con-erp", "post30": "clientes-que-dejan-de-comprar-como-detectarlos", "post29": "como-sacar-informes-de-odoo-sin-saber-usarlo", "post28": "odoo-inteligencia-artificial", "post27": "erp-con-inteligencia-artificial-para-pymes", "post26": "controlar-cobros-pendientes-pyme", "post25": "erp-para-pequena-empresa", "post24": "odoo-para-empresas-de-distribucion", "post23": "odoo-vs-zoho-pyme", "post22": "odoo-peru-pymes", "post21": "odoo-pymes-chile", "post20": "odoo-pymes-argentina", "post19": "odoo-para-ecommerce-pyme", "post18": "migrar-de-excel-a-odoo", "post17": "odoo-para-autonomos-espana", "post16": "odoo-vs-sage-50cloud", "post15": "erp-pyme-mexico-barato", "post14": "odoo-colombia", "post13": "odoo-vs-contpaq", "post12": "odoo-vs-aspel", "post11": "implementar-odoo-mexico", "post10": "implantar-odoo-rapido", "post9": "odoo-vs-sap-pyme", "post8": "erp-barato-pyme", "post7": "odoo-community-vs-enterprise", "post6": "kit-digital-odoo", "post5": "odoo-community-gratis", "post4": "odoo-barato-pymes-espana", "post3": "verifactu-odoo", "post2": "cuanto-cuesta-implantar-odoo", "post1": "odoo-vs-holded"};
+function go(id){
+  var m = {'home':'/','checkout':'/#contratar','modules':'/#modulos','about':'/#nosotros','contact':'/#contacto','terms':'/#terminos','privacy':'/#privacidad','legal':'/#legal','cookies':'/#cookies','blog':'/blog/'};
+  if (BLOG_SLUGS[id]) { location.href = '/blog/' + BLOG_SLUGS[id] + '/'; return; }
+  location.href = m[id] || '/';
+}
+function goCheckout(){ location.href = '/#contratar'; }
+function openVideo(id){ window.open('https://www.youtube.com/watch?v=' + id, '_blank', 'noopener'); }
+function setLang(){}
+(function(){
+  var box = document.getElementById('ai-video');
+  if (!box) return;
+  var id = box.getAttribute('data-yt');
+  box.style.backgroundImage = 'url(https://i.ytimg.com/vi/' + id + '/hqdefault.jpg)';
+  function load(sound){
+    if (box.dataset.loaded) return; box.dataset.loaded = '1';
+    box.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&mute=' + (sound ? 0 : 1) + '&playsinline=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="OdooListo IA"></iframe>';
+    try { gtag('event', 'video_ia', {'accion': sound ? 'clic' : 'auto_silencio', 'ubicacion': 'landing'}); } catch(e){}
+  }
+  box.addEventListener('click', function(){ load(true); });
+  if ('IntersectionObserver' in window) { var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) { load(false); io.disconnect(); } }); }, {threshold:.6}); io.observe(box); }
+})();
+document.addEventListener('click', function(ev){
+  var a = ev.target.closest ? ev.target.closest('a[href]') : null;
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  try {
+    if (href.indexOf('wa.me/') > -1) {
+      if (!a.dataset.waBase) a.dataset.waBase = href;
+      a.setAttribute('href', a.dataset.waBase + encodeURIComponent(' (ref: ' + location.pathname.replace(/^[/]|[/]$/g, '') + ')'));
+      gtag('event', 'whatsapp_click', {'ubicacion': 'blog', 'transport_type':'beacon'});
+    }
+    else if (href.indexOf('calendly.com/') > -1) gtag('event', 'calendly_click', {'tipo': 'demo', 'ubicacion': 'blog', 'transport_type':'beacon'});
+    else if (href.indexOf('/#contratar') > -1) gtag('event', 'blog_cta_click', {'transport_type':'beacon'});
+  } catch(e){}
+}, true);
+</script>
+</body>
+</html>

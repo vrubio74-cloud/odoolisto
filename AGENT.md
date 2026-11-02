@@ -54,7 +54,7 @@ Eres el agente de contenido SEO de **OdooListo** (Praxya Formaplus, S.L.). Tu mi
 - [x] `odoo inteligencia artificial` → PUBLICADO: 15 Oct 2026 → URL: https://odoolisto.com/blog/odoo-inteligencia-artificial/ *(Pack L; qué trae la app de IA de Odoo 19, que no está en Community, y que la «IA agéntica» figura en el plan Personalizado de Enterprise; precios de octubre 2026)*
 - [x] `como sacar informes de odoo sin saber usarlo` → PUBLICADO: 22 Oct 2026 → URL: https://odoolisto.com/blog/como-sacar-informes-de-odoo-sin-saber-usarlo/ *(Pack L para OdooListo IA; informes estándar de Community en todos los packs; aclara que Spreadsheet/Documents y la antigüedad de saldos son de Enterprise)*
 - [x] `clientes que dejan de comprar como detectarlos` → PUBLICADO: 29 Oct 2026 → URL: https://odoolisto.com/blog/clientes-que-dejan-de-comprar-como-detectarlos/ *(Pack S para el pivote de ventas de Community; Pack L para OdooListo IA; no cita la opción de comparar periodos porque no figura en la documentación de Odoo 19)*
-- [ ] `previsión de ventas pyme con erp`
+- [x] `previsión de ventas pyme con erp` → PUBLICADO: 02 Nov 2026 → URL: https://odoolisto.com/blog/prevision-de-ventas-pyme-con-erp/ *(Pack S para el análisis de ventas y el informe de previsión del CRM de Community, verificado en el código de Odoo 19; Pack L para OdooListo IA)*
 - [ ] `control de stock pyme alertas de rotura`
 
 > **Nota de sincronización (15 Jul 2026):** este checklist no reflejaba el estado real del sitio — 9 artículos ya estaban publicados en index.html (post1-post9) sin haberse marcado aquí. Se ha reconciliado abajo. También se detectó que las páginas `page-post1` y `page-post2` tienen el contenido intercambiado en el HTML en vivo (la tarjeta "Odoo vs Holded" enlaza al contenido de "Cuánto cuesta implantar Odoo" y viceversa). Corregido el 13 Sep 2026 (commit 072219e, solo swap de IDs, contenido de los artículos intacto).
@@ -242,6 +242,7 @@ crear `blog/<slug>/index.html`. Haz commit de `blog/`, `assets/` y `sitemap.xml`
 | 2026-10-15 | odoo inteligencia artificial | Odoo e inteligencia artificial: qué trae Odoo 19 y cómo tenerla en Community | https://odoolisto.com/blog/odoo-inteligencia-artificial/ | ✅ Publicado |
 | 2026-10-22 | como sacar informes de odoo sin saber usarlo | Cómo sacar informes de Odoo sin saber usarlo: guía para gerentes de pyme | https://odoolisto.com/blog/como-sacar-informes-de-odoo-sin-saber-usarlo/ | ✅ Publicado |
 | 2026-10-29 | clientes que dejan de comprar como detectarlos | Clientes que dejan de comprar: cómo detectarlos a tiempo en tu pyme | https://odoolisto.com/blog/clientes-que-dejan-de-comprar-como-detectarlos/ | ✅ Publicado |
+| 2026-11-02 | previsión de ventas pyme con erp | Previsión de ventas para pymes con un ERP: cómo saber cuánto vas a facturar | https://odoolisto.com/blog/prevision-de-ventas-pyme-con-erp/ | ✅ Publicado |
 
 ---
 
@@ -256,5 +257,5 @@ crear `blog/<slug>/index.html`. Haz commit de `blog/`, `assets/` y `sitemap.xml`
 
 ---
 
-*Última actualización: 29 Oct 2026 (post30 `clientes que dejan de comprar como detectarlos` publicado)*
+*Última actualización: 02 Nov 2026 (post31 `previsión de ventas pyme con erp` publicado)*
 *Agente configurado por: Praxya Formaplus, S.L.*
