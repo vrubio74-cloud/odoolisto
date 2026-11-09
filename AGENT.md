@@ -101,7 +101,7 @@ Eres el agente de contenido SEO de **OdooListo** (Praxya Formaplus, S.L.). Tu mi
 - [x] `odoo para empresas de distribucion` → PUBLICADO: 01 Oct 2026 → URL: https://odoolisto.com/#post24 *(Pack M)*
 - [x] `erp para pequeña empresa` → PUBLICADO: 10 Oct 2026 → URL: https://odoolisto.com/#post25 *(Pack S/M; comparativa de cuota por usuario con Holded y Odoo Enterprise, precios de octubre 2026)*
 - [x] `controlar cobros pendientes pyme` → PUBLICADO: 10 Oct 2026 → URL: https://odoolisto.com/blog/controlar-cobros-pendientes-pyme/ *(Pack S; deja claro que el seguimiento automático por niveles y el informe de antigüedad de saldos son de Enterprise)*
-- [ ] `odoo crm pymes` → Título: "Odoo CRM para pymes: embudo comercial conectado con ventas y facturación" *(Pack S)*
+- [x] `odoo crm pymes` → PUBLICADO: 09 Nov 2026 → URL: https://odoolisto.com/blog/odoo-crm-pymes/ *(Pack S; funciones verificadas en el código de Odoo 19 Community, incluida la probabilidad predictiva; WhatsApp y VoIP no están en Community; precios de HubSpot y Pipedrive de noviembre 2026, de fuentes secundarias)*
 - [ ] `odoo fabricacion pyme` → Título: "Odoo Fabricación para pymes: órdenes de producción y escandallos sin Excel" *(Pack L; ojo: el planificador Gantt y PLM son de Enterprise)*
 
 ---
@@ -244,6 +244,7 @@ crear `blog/<slug>/index.html`. Haz commit de `blog/`, `assets/` y `sitemap.xml`
 | 2026-10-29 | clientes que dejan de comprar como detectarlos | Clientes que dejan de comprar: cómo detectarlos a tiempo en tu pyme | https://odoolisto.com/blog/clientes-que-dejan-de-comprar-como-detectarlos/ | ✅ Publicado |
 | 2026-11-02 | previsión de ventas pyme con erp | Previsión de ventas para pymes con un ERP: cómo saber cuánto vas a facturar | https://odoolisto.com/blog/prevision-de-ventas-pyme-con-erp/ | ✅ Publicado |
 | 2026-11-05 | control de stock pyme alertas de rotura | Control de stock en tu pyme: alertas de rotura antes de quedarte sin producto | https://odoolisto.com/blog/control-de-stock-pyme-alertas-de-rotura/ | ✅ Publicado |
+| 2026-11-09 | odoo crm pymes | Odoo CRM para pymes: embudo comercial conectado con ventas y facturación | https://odoolisto.com/blog/odoo-crm-pymes/ | ✅ Publicado |
 
 ---
 
@@ -258,5 +259,5 @@ crear `blog/<slug>/index.html`. Haz commit de `blog/`, `assets/` y `sitemap.xml`
 
 ---
 
-*Última actualización: 05 Nov 2026 (post32 `control de stock pyme alertas de rotura` publicado)*
+*Última actualización: 09 Nov 2026 (post33 `odoo crm pymes` publicado)*
 *Agente configurado por: Praxya Formaplus, S.L.*
