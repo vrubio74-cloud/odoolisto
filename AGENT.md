@@ -102,7 +102,7 @@ Eres el agente de contenido SEO de **OdooListo** (Praxya Formaplus, S.L.). Tu mi
 - [x] `erp para pequeña empresa` → PUBLICADO: 10 Oct 2026 → URL: https://odoolisto.com/#post25 *(Pack S/M; comparativa de cuota por usuario con Holded y Odoo Enterprise, precios de octubre 2026)*
 - [x] `controlar cobros pendientes pyme` → PUBLICADO: 10 Oct 2026 → URL: https://odoolisto.com/blog/controlar-cobros-pendientes-pyme/ *(Pack S; deja claro que el seguimiento automático por niveles y el informe de antigüedad de saldos son de Enterprise)*
 - [x] `odoo crm pymes` → PUBLICADO: 09 Nov 2026 → URL: https://odoolisto.com/blog/odoo-crm-pymes/ *(Pack S; funciones verificadas en el código de Odoo 19 Community, incluida la probabilidad predictiva; WhatsApp y VoIP no están en Community; precios de HubSpot y Pipedrive de noviembre 2026, de fuentes secundarias)*
-- [ ] `odoo fabricacion pyme` → Título: "Odoo Fabricación para pymes: órdenes de producción y escandallos sin Excel" *(Pack L; ojo: el planificador Gantt y PLM son de Enterprise)*
+- [x] `odoo fabricacion pyme` → PUBLICADO: 12 Nov 2026 → URL: https://odoolisto.com/blog/odoo-fabricacion-pyme/ *(Pack L; funciones verificadas en el código de Odoo 19 Community; MPS, PLM, calidad, Gantt y vista de taller marcados como Enterprise; sin precios por usuario de Odoo porque la página oficial no permitió confirmar la cifra anual)*
 
 ---
 
@@ -245,6 +245,7 @@ crear `blog/<slug>/index.html`. Haz commit de `blog/`, `assets/` y `sitemap.xml`
 | 2026-11-02 | previsión de ventas pyme con erp | Previsión de ventas para pymes con un ERP: cómo saber cuánto vas a facturar | https://odoolisto.com/blog/prevision-de-ventas-pyme-con-erp/ | ✅ Publicado |
 | 2026-11-05 | control de stock pyme alertas de rotura | Control de stock en tu pyme: alertas de rotura antes de quedarte sin producto | https://odoolisto.com/blog/control-de-stock-pyme-alertas-de-rotura/ | ✅ Publicado |
 | 2026-11-09 | odoo crm pymes | Odoo CRM para pymes: embudo comercial conectado con ventas y facturación | https://odoolisto.com/blog/odoo-crm-pymes/ | ✅ Publicado |
+| 2026-11-12 | odoo fabricacion pyme | Odoo Fabricación para pymes: órdenes de producción y escandallos sin Excel | https://odoolisto.com/blog/odoo-fabricacion-pyme/ | ✅ Publicado |
 
 ---
 
@@ -259,5 +260,5 @@ crear `blog/<slug>/index.html`. Haz commit de `blog/`, `assets/` y `sitemap.xml`
 
 ---
 
-*Última actualización: 09 Nov 2026 (post33 `odoo crm pymes` publicado)*
+*Última actualización: 12 Nov 2026 (post34 `odoo fabricacion pyme` publicado; no quedan keywords `[ ]`: la próxima ejecución debe investigar una nueva tanda)*
 *Agente configurado por: Praxya Formaplus, S.L.*
