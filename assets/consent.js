@@ -2,7 +2,8 @@
  * Consent Mode v2: todo denegado por defecto (lo fija el bloque del <head>).
  * Este script pinta el banner, guarda la elección y, si se acepta:
  *   - actualiza el consentimiento de Google (GA4 + Ads)
- *   - carga Microsoft Clarity
+ *   - pasa Microsoft Clarity a modo con cookies (sin consentimiento, Clarity funciona en su modo sin cookies:
+ *     ConsentV2 denegado, cada página vista es una sesión aparte y no se escribe _clck/_clsk)
  *   - avisa a window.olOnConsent (para píxeles futuros, p. ej. Meta)
  * Además mide los clics a Calendly y WhatsApp como conversión secundaria (Google y Microsoft).
  * Elección guardada en localStorage 'ol_consent' = 'all' | 'none'.
@@ -14,14 +15,19 @@
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
 
-  function loadClarity() {
-    if (LOCAL || window.__olClarity) return;
-    window.__olClarity = true;
-    (function (c, l, a, r, i, t, y) {
-      c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
-      t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
-      y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-    })(window, document, 'clarity', 'script', 'xenf784cuk');
+  // ok = true: con cookies (aceptado) · ok = false: modo sin cookies de Clarity (ConsentV2 denegado)
+  function loadClarity(ok) {
+    if (LOCAL) return;
+    if (!window.__olClarity) {
+      window.__olClarity = true;
+      (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+        t = l.createElement(r); t.async = 1; t.src = 'https://www.clarity.ms/tag/' + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+      })(window, document, 'clarity', 'script', 'xenf784cuk');
+    }
+    var v = ok ? 'granted' : 'denied';
+    window.clarity('consentv2', { ad_Storage: v, analytics_Storage: v });
   }
 
   // Píxel de Meta (conjunto de datos «OdooListo web»): solo con consentimiento
@@ -59,7 +65,7 @@
         ad_personalization: 'granted', analytics_storage: 'granted'
       });
     }
-    loadClarity();
+    loadClarity(true);
     if (typeof window.olOnConsent === 'function') { try { window.olOnConsent(); } catch (e) {} }
   }
 
@@ -70,6 +76,7 @@
         ad_personalization: 'denied', analytics_storage: 'denied'
       });
     }
+    loadClarity(false);
   }
 
   // Clic en Calendly o WhatsApp: conversión secundaria «Clic Calendly o WhatsApp - OdooListo»
@@ -82,7 +89,13 @@
     var href = a.getAttribute('href') || '';
     if (!/calendly\.com|wa\.me|api\.whatsapp\.com/.test(href)) return;
     if (/sesion-go-live|acabo%20de%20contratar|just%20signed%20up/i.test(href)) return;
-    try { if (typeof gtag === 'function') gtag('event', 'conversion', { send_to: CONV_CONTACTO, transport_type: 'beacon' }); } catch (err) {}
+    try {
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', { send_to: CONV_CONTACTO, transport_type: 'beacon' });
+        // GA4: evento propio (con consentimiento denegado viaja como ping sin cookies de Consent Mode)
+        gtag('event', 'clic_contacto', { metodo: /calendly/.test(href) ? 'calendly' : 'whatsapp', transport_type: 'beacon' });
+      }
+    } catch (err) {}
     if (window.__olUet) { window.uetq = window.uetq || []; window.uetq.push('event', 'contact', {}); }
   }, true);
 
@@ -104,9 +117,9 @@
     var d = document.createElement('div'); d.id = 'olcb'; d.setAttribute('role', 'dialog');
     d.setAttribute('aria-label', en ? 'Cookies' : 'Cookies');
     d.innerHTML = en
-      ? '<p>We use analytics and advertising cookies (Google, Meta, Microsoft) only if you accept them. <a href="/#cookies">Cookie policy</a>.</p>' +
+      ? '<p>Accepting cookies helps us see which parts of the site are useful and improve it. Analytics and advertising cookies (Google, Meta, Microsoft) are only used if you accept; without them we measure visits without cookies. <a href="/#cookies">Cookie policy</a>.</p>' +
         '<div class="b"><button class="r" type="button">Reject</button><button class="a" type="button">Accept</button></div>'
-      : '<p>Usamos cookies de análisis y publicidad (Google, Meta, Microsoft) solo si las aceptas. <a href="/#cookies">Política de cookies</a>.</p>' +
+      : '<p>Si aceptas las cookies, nos ayudas a ver qué partes de la web te sirven y a mejorarla. Las de análisis y publicidad (Google, Meta, Microsoft) solo se usan si las aceptas; sin ellas, medimos las visitas sin cookies. <a href="/#cookies">Política de cookies</a>.</p>' +
         '<div class="b"><button class="r" type="button">Rechazar</button><button class="a" type="button">Aceptar</button></div>';
     d.querySelector('.r').onclick = function () { set('none'); deny(); d.remove(); };
     d.querySelector('.a').onclick = function () { set('all'); grant(); d.remove(); };
@@ -139,7 +152,7 @@
 
   var c = get();
   if (c === 'all') {
-    loadClarity(); loadMeta(); loadUet();
+    loadClarity(true); loadMeta(); loadUet();
     // Eventos lanzados antes de cargar este script (p. ej. purchase en /gracias)
     try {
       window.dataLayer.forEach(function (a) {
@@ -155,7 +168,10 @@
       });
     } catch (e) {}
   }
-  else if (c !== 'none') {
+  else {
+    loadClarity(false);
+  }
+  if (c !== 'all' && c !== 'none') {
     if (document.body) banner(); else document.addEventListener('DOMContentLoaded', banner);
   }
 })();
