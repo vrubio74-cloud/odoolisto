@@ -107,7 +107,7 @@ Eres el agente de contenido SEO de **OdooListo** (Praxya Formaplus, S.L.). Tu mi
 ### ⚫ PRIORIDAD SÉPTIMA — Séptima tanda (añadida automáticamente 16 Nov 2026, sin keywords `[ ]` pendientes en tandas anteriores)
 > Elegidas por mapearse a un pack concreto y a sectores del ICP (servicios profesionales, ingeniería, construcción, distribución). Las keywords «de problema» (`software de gestion empresarial`) traen más volumen que las de producto (ver brand-context §6). `alternativa a holded` va en frase: fue la que dio 100 % de CTR en SEM.
 - [x] `odoo proyectos y partes de horas` → PUBLICADO: 16 Nov 2026 → URL: https://odoolisto.com/blog/odoo-proyectos-y-partes-de-horas/ *(Pack M; funciones verificadas en el código de Odoo 19 Community: partes por tarea, horas asignadas y extra, coste por hora, facturación por horas/precio cerrado/hitos/manual, tarifa por empleado, factura por periodo y panel de rentabilidad; cronómetro, validación de partes y planificación marcados como Enterprise; sin precios de terceros)*
-- [ ] `software de gestion empresarial para pymes` → Pack S/M. Comparar modelos de cobro (por usuario vs tarifa plana) con precios oficiales con fuente y fecha
+- [x] `software de gestion empresarial para pymes` → PUBLICADO: 19 Nov 2026 → URL: https://odoolisto.com/blog/software-de-gestion-empresarial-para-pymes/ *(Pack S/M; precios de lista con pago mensual leídos en holded.com/es/precios y odoo.com/es_ES/pricing el 19 nov 2026, sin las promociones de Black Friday de Holded ni el descuento de primer año de Odoo; ejemplo de 10 y 20 usuarios)*
 - [ ] `alternativa a holded` → Pack S/M. Distinto de `odoo vs holded`: intención de cambio, no de comparación. Precios de Holded de su web oficial, con fecha
 - [ ] `odoo compras pyme` → Pack M. Solicitudes de presupuesto, pedidos a proveedor, recepción y factura de proveedor
 - [ ] `odoo recursos humanos pyme` → Pack L. Dejar claro que las nóminas españolas NO están en Community ni en el pack; verificar en código qué apps de RRHH trae Community 19
@@ -256,6 +256,7 @@ crear `blog/<slug>/index.html`. Haz commit de `blog/`, `assets/` y `sitemap.xml`
 | 2026-11-09 | odoo crm pymes | Odoo CRM para pymes: embudo comercial conectado con ventas y facturación | https://odoolisto.com/blog/odoo-crm-pymes/ | ✅ Publicado |
 | 2026-11-12 | odoo fabricacion pyme | Odoo Fabricación para pymes: órdenes de producción y escandallos sin Excel | https://odoolisto.com/blog/odoo-fabricacion-pyme/ | ✅ Publicado |
 | 2026-11-16 | odoo proyectos y partes de horas | Odoo Proyectos y partes de horas: qué horas facturas y cuáles regalas | https://odoolisto.com/blog/odoo-proyectos-y-partes-de-horas/ | ✅ Publicado |
+| 2026-11-19 | software de gestion empresarial para pymes | Software de gestión empresarial para pymes: cómo elegir sin que la cuota crezca con tu equipo | https://odoolisto.com/blog/software-de-gestion-empresarial-para-pymes/ | ✅ Publicado |
 
 ---
 
@@ -270,5 +271,5 @@ crear `blog/<slug>/index.html`. Haz commit de `blog/`, `assets/` y `sitemap.xml`
 
 ---
 
-*Última actualización: 16 Nov 2026 (séptima tanda añadida; post35 `odoo proyectos y partes de horas` publicado; quedan 4 keywords `[ ]`)*
+*Última actualización: 19 Nov 2026 (post36 `software de gestion empresarial para pymes` publicado; quedan 3 keywords `[ ]` en la séptima tanda)*
 *Agente configurado por: Praxya Formaplus, S.L.*
